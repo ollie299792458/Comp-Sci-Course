@@ -54,7 +54,7 @@ fun ftree(k,n) =
 
 
 
-fun minleaf(Lf) = Lf
+fun minleaf(Lf) = 0
     | minleaf(Br(v, Lf, _)) = v
     | minleaf(Br(v, t1, t2)) = minleaf(t1);
 
@@ -64,16 +64,43 @@ fun deletemin(Lf) = Lf
     | deletemin(Br(v, t1, t2)) = Br(v, deletemin(t1), t2);
 
 fun deletehead(Lf) = Lf
-    | deletehead(Br(v, t1, t2)) = 
-        Br(minleaf(t2), deletemin(t1), t2);
+    | deletehead(Br(v, t1, t2)) =
+        if (t2 = Lf)
+        then t1
+        else Br(minleaf(t2), t1, deletemin(t2));
 
 fun deletenode(Lf, _) = Lf
     | deletenode(Br(v, t1, t2), x) =
         if (v = x)
         then deletehead(Br(v, t1, t2))
-        else if (v < x) 
+        else if (v < x)
             then Br(v, t1, deletenode(t2, x))
             else Br(v, deletenode(t1, x), t2);
+
+
+
+fun reflecttst(Lf, Lf) = true
+    | reflecttst(Lf, Br(u, u1, u2)) = false
+    | reflecttst(Br(v, v1, v2), Lf) = false
+    | reflecttst(Br(v, v1, v2), Br(u, u1, u2)) =
+        if (u = v)
+        then reflecttst(v1,u2) andalso reflecttst(u1,v2)
+        else false
+
+
+
+datatype 'a olist = Lf
+                  | Br of 'a * 'a olist;
+
+
+
+datatype 'a ltree = Lf
+                  | Br of 'a * 'b ltree * 'b ltree;
+
+
+
+datatype 'a stree = Lf
+                  | Br of 'a * 'a stree list;
 
 
 
