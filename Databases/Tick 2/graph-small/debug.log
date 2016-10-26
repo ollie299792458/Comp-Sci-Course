@@ -1,0 +1,11 @@
+2016-10-03 19:52:29.589+0000 INFO  [o.n.u.i.b.ParallelBatchImporter] Import starting
+2016-10-03 19:52:29.948+0000 WARN  [o.n.k.i.s.MetaDataStore] Missing counts store, rebuilding it.
+2016-10-03 19:52:30.128+0000 INFO  [o.n.k.a.i.l.LuceneLabelScanStore] No lucene scan store index found, this might just be first use. Preparing to rebuild.
+2016-10-03 19:52:30.297+0000 INFO  [o.n.k.a.i.l.LuceneLabelScanStore] Rebuilding lucene scan store, this may take a while
+2016-10-03 19:52:30.302+0000 INFO  [o.n.k.a.i.l.LuceneLabelScanStore] Lucene scan store rebuilt (roughly 0 nodes)
+2016-10-03 19:52:36.460+0000 INFO  [o.n.u.i.b.ParallelBatchImporter] Import completed, took 6s 871ms. Imported:
+  16693 nodes
+  15572 relationships
+  41397 properties
+2016-10-03 19:52:36.465+0000 INFO  [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 1 to [/Users/martin/dev/cl/dbms/moviedb-exercises/graph-small/neostore.counts.db.b], from [/Users/martin/dev/cl/dbms/moviedb-exercises/graph-small/neostore.counts.db.a].
+2016-10-03 19:52:36.469+0000 INFO  [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 1 to [/Users/martin/dev/cl/dbms/moviedb-exercises/graph-small/neostore.counts.db.b], from [/Users/martin/dev/cl/dbms/moviedb-exercises/graph-small/neostore.counts.db.a].
