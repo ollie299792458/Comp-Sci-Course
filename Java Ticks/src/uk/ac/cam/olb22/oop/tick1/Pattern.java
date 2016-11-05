@@ -95,14 +95,14 @@ public class Pattern {
                 + mCells + "'.");
 
         try {
-            for (int i = getStartRow(); i < getStartRow() + subStrings.length; i++) {
-                char[] chars = subStrings[i - getStartRow()].toCharArray();
-                for (int j = getStartCol(); j < getStartCol() + chars.length; j++) {
-                    int index = j - getStartCol();
+            for (int row = getStartRow(); row < getStartRow() + subStrings.length; row++) {
+                char[] chars = subStrings[row - getStartRow()].toCharArray();
+                for (int col = getStartCol(); col < getStartCol() + chars.length; col++) {
+                    int index = col - getStartCol();
                     if (chars[index] == '1') {
-                        world[i][j] = true;
+                        world[row][col] = true;
                     } else if (chars[index] == '0') {
-                        world[i][j] = false;
+                        world[row][col] = false;
                     } else {
                         throw pException;
                     }

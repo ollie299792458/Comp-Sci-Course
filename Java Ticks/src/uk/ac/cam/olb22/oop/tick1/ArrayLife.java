@@ -20,7 +20,7 @@ public class ArrayLife {
         }
 	}
    
-	public int countNeighbours(int col, int row) {
+	private int countNeighbours(int col, int row) {
 		int res = 0;
 		res += getCell(col-1, row-1) ? 1 : 0;
 		res += getCell(col-1, row) ? 1 : 0;
@@ -33,7 +33,7 @@ public class ArrayLife {
 		return res;
 	}
 
-	public boolean computeCell(int col, int row) {
+	private boolean computeCell(int col, int row) {
 
 	   // liveCell is true if the cell at position (col,row) in mWorld is live
 	   boolean liveCell = getCell(col, row);
@@ -100,20 +100,20 @@ public class ArrayLife {
         }
     }
 
-    public ArrayLife(String format) {
-        try {
-            pattern = new Pattern(format);
-            mWorld = new boolean[pattern.getWidth()][pattern.getHeight()];
-            pattern.initialise(mWorld);
-        } catch (PatternFormatException e){
-            System.out.println(e.getMessage());
-        }
+    public ArrayLife(String format) throws PatternFormatException{
+        pattern = new Pattern(format);
+        mWorld = new boolean[pattern.getHeight()][pattern.getWidth()];
+        pattern.initialise(mWorld);
     }
 
     public static void main(String[] args) throws Exception {
-        args = new String[]{"Glider:Richard Guy:20:20:1:1:010 001 111"};
+        try {
+            ArrayLife al = new ArrayLife(args[0]);
 
-        ArrayLife al = new ArrayLife(args[0]);
-        al.play();
+            al.play();
+        } catch (PatternFormatException e){
+            System.out.println(e.getMessage());
+
+        }
     }
 }
