@@ -1,5 +1,7 @@
 package uk.ac.cam.olb22.prejava.ex2;
-        
+
+import uk.ac.cam.olb22.prejava.ex1.PackedLong;
+
 public class TinyLife {
 	public static boolean getCell(long world, int col, int row) {
 		if (!((col > 7) || (row > 7) || (col<0) || (row<0))) {
