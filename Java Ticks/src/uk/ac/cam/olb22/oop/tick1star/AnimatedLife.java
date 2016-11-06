@@ -102,6 +102,7 @@ public class AnimatedLife {
     }
 
     public static void main(String[] args) throws Exception {
+
         try {
             AnimatedLife al = new AnimatedLife(args[0], args[2]);
 
