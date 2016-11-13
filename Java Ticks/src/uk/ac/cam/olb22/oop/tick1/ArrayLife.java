@@ -90,7 +90,6 @@ public class ArrayLife {
         }
 	}
 
-
     public void play() throws java.io.IOException {
         int userResponse = 0;
         while (userResponse != 'q') {
