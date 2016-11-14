@@ -21,20 +21,19 @@ plot(time,averagetemp);
 
 %% Work out values for fitting function
 fit = polyfit(time, averagetemp, 1);
-a1 = fit(1);
-a0 = fit(2)+1961*a1;
-tau = 1.0;
-delta = -1*pi/2;
-fit = @(a2, x) a0 + a1.*(x - 1961) + a2.*sin(((2*pi)/tau).*x + delta); 
-fcn = @(b) sum((fit(b,time) - averagetemp).^2);
-ar = max(averagetemp) - min(averagetemp);
-a2 = fminsearch(fcn, ar);
+a2g = fit(1);
+a1g = fit(2)+1961*a1g;
+a4g = 1.0;
+a5g = -1*pi/2;
+fit = @(a, x) a(1) + a(2).*(x - 1961) + a(3).*sin(((2*pi)/a(4)).*x + a(5)); 
+fcn = @(a) sum((fit(a,time) - averagetemp).^2);
+a = fminsearch(fcn, [1,1,1,1,1]);
 
 %% Plot fitting function
-y = fit(a2, time);
+y = fit(a, time);
 plot(time, y);
 
-%% Label and format the graph
+%% Label and format the line graph
 xlim([min(time) max(time)]);
 xlabel('Date / Years');
 ylabel('Average Temperature / °C');
@@ -42,12 +41,12 @@ title('Monthly Temperature variation in Cambridge from 1961 to 2011 showing the 
 legend('Average Temperature', 'Sinusoidal Fit', 'location', 'northwest');
 
 %% Report parameters
-a0
-a1
-a2
-tau
-delta
-change = (max(time) - min(time))*a1
+a(1)
+a(2)
+a(3)
+a(4)
+a(5)
+change = (max(time) - min(time))*a(2)
 
 %% Prepare new chart
 figure;
@@ -55,5 +54,10 @@ hold on;
 
 %% Plot bar chart
 rainfall = cambridgedata(:,6);
-%Not the bar method, but why on earth would i use the 
+% Not the bar method, but why on earth would I use the bar method
 histogram(rainfall);
+
+%% Label and format the histogram
+xlabel('Rainfall / mm');
+ylabel('Occurunces / Months');
+title('Histogram of rainfall in Cambridge from 1961 to 2011');

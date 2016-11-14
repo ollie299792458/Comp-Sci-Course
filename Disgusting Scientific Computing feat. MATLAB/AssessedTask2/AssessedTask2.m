@@ -20,18 +20,13 @@ averagetemp = (maxtemp + mintemp)/2;
 plot(time,averagetemp);
 
 %% Work out values for fitting function
-fit = polyfit(time, averagetemp, 1);
-a1 = fit(1);
-a0 = fit(2)+1961*a1;
-tau = 1.0;
-delta = -1*pi/2;
-fit = @(a2, x) a0 + a1.*(x - 1961) + a2.*sin(((2*pi)/tau).*x + delta); 
-fcn = @(b) sum((fit(b,time) - averagetemp).^2);
-ar = max(averagetemp) - min(averagetemp);
-a2 = fminsearch(fcn, ar);
+tau = 1;
+fit = @(a, x) a(1) + a(2).*(x - 1961) + a(3).*sin(((2*pi)/tau).*x + a(4)); 
+fcn = @(a) sum((fit(a,time) - averagetemp).^2);
+a = fminsearch(fcn, [1,1,1,1]);
 
 %% Plot fitting function
-y = fit(a2, time);
+y = fit(a, time);
 plot(time, y);
 
 %% Label and format the line graph
@@ -42,12 +37,12 @@ title('Monthly Temperature variation in Cambridge from 1961 to 2011 showing the 
 legend('Average Temperature', 'Sinusoidal Fit', 'location', 'northwest');
 
 %% Report parameters
-a0
-a1
-a2
+a0 = a(1)
+a1 = a(2)
+a2 = a(3)
 tau
-delta
-change = (max(time) - min(time))*a1
+delta = a(4)
+change = (max(time) - min(time))*a(2)
 
 %% Prepare new chart
 figure;
@@ -60,5 +55,5 @@ histogram(rainfall);
 
 %% Label and format the histogram
 xlabel('Rainfall / mm');
-ylabel('Occurunces / Months');
+ylabel('Occurence / Months');
 title('Histogram of rainfall in Cambridge from 1961 to 2011');
