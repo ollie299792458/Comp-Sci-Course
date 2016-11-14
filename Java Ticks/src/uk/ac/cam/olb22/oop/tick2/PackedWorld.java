@@ -1,7 +1,6 @@
 package uk.ac.cam.olb22.oop.tick2;
 
 import uk.ac.cam.olb22.oop.tick1.PatternFormatException;
-import uk.ac.cam.olb22.prejava.ex1.PackedLong;
 
 
 import java.io.IOException;
@@ -16,7 +15,7 @@ public class PackedWorld extends World {
     @Override
     public boolean getCell(int col, int row) {
         if (!((col > 7) || (row > 7) || (col<0) || (row<0))) {
-            return PackedLong.get(mWorld, col + row * 8);
+            return getFromLong(mWorld, col + row * 8);
         } else {
             return false;
         }
@@ -24,39 +23,36 @@ public class PackedWorld extends World {
 
     @Override
     public void nextGeneration() {
-        boolean[][] nextGeneration = new boolean[mWorld.length][];
-        for (int y = 0; y < mWorld.length; ++y) {
-            nextGeneration[y] = new boolean[mWorld[y].length];
-            for (int x = 0; x < mWorld[y].length; ++x) {
-                boolean nextCell = computeCell(x, y);
-                nextGeneration[y][x]=nextCell;
+        long newWorld = 0;
+        for (int row = 0; row < 8; row++) {
+            for (int col = 0; col < 8; col++) {
+                newWorld = setInLong(newWorld, col + row * 8, computeCell(col, row));
             }
         }
-        mWorld = nextGeneration;
+        incrementGenerationCount();
+        mWorld = newWorld;
     }
 
     @Override
     public void setCell(int col, int row, boolean val) {
-        long mask = 1;
-        if (value) {
-            packed = packed | (mask<<position);
+        if (!((col > 7) || (row > 7) || (col<0) || (row<0))) {
+            mWorld = setInLong(mWorld, col + row * 8, val);
         }
-        else {
-            packed = packed & ~(mask<<position);
-        }
-        return packed;
     }
 
     public PackedWorld(String serial) throws PatternFormatException {
         super(serial);
-        mWorld = new boolean[getPattern().getHeight()][getPattern().getWidth()];
+        if (getWidth()>8 || getHeight()>8){
+            throw new PatternFormatException("World size too big");
+        }
+        mWorld = 0;
         getPattern().initialise(this);
     }
 
     public void print() {
         System.out.println("-");
-        for (int row = 0; row < mWorld.length; row++) {
-            for (int col = 0; col < mWorld[row].length; col++) {
+        for (int row = 0; row < 8; row++) {
+            for (int col = 0; col < 8; col++) {
                 System.out.print(getCell(col, row) ? "#" : "_");
             }
             System.out.println();
@@ -74,9 +70,9 @@ public class PackedWorld extends World {
 
     public static void main(String args[]) throws IOException {
         args = new String[1];
-        args[0] = "Glider:Richard Guy:20:20:1:1:010 001 111";
+        args[0] = "Glider:Richard Guy:8:8:1:1:010 001 111";
         try {
-            ArrayWorld pl = new ArrayWorld(args[0]);
+            PackedWorld pl = new PackedWorld(args[0]);
             pl.play();
         }
         catch (PatternFormatException e) {
@@ -85,4 +81,30 @@ public class PackedWorld extends World {
 
     }
 
+    /*
+    * Unpack and return the nth bit from the packed number at index position;
+    * position counts from zero (representing the least significant bit)
+    * up to 63 (representing the most significant bit).
+    */
+    private static boolean getFromLong(long packed, int position) {
+        // set "check" to equal 1 if the "position" bit in "packed" is set to 1
+        long check = (packed>>>position)& 1;
+
+        return (check == 1);
+    }
+
+    /*
+     * Set the nth bit in the packed number to the value given
+     * and return the new packed number
+     */
+    private static long setInLong(long packed, int position, boolean value) {
+        long mask = 1;
+        if (value) {
+            packed = packed | (mask<<position);
+        }
+        else {
+            packed = packed & ~(mask<<position);
+        }
+        return packed;
+    }
 }

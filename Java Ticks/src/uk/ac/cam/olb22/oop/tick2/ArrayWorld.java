@@ -30,6 +30,7 @@ public class ArrayWorld extends World {
                 nextGeneration[y][x]=nextCell;
             }
         }
+        incrementGenerationCount();
         mWorld = nextGeneration;
     }
 
