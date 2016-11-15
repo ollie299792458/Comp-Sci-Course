@@ -1,15 +1,17 @@
 package uk.ac.cam.olb22.oop.tick2;
 
-import uk.ac.cam.olb22.oop.tick2.Pattern;
-import uk.ac.cam.olb22.oop.tick1.PatternFormatException;
-
 /**
  * Created by oliver on 13/11/16.
  */
 public abstract class World {
     public abstract boolean getCell(int col, int row);
 
-    public abstract void nextGeneration();
+    public void nextGeneration() {
+        nextGenerationImpl();
+        incrementGenerationCount();
+    }
+
+    protected abstract void nextGenerationImpl();
 
     public abstract void setCell(int col, int row, boolean val);
 
@@ -32,7 +34,7 @@ public abstract class World {
         return mGeneration;
     }
 
-    public void incrementGenerationCount() {
+    protected void incrementGenerationCount() {
         mGeneration++;
     }
 

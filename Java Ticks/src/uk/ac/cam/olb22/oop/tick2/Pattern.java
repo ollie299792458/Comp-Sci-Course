@@ -1,7 +1,5 @@
 package uk.ac.cam.olb22.oop.tick2;
 
-import uk.ac.cam.olb22.oop.tick1.PatternFormatException;
-
 public class Pattern {
 
     private String mName;
@@ -100,9 +98,9 @@ public class Pattern {
                 for (int col = getStartCol(); col < getStartCol() + chars.length; col++) {
                     int index = col - getStartCol();
                     if (chars[index] == '1') {
-                        world.setCell(row, col, true);
+                        world.setCell(col, row, true);
                     } else if (chars[index] == '0') {
-                        world.setCell(row, col, false);
+                        world.setCell(col, row, false);
                     } else {
                         throw pException;
                     }

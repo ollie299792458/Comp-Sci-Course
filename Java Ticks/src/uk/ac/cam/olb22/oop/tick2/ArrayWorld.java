@@ -1,10 +1,5 @@
 package uk.ac.cam.olb22.oop.tick2;
 
-import uk.ac.cam.olb22.oop.tick1.PatternFormatException;
-
-
-import java.io.IOException;
-
 /**
  * Created by oliver on 13/11/16.
  */
@@ -21,7 +16,7 @@ public class ArrayWorld extends World {
     }
 
     @Override
-    public void nextGeneration() {
+    public void nextGenerationImpl() {
         boolean[][] nextGeneration = new boolean[mWorld.length][];
         for (int y = 0; y < mWorld.length; ++y) {
             nextGeneration[y] = new boolean[mWorld[y].length];
@@ -30,7 +25,6 @@ public class ArrayWorld extends World {
                 nextGeneration[y][x]=nextCell;
             }
         }
-        incrementGenerationCount();
         mWorld = nextGeneration;
     }
 
@@ -45,40 +39,7 @@ public class ArrayWorld extends World {
 
     public ArrayWorld(String serial) throws PatternFormatException {
         super(serial);
-        mWorld = new boolean[getPattern().getHeight()][getPattern().getWidth()];
+        mWorld = new boolean[getHeight()][getWidth()];
         getPattern().initialise(this);
     }
-
-    public void print() {
-        System.out.println("-");
-        for (int row = 0; row < mWorld.length; row++) {
-            for (int col = 0; col < mWorld[row].length; col++) {
-                System.out.print(getCell(col, row) ? "#" : "_");
-            }
-            System.out.println();
-        }
-    }
-
-    public void play() throws java.io.IOException {
-        int userResponse = 0;
-        while (userResponse != 'q') {
-            print();
-            userResponse = System.in.read();
-            nextGeneration();
-        }
-    }
-
-    public static void main(String args[]) throws IOException {
-        args = new String[1];
-        args[0] = "Glider:Richard Guy:20:20:1:1:010 001 111";
-        try {
-            ArrayWorld pl = new ArrayWorld(args[0]);
-            pl.play();
-        }
-        catch (PatternFormatException e) {
-            System.out.println(e.getMessage());
-        }
-
-    }
-
 }

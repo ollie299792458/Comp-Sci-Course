@@ -1,10 +1,5 @@
 package uk.ac.cam.olb22.oop.tick2;
 
-import uk.ac.cam.olb22.oop.tick1.PatternFormatException;
-
-
-import java.io.IOException;
-
 /**
  * Created by oliver on 13/11/16.
  */
@@ -22,14 +17,13 @@ public class PackedWorld extends World {
     }
 
     @Override
-    public void nextGeneration() {
+    public void nextGenerationImpl() {
         long newWorld = 0;
         for (int row = 0; row < 8; row++) {
             for (int col = 0; col < 8; col++) {
                 newWorld = setInLong(newWorld, col + row * 8, computeCell(col, row));
             }
         }
-        incrementGenerationCount();
         mWorld = newWorld;
     }
 
@@ -47,38 +41,6 @@ public class PackedWorld extends World {
         }
         mWorld = 0;
         getPattern().initialise(this);
-    }
-
-    public void print() {
-        System.out.println("-");
-        for (int row = 0; row < 8; row++) {
-            for (int col = 0; col < 8; col++) {
-                System.out.print(getCell(col, row) ? "#" : "_");
-            }
-            System.out.println();
-        }
-    }
-
-    public void play() throws java.io.IOException {
-        int userResponse = 0;
-        while (userResponse != 'q') {
-            print();
-            userResponse = System.in.read();
-            nextGeneration();
-        }
-    }
-
-    public static void main(String args[]) throws IOException {
-        args = new String[1];
-        args[0] = "Glider:Richard Guy:8:8:1:1:010 001 111";
-        try {
-            PackedWorld pl = new PackedWorld(args[0]);
-            pl.play();
-        }
-        catch (PatternFormatException e) {
-            System.out.println(e.getMessage());
-        }
-
     }
 
     /*

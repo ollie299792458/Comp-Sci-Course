@@ -106,6 +106,7 @@ public class ArrayLife {
     }
 
     public static void main(String[] args) throws Exception {
+        //args = new String[]{"Glider:Richard Guy:9:7:1:1:010 001 111"};
         try {
             ArrayLife al = new ArrayLife(args[0]);
 
