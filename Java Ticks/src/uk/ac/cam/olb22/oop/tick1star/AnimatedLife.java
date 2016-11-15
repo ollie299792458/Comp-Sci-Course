@@ -102,6 +102,7 @@ public class AnimatedLife {
     }
 
     public static void main(String[] args) throws Exception {
+        //args = new String[]{"R-Pentomino:John Conway feat. Oliver Black:100:100:48:48:011 110 010", "1200", "R-pentomino.gif"};
         try {
             AnimatedLife al = new AnimatedLife(args[0], args[2]);
 
