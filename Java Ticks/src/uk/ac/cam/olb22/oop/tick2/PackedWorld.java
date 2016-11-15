@@ -9,8 +9,8 @@ public class PackedWorld extends World {
 
     @Override
     public boolean getCell(int col, int row) {
-        if (!((col > 7) || (row > 7) || (col<0) || (row<0))) {
-            return getFromLong(mWorld, col + row * 8);
+        if (!((col >= getHeight()) || (row >= getHeight()) || (col<0) || (row<0))) {
+            return getFromLong(mWorld, col + row * getWidth());
         } else {
             return false;
         }
@@ -19,9 +19,9 @@ public class PackedWorld extends World {
     @Override
     public void nextGenerationImpl() {
         long newWorld = 0;
-        for (int row = 0; row < 8; row++) {
-            for (int col = 0; col < 8; col++) {
-                newWorld = setInLong(newWorld, col + row * 8, computeCell(col, row));
+        for (int row = 0; row < getHeight(); row++) {
+            for (int col = 0; col < getWidth(); col++) {
+                newWorld = setInLong(newWorld, col + row * getWidth(), computeCell(col, row));
             }
         }
         mWorld = newWorld;
@@ -29,14 +29,14 @@ public class PackedWorld extends World {
 
     @Override
     public void setCell(int col, int row, boolean val) {
-        if (!((col > 7) || (row > 7) || (col<0) || (row<0))) {
-            mWorld = setInLong(mWorld, col + row * 8, val);
+        if (!((col >= getWidth()) || (row >= getHeight()) || (col<0) || (row<0))) {
+            mWorld = setInLong(mWorld, col + row * getWidth(), val);
         }
     }
 
     public PackedWorld(String serial) throws PatternFormatException {
         super(serial);
-        if (getWidth()>8 || getHeight()>8){
+        if ((getWidth()*getHeight())>64){
             throw new PatternFormatException("World size too big");
         }
         mWorld = 0;
