@@ -47,23 +47,23 @@ public class Renderer {
         double k_s = object.getPhong_kS();
         double n = object.getPhong_n();
 
+
+        // DONE: Calculate L, V, and R
         N = N.normalised();
         Vector3 L = light.getPosition().subtract(P).normalised();
         Vector3 V = P.normalised().scale(-1);
         Vector3 R = L.reflectIn(N).normalised();
 
+        // DONE: Calculate NdotL and RdotV
         double NdotL = N.dot(L);
         double RdotV = R.dot(V);
 
+        // DONE: Calculate Vector3 ambient, diffuse, and specular terms
         Vector3 ambient = C_diff.scale(I_a);
         Vector3 diffuse = C_diff.scale(I.scale(k_d*Math.max(0.0, NdotL)));
         Vector3 specular = C_spec.scale(I.scale(k_s*Math.pow(Math.max(0.0, RdotV), n)));
 
-        // TODO: Calculate L, V, and R
-        // TODO: Calculate NdotL and RdotV
-        // TODO: Calculate Vector3 ambient, diffuse, and specular terms
-        // TODO: return ambient+diffuse+specular
-
+        // DONE: return ambient+diffuse+specular
         return ambient.add(diffuse.add(specular));
     }
 

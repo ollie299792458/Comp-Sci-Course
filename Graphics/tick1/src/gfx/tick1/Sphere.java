@@ -57,7 +57,7 @@ public class Sphere {
             }
             if (s1 >= 0) {
                 s = s1;
-            } else if (s1 >= 0) {
+            } else if (s2 >= 0) {
                 s = s2;
             }
 
