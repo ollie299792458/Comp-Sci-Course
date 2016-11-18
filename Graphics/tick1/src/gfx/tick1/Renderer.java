@@ -47,7 +47,6 @@ public class Renderer {
         double k_s = object.getPhong_kS();
         double n = object.getPhong_n();
 
-
         // DONE: Calculate L, V, and R
         N = N.normalised();
         Vector3 L = light.getPosition().subtract(P).normalised();
