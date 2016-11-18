@@ -42,19 +42,18 @@ public class Renderer {
             return directIllumination;
 
         } else {
-        	Vector3 reflectedIllumination;
+        	Vector3 reflectedIllumination = new Vector3(0);
             // DONE: Calculate the direction R of the bounced
             Vector3 D = ray.getDirection();
-            double DdotN = D.dot(N);
-            Vector3 R = D.subtract(N.scale(2*DdotN)).normalised();
+            Vector3 R = D.reflectIn(N).normalised().scale(-1);
 
             // DONE: Spawn a reflectedRay with bias
             Vector3 epsilonR = R.scale(EPSILON);
             Vector3 PaddEpsilonR = P.add(epsilonR);
-            Ray reflectedRay = new Ray(PaddEpsilonR,R);
+            Ray reflectedRay = new Ray(PaddEpsilonR, R);
 
             // DONE: Calculate reflectedIllumination by tracing reflectedRay
-            reflectedIllumination = trace(scene, reflectedRay, bouncesLeft-1);
+            reflectedIllumination = trace(scene, reflectedRay, bouncesLeft - 1);
 
             // Scale direct and reflective illumination to conserve light
             directIllumination = directIllumination.scale(1.0 - object.getReflectivity());
@@ -101,7 +100,7 @@ public class Renderer {
             boolean inShadow = (closestIntersect.getDistance() < distanceToLight);
 
             // DONE: if not inShadow, add diffuse and specular to colourToReturn
-            if (!inShadow) {
+            if (!inShadow && L.dot(N) >= 0) {
 
                 // DONE: Calculate V, and R
                 Vector3 V = P.normalised().scale(-1);

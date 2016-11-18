@@ -6,6 +6,7 @@ import javax.imageio.ImageIO;
 
 public class Tick2 {
     public static final String DEFAULT_INPUT = "tick2.xml";
+    public static final String TEST_INPUT = "specular_test.xml";
     public static final String DEFAULT_OUTPUT = "output.png";
     public static final int DEFAULT_BOUNCES = 2;
 
@@ -24,7 +25,7 @@ public class Tick2 {
             usageError();
 
         // Parse the input and output filenames from the arguments
-        String input = DEFAULT_INPUT, output = DEFAULT_OUTPUT;
+        String input = TEST_INPUT, output = DEFAULT_OUTPUT;
         int bounces = DEFAULT_BOUNCES;
         for (int i = 0; i < args.length; i += 2) {
             switch (args[i]) {
