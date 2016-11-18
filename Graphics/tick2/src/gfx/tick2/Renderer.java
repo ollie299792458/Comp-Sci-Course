@@ -45,7 +45,8 @@ public class Renderer {
         	Vector3 reflectedIllumination;
             // DONE: Calculate the direction R of the bounced
             Vector3 D = ray.getDirection();
-            Vector3 R = D.reflectIn(N).normalised().scale(-1);
+            double DdotN = D.dot(N);
+            Vector3 R = D.subtract(N.scale(2*DdotN)).normalised();
 
             // DONE: Spawn a reflectedRay with bias
             Vector3 epsilonR = R.scale(EPSILON);

@@ -1,0 +1,6 @@
+<scene>
+    <ambient-light colour="#555555"/>
+    <point-light x="-2.5" y="2.5" z="3" colour="#FFFFFF" intensity="200"/>
+    <sphere x="0" y="0" z="5" radius="1" colour="#FF1D25"/>
+    <sphere x="2" y="-1" z="8" radius="1" colour="#808080"/>
+</scene>
