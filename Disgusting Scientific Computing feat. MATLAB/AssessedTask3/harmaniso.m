@@ -14,18 +14,26 @@
 % Establish parameters (so they can be easily changed)
 dm  = 3;                 % Dimensions
 m   = 1;                 % Mass of the moving particle
-k   = [10; 5; 2];        % Spring constants, kx, ky, and kz
-% k = [5; 5; 5];           % Isotropic case
-dt  = 0.05;              % time step
-nt  = 400;               % number of time steps
+k   = [5; 5; 5];        % Spring constants, kx, ky, and kz
+% k = [10; 5; 2];          % 2&3D Anisotropic case
+% k = [5; 5; 5];           % Isotropic case and QofN
+dt  = 9;                % time step
+% dt  = 0.05;              % Quality of the numerics small
+% dt  = 0.6;               % QofN large
+% dt  = 9;                 % QofN Xtra Large
+nt  = 60;               % number of time steps
+% nt = 60;                 % QofN
+% nt  = 4000;              % 3D Anisotropic
+% nt = 400;                % Isotropic and 2D Anisotropic
 ti  = 0.;                % Initial time
 tf  = ti + (nt-1) * dt;  % Final time
 xcen = [0; 0; 0];        % Position of center
 
 % Initial conditions (the dimensions must match dm)
-x0 = [10.; 6.; 3.;]; v0 = [0.4; -1; 2.3];
-% x0 = [10.; 6.; 3.;]; v0 = [0.4; -1; 2.3]; %3D Anisotropic Case
-% x0 = [10.; 10.; 0]; v0 = [0.4; -0.4; 0];  %2D Anisotropic Case
+x0 = [5.; 5.; 5]; v0 = [0.1; -5; 0.1];
+% x0 = [10.; 6.; 3]; v0 = [0.4; -1; 2.3];   % 3D Anisotropic case
+% x0 = [10.; 10.; 0]; v0 = [0.4; -0.4; 0];  % 2D Anisotropic case
+% x0 = [10.; 10.; 5]; v0 = [0.4; -0.4; 0.3];% Isotropic case and QofN
 
 % Initiate arrays
 t = linspace(ti,tf,nt);
