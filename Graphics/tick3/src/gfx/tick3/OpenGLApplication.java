@@ -373,10 +373,16 @@ public class OpenGLApplication {
         Matrix4f mvp_matrix; // Model-view-projection matrix
         mvp_matrix = new Matrix4f(camera.getProjectionMatrix()).mul(camera.getViewMatrix());
 
+        Vector3f cameraPosition;
+        cameraPosition = new Vector3f(camera.getCameraPosition());
+
         int mvp_location = glGetUniformLocation(shaders.getHandle(), "mvp_matrix");
         FloatBuffer mvp_buffer = BufferUtils.createFloatBuffer(16);
         mvp_matrix.get(mvp_buffer);
         glUniformMatrix4fv(mvp_location, false, mvp_buffer);
+
+        int camPosLoc = glGetUniformLocation(shaders.getHandle(), "cp_vector");
+        glUniform3f(camPosLoc, cameraPosition.x, cameraPosition.y, cameraPosition.z);
 
         // Step 2: Clear the buffer
 
