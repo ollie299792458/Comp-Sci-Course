@@ -57,7 +57,7 @@ public class FactsOfLife {
                 double growthRate = (((double)thisPop) - ((double)lastPop))/((double)lastPop);
                 double deathRate = (((double)lastPop) - ((double)thisPop))/((double)lastPop);
 
-                if (biggestDeathRate.doubleVal < deathRate) {
+                if (biggestDeathRate.doubleVal > deathRate) {
                     biggestDeathRate.doubleVal = deathRate;
                     biggestDeathRate.pattern = pattern;
                 }
