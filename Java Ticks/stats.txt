@@ -1,5 +1,5 @@
 gliderless
 factory
 glider synthesis
-glider synthesis
+bookend
 spacefiller

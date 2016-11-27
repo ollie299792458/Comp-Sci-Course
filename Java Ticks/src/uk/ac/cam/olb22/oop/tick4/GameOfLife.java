@@ -37,7 +37,7 @@ public class GameOfLife {
     private World copyWorld(boolean useCloning) {
         World result;
         if (useCloning) {
-            result = mWorld.clone();
+            result = null;
         } else {
             if (mWorld instanceof PackedWorld) {
                 result = new PackedWorld((PackedWorld) mWorld);
