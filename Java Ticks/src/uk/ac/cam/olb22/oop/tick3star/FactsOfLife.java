@@ -40,11 +40,7 @@ public class FactsOfLife {
 
             System.out.println("Now testing: " +pattern.getName());
 
-            if (pattern.getHeight()*pattern.getWidth() <= 64) {
-                mWorld = new PackedWorld(pattern);
-            } else {
-                mWorld = new ArrayWorld(pattern);
-            }
+            mWorld = new ArrayWorld(pattern);
 
             prevGens.clear();
 
@@ -124,7 +120,7 @@ public class FactsOfLife {
     }
 
     public static void main(String args[]) throws IOException, PatternFormatException {
-        args = new String[] {"http://www.cl.cam.ac.uk/teaching/current/OOProg/ticks/life.txt"};
+        //args = new String[] {"http://www.cl.cam.ac.uk/teaching/current/OOProg/ticks/life.txt"};
         if (args.length!=1) {
             System.out.println("Usage: java FactsOfLife <path/url to store>");
             return;

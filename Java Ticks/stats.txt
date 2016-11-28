@@ -1,5 +1,0 @@
-gliderless
-factory
-glider synthesis
-bookend
-spacefiller
