@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d1753e1-d6c2-4549-a3ac-b97d42ba6648" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Graphics/tick3/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Graphics/tick3/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick4/ArrayWorld.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick4/ArrayWorld.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick4/GameOfLife.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick4/GameOfLife.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick4/PackedWorld.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick4/PackedWorld.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick4/World.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick4/World.java" />
-    </list>
+    <list default="true" id="3d1753e1-d6c2-4549-a3ac-b97d42ba6648" name="Default" comment="" />
     <ignored path="Java Ticks.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,7 +24,7 @@
       <file leaf-file-name="GameOfLife.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick4/GameOfLife.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
+            <state relative-caret-position="776">
               <caret line="115" column="10" lean-forward="false" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
               <folding />
             </state>
@@ -884,7 +878,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="42" width="3200" height="1758" extended-state="6" />
+    <frame x="0" y="42" width="3200" height="1758" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -896,7 +890,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46915254" sideWeight="0.5025" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32911393" sideWeight="0.4975" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.4975" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1336,7 +1330,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick4/GameOfLife.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
+        <state relative-caret-position="776">
           <caret line="115" column="10" lean-forward="false" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
           <folding />
         </state>
