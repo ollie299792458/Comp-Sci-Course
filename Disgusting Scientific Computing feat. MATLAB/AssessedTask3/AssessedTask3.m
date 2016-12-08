@@ -60,11 +60,11 @@ x = linspace(0,100,100);
 plot(x,x);
 print -dpng -r300 2.2.3ContourDandYequalsX.png;
 
-%% Obtain derivative function
+%% Obtain numerical derivative
 h = (fin - in)/stp;
 dZd = diff(Zd)/h;
 
-%% Plot derivative function
+%% Plot derivative
 clf;
 mesh(dZd);
 xlabel('X distance');
