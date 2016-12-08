@@ -21,7 +21,7 @@ public class GameOfLife {
     }
 
     public void nextGeneration() {
-        if (mCachedWorlds.size()>mWorld.getGenerationCount()) {
+        if (mCachedWorlds.size()>mWorld.getGenerationCount()+1) {
             mWorld = mCachedWorlds.get(mWorld.getGenerationCount()+1);
         } else {
             mWorld = copyWorld(true);
@@ -31,13 +31,17 @@ public class GameOfLife {
     }
 
     public void previousGeneration() {
-        mWorld = mCachedWorlds.get(mWorld.getGenerationCount()-1);
+        try {
+            mWorld = mCachedWorlds.get(mWorld.getGenerationCount() - 1);
+        } catch (IndexOutOfBoundsException e) {
+            mWorld = mWorld;
+        }
     }
 
     private World copyWorld(boolean useCloning) {
         World result;
         if (useCloning) {
-            result = null;
+            result = (World) mWorld.clone();
         } else {
             if (mWorld instanceof PackedWorld) {
                 result = new PackedWorld((PackedWorld) mWorld);
@@ -86,7 +90,7 @@ public class GameOfLife {
             else if (response.startsWith("p")) {
                 List<Pattern> names = mStore.getPatternsNameSorted();
                 // DONE: Extract the integer after the p in response
-                int patternNumber = Integer.parseInt(response.substring(1));
+                int patternNumber = Integer.parseInt(response.substring(1).trim());
                 // DONE: Get the associated pattern
                 Pattern pattern = names.get(patternNumber);
                 // DONE: Initialise mWorld using PackedWorld or ArrayWorld based on pattern world size
@@ -109,7 +113,7 @@ public class GameOfLife {
     }
 
     public static void main(String args[]) throws IOException, PatternFormatException {
-        args = new String[] {"http://www.cl.cam.ac.uk/teaching/current/OOProg/ticks/life.txt"};
+        //args = new String[] {"http://www.cl.cam.ac.uk/teaching/current/OOProg/ticks/life.txt"};
         if (args.length!=1) {
             System.out.println("Usage: java FactsOfLife <path/url to store>");
             return;
@@ -123,7 +127,5 @@ public class GameOfLife {
         catch (IOException ioe) {
             System.out.println("Failed to load pattern store");
         }
-
-
     }
 }

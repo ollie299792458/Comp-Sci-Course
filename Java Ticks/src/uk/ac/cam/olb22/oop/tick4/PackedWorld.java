@@ -8,8 +8,10 @@ public class PackedWorld extends World implements Cloneable{
     private long mWorld;
 
     @Override
-    public PackedWorld clone() {
-        return new PackedWorld(this);
+    public Object clone() {
+        PackedWorld cloned = (PackedWorld) super.clone();
+        cloned.mWorld = mWorld;
+        return cloned;
     }
 
     @Override

@@ -8,18 +8,18 @@ public abstract class World implements Cloneable {
     protected World() {
     }
 
+    @Override
+    public Object clone() {
+        try {
+            return super.clone();
+        } catch (CloneNotSupportedException e) {
+            return null;
+        }
+    }
+
     protected void setPatternAndGeneration(World world) {
         mPattern = world.getPattern();
         mGeneration = world.getGenerationCount();
-    }
-
-    public World(World world) {
-        for (int width = 0; width < world.getWidth(); width ++) {
-            for (int height = 0; height < world.getHeight(); height ++) {
-                setCell(width, height, world.getCell(width, height));
-            }
-        }
-        setPatternAndGeneration(world);
     }
 
     public abstract boolean getCell(int col, int row);
