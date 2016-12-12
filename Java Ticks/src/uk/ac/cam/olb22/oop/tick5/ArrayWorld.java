@@ -1,4 +1,4 @@
-package uk.ac.cam.olb22.oop.tick4;
+package uk.ac.cam.olb22.oop.tick5;
 
 /**
  * Created by oliver on 13/11/16.
@@ -80,7 +80,7 @@ public class ArrayWorld extends World implements Cloneable{
     public ArrayWorld(Pattern pattern) throws PatternFormatException {
         super(pattern);
         mDeadRow = new boolean[getWidth()];
-        mWorld = new boolean[getHeight()][getHeight()];
+        mWorld = new boolean[getHeight()][getWidth()];
         for (boolean[] row : mWorld) {
             row = mDeadRow;
         }

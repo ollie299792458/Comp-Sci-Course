@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sound1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick2star/sound.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
