@@ -13,9 +13,8 @@ public class GamePanel extends JPanel {
         g.setColor(java.awt.Color.WHITE);
         g.fillRect(0, 0, this.getWidth(), this.getHeight());
         if (mWorld != null) {
-
-            int dx = getWidth()/mWorld.getWidth();
-            int dy = getHeight()/mWorld.getHeight();
+            int dx = getWidth()/(mWorld.getWidth()+1);
+            int dy = getHeight()/(mWorld.getHeight()+1);
             int dc = dx;
             if (dx > dy) {
                 dc = dy;
@@ -23,10 +22,12 @@ public class GamePanel extends JPanel {
             for (int i = 0; i < mWorld.getWidth(); i++) {
                 for (int j = 0; j< mWorld.getHeight(); j++) {
                     g.setColor(Color.LIGHT_GRAY);
-                    g.drawRect(i*dc + dc/2, j*dc + dc/2, dc, dc);
+                    int x = i*dc+dc/2;
+                    int y = j*dc+dc/2;
+                    g.drawRect(x, y, dc, dc);
                     if (mWorld.getCell(i, j)) {
                         g.setColor(Color.BLACK);
-                        g.fillRect(i*dc + dc/2, j*dc + dc/2, dc, dc);
+                        g.fillRect(x, y, dc, dc);
                     }
                 }
             }
