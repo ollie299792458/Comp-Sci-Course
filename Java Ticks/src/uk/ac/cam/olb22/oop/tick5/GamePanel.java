@@ -13,21 +13,29 @@ public class GamePanel extends JPanel {
         g.setColor(java.awt.Color.WHITE);
         g.fillRect(0, 0, this.getWidth(), this.getHeight());
         if (mWorld != null) {
-            int dx = getWidth()/(mWorld.getWidth()+1);
-            int dy = getHeight()/(mWorld.getHeight()+1);
-            int dc = dx;
+            //Print generation count
+            int gh = 20;
+            g.setColor(Color.BLACK);
+            g.drawString("Generation: "+String.valueOf(mWorld.getGenerationCount()), 5, getHeight()-5);
+
+
+            //Print board
+            double dx = ((double) getWidth())/((double) mWorld.getWidth());
+            double dy = ((double) (getHeight()-gh))/((double) mWorld.getHeight());
+            double dc = dx;
             if (dx > dy) {
                 dc = dy;
             }
             for (int i = 0; i < mWorld.getWidth(); i++) {
                 for (int j = 0; j< mWorld.getHeight(); j++) {
                     g.setColor(Color.LIGHT_GRAY);
-                    int x = i*dc+dc/2;
-                    int y = j*dc+dc/2;
-                    g.drawRect(x, y, dc, dc);
+                    int x = (int) Math.floor(i*dc);
+                    int y = (int) Math.floor(j*dc);
+                    int w = (int) Math.floor(dc);
+                    g.drawRect(x, y, w, w);
                     if (mWorld.getCell(i, j)) {
                         g.setColor(Color.BLACK);
-                        g.fillRect(x, y, dc, dc);
+                        g.fillRect(x, y, w, w);
                     }
                 }
             }

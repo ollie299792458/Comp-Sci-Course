@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="570c35bc-b069-42fc-aa6b-5dcaa9a13870" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick5/GamePanel.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick5/GamePanel.java" />
     </list>
@@ -26,12 +25,10 @@
       <file leaf-file-name="GUILife.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick5/GUILife.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1618">
+            <state relative-caret-position="3770">
               <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4953#5099#0" expanded="true" />
-                <element signature="e#5098#5099#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,8 +62,22 @@
             <state relative-caret-position="2059">
               <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
               <folding>
-                <element signature="e#4018#4019#0" expanded="true" />
-                <element signature="e#4072#4073#0" expanded="true" />
+                <element signature="e#303#304#0" expanded="false" />
+                <element signature="e#331#332#0" expanded="false" />
+                <element signature="e#364#365#0" expanded="false" />
+                <element signature="e#394#395#0" expanded="false" />
+                <element signature="e#423#424#0" expanded="false" />
+                <element signature="e#452#453#0" expanded="false" />
+                <element signature="e#482#483#0" expanded="false" />
+                <element signature="e#512#513#0" expanded="false" />
+                <element signature="e#544#545#0" expanded="false" />
+                <element signature="e#576#577#0" expanded="false" />
+                <element signature="e#608#609#0" expanded="false" />
+                <element signature="e#640#641#0" expanded="false" />
+                <element signature="e#672#673#0" expanded="false" />
+                <element signature="e#701#702#0" expanded="false" />
+                <element signature="e#3917#3918#0" expanded="false" />
+                <element signature="e#3972#3973#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -75,8 +86,8 @@
       <file leaf-file-name="GamePanel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick5/GamePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="16" column="54" lean-forward="false" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+            <state relative-caret-position="364">
+              <caret line="18" column="101" lean-forward="false" selection-start-line="18" selection-start-column="101" selection-end-line="18" selection-end-column="101" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,9 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -247,6 +255,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -550,7 +561,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25305465" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25659165" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -581,12 +592,73 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick5/GUILife.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3770">
+          <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick5/ArrayWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2378">
+          <caret line="82" column="52" lean-forward="false" selection-start-line="82" selection-start-column="52" selection-end-line="82" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick5/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1827">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding>
+            <element signature="e#1381#1382#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick5/Pattern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2465">
+          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding>
+            <element signature="e#303#304#0" expanded="false" />
+            <element signature="e#331#332#0" expanded="false" />
+            <element signature="e#364#365#0" expanded="false" />
+            <element signature="e#394#395#0" expanded="false" />
+            <element signature="e#423#424#0" expanded="false" />
+            <element signature="e#452#453#0" expanded="false" />
+            <element signature="e#482#483#0" expanded="false" />
+            <element signature="e#512#513#0" expanded="false" />
+            <element signature="e#544#545#0" expanded="false" />
+            <element signature="e#576#577#0" expanded="false" />
+            <element signature="e#608#609#0" expanded="false" />
+            <element signature="e#640#641#0" expanded="false" />
+            <element signature="e#672#673#0" expanded="false" />
+            <element signature="e#701#702#0" expanded="false" />
+            <element signature="e#3917#3918#0" expanded="false" />
+            <element signature="e#3972#3973#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick5/GamePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4953#5099#0" expanded="true" />
-            <element signature="e#5098#5099#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick5/GUILife.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -614,8 +686,22 @@
         <state relative-caret-position="2059">
           <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding>
-            <element signature="e#4018#4019#0" expanded="true" />
-            <element signature="e#4072#4073#0" expanded="true" />
+            <element signature="e#303#304#0" expanded="false" />
+            <element signature="e#331#332#0" expanded="false" />
+            <element signature="e#364#365#0" expanded="false" />
+            <element signature="e#394#395#0" expanded="false" />
+            <element signature="e#423#424#0" expanded="false" />
+            <element signature="e#452#453#0" expanded="false" />
+            <element signature="e#482#483#0" expanded="false" />
+            <element signature="e#512#513#0" expanded="false" />
+            <element signature="e#544#545#0" expanded="false" />
+            <element signature="e#576#577#0" expanded="false" />
+            <element signature="e#608#609#0" expanded="false" />
+            <element signature="e#640#641#0" expanded="false" />
+            <element signature="e#672#673#0" expanded="false" />
+            <element signature="e#701#702#0" expanded="false" />
+            <element signature="e#3917#3918#0" expanded="false" />
+            <element signature="e#3972#3973#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -683,8 +769,22 @@
         <state relative-caret-position="2059">
           <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding>
-            <element signature="e#4018#4019#0" expanded="true" />
-            <element signature="e#4072#4073#0" expanded="true" />
+            <element signature="e#303#304#0" expanded="false" />
+            <element signature="e#331#332#0" expanded="false" />
+            <element signature="e#364#365#0" expanded="false" />
+            <element signature="e#394#395#0" expanded="false" />
+            <element signature="e#423#424#0" expanded="false" />
+            <element signature="e#452#453#0" expanded="false" />
+            <element signature="e#482#483#0" expanded="false" />
+            <element signature="e#512#513#0" expanded="false" />
+            <element signature="e#544#545#0" expanded="false" />
+            <element signature="e#576#577#0" expanded="false" />
+            <element signature="e#608#609#0" expanded="false" />
+            <element signature="e#640#641#0" expanded="false" />
+            <element signature="e#672#673#0" expanded="false" />
+            <element signature="e#701#702#0" expanded="false" />
+            <element signature="e#3917#3918#0" expanded="false" />
+            <element signature="e#3972#3973#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -717,20 +817,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick5/GUILife.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1618">
+        <state relative-caret-position="3770">
           <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4953#5099#0" expanded="true" />
-            <element signature="e#5098#5099#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/oop/tick5/GamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="16" column="54" lean-forward="false" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+        <state relative-caret-position="364">
+          <caret line="18" column="101" lean-forward="false" selection-start-line="18" selection-start-column="101" selection-end-line="18" selection-end-column="101" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
