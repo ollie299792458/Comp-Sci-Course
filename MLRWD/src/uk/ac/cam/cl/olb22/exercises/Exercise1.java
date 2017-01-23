@@ -76,6 +76,9 @@ public class Exercise1 implements IExercise1 {
     @Override
     public double calculateAccuracy(Map<Path, Sentiment> trueSentiments, Map<Path, Sentiment> predictedSentiments) {
         int correct = 0;
+        if (predictedSentiments == null) {
+            return 0;
+        }
         int total = predictedSentiments.size();
 
         for (Map.Entry<Path, Sentiment> predictedSentiment : predictedSentiments.entrySet()) {

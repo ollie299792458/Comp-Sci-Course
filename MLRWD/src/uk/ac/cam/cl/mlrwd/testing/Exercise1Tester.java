@@ -10,13 +10,14 @@ import uk.ac.cam.cl.mlrwd.exercises.sentiment_detection.DataPreparation1;
 import uk.ac.cam.cl.mlrwd.exercises.sentiment_detection.IExercise1;
 import uk.ac.cam.cl.mlrwd.exercises.sentiment_detection.Sentiment;
 
+import uk.ac.cam.cl.mlrwd.utils.DataSplit;
 import uk.ac.cam.cl.olb22.exercises.Exercise1;
 
 public class Exercise1Tester {
-	static final Path dataDirectory = Paths.get("data/task1/sentiment_dataset");
+	static final Path dataDirectory = Paths.get("data/topic1/sentiment_dataset");
 
 	public static void main(String[] args) throws IOException {
-		Path lexiconFile = Paths.get("data/task1/sentiment_lexicon");
+		Path lexiconFile = Paths.get("data/topic1/task1/sentiment_lexicon");
 
 		// Loading the dataset.
 		Path sentimentFile = dataDirectory.resolve("review_sentiment");
