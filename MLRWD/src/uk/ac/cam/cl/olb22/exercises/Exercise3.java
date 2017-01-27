@@ -30,10 +30,12 @@ public class Exercise3 {
         System.out.println("Sorted Tokens");
         ex.outputSortedTokens(sortedTokens, "data/topic1/task3/sorted_tokens.txt");
         System.out.println("Outputted Sorted Tokens");
+
         List<BestFit.Point> points = ex.getFirstNPoints(sortedTokens, 10000);
         System.out.println("Got Points");
         ChartPlotter.plotLines(points);
         System.out.println("Plotted Points");
+
         Set<String> words = new HashSet<>(
                 Arrays.asList(
                         new String[] {"engaging", "exceptional", "marvelous", "fantastic", "hilarious", "awful", "lackluster", "dreadful", "atrocious", "garbage"}));
@@ -44,15 +46,30 @@ public class Exercise3 {
         List<BestFit.Point> task1Points = ex.getFirstNPoints(task1SortedWords, task1SortedWords.size());
         ChartPlotter.plotLines(task1Points);
         System.out.println("Plotted Task 1 Frequencies");
+
         List<BestFit.Point> loglogPoints = ex.getLogLogPoints(points);
         System.out.println("Got log log points");
-        Map<BestFit.Point, Double> loglogLineOfBestFitMap = ex.getBestFitMap(loglogPoints);
-        BestFit.Line loglogPointsLineOfBestFit = BestFit.leastSquares(loglogLineOfBestFitMap);
+        Map<BestFit.Point, Double> loglogPointsLineOfBestFitMap = ex.getBestFitMap(loglogPoints);
+        BestFit.Line loglogPointsLineOfBestFit = BestFit.leastSquares(loglogPointsLineOfBestFitMap);
         List<BestFit.Point> loglogPointsLineOfBestFitPoints = ex.getPointsFromLineOfBestFine(loglogPointsLineOfBestFit, loglogPoints);
         System.out.println("Got log log line of best fit");
         ChartPlotter.plotLines(loglogPoints, loglogPointsLineOfBestFitPoints);
         System.out.println("Plotted log log points with line best fit");
+
+       //TODO List<Map.Entry<String, Integer>> task1ExpectedFrequencies = ex.getAllExpectedFrequencies(sortedTokens, loglogPointsLineOfBestFit);
+        System.out.println("Got Expected Frequencies");
+        System.out.println("Outputted Expected Frequencies");
+
         System.out.println("Done");
+    }
+
+
+    private double getExpectedFrequency(int rankToGuess, BestFit.Line loglogPointsLineOfBestFit) {
+        return Math.exp(getExpectedY(Math.log(rankToGuess), loglogPointsLineOfBestFit));
+    }
+
+    private double getExpectedY(double xGuess, BestFit.Line line) {
+        return line.gradient*xGuess+line.yIntercept;
     }
 
     private List<BestFit.Point> getPointsFromLineOfBestFine(BestFit.Line lineOfBestFit, List<BestFit.Point> points) {
