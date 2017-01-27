@@ -1,0 +1,10 @@
+fantastic 2044
+hilarious 1702
+awful 908
+engaging 554
+garbage 406
+exceptional 392
+marvelous 317
+lackluster 135
+dreadful 131
+atrocious 113
