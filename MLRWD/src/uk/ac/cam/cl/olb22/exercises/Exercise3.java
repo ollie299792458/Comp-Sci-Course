@@ -17,6 +17,7 @@ import java.util.*;
 public class Exercise3 {
 
     static final Path dataDirectory = Paths.get("data/topic1/large_dataset");
+    static final String outputFilePath = "data/topic1/task3/";
 
     public static void main(String[] args) throws IOException {
         Exercise3 ex = new Exercise3();
@@ -28,7 +29,7 @@ public class Exercise3 {
         System.out.println("Counted Tokens");
         List<Map.Entry<String, Integer>> sortedTokens = ex.sortTokens(countTokens);
         System.out.println("Sorted Tokens");
-        ex.outputSortedTokens(sortedTokens, "data/topic1/task3/sorted_tokens.txt");
+        ex.outputSortedIntegerTokens(sortedTokens, outputFilePath + "sorted_tokens.txt");
         System.out.println("Outputted Sorted Tokens");
 
         List<BestFit.Point> points = ex.getFirstNPoints(sortedTokens, 10000);
@@ -36,12 +37,12 @@ public class Exercise3 {
         ChartPlotter.plotLines(points);
         System.out.println("Plotted Points");
 
-        Set<String> words = new HashSet<>(
+        Set<String> wordsTask1 = new HashSet<>(
                 Arrays.asList(
                         new String[] {"engaging", "exceptional", "marvelous", "fantastic", "hilarious", "awful", "lackluster", "dreadful", "atrocious", "garbage"}));
-        List<Map.Entry<String, Integer>> task1SortedWords = ex.getTokensMatching(sortedTokens, words);
+        List<Map.Entry<String, Integer>> task1SortedWords = ex.getTokensMatchingInteger(sortedTokens, wordsTask1);
         System.out.println("Got Task 1 Frequencies");
-        ex.outputSortedTokens(task1SortedWords, "data/topic1/task3/sorted_tokens_task1.txt");
+        ex.outputSortedIntegerTokens(task1SortedWords, outputFilePath+ "sorted_tokens_task1.txt");
         System.out.println("Outputted Task 1 Frequencies");
         List<BestFit.Point> task1Points = ex.getFirstNPoints(task1SortedWords, task1SortedWords.size());
         ChartPlotter.plotLines(task1Points);
@@ -56,11 +57,59 @@ public class Exercise3 {
         ChartPlotter.plotLines(loglogPoints, loglogPointsLineOfBestFitPoints);
         System.out.println("Plotted log log points with line best fit");
 
-       //TODO List<Map.Entry<String, Integer>> task1ExpectedFrequencies = ex.getAllExpectedFrequencies(sortedTokens, loglogPointsLineOfBestFit);
+        List<BestFit.Point> expectedFrequencies = ex.getAllExpectedFrequencies(loglogPoints, loglogPointsLineOfBestFit);
+        List<Map.Entry<String, Double>> task1ExpectedFrequenciesByWord = ex.getTokensMatchingDouble(ex.groupPointsByWord(sortedTokens, points), wordsTask1);
         System.out.println("Got Expected Frequencies");
+        ex.outputSortedDoubleTokens(task1ExpectedFrequenciesByWord, outputFilePath+ "expected_freq_tokens_task1.txt");
         System.out.println("Outputted Expected Frequencies");
 
+        System.out.println("Estimated k: "+ Math.exp(loglogPointsLineOfBestFit.yIntercept)+", and alpha: "+ (-loglogPointsLineOfBestFit.gradient));
+
+        List<BestFit.Point> heapsLawPoints = ex.getHeapsLawPoints(tokens);
+        List<BestFit.Point> loglogHeapsLawPoints = ex.getLogLogPoints(heapsLawPoints);
+        System.out.println("Got heaps law calculations");
+        ChartPlotter.plotLines(loglogHeapsLawPoints);
+        System.out.println("Plotted heaps law");
+
         System.out.println("Done");
+    }
+
+    private List<BestFit.Point> getHeapsLawPoints(List<String> tokens) {
+        List<BestFit.Point> result = new LinkedList<>();
+        Set<String> uniqueWords = new HashSet<>();
+        int pow2 = 0;
+        long nextcheck = (int) Math.pow(2.0, pow2);
+        int wordCount = 0;
+        for (String token : tokens) {
+            wordCount ++;
+            uniqueWords.add(token);
+            if (wordCount == nextcheck) {
+                result.add(new BestFit.Point(Math.pow(2,pow2),uniqueWords.size()));
+                pow2++;
+                nextcheck = (long) Math.pow(2.0, pow2);
+            }
+        }
+        return result;
+    }
+
+    private List<Map.Entry<String,Double>> groupPointsByWord(List<Map.Entry<String, Integer>> tokens, List<BestFit.Point> points) {
+        List<Map.Entry<String, Double>> result = new LinkedList<>();
+        int max = tokens.size();
+        if (points.size()<tokens.size()) {
+            max = points.size();
+        }
+        for (int i = 0; i < max; i++) {
+            result.add(new AbstractMap.SimpleEntry<String, Double>(tokens.get(i).getKey(), points.get(i).y));
+        }
+        return result;
+    }
+
+    private List<BestFit.Point> getAllExpectedFrequencies(List<BestFit.Point> points, BestFit.Line line) {
+        List<BestFit.Point> result = new ArrayList<>(points.size());
+        for (BestFit.Point point : points) {
+            result.add(new BestFit.Point(point.x, getExpectedY(point.x, line)));
+        }
+        return result;
     }
 
 
@@ -68,8 +117,8 @@ public class Exercise3 {
         return Math.exp(getExpectedY(Math.log(rankToGuess), loglogPointsLineOfBestFit));
     }
 
-    private double getExpectedY(double xGuess, BestFit.Line line) {
-        return line.gradient*xGuess+line.yIntercept;
+    private double getExpectedY(double x, BestFit.Line line) {
+        return line.gradient*x+line.yIntercept;
     }
 
     private List<BestFit.Point> getPointsFromLineOfBestFine(BestFit.Line lineOfBestFit, List<BestFit.Point> points) {
@@ -97,7 +146,17 @@ public class Exercise3 {
         return result;
     }
 
-    private List<Map.Entry<String,Integer>> getTokensMatching(List<Map.Entry<String, Integer>> sortedTokens, Set<String> words) {
+    private List<Map.Entry<String, Double>> getTokensMatchingDouble(List<Map.Entry<String, Double>> sortedTokens, Set<String> words) {
+        List<Map.Entry<String, Double>> result = new ArrayList<>(words.size());
+        for (Map.Entry<String , Double> entry : sortedTokens) {
+            if (words.contains(entry.getKey())) {
+                result.add(entry);
+            }
+        }
+        return result;
+    }
+
+    private List<Map.Entry<String, Integer>> getTokensMatchingInteger(List<Map.Entry<String, Integer>> sortedTokens, Set<String> words) {
         List<Map.Entry<String, Integer>> result = new ArrayList<>(words.size());
         for (Map.Entry<String , Integer> entry : sortedTokens) {
             if (words.contains(entry.getKey())) {
@@ -107,7 +166,15 @@ public class Exercise3 {
         return result;
     }
 
-    private void outputSortedTokens(List<Map.Entry<String, Integer>> sortedTokens, String fileName) throws IOException {
+    private void outputSortedIntegerTokens(List<Map.Entry<String, Integer>> sortedTokens, String fileName) throws IOException {
+        List<String> lines = new ArrayList<>(sortedTokens.size());
+        for (Map.Entry entry : sortedTokens) {
+            lines.add(entry.getKey() + " " + String.valueOf(entry.getValue()));
+        }
+        Files.write(Paths.get(fileName), lines);
+    }
+
+    private void outputSortedDoubleTokens(List<Map.Entry<String, Double>> sortedTokens, String fileName) throws IOException {
         List<String> lines = new ArrayList<>(sortedTokens.size());
         for (Map.Entry entry : sortedTokens) {
             lines.add(entry.getKey() + " " + String.valueOf(entry.getValue()));
