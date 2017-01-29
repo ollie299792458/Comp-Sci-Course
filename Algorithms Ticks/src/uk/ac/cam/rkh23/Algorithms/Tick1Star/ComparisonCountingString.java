@@ -4,6 +4,7 @@ public class ComparisonCountingString implements Comparable< ComparisonCountingS
 
     // State to track the number of comparisons since reset
     private static int sCompCount=0;
+    private int compCount = 0;
 
     // The String value we are wrapping
     private String mString=null;
@@ -13,12 +14,15 @@ public class ComparisonCountingString implements Comparable< ComparisonCountingS
 
     public static int getComparisonCount() { return sCompCount;}
 
+    public int getCompCount() {return compCount;};
+
     public static void resetComparisonCount() { sCompCount=0;}
 
     @Override
     public int compareTo(ComparisonCountingString o) {
         // Add to the comparison count
         sCompCount++;
+        compCount++;
         // Just pass on the comparison
         //System.out.println(o.mString+" v "+this.mString);
         return mString.compareTo(o.mString);
