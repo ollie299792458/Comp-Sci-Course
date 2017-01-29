@@ -1,17 +1,19 @@
 package uk.ac.cam.olb22.algorithms.tick1star;
 
 import uk.ac.cam.rkh23.Algorithms.Tick1.EmptyHeapException;
+import uk.ac.cam.rkh23.Algorithms.Tick1Star.ComparisonCountingString;
 import uk.ac.cam.rkh23.Algorithms.Tick1Star.MaxHeapInterface;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
  * Created by oliver on 28/01/17.
  */
 public class MaxHeap<T extends Comparable<T>> implements MaxHeapInterface {
-    private List<T> heap = new ArrayList<T>();
+    protected List<T> heap = new ArrayList<T>();
 
     public MaxHeap(List<T> l) {
         for (T o : l) {
@@ -34,14 +36,26 @@ public class MaxHeap<T extends Comparable<T>> implements MaxHeapInterface {
     }
 
     @Override
-    public void insert(T o) {
-        heap.add(o);
+    public void insert(Comparable o) {
+        heap.add((T) o);
         shiftUp(heap.size()-1);
     }
 
+    private int getParentIndex(int i) {
+        return (i-1)/2;
+    }
+
+    private int getLeftChildIndex(int i) {
+        return 2*i + 1;
+    }
+
+    private int getRightChildIndex(int i) {
+        return 2*i + 2;
+    }
+
     private void siftDown(int ki) {
-        int kl = 2*ki + 1;
-        int kr = 2*ki + 2;
+        int kl = getLeftChildIndex(ki);
+        int kr = getRightChildIndex(ki);
         int km = 0;
         if (kr >= heap.size()) {
             if (kl >= heap.size()) {
@@ -66,7 +80,7 @@ public class MaxHeap<T extends Comparable<T>> implements MaxHeapInterface {
 
     private void shiftUp(int ki) {
         if (ki != 0) {
-            int kp = (ki-1)/2;
+            int kp = getParentIndex(ki);
             while (heap.get(kp).compareTo(heap.get(ki)) < 0) {
                 T ty = heap.get(kp);
                 heap.set(kp, heap.get(ki));
@@ -82,19 +96,20 @@ public class MaxHeap<T extends Comparable<T>> implements MaxHeapInterface {
     }
 
     public static void main(String[] args) throws EmptyHeapException {
-        MaxHeap<Character> testCharHeap = new MaxHeap(Arrays.asList("123456".toCharArray()));
+        List<ComparisonCountingString> list = new ArrayList<>();
+        list.add(new ComparisonCountingString("a"));
+        list.add(new ComparisonCountingString("b"));
+        list.add(new ComparisonCountingString("c"));
+        list.add(new ComparisonCountingString("d"));
+        list.add(new ComparisonCountingString("e"));
+        list.add(new ComparisonCountingString("f"));
+        list.add(new ComparisonCountingString("g"));
+        MaxHeap<ComparisonCountingString> testCharHeap = new MaxHeap<ComparisonCountingString>(list);
         System.out.println(testCharHeap.heap);
         int length = testCharHeap.getLength();
         for (int i = 0; i < length; i++) {
             System.out.println(testCharHeap.getMax());
         }
-        testCharHeap.insert('F');
-        testCharHeap.insert('G');
-        testCharHeap.insert('d');
-        System.out.println(testCharHeap.heap);
-        length = testCharHeap.getLength();
-        for (int i = 0; i < length; i++) {
-            System.out.println(testCharHeap.getMax());
-        }
+        System.out.println(ComparisonCountingString.getComparisonCount());
     }
 }
