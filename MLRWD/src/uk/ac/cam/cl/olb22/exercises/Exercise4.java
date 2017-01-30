@@ -28,6 +28,7 @@ public class Exercise4 implements IExercise4 {
             String name = null;
             Sentiment sentiment = null;
             boolean strong = false;
+            boolean weak = false;
             for (String equation : splitSpace) {
                 String[] words = equation.split("=");
                 if (equation.startsWith("word1=")) {
@@ -41,14 +42,20 @@ public class Exercise4 implements IExercise4 {
                 } else if (equation.startsWith("type=")) {
                     if (words[1].equals("strongsubj")) {
                         strong = true;
+                    } else if (words[1].equals("weaksubj")) {
+                        weak = true;
                     }
                 }
             }
             if (sentiment != null) {
                 lexiconSentiment.put(name, sentiment);
-            }
-            if (strong) {
-                lexiconStrong.add(name);
+                if (strong) {
+                    lexiconStrong.add(name);
+                } else if (weak) {
+                    if (lexiconStrong.contains(name)) {
+                        lexiconStrong.remove(name);
+                    }
+                }
             }
         }
 
