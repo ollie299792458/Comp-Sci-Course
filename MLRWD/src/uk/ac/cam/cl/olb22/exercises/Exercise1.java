@@ -16,7 +16,7 @@ import java.util.Set;
 public class Exercise1 implements IExercise1 {
     @Override
     public Map<Path, Sentiment> simpleClassifier(Set<Path> testSet, Path lexiconFile) throws IOException {
-        Map<String, Sentiment> lexicon = new HashMap<>();
+        Map<String, Sentiment> lexiconSentiment = new HashMap<>();
 
         BufferedReader reader = new BufferedReader(new FileReader(lexiconFile.toFile()));
         String line = null;
@@ -25,22 +25,19 @@ public class Exercise1 implements IExercise1 {
             String name = null;
             Sentiment sentiment = null;
             for (String equation : splitSpace) {
-                boolean polarity = false;
-                if (equation.startsWith("word1=")||(polarity = equation.startsWith("priorpolarity="))) {
-                    String[] words = equation.split("=");
-                    if (polarity) {
-                        if (words[1].equals("positive")){
-                            sentiment = Sentiment.POSITIVE;
-                        } else if (words[1].equals("negative")){
-                            sentiment = Sentiment.NEGATIVE;
-                        }
-                    } else {
-                        name = words[1];
+                String[] words = equation.split("=");
+                if (equation.startsWith("word1=")) {
+                    name = words[1];
+                } else if (equation.startsWith("priorpolarity=")) {
+                    if (words[1].equals("positive")) {
+                        sentiment = Sentiment.POSITIVE;
+                    } else if (words[1].equals("negative")) {
+                        sentiment = Sentiment.NEGATIVE;
                     }
                 }
             }
             if (sentiment != null) {
-                lexicon.put(name, sentiment);
+                lexiconSentiment.put(name, sentiment);
             }
         }
 
@@ -51,8 +48,8 @@ public class Exercise1 implements IExercise1 {
             int posScore = 0;
             int negScore = 0;
             for (String token : tokens) {
-                if (lexicon.containsKey(token)) {
-                    Sentiment sentiment = lexicon.get(token);
+                if (lexiconSentiment.containsKey(token)) {
+                    Sentiment sentiment = lexiconSentiment.get(token);
                     switch (sentiment) {
                         case POSITIVE:
                             posScore++;
