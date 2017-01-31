@@ -19,19 +19,25 @@ public class BottomUpMaxHeap<T extends Comparable<T>> extends MaxHeap<T> {
         if (heap.size() == 0) {
             throw new EmptyHeapException();
         }
+        //swap end element with root
         T oldMax = heap.get(0);
-        heap.set(0, heap.get(heap.size()-1));
+        swap(0,heap.size()-1);
         heap.remove(heap.size()-1);
-        if (heap.size() != 0) {
+
+        if (heap.size() > 1) {
+            //walk down the tree
             T newRoot = heap.get(0);
             int lIndex = 0;
+            //if after end stop
             while (heap.size() > getRightChildIndex(lIndex)) {
+                //choose left or right
                 if (heap.get(getLeftChildIndex(lIndex)).compareTo(heap.get(getRightChildIndex(lIndex))) >= 0) {
                     lIndex = getLeftChildIndex(lIndex);
                 } else {
                     lIndex = getRightChildIndex(lIndex);
                 }
             }
+            //check not left child only
             if (heap.size() > getLeftChildIndex(lIndex)) {
                 lIndex = getLeftChildIndex(lIndex);
             }
@@ -69,6 +75,12 @@ public class BottomUpMaxHeap<T extends Comparable<T>> extends MaxHeap<T> {
         return 2*i + 2;
     }
 
+    private void swap (int i1, int i2) {
+        T temp = heap.get(i1);
+        heap.set(i1, heap.get(i2));
+        heap.set(i2, temp);
+    }
+
     public static void main(String[] args) throws EmptyHeapException {
         List<ComparisonCountingString> list = new ArrayList<>();
         list.add(new ComparisonCountingString("c"));
@@ -80,6 +92,7 @@ public class BottomUpMaxHeap<T extends Comparable<T>> extends MaxHeap<T> {
         list.add(new ComparisonCountingString("w"));
         list.add(new ComparisonCountingString("h"));
         list.add(new ComparisonCountingString("k"));
+
         /*list.add(new ComparisonCountingString("a"));
         list.add(new ComparisonCountingString("z"));
         list.add(new ComparisonCountingString("b"));
@@ -109,8 +122,13 @@ public class BottomUpMaxHeap<T extends Comparable<T>> extends MaxHeap<T> {
         BottomUpMaxHeap<ComparisonCountingString> testCharHeap = new BottomUpMaxHeap<>(list);
         System.out.println(testCharHeap.heap);
         System.out.println(ComparisonCountingString.getComparisonCount());
+        for (ComparisonCountingString string : testCharHeap.heap) {
+            System.out.print(string + " " + string.getCompCount()+" ");
+        }
+        System.out.println();
         int length = testCharHeap.getLength();
         for (int i = 0; i < length; i++) {
+            System.out.println(testCharHeap.heap);
             System.out.println(testCharHeap.getMax());
         }
         System.out.println(ComparisonCountingString.getComparisonCount());

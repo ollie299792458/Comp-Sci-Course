@@ -18,46 +18,41 @@ import java.util.*;
 public class Exercise4 implements IExercise4 {
     @Override
     public Map<Path, Sentiment> magnitudeClassifier(Set<Path> testSet, Path lexiconFile) throws IOException {
-        Map<String, Sentiment> lexiconSentiment = new HashMap<>();
-        Set<String> lexiconStrong = new HashSet<>();
+        Map<String, WeightedSentiment> lexiconSentiment = new HashMap<>();
 
         BufferedReader reader = new BufferedReader(new FileReader(lexiconFile.toFile()));
         String line = null;
         while ((line = reader.readLine()) != null) {
             String[] splitSpace = line.split(" ");
-            String name = null;
-            Sentiment sentiment = null;
-            boolean strong = false;
-            boolean weak = false;
+            String name = "";
+            String polarity = "";
+            String weight = "";
             for (String equation : splitSpace) {
                 String[] words = equation.split("=");
                 if (equation.startsWith("word1=")) {
                     name = words[1];
                 } else if (equation.startsWith("priorpolarity=")) {
-                    if (words[1].equals("positive")){
-                        sentiment = Sentiment.POSITIVE;
-                    } else if (words[1].equals("negative")){
-                        sentiment = Sentiment.NEGATIVE;
-                    }
+                    polarity = words[1];
                 } else if (equation.startsWith("type=")) {
-                    if (words[1].equals("strongsubj")) {
-                        strong = true;
-                    } else if (words[1].equals("weaksubj")) {
-                        weak = true;
-                    }
+                    weight = words[1];
                 }
             }
+            WeightedSentiment sentiment = null;
+            if (polarity.equals("positive") && weight.equals("strongsubj")) {
+                sentiment = WeightedSentiment.HPOS;
+            } else if (polarity.equals("positive") && weight.equals("weaksubj")) {
+                sentiment = WeightedSentiment.POS;
+            } else if (polarity.equals("negative") && weight.equals("weaksubj")) {
+                sentiment = WeightedSentiment.NEG;
+            } else if (polarity.equals("negative") && weight.equals("strongsubj")) {
+                sentiment = WeightedSentiment.HNEG;
+            }
+
             if (sentiment != null) {
                 lexiconSentiment.put(name, sentiment);
-                if (strong) {
-                    lexiconStrong.add(name);
-                } else if (weak) {
-                    if (lexiconStrong.contains(name)) {
-                        lexiconStrong.remove(name);
-                    }
-                }
             }
         }
+        reader.close();
 
         Map<Path, Sentiment> calculatedSentiments = new HashMap<>(testSet.size());
 
@@ -67,19 +62,19 @@ public class Exercise4 implements IExercise4 {
             int negScore = 0;
             for (String token : tokens) {
                 if (lexiconSentiment.containsKey(token)) {
-                    Sentiment sentiment = lexiconSentiment.get(token);
+                    WeightedSentiment sentiment = lexiconSentiment.get(token);
                     switch (sentiment) {
-                        case POSITIVE:
-                            if (lexiconStrong.contains(token)) {
-                                posScore++;
-                            }
+                        case POS:
                             posScore++;
                             break;
-                        case NEGATIVE:
-                            if (lexiconStrong.contains(token)) {
-                                negScore++;
-                            }
+                        case HPOS:
+                            posScore+=2;
+                            break;
+                        case NEG:
                             negScore++;
+                            break;
+                        case HNEG:
+                            negScore+=2;
                             break;
                     }
                 }
@@ -125,5 +120,9 @@ public class Exercise4 implements IExercise4 {
                     .divide(BigDecimal.valueOf(k+1));
         }
         return ret;
+    }
+
+    private enum WeightedSentiment {
+        POS, NEG, HPOS, HNEG;
     }
 }

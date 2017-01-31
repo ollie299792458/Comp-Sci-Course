@@ -14,7 +14,7 @@ public class ComparisonCountingString implements Comparable< ComparisonCountingS
 
     public static int getComparisonCount() { return sCompCount;}
 
-    public int getCompCount() {return compCount;};
+    public int getCompCount() { return compCount; }
 
     public static void resetComparisonCount() { sCompCount=0;}
 
@@ -24,7 +24,7 @@ public class ComparisonCountingString implements Comparable< ComparisonCountingS
         sCompCount++;
         compCount++;
         // Just pass on the comparison
-        //System.out.println(o.mString+" v "+this.mString);
+        System.out.println(o.mString+" v "+this.mString);
         return mString.compareTo(o.mString);
     }
 

@@ -63,20 +63,24 @@ public class MaxHeap<T extends Comparable<T>> implements MaxHeapInterface {
     private void siftDown(int ki) {
         int kl = getLeftChildIndex(ki);
         int kr = getRightChildIndex(ki);
-        int km = 0;
         if (kr >= heap.size()) {
-            if (!(kl >= heap.size())) {
-                km = kl;
-                if (heap.get(ki).compareTo(heap.get(km)) < 0) {
-                    swap(km, ki);
+            if (kl >= heap.size()) {
+                //Done, ki is at the bottom
+            } else {
+                if (heap.get(ki).compareTo(heap.get(kl)) < 0) {
+                    //if the left child is too small, swap them
+                    swap(kl, ki);
                 }
             }
         } else {
+            int km = 0;
+            //set km to the largest of kr and kl
             if (heap.get(kl).compareTo(heap.get(kr)) >= 0) {
                 km = kl;
             } else {
                 km = kr;
             }
+            //if the largest is larger than the parent, swap it and recurse.
             if (heap.get(ki).compareTo(heap.get(km)) < 0) {
                 swap(km,ki);
                 siftDown(km);
@@ -87,7 +91,7 @@ public class MaxHeap<T extends Comparable<T>> implements MaxHeapInterface {
     private void shiftUp(int ki) {
         if (ki != 0) {
             int kp = getParentIndex(ki);
-            while (heap.get(kp).compareTo(heap.get(ki)) < 0) {
+            if (heap.get(kp).compareTo(heap.get(ki)) < 0) {
                 swap(ki,kp);
                 shiftUp(kp);
             }
