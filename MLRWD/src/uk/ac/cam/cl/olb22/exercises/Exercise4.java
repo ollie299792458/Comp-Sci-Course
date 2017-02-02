@@ -103,23 +103,37 @@ public class Exercise4 implements IExercise4 {
                 minuss++;
             }
         }
-        int n = pluss+minuss+nulls;
-        int k = Math.min(pluss, minuss) + nulls/2;
-        double q = 0.5;
-        double p = 0;
+        assert classificationA.size()==classificationB.size()&&classificationB.size()==actualSentiments.size()&&pluss+minuss+nulls==actualSentiments.size();
+
+        //get half null and round up
+        int halfNull = (int) Math.ceil((double) nulls/2);
+        //get n and k
+        int n = pluss+minuss+2*halfNull;
+        int k = Math.min(pluss, minuss) + halfNull;
+        //get q and initial p
+        BigDecimal q = BigDecimal.valueOf(0.5);
+        BigDecimal p = BigDecimal.ZERO;
+        //get q to the power of n
+        BigDecimal qpart = q.pow(n);
+
         for (int i = 0; i<=k; i++) {
-            p += (binomial(n,i).multiply(BigDecimal.valueOf(2*Math.pow(q,i)*Math.pow(1-q,n-i)))).doubleValue();
+            //get n choose i, combinations method works
+            BigDecimal combinations = new BigDecimal(combinations(n,i));
+            //add it to the total
+            p = p.add(combinations.multiply(qpart));
         }
-        return p;
+        //multiply by two
+        p = p.multiply(BigDecimal.valueOf(2));
+        return 1-p.doubleValue();
     }
 
-    private static BigDecimal binomial(final int N, final int K) {
-        BigDecimal ret = BigDecimal.ONE;
+    private static BigInteger combinations(final int N, final int K) {
+        BigInteger res = BigInteger.ONE;
         for (int k = 0; k < K; k++) {
-            ret = ret.multiply(BigDecimal.valueOf(N-k))
-                    .divide(BigDecimal.valueOf(k+1));
+            res = res.multiply(BigInteger.valueOf(N-k))
+                    .divide(BigInteger.valueOf(k+1));
         }
-        return ret;
+        return res;
     }
 
     private enum WeightedSentiment {
