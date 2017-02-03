@@ -124,7 +124,7 @@ public class Exercise4 implements IExercise4 {
         }
         //multiply by two
         p = p.multiply(BigDecimal.valueOf(2));
-        return 1-p.doubleValue();
+        return p.doubleValue();
     }
 
     private static BigInteger combinations(final int N, final int K) {

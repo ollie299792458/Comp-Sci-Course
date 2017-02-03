@@ -12,16 +12,16 @@ import uk.ac.cam.cl.mlrwd.exercises.sentiment_detection.IExercise2;
 import uk.ac.cam.cl.mlrwd.exercises.sentiment_detection.IExercise5;
 import uk.ac.cam.cl.mlrwd.exercises.sentiment_detection.Sentiment;
 
-//TODO: Replace with your package.
-import uk.ac.cam.cl.emm68.exercises.Exercise1;
-import uk.ac.cam.cl.emm68.exercises.Exercise2;
-import uk.ac.cam.cl.emm68.exercises.Exercise5;
+//DONE: Replace with your package.
+import uk.ac.cam.cl.olb22.exercises.Exercise1;
+import uk.ac.cam.cl.olb22.exercises.Exercise2;
+import uk.ac.cam.cl.olb22.exercises.Exercise5;
 
 public class Exercise5Tester {
 
-	static final Path dataDirectory = Paths.get("data/sentiment_dataset");
-	static final Path testDirectory = Paths.get("data/sentiment_test_set");
-	static final Path newDataDirectory = Paths.get("data/year_2016_dataset");
+	static final Path dataDirectory = Paths.get("data/topic1/sentiment_dataset");
+	static final Path testDirectory = Paths.get("data/topic1/task5/sentiment_test_set");
+	static final Path newDataDirectory = Paths.get("data/topic1/task5/year_2016_dataset");
 	static final int seed = 0;
 
 	public static void main(String[] args) throws IOException {

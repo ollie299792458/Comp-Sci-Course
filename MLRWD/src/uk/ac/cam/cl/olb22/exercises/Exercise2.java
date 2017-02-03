@@ -150,7 +150,7 @@ public class Exercise2 implements IExercise2 {
                     positive = positive + tokenLogProbs.get(token).get(Sentiment.POSITIVE);
                     negative = negative + tokenLogProbs.get(token).get(Sentiment.NEGATIVE);
                 } else {
-                    //TODO
+                    //DONE T0D0
                 }
             }
 

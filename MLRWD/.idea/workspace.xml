@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7df2f01f-b9fb-4ad2-baf8-89a56669d299" name="Default" comment="" />
+    <list default="true" id="7df2f01f-b9fb-4ad2-baf8-89a56669d299" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/testing/Exercise4Tester.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/testing/Exercise4Tester.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/testing/Exercise5Tester.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/testing/Exercise5Tester.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/exercises/Exercise2.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/exercises/Exercise2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/exercises/Exercise4.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/exercises/Exercise4.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/exercises/Exercise5.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/exercises/Exercise5.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,31 +23,35 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="DataPreparation1.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/exercises/sentiment_detection/DataPreparation1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="754">
-              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IExercise4.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/exercises/sentiment_detection/IExercise4.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1073">
-              <caret line="40" column="1" lean-forward="false" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IExercise1.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/exercises/sentiment_detection/IExercise1.java">
+      <file leaf-file-name="Exercise5Tester.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/testing/Exercise5Tester.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="551">
-              <caret line="22" column="40" lean-forward="false" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+              <caret line="58" column="8" lean-forward="false" selection-start-line="58" selection-start-column="8" selection-end-line="62" selection-end-column="113" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Exercise5.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/exercises/Exercise5.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="742">
+              <caret line="157" column="53" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Exercise1Tester.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/testing/Exercise1Tester.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="18" column="63" lean-forward="true" selection-start-line="18" selection-start-column="63" selection-end-line="19" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -49,8 +60,8 @@
       <file leaf-file-name="Exercise4.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/exercises/Exercise4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="734">
-              <caret line="125" column="46" lean-forward="true" selection-start-line="125" selection-start-column="46" selection-end-line="125" selection-end-column="46" />
+            <state relative-caret-position="624">
+              <caret line="103" column="13" lean-forward="true" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,8 +72,8 @@
       <file leaf-file-name="Exercise4Tester.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/testing/Exercise4Tester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="30" column="56" lean-forward="false" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+            <state relative-caret-position="426">
+              <caret line="59" column="8" lean-forward="false" selection-start-line="59" selection-start-column="8" selection-end-line="62" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,31 +81,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Exercise1.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/exercises/Exercise1.java">
+      <file leaf-file-name="Exercise2Tester.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/testing/Exercise2Tester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1479">
-              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+            <state relative-caret-position="-290">
+              <caret line="38" column="64" lean-forward="true" selection-start-line="38" selection-start-column="64" selection-end-line="38" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sentiment_lexicon" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/topic1/task1/sentiment_lexicon">
+      <file leaf-file-name="IExercise5.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/exercises/sentiment_detection/IExercise5.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Exercise3.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/exercises/Exercise3.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1711">
-              <caret line="68" column="63" lean-forward="false" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="63" />
+            <state relative-caret-position="-1172">
+              <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,13 +130,15 @@
       <list>
         <option value="$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/testing/Exercise1Tester.java" />
         <option value="$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/testing/Exercise2Tester.java" />
-        <option value="$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/exercises/Exercise2.java" />
         <option value="$PROJECT_DIR$/data/topic1/task3/sorted_tokens.txt" />
         <option value="$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/exercises/Exercise3.java" />
         <option value="$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/exercises/sentiment_detection/IExercise4.java" />
         <option value="$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/exercises/Exercise1.java" />
-        <option value="$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/testing/Exercise4Tester.java" />
+        <option value="$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/testing/Exercise5Tester.java" />
+        <option value="$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/exercises/Exercise2.java" />
         <option value="$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/exercises/Exercise4.java" />
+        <option value="$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/testing/Exercise4Tester.java" />
+        <option value="$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/exercises/Exercise5.java" />
       </list>
     </option>
   </component>
@@ -354,7 +357,7 @@
       <recent name="$PROJECT_DIR$/data/topic1/task1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Exercise4Tester">
+  <component name="RunManager" selected="Application.Exercise5">
     <configuration default="false" name="Exercise1Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -395,14 +398,14 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Exercise3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Exercise4Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="uk.ac.cam.cl.olb22.exercises.*" />
+          <option name="PATTERN" value="uk.ac.cam.cl.mlrwd.testing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="uk.ac.cam.cl.olb22.exercises.Exercise3" />
+      <option name="MAIN_CLASS_NAME" value="uk.ac.cam.cl.mlrwd.testing.Exercise4Tester" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -415,14 +418,34 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Exercise4Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Exercise5Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="uk.ac.cam.cl.mlrwd.testing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="uk.ac.cam.cl.mlrwd.testing.Exercise4Tester" />
+      <option name="MAIN_CLASS_NAME" value="uk.ac.cam.cl.mlrwd.testing.Exercise5Tester" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="MLRWD" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Exercise5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="uk.ac.cam.cl.olb22.exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="uk.ac.cam.cl.olb22.exercises.Exercise5" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -639,18 +662,20 @@
       <listeners />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Exercise1Tester" />
       <item index="1" class="java.lang.String" itemvalue="Application.Exercise2Tester" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Exercise3" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Exercise4Tester" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Exercise4Tester" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Exercise5Tester" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Exercise5" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.Exercise4Tester" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Exercise1Tester" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Exercise2Tester" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Exercise3" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.Exercise5" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Exercise5Tester" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Exercise4Tester" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Exercise1Tester" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Exercise2Tester" />
       </list>
     </recent_temporary>
   </component>
@@ -670,25 +695,36 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="0" y="60" width="3200" height="1740" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952252" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885003" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32548755" sideWeight="0.50128615" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32548755" sideWeight="0.49871382" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32548755" sideWeight="0.49871382" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23279743" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952252" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24983923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -699,9 +735,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885003" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952252" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -739,7 +773,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="21" />
+      <option name="time" value="24" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -786,9 +820,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
           <caret line="30" column="56" lean-forward="false" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -838,9 +870,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
           <caret line="30" column="76" lean-forward="false" selection-start-line="30" selection-start-column="76" selection-end-line="30" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -896,14 +926,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/exercises/sentiment_detection/IExercise4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1073">
-          <caret line="40" column="1" lean-forward="false" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/exercises/sentiment_detection/IExercise1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
@@ -949,16 +971,92 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-215">
           <caret line="30" column="76" lean-forward="false" selection-start-line="30" selection-start-column="76" selection-end-line="30" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/exercises/Exercise2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="141" column="35" lean-forward="true" selection-start-line="141" selection-start-column="34" selection-end-line="161" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_101/src.zip!/java/util/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="639" column="21" lean-forward="false" selection-start-line="639" selection-start-column="21" selection-end-line="639" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/exercises/sentiment_detection/IExercise4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="40" column="1" lean-forward="false" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/testing/Exercise2Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-290">
+          <caret line="38" column="64" lean-forward="true" selection-start-line="38" selection-start-column="64" selection-end-line="38" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/exercises/sentiment_detection/IExercise5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1172">
+          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/exercises/sentiment_detection/IExercise2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/testing/Exercise1Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="18" column="63" lean-forward="true" selection-start-line="18" selection-start-column="63" selection-end-line="19" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/testing/Exercise4Tester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="30" column="56" lean-forward="false" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+        <state relative-caret-position="426">
+          <caret line="59" column="8" lean-forward="false" selection-start-line="59" selection-start-column="8" selection-end-line="62" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/mlrwd/testing/Exercise5Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="58" column="8" lean-forward="false" selection-start-line="58" selection-start-column="8" selection-end-line="62" selection-end-column="113" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/exercises/Exercise5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="157" column="53" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -967,8 +1065,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/exercises/Exercise4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="734">
-          <caret line="125" column="46" lean-forward="true" selection-start-line="125" selection-start-column="46" selection-end-line="125" selection-end-column="46" />
+        <state relative-caret-position="624">
+          <caret line="103" column="13" lean-forward="true" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
