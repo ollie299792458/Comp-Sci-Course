@@ -146,7 +146,7 @@ public class Exercise6 implements IExercise6 {
 
                 Map<Sentiment, Integer> internalMap = result.getOrDefault(entry.getKey(), new HashMap<>(2));
 
-                if (internalMap.getOrDefault(entry.getValue(), -1) == -1) {
+                if (!   internalMap.containsKey(entry.getValue())) {
                     internalMap.put(entry.getValue(), 0);
                 }
 
@@ -161,41 +161,55 @@ public class Exercise6 implements IExercise6 {
     @Override
     public double kappa(Map<Integer, Map<Sentiment, Integer>> agreementTable) {
         final int bigN = agreementTable.size();
-        final Map<Integer, Integer> totalIs = new HashMap<>(agreementTable.size());
+
+        Map<Integer, Integer> totalIs = new HashMap<>(agreementTable.size());
+
         for (Map.Entry<Integer, Map<Sentiment, Integer>> iEntry : agreementTable.entrySet()) {
             Map<Sentiment, Integer> iEntryMap = iEntry.getValue();
             int totalI = 0;
             for (Sentiment sentiment: Sentiment.values()) {
-                totalI += iEntryMap.get(sentiment);
+                totalI += iEntryMap.getOrDefault(sentiment, 0);
             }
             totalIs.put(iEntry.getKey(), totalI);
         }
 
-
         double pe = 0;
         for (Sentiment j: Sentiment.values()) {
             double peinside = 0;
+
             for (Map.Entry<Integer, Map<Sentiment, Integer>> innerEntry : agreementTable.entrySet()) {
                 Map<Sentiment, Integer> innerMap = innerEntry.getValue();
-                double nij = innerMap.getOrDefault(j,0);
-                peinside += nij / (double) totalIs.get(innerEntry.getKey());
+
+                if (innerMap.containsKey(j) && totalIs.containsKey(innerEntry.getKey())) {
+                    double nij = innerMap.get(j);
+                    double ni = totalIs.get(innerEntry.getKey());
+                    peinside += nij / ni;
+                }
             }
             pe += Math.pow(peinside/(double) bigN, 2);
         }
 
-
         double pa = 0;
         for (Map.Entry<Integer, Map<Sentiment, Integer>> innerEntry : agreementTable.entrySet()) {
             double painside = 0;
+
             for (Sentiment j : Sentiment.values()) {
-                painside += innerEntry.getValue().get(j)*(innerEntry.getValue().get(j)-1);
+                Map<Sentiment, Integer> innerMap = innerEntry.getValue();
+
+                if (innerMap.containsKey(j)) {
+                    double nij = innerMap.get(j);
+                    painside += nij * (nij - 1);
+                }
             }
-            pa += painside/((double) totalIs.get(innerEntry.getKey())*((double) totalIs.get(innerEntry.getKey())-1));
+
+            if (totalIs.containsKey(innerEntry.getKey())) {
+                double ni = totalIs.get(innerEntry.getKey());
+                pa += painside / (ni * (ni - 1));
+            }
         }
-        pa = (1/(double) bigN)*pa;
+        pa = (pa/(double) bigN);
 
-
-        double kappa = (pa - pe)/(1.0 - pe);
+        final double kappa = (pa - pe)/(1.0 - pe);
         return kappa;
     }
 }
