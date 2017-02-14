@@ -38,8 +38,10 @@ public class Exercise7 implements IExercise7 {
             }
 
             for (int i = 0; (i < hiddenSequence.size()) && (i < observedSequence.size()); i++) {
-                incrementMap(emissionMatrixCount, hiddenSequence.get(i), observedSequence.get(i));
-                incrementMap(emissionMatrixTotals, hiddenSequence.get(i));
+                if (hiddenSequence.get(i) != null && observedSequence.get(i)!= null) {
+                    incrementMap(emissionMatrixCount, hiddenSequence.get(i), observedSequence.get(i));
+                    incrementMap(emissionMatrixTotals, hiddenSequence.get(i));
+                }
 
             }
 
@@ -55,7 +57,7 @@ public class Exercise7 implements IExercise7 {
         Map<U, Map<U, Double>> transitionMatrix = getPropabilitiesFromCount2D(transitionMatrixCount, transitionMatrixTotals);
         Map<U, Double> initialProbs = getPropabilitiesFromCount(initialProbsCount, initialProbsTotal);
 
-        HiddenMarkovModel<T, U> result = new HiddenMarkovModel<T, U>(transitionMatrix, emissionMatrix, initialProbs);
+        HiddenMarkovModel<T, U> result = new HiddenMarkovModel<>(transitionMatrix, emissionMatrix, initialProbs);
         return result;
     }
 
@@ -72,11 +74,13 @@ public class Exercise7 implements IExercise7 {
     }
 
     private static <T> void incrementMapBy(Map<T, Integer> map, T key, int delta) {
-        if (map.containsKey(key)) {
-            int value = map.get(key);
-            map.put(key, value + delta);
-        } else {
-            map.put(key, delta);
+        if (map != null) {
+            if (map.containsKey(key)) {
+                int value = map.get(key);
+                map.put(key, value + delta);
+            } else {
+                map.put(key, delta);
+            }
         }
     }
 
