@@ -17,13 +17,13 @@ import uk.ac.cam.cl.mlrwd.exercises.markov_models.HMMDataStore;
 import uk.ac.cam.cl.mlrwd.exercises.markov_models.HiddenMarkovModel;
 import uk.ac.cam.cl.mlrwd.exercises.markov_models.IExercise7;
 import uk.ac.cam.cl.mlrwd.exercises.markov_models.IExercise8;
-//TODO: Replace with your package.
-import uk.ac.cam.cl.emm68.exercises.Exercise7;
-import uk.ac.cam.cl.emm68.exercises.Exercise8;
+//DONE: Replace with your package.
+import uk.ac.cam.cl.olb22.exercises.Exercise7;
+import uk.ac.cam.cl.olb22.exercises.Exercise8;
 
 public class Exercise8Tester {
 
-	static final Path dataDirectory = Paths.get("data/dice_dataset");
+	static final Path dataDirectory = Paths.get("data/topic2/task7/dice_dataset");
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException, InstantiationException, IllegalAccessException {
 
