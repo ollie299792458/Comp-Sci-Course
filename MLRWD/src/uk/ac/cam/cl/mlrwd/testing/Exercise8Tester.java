@@ -11,13 +11,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-import uk.ac.cam.cl.mlrwd.exercises.markov_models.DiceRoll;
-import uk.ac.cam.cl.mlrwd.exercises.markov_models.DiceType;
-import uk.ac.cam.cl.mlrwd.exercises.markov_models.HMMDataStore;
-import uk.ac.cam.cl.mlrwd.exercises.markov_models.HiddenMarkovModel;
-import uk.ac.cam.cl.mlrwd.exercises.markov_models.IExercise7;
-import uk.ac.cam.cl.mlrwd.exercises.markov_models.IExercise8;
-//DONE: Replace with your package.
+import uk.ac.cam.cl.mlrwd.exercises.markov_models.*;
+
+//DONE Replace with your package.
 import uk.ac.cam.cl.olb22.exercises.Exercise7;
 import uk.ac.cam.cl.olb22.exercises.Exercise8;
 
@@ -49,9 +45,10 @@ public class Exercise8Tester {
 		HiddenMarkovModel<DiceRoll, DiceType> model = implementation7.estimateHMM(trainingSet);
 
 		IExercise8 implementation = (IExercise8) new Exercise8();
+		Map<DiceType, Double> finalProbs = implementation.getFinalProbs(trainingSet);
 			
 		HMMDataStore<DiceRoll, DiceType> data = HMMDataStore.loadDiceFile(devSet.get(0));
-		List<DiceType> predicted = implementation.viterbi(model, data.observedSequence);
+		List<DiceType> predicted = implementation.viterbi(model, finalProbs, data.observedSequence);
 		System.out.println("True hidden sequence:");
 		System.out.println(data.hiddenSequence);
 		System.out.println();
@@ -61,7 +58,7 @@ public class Exercise8Tester {
 		System.out.println();
 	
 
-		Map<List<DiceType>, List<DiceType>> true2PredictedMap = implementation.predictAll(model, devSet);
+		Map<List<DiceType>, List<DiceType>> true2PredictedMap = implementation.predictAll(model, finalProbs, devSet);
 		double precision = implementation.precision(true2PredictedMap);
 		System.out.println("Prediction precision:");
 		System.out.println(precision);

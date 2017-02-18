@@ -8,39 +8,63 @@ import java.util.Map;
 public interface IExercise8 {
 
 	/**
-	 * Uses the Viterbi algorithm to calculate the most likely single sequence of
-	 * hidden states given the observed sequence and a model.
+	 * Calculates probabilities of the final hidden state being of particular
+	 * type.
+	 * 
+	 * @param trainingSequences
+	 *            {@link List<{@link Path}>} of files with training sequence
+	 *            pairs.
+	 * @return Probabilities of each state being the final hidden state.
+	 */
+	public Map<DiceType, Double> getFinalProbs(List<Path> trainingFiles) throws IOException;
+
+	/**
+	 * Uses the Viterbi algorithm to calculate the most likely single sequence
+	 * of hidden states given the observed sequence and a model.
 	 * 
 	 * @param model
-	 *            {@link HiddenMarkovModel}<{@link DiceRoll}, {@link DiceType}> A sequence model.
+	 *            {@link HiddenMarkovModel}<{@link DiceRoll}, {@link DiceType}>
+	 *            A sequence model.
+	 * @param finalProbs
 	 * @param observedSequence
-	 *            {@link List}<{@link DiceRoll}> A sequence of observed die rolls
+	 *            {@link List}<{@link DiceRoll}> A sequence of observed die
+	 *            rolls
 	 * @return {@link List}<{@link DiceType}> The most likely single sequence of
 	 *         hidden states
 	 */
-	public List<DiceType> viterbi(HiddenMarkovModel<DiceRoll, DiceType> model, List<DiceRoll> observedSequence);
+	public List<DiceType> viterbi(HiddenMarkovModel<DiceRoll, DiceType> model, Map<DiceType, Double> finalProbs,
+			List<DiceRoll> observedSequence);
 
 	/**
-	 * Uses the Viterbi algorithm to predict hidden sequences of all observed sequences in testFiles.
-	 * @param model The HMM model.
-	 * @param testFiles A list of files with observed and true hidden sequences.
-	 * @return {@link Map}<{@link List}<{@link DiceType}>, {@link List}<{@link DiceType}>>
-	 *            A map from a real hidden sequence to the equivalent estimated hidden sequence.
+	 * Uses the Viterbi algorithm to predict hidden sequences of all observed
+	 * sequences in testFiles.
+	 * 
+	 * @param model
+	 *            The HMM model.
+	 * @param finalProbs
+	 *            The probabilities of a hidden state being the last one in a sequence   
+	 * @param testFiles
+	 *            A list of files with observed and true hidden sequences.
+	 * @return {@link Map}<{@link List}<{@link DiceType}>,
+	 *         {@link List}<{@link DiceType}>> A map from a real hidden sequence
+	 *         to the equivalent estimated hidden sequence.
 	 * @throws IOException
 	 */
-	public Map<List<DiceType>, List<DiceType>> predictAll(HiddenMarkovModel<DiceRoll, DiceType> model, List<Path> testFiles)
-			throws IOException;
-	
+	public Map<List<DiceType>, List<DiceType>> predictAll(HiddenMarkovModel<DiceRoll, DiceType> model,
+			Map<DiceType, Double> finalProbs, List<Path> testFiles) throws IOException;
+
 	/**
 	 * Calculates the precision of the estimated sequence with respect to the
 	 * weighted state, i.e. the proportion of predicted weighted states that
 	 * were actually weighted.
 	 * 
 	 * @param true2PredictedMap
-	 *            {@link Map}<{@link List}<{@link DiceType}>, {@link List}<{@link DiceType}>>
-	 *            A map from a real hidden sequence to the equivalent estimated hidden sequence.
+	 *            {@link Map}<{@link List}<{@link DiceType}>,
+	 *            {@link List}<{@link DiceType}>> A map from a real hidden
+	 *            sequence to the equivalent estimated hidden sequence.
 	 * @return <code>double</code> The precision of the estimated sequence with
-	 *         respect to the weighted state averaged over all the test sequences.
+	 *         respect to the weighted state averaged over all the test
+	 *         sequences.
 	 */
 	public double precision(Map<List<DiceType>, List<DiceType>> true2PredictedMap);
 
@@ -50,10 +74,12 @@ public interface IExercise8 {
 	 * predicted weighted.
 	 * 
 	 * @param true2PredictedMap
-	 *            {@link Map}<{@link List}<{@link DiceType}>, {@link List}<{@link DiceType}>>
-	 *            A map from a real hidden sequence to the equivalent estimated hidden sequence.
+	 *            {@link Map}<{@link List}<{@link DiceType}>,
+	 *            {@link List}<{@link DiceType}>> A map from a real hidden
+	 *            sequence to the equivalent estimated hidden sequence.
 	 * @return <code>double</code> The recall of the estimated sequence with
-	 *         respect to the weighted state averaged over all the test sequences.
+	 *         respect to the weighted state averaged over all the test
+	 *         sequences.
 	 */
 	public double recall(Map<List<DiceType>, List<DiceType>> true2PredictedMap);
 
@@ -62,12 +88,13 @@ public interface IExercise8 {
 	 * weighted state, i.e. the harmonic mean of precision and recall.
 	 * 
 	 * @param true2PredictedMap
-	 *            {@link Map}<{@link List}<{@link DiceType}>, {@link List}<{@link DiceType}>>
-	 *            A map from a real hidden sequence to the equivalent estimated hidden sequence.
+	 *            {@link Map}<{@link List}<{@link DiceType}>,
+	 *            {@link List}<{@link DiceType}>> A map from a real hidden
+	 *            sequence to the equivalent estimated hidden sequence.
 	 * @return <code>double</code> The F1 measure of the estimated sequence with
-	 *         respect to the weighted state averaged over all the test sequences.
+	 *         respect to the weighted state averaged over all the test
+	 *         sequences.
 	 */
 	public double fOneMeasure(Map<List<DiceType>, List<DiceType>> true2PredictedMap);
 
-	
 }

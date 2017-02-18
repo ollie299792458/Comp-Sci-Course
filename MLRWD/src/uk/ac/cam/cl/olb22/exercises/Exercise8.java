@@ -1,9 +1,6 @@
 package uk.ac.cam.cl.olb22.exercises;
 
-import uk.ac.cam.cl.mlrwd.exercises.markov_models.DiceRoll;
-import uk.ac.cam.cl.mlrwd.exercises.markov_models.DiceType;
-import uk.ac.cam.cl.mlrwd.exercises.markov_models.HiddenMarkovModel;
-import uk.ac.cam.cl.mlrwd.exercises.markov_models.IExercise8;
+import uk.ac.cam.cl.mlrwd.exercises.markov_models.*;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -14,11 +11,37 @@ import java.util.*;
  */
 public class Exercise8 implements IExercise8 {
     @Override
-    public List<DiceType> viterbi(HiddenMarkovModel<DiceRoll, DiceType> model, List<DiceRoll> observedSequence) {
-        return viterbiGen(model, observedSequence, DiceType.values(), DiceRoll.values());
+    public Map<DiceType, Double> getFinalProbs(List<Path> trainingFiles) throws IOException {
+        List<HMMDataStore<DiceRoll, DiceType>> dataStores = HMMDataStore.loadDiceFiles(trainingFiles);
+        return getFinalProbsGen(dataStores, DiceType.values());
     }
 
-    private <T, U> List<T> viterbiGen(HiddenMarkovModel<U, T> model, List<U> observedSequence, T[] statesT, U[] statesU) {
+    private <T,U> Map<T,Double> getFinalProbsGen(List<HMMDataStore<U, T>> dataStores, T[] values) {
+        Map<T, Double> result = new HashMap<T, Double>(values.length);
+        Map<T, Integer> resultCount = new HashMap<T, Integer>(values.length);
+        int total = dataStores.size();
+
+        for (T value : values) {
+            resultCount.put(value, 0);
+        }
+
+        for (HMMDataStore<U, T> dataStore : dataStores) {
+            T last = dataStore.hiddenSequence.get(dataStore.hiddenSequence.size()-1);
+            resultCount.put(last, resultCount.get(last)+1);
+        }
+
+        for (T value : values) {
+            result.put(value, (double) resultCount.get(value)/(double) total);
+        }
+        return result;
+    }
+
+    @Override
+    public List<DiceType> viterbi(HiddenMarkovModel<DiceRoll, DiceType> model, Map<DiceType, Double> finalProbs, List<DiceRoll> observedSequence) {
+        return viterbiGen(model, finalProbs, observedSequence, DiceType.values());
+    }
+
+    private <T, U> List<T> viterbiGen(HiddenMarkovModel<U, T> model, Map<T, Double> finalProbs, List<U> observedSequence, T[] statesT) {
         List<Map<T, T>> psi = new LinkedList<>();
         List<Map<T, Double>> delta = new LinkedList<>();
 
@@ -26,36 +49,17 @@ public class Exercise8 implements IExercise8 {
 
         mainStep(model, delta, psi, observedSequence, statesT);
 
-        List<T> result = grandFinale(model, observedSequence.size(), delta, psi, statesT);
+        T endState = finalProbs(model, delta, psi, observedSequence.size(), finalProbs, statesT);
+
+        List<T> result = grandFinale(model, observedSequence.size(), psi, endState);
 
         assert result.size() == observedSequence.size();
 
         return result;
     }
 
-    private <T, U> List<T> grandFinale(HiddenMarkovModel<U, T> model, int length, List<Map<T, Double>> delta, List<Map<T, T>> psi, T[] statesT) {
+    private <T, U> List<T> grandFinale(HiddenMarkovModel<U, T> model, int length, List<Map<T, T>> psi, T endState) {
         List<T> result = new LinkedList<T>();
-
-        T endState = null;
-        T bestPreEndState = null;
-        double biggestProb = 0;
-        for (T potentialEndState : statesT) {
-            for (T lastState : statesT) {
-                double newProb = Math.log(model.getTransitionMatrix().get(lastState).get(potentialEndState));
-                newProb += delta.get(length - 1).get(lastState);
-                if (newProb < biggestProb) {
-                    bestPreEndState = lastState;
-                    endState = potentialEndState;
-                    biggestProb = newProb;
-                }
-            }
-        }
-        Map<T, Double> innerDeltaMap = new HashMap<>();
-        innerDeltaMap.put(endState, biggestProb);
-        Map<T, T> innerPsiMap = new HashMap<>();
-        innerPsiMap.put(endState, bestPreEndState);
-        delta.add(innerDeltaMap);
-        psi.add(innerPsiMap);
 
         result.add(endState);
         for (int i = length-1; i >= 0; i--) {
@@ -66,6 +70,27 @@ public class Exercise8 implements IExercise8 {
         Collections.reverse(result);
         result.remove(0);
         return result;
+    }
+
+    private <U, T> T finalProbs(HiddenMarkovModel<U, T> model, List<Map<T, Double>> delta, List<Map<T, T>> psi, int length, Map<T, Double> finalProbs, T[] statesT) {
+        T endState = null;
+        double biggestProb = 0;
+        for (T potentialEndState : statesT) {
+            double newProb = finalProbs.get(potentialEndState);
+            if (newProb < biggestProb) {
+                endState = potentialEndState;
+                biggestProb = newProb;
+            }
+        }
+        Map<T, Double> innerDeltaMap = new HashMap<>();
+        innerDeltaMap.put(endState, biggestProb);
+        Map<T, T> innerPsiMap = new HashMap<>();
+        for (T state : statesT) {
+            innerPsiMap.put(endState, state);
+        }
+        delta.add(innerDeltaMap);
+        psi.add(innerPsiMap);
+        return endState;
     }
 
     private <U, T> void mainStep(HiddenMarkovModel<U, T> model, List<Map<T, Double>> delta, List<Map<T, T>> psi, List<U> observedSequence, T[] statesT) {
@@ -106,23 +131,35 @@ public class Exercise8 implements IExercise8 {
     }
 
     @Override
-    public Map<List<DiceType>, List<DiceType>> predictAll(HiddenMarkovModel<DiceRoll, DiceType> model, List<Path> testFiles) throws IOException {
-        return null;
+    public Map<List<DiceType>, List<DiceType>> predictAll(HiddenMarkovModel<DiceRoll, DiceType> model, Map<DiceType, Double> finalProbs, List<Path> testFiles) throws IOException {
+        List<HMMDataStore<DiceRoll, DiceType>> dataStores = HMMDataStore.loadDiceFiles(testFiles);
+        return predictAllGen(model, finalProbs, dataStores);
+    }
+
+    private <T,U> Map<List<T>, List<T>> predictAllGen(HiddenMarkovModel<U, T> model, Map<T, Double> finalProbs, List<HMMDataStore<U, T>> dataStores) throws IOException {
     }
 
     @Override
     public double precision(Map<List<DiceType>, List<DiceType>> true2PredictedMap) {
-        return precisionGen(true2PredictedMap, DiceType.values());
+        return precisionGen(true2PredictedMap, DiceType.WEIGHTED);
     }
 
-    private <T> double precisionGen(Map<List<T>, List<T>> true2PredictedMap, T[] values) {
+    private <T> double precisionGen(Map<List<T>, List<T>> true2PredictedMap, T interestingState) {
+        int numberOfCorrectlyPredictedi = 0;
+        int numberOfPredictedi = 0;
         for (Map.Entry<List<T>, List<T>> entry : true2PredictedMap.entrySet()) {
-            precisionGenSub(entry.getKey(), entry.getValue());
+            List<T> trueStates = entry.getKey();
+            List<T> predictedStates = entry.getValue();
+            for (int i = 0; i < trueStates.size() && i < predictedStates.size(); i++) {
+                if (predictedStates.get(i) == interestingState) {
+                    numberOfPredictedi++;
+                    if (trueStates.get(i) == interestingState) {
+                        numberOfCorrectlyPredictedi++;
+                    }
+                }
+            }
         }
-    }
-
-    private <T> void precisionGenSub(List<T> key, List<T> value) {
-
+        return (double) numberOfCorrectlyPredictedi/(double) numberOfPredictedi;
     }
 
     @Override
