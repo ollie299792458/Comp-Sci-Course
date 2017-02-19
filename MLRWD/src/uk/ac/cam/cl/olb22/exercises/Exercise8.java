@@ -62,13 +62,12 @@ public class Exercise8 implements IExercise8 {
         List<T> result = new LinkedList<T>();
 
         result.add(endState);
-        while (result.size() <= length) {
+        while (result.size() < length) {
             T currentState = result.get(result.size()-1);
-            T bestPrevState = psi.get(length-result.size()).get(currentState);
+            T bestPrevState = psi.get(length-result.size()-1).get(currentState);
             result.add(bestPrevState);
         }
         Collections.reverse(result);
-        result.remove(0);
         return result;
     }
 
