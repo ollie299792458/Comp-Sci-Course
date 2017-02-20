@@ -17,22 +17,13 @@ public class Exercise8 implements IExercise8 {
     }
 
     private <T,U> Map<T,Double> getFinalProbsGen(List<HMMDataStore<U, T>> dataStores, T[] values) {
-        Map<T, Double> result = new HashMap<T, Double>(values.length);
-        Map<T, Integer> resultCount = new HashMap<T, Integer>(values.length);
-        int total = dataStores.size();
+        Map<T, Double> result = new HashMap<>(values.length);
 
-        for (T value : values) {
-            resultCount.put(value, 0);
+        for (HMMDataStore<U, T> store : dataStores) {
+            T type = store.hiddenSequence.get(store.hiddenSequence.size() - 1);
+            result.put(type, result.getOrDefault(type, 0.0) + 1.0/dataStores.size());
         }
 
-        for (HMMDataStore<U, T> dataStore : dataStores) {
-            T last = dataStore.hiddenSequence.get(dataStore.hiddenSequence.size()-1);
-            resultCount.put(last, resultCount.get(last)+1);
-        }
-
-        for (T value : values) {
-            result.put(value, (double) resultCount.get(value)/(double) total);
-        }
         return result;
     }
 
@@ -49,80 +40,79 @@ public class Exercise8 implements IExercise8 {
 
         mainStep(model, delta, psi, observedSequence, statesT);
 
-        T endState = getEndState(model, delta, psi, observedSequence.size(), finalProbs, statesT);
+        addEndState(model, delta, psi, observedSequence, finalProbs, statesT);
 
-        List<T> result = grandFinale(model, observedSequence.size(), psi, endState);
+        assert psi.size() == observedSequence.size();
+
+        List<T> result = grandFinale(model, observedSequence.size(), delta, psi, statesT);
 
         assert result.size() == observedSequence.size();
 
         return result;
     }
 
-    private <T, U> List<T> grandFinale(HiddenMarkovModel<U, T> model, int length, List<Map<T, T>> psi, T endState) {
+    private <T, U> List<T> grandFinale(HiddenMarkovModel<U, T> model, int length, List<Map<T, Double>> delta, List<Map<T, T>> psi, T[] values) {
         List<T> result = new LinkedList<T>();
 
-        result.add(endState);
-        while (result.size() < length) {
-            T currentState = result.get(result.size()-1);
-            T bestPrevState = psi.get(length-result.size()-1).get(currentState);
-            result.add(bestPrevState);
+        Map.Entry<T, Double> endState = Collections.max(delta.get(delta.size()-1).entrySet(), Map.Entry.comparingByValue());
+
+        T currentState = endState.getKey();
+        result.add(currentState);
+        for (int i = psi.size()-1; i>=0; i--){
+            currentState = psi.get(i).get(currentState);
+            result.add(currentState);
         }
+        result.remove(0);
         Collections.reverse(result);
         return result;
     }
 
-    private <U, T> T getEndState(HiddenMarkovModel<U, T> model, List<Map<T, Double>> delta, List<Map<T, T>> psi, int length, Map<T, Double> finalProbs, T[] statesT) {
-        T endState = null;
-        double biggestProb = 0;
-        for (T potentialEndState : statesT) {
-            double deltaV = delta.get(delta.size()-1).get(potentialEndState);
-            assert deltaV < 0;
-            double aV = Math.log(finalProbs.get(potentialEndState));
-            assert aV < 0;
-            double newProb = aV+deltaV;
-            assert newProb < 0;
-            if (newProb < biggestProb) {
-                endState = potentialEndState;
-                biggestProb = newProb;
+    private <U, T> void addEndState(HiddenMarkovModel<U, T> model, List<Map<T, Double>> delta, List<Map<T, T>> psi, List<U> observedSequence, Map<T, Double> finalProbs, T[] statesT) {
+        Map<T, Double> deltaInnerMap = new HashMap<>(statesT.length);
+        Map<T, T> psiInnerMap = new HashMap<>(statesT.length);
+        for (T currentState : statesT) {
+            Map<T, Double> possibleProbs = new HashMap<>(statesT.length);
+
+            for (T lastState : statesT) {
+                double prob = 0;
+                double deltaV = delta.get(delta.size()-1).get(lastState);
+                assert deltaV < 0;
+                double aV= Math.log(finalProbs.get(lastState));
+                assert aV < 0;
+                prob = deltaV+aV;
+                possibleProbs.put(lastState, prob);
             }
+
+            Map.Entry<T, Double> best = Collections.max(possibleProbs.entrySet(), Map.Entry.comparingByValue());
+            psiInnerMap.put(currentState, best.getKey());
+            deltaInnerMap.put(currentState, best.getValue());
         }
-        Map<T, Double> innerDeltaMap = new HashMap<>();
-        innerDeltaMap.put(endState, biggestProb);
-        Map<T, T> innerPsiMap = new HashMap<>();
-        for (T state : statesT) {
-            innerPsiMap.put(endState, state);
-        }
-        delta.add(innerDeltaMap);
-        psi.add(innerPsiMap);
-        return endState;
+        delta.add(deltaInnerMap);
+        psi.add(psiInnerMap);
     }
 
     private <U, T> void mainStep(HiddenMarkovModel<U, T> model, List<Map<T, Double>> delta, List<Map<T, T>> psi, List<U> observedSequence, T[] statesT) {
-        for (int i = 1; i < observedSequence.size(); i++) {
+        for (int t = 1; t < observedSequence.size(); t++) {
             Map<T, Double> deltaInnerMap = new HashMap<>(statesT.length);
             Map<T, T> psiInnerMap = new HashMap<>(statesT.length);
             for (T currentState : statesT) {
-                T mpLastState = null;
-                double mpProp = 0;
+                Map<T, Double> possibleProbs = new HashMap<>(statesT.length);
+                double bV = Math.log(model.getEmissionMatrix().get(currentState).get(observedSequence.get(t)));
+                assert bV < 0;
 
                 for (T lastState : statesT) {
                     double prob = 0;
-                    double deltaV = delta.get(i-1).get(lastState);
+                    double deltaV = delta.get(t-1).get(lastState);
                     assert deltaV < 0;
                     double aV= Math.log(model.getTransitionMatrix().get(lastState).get(currentState));
                     assert aV < 0;
-                    double bV = Math.log(model.getEmissionMatrix().get(lastState).get(observedSequence.get(i)));
-                    assert bV < 0;
                     prob = deltaV+aV+bV;
-                    if (prob < mpProp) {
-                        mpLastState = lastState;
-                        mpProp = prob;
-                    }
+                    possibleProbs.put(lastState, prob);
                 }
 
-                assert mpLastState != null && mpProp != 0;
-                psiInnerMap.put(currentState, mpLastState);
-                deltaInnerMap.put(currentState, mpProp);
+                Map.Entry<T, Double> best = Collections.max(possibleProbs.entrySet(), Map.Entry.comparingByValue());
+                psiInnerMap.put(currentState, best.getKey());
+                deltaInnerMap.put(currentState, best.getValue());
             }
             delta.add(deltaInnerMap);
             psi.add(psiInnerMap);
