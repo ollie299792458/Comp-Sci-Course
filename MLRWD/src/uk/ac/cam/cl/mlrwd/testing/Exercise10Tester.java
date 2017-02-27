@@ -12,11 +12,11 @@ import java.io.IOException;
 
 import uk.ac.cam.cl.mlrwd.exercises.social_networks.IExercise10;
 
-//TODO: Replace with your package.
-import uk.ac.cam.cl.kh562.exercises.Exercise10;
+//DONE: Replace with your package.
+import uk.ac.cam.cl.olb22.exercises.Exercise10;
 
 public class Exercise10Tester {
-    static final Path networkFile = Paths.get("data/network_files/simple_network.edges");
+    static final Path networkFile = Paths.get("data/topic3/task10/network_files/simple_network.edges");
 
     public static void main(String[] args) throws IOException {
 	IExercise10 implementation = (IExercise10) new Exercise10();
