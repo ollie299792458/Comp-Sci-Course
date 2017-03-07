@@ -44,7 +44,7 @@
         @Override
         public List<Integer> getFewestEdgesPath(int src, int target) throws TargetUnreachable {
             Map<Integer, Integer> predecesor = new HashMap<>(getNumVertices());
-            Queue<Integer> toExplore = new LinkedList();
+            Queue<Integer> toExplore = new LinkedList<>();
 
             toExplore.add(src);
             predecesor.put(src, -1);
@@ -94,102 +94,74 @@
         @Override
         public MaxFlowNetwork getMaxFlow(int s, int t) {
             try {
-                int maxFlow = 0;
-                Graph f = new Graph(getEmptyMatrix());
+                int[][] f = new int[mN][mN];
 
                 while (true) {
                     Set<Integer> S = new HashSet<>();
                     S.add(s);
-                    Graph gS = addAllVerticesInWhileLoop(S, f);
+                    Graph incFlow = getIncFlow(f, S);
+
                     if (!S.contains(t)) break;
-                    List<Integer> p = gS.getFewestEdgesPath(s, t);
+
+                    List<Integer> p = incFlow.getFewestEdgesPath(s,t);
+
                     int delta = Integer.MAX_VALUE;
-                    for (Map.Entry<Integer, Integer> e : getEdges(p)) {
-                        int vi = e.getKey();
-                        int vi1 = e.getValue();
+                    for (int n = 0; n < p.size()-1; n++) {
+                        int vi = p.get(n), vi1 = p.get(n+1);
+
                         if (mAdj[vi][vi1] > 0) {
-                            delta = Math.min(mAdj[vi][vi1] - f.mAdj[vi][vi1], delta);
+                            delta = Math.min(mAdj[vi][vi1] - f[vi][vi1], delta);
                         } else {
-                            delta = Math.min(mAdj[vi1][vi], delta);
+                            delta = Math.min(f[vi1][vi], delta);
                         }
                     }
                     assert delta > 0;
-                    for (Map.Entry<Integer, Integer> e : getEdges(p)) {
-                        int vi = e.getKey();
-                        int vi1 = e.getValue();
+
+                    for (int n = 0; n < p.size()-1; n++) {
+                        int vi = p.get(n), vi1 = p.get(n + 1);
+
                         if (mAdj[vi][vi1] > 0) {
-                            f.mAdj[vi][vi1] = f.mAdj[vi][vi1] + delta;
+                            f[vi][vi1] += delta;
                         } else {
-                            f.mAdj[vi][vi1] = f.mAdj[vi][vi1] - delta;
+                            f[vi1][vi] -= delta;
                         }
                     }
                 }
 
-                maxFlow = calculateMaxFlow(f, s);
-                MaxFlowNetwork result = new MaxFlowNetwork(maxFlow, f);
-                return result;
+                Graph maxFlowGraph = new Graph(f);
+                int maxFlow = calculateMaxFlow(maxFlowGraph, s);
+                return new MaxFlowNetwork(maxFlow, maxFlowGraph);
             } catch (TargetUnreachable e) {
                 return new MaxFlowNetwork(0, new Graph(new int[0][0]));
             }
         }
 
-        private List<Map.Entry<Integer, Integer>> getEdges(List<Integer> p) {
-            List<Map.Entry<Integer,Integer>> result = new LinkedList<>();
-            for (int i = 0; i < p.size()-1;i++) {
-                result.add(new AbstractMap.SimpleEntry<Integer, Integer>(p.get(i), p.get(i+1)));
+        private Graph getIncFlow(int[][] f, Set<Integer> S) {
+            int[][] result = new int[mN][mN];
+            boolean changeMade = true;
+            while (changeMade) {
+                changeMade = false;
+                Set<Integer> newS = new HashSet<>();
+                for (int v : S) {
+                    for (int u = 0; u < mN; u++) {
+                        if (!S.contains(u)) {
+                            if (f[v][u] < mAdj[v][u] || f[u][v] > 0) {
+                                newS.add(u);
+                                result[v][u] = 1;
+                                changeMade = true;
+                            }
+                        }
+                    }
+                }
+                S.addAll(newS);
             }
-            return result;
+            return new Graph(result);
         }
 
         private int calculateMaxFlow(Graph f, int s) {
             int result = 0;
             for (Integer n : f.getNeighbours(s)) {
                 result += f.mAdj[s][n];
-            }
-            return result;
-        }
-
-        private Graph addAllVerticesInWhileLoop(Set<Integer> S, Graph f) {
-            Graph result = new Graph(getEmptyMatrix());
-            boolean thereare = true;
-            while (thereare) {
-                thereare = false;
-                Set<Integer> newS = new HashSet<>();
-                for (Integer v : S) {
-                    for (Integer u : getNeighbours(v)) {
-                        if (!S.contains(u)) {
-                            if ((f.mAdj[v][u] < mAdj[v][u])) {
-                                newS.add(u);
-                                result.mAdj[v][u] = mAdj[v][u];
-                            } else if (f.mAdj[u][v] > 0) {
-                                newS.add(u);
-                                result.mAdj[u][v] = mAdj[u][v];
-                            }
-                        }
-                    }
-                }
-                S.addAll(newS);
-                if (!newS.isEmpty()) {
-                    thereare=true;
-                }
-            }
-            return result;
-        }
-
-        private int[][] getEmptyMatrix() {
-            int[][] result = new int[getNumVertices()][getNumVertices()];
-            for(int i = 0; i < getNumVertices(); i++) {
-                for (int j = 0; j < getNumVertices(); j++) {
-                    try {
-                        if (getWeight(i,j) > 0) {
-                            result[i][j] = 0;
-                        } else {
-                            result[i][j] = -1;
-                        }
-                    } catch (InvalidEdgeException e) {
-                        throw new RuntimeException("Error in graphbase implementation");
-                    }
-                }
             }
             return result;
         }
