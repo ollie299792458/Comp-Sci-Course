@@ -14,7 +14,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
       <file leaf-file-name="泡沫排序机.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/泡沫排序机.java">
+        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/泡沫排序机.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
@@ -29,7 +29,7 @@
         </entry>
       </file>
       <file leaf-file-name="二进插入排序机.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/二进插入排序机.java">
+        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/二进插入排序机.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="40">
               <caret line="30" column="43" lean-forward="true" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
@@ -44,7 +44,7 @@
         </entry>
       </file>
       <file leaf-file-name="递归合并排序机.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/递归合并排序机.java">
+        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/递归合并排序机.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="277">
               <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="32" selection-end-column="20" />
@@ -59,10 +59,10 @@
         </entry>
       </file>
       <file leaf-file-name="从下合并排序机.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/从下合并排序机.java">
+        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/从下合并排序机.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="72" column="9" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="72" selection-end-column="9" />
+            <state relative-caret-position="240">
+              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
               <folding>
                 <element signature="e#210#211#0" expanded="true" />
                 <element signature="e#234#235#0" expanded="true" />
@@ -74,7 +74,7 @@
         </entry>
       </file>
       <file leaf-file-name="系列发生器.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/系列发生器.java">
+        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/系列发生器.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
               <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
@@ -84,7 +84,7 @@
         </entry>
       </file>
       <file leaf-file-name="插入排序机.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/插入排序机.java">
+        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/插入排序机.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
@@ -99,7 +99,7 @@
         </entry>
       </file>
       <file leaf-file-name="选择排序机.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/选择排序机.java">
+        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/选择排序机.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
               <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
@@ -114,7 +114,7 @@
         </entry>
       </file>
       <file leaf-file-name="抽象排序机.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/抽象排序机.java">
+        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/抽象排序机.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="557">
               <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
@@ -178,6 +178,7 @@
         <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/递归合并排序机.java" />
         <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Main.java" />
         <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/从下合并排序机.java" />
+        <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/从下合并排序机.java" />
       </list>
     </option>
   </component>
@@ -234,7 +235,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="分类" />
+              <option name="myItemId" value="排序" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -423,15 +424,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6679198" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6678125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946795" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951483" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32884097" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884097" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -456,7 +456,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/抽象排序机.java">
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/抽象排序机.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="557">
           <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
@@ -464,7 +464,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/系列发生器.java">
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/系列发生器.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
@@ -472,7 +472,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/选择排序机.java">
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/选择排序机.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
@@ -485,7 +485,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/泡沫排序机.java">
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/泡沫排序机.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
@@ -498,7 +498,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/插入排序机.java">
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/插入排序机.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
@@ -511,7 +511,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/二进插入排序机.java">
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/二进插入排序机.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="30" column="43" lean-forward="true" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
@@ -524,7 +524,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/递归合并排序机.java">
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/递归合并排序机.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="32" selection-end-column="20" />
@@ -547,10 +547,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/从下合并排序机.java">
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/从下合并排序机.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="72" column="9" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="72" selection-end-column="9" />
+        <state relative-caret-position="240">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding>
             <element signature="e#210#211#0" expanded="true" />
             <element signature="e#234#235#0" expanded="true" />

@@ -1,6 +1,6 @@
 package uk.ac.cam.olb22.algo;
 
-import uk.ac.cam.olb22.算法.分类.*;
+import uk.ac.cam.olb22.算法.排序.*;
 
 import java.util.Arrays;
 import java.util.LinkedList;
