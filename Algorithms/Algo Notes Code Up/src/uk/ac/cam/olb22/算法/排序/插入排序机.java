@@ -6,8 +6,8 @@ package uk.ac.cam.olb22.算法.排序;
 public class 插入排序机 extends 抽象排序机 {
     public static final String 名字 = "插入";
 
-    public 插入排序机(int 种) {
-        super(种);
+    public 插入排序机(int 长短, int 开始, int 结束, int 种) {
+        super(长短, 开始, 结束, 种);
     }
 
     @Override

@@ -8,8 +8,8 @@ import java.util.Arrays;
 public class 递归合并排序机 extends 抽象排序机 {
     private static final String 名字 = "递归合并";
 
-    public 递归合并排序机(int 种) {
-        super(种);
+    public 递归合并排序机(int 长短, int 开始, int 结束, int 种) {
+        super(长短, 开始, 结束, 种);
     }
 
     @Override
