@@ -1,5 +1,6 @@
 package uk.ac.cam.olb22.algo;
 
+import uk.ac.cam.olb22.algo.动态规划.斐波那契数字;
 import uk.ac.cam.olb22.算法.排序.*;
 
 import java.util.Arrays;
@@ -25,6 +26,11 @@ public class Main {
         for (抽象排序机 算法 : 算法们) {
             打印结果(算法);
         }
+
+        斐波那契数字 个斐波那契数子 = new 斐波那契数字();
+        System.out.println("动态规划 斐波那契数子");
+        System.out.println(个斐波那契数子.打印到一千());
+        System.out.println();
     }
 
     private static void 打印结果(抽象排序机 排序机) {
