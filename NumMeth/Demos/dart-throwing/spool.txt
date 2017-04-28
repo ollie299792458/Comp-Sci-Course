@@ -1,0 +1,9 @@
+gmcs  DartThrowing.cs
+mkdir -p obj
+mv DartThrowing.exe obj
+cd obj ; ulimit -t 15;	mono ./DartThrowing.exe
+run0: Antithetic=False Ratio is 785259/1000000 = 3.141036
+run1: Antithetic=False Ratio is 785669/1000000 = 3.142676
+run3: Antithetic=False Ratio is 786428/1000000 = 3.145712
+
+Process make finished

@@ -1,0 +1,30 @@
+javac -classpath .:../lu-decomposition DiodeExample2.java
+java -classpath .:../lu-decomposition DiodeExample2
+Diode2 iteration=0   v_1=0.000000 v_2=0.000000  (I_d=0.000000e+00) I=0.000000e+00
+Diode2 iteration=200   v_1=9.107288 v_2=0.180167  (I_d=1.801672e+00) I=8.927121e-03
+Diode2 iteration=400   v_1=9.123372 v_2=0.357087  (I_d=3.571000e+00) I=8.766284e-03
+Diode2 iteration=600   v_1=9.139102 v_2=0.530119  (I_d=5.447185e+00) I=8.608982e-03
+Diode2 iteration=800   v_1=9.149486 v_2=0.644341  (I_d=2.079746e+01) I=8.505145e-03
+Diode2 iteration=1000   v_1=9.152371 v_2=0.676083  (I_d=5.782025e+01) I=8.476288e-03
+Diode2 iteration=1200   v_1=9.153743 v_2=0.691175  (I_d=1.001847e+02) I=8.462568e-03
+Diode2 iteration=1400   v_1=9.154629 v_2=0.700921  (I_d=1.446125e+02) I=8.453708e-03
+Diode2 iteration=1600   v_1=9.155281 v_2=0.708086  (I_d=1.901970e+02) I=8.447194e-03
+Diode2 iteration=1800   v_1=9.155795 v_2=0.713740  (I_d=2.365510e+02) I=8.442055e-03
+Diode2 iteration=2000   v_1=9.156219 v_2=0.718404  (I_d=2.834687e+02) I=8.437814e-03
+Diode2 iteration=2200   v_1=9.156579 v_2=0.722371  (I_d=3.308253e+02) I=8.434208e-03
+Diode2 iteration=2400   v_1=9.156893 v_2=0.725821  (I_d=3.785387e+02) I=8.431072e-03
+Diode2 iteration=2600   v_1=9.157170 v_2=0.728872  (I_d=4.265507e+02) I=8.428298e-03
+Diode2 iteration=2800   v_1=9.157419 v_2=0.731606  (I_d=4.748189e+02) I=8.425813e-03
+Diode2 iteration=3000   v_1=9.157644 v_2=0.734083  (I_d=5.233106e+02) I=8.423561e-03
+Diode2 iteration=3200   v_1=9.157850 v_2=0.736346  (I_d=5.720001e+02) I=8.421503e-03
+Diode2 iteration=3400   v_1=9.158039 v_2=0.738430  (I_d=6.208671e+02) I=8.419609e-03
+Diode2 iteration=3600   v_1=9.158215 v_2=0.740360  (I_d=6.698945e+02) I=8.417854e-03
+Diode2 iteration=3800   v_1=9.158378 v_2=0.742158  (I_d=7.190683e+02) I=8.416220e-03
+Diode2 iteration=4000   v_1=9.158531 v_2=0.743841  (I_d=7.683767e+02) I=8.414690e-03
+Diode2 iteration=4200   v_1=9.158675 v_2=0.745421  (I_d=8.178093e+02) I=8.413253e-03
+Diode2 iteration=4400   v_1=9.158810 v_2=0.746912  (I_d=8.673576e+02) I=8.411898e-03
+Diode2 iteration=4600   v_1=9.158938 v_2=0.748322  (I_d=9.170137e+02) I=8.410616e-03
+Diode2 iteration=4800   v_1=9.159060 v_2=0.749660  (I_d=9.667710e+02) I=8.409400e-03
+Finished
+
+Process make finished
