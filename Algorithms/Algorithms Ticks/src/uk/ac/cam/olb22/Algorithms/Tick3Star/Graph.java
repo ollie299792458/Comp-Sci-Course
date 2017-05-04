@@ -1,7 +1,6 @@
-package uk.ac.cam.olb22.Algorithms.Tick3;
+package uk.ac.cam.olb22.Algorithms.Tick3Star;
 
 import uk.ac.cam.rkh23.Algorithms.Tick3.GraphBase;
-import uk.ac.cam.rkh23.Algorithms.Tick3.InvalidEdgeException;
 import uk.ac.cam.rkh23.Algorithms.Tick3.MaxFlowNetwork;
 import uk.ac.cam.rkh23.Algorithms.Tick3.TargetUnreachable;
 
