@@ -2,45 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a1aea5a-ba15-4a88-9538-01aa5e2519f2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/dictionarys/DictionaryInterface.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/dictionarys/DirectAddressingDictionary.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/lists/DequeInterface.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/lists/ListDeque.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/lists/ListQueue.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/lists/QueueInterface.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/sets/AbstractSet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/sets/BinarySearchSet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/sets/RedBlackSet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/graph/GraphInterface.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Algorithms Ticks/src/uk/ac/cam/olb22/Algorithms/Tick3Star/Graph.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Algorithms Ticks/src/uk/ac/cam/olb22/Algorithms/Tick3Star/GreedyMatcher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Algorithms Ticks/src/uk/ac/cam/olb22/Algorithms/Tick3Star/MaximumMatcher.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Main.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/动态规划/斐波那契数字.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/动态规划/斐波那契数字.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/数据结构/单子.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/数据结构/单子.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/数据结构/堆栈.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/数据结构/堆栈.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/数据结构/简单单子.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/数据结构/简单单子.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/数据结构/简单堆栈.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/数据结构/简单堆栈.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/二进插入排序机.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/排序/二进插入排序机.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/从下合并排序机.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/排序/从下合并排序机.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/堆排序机.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/排序/堆排序机.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/快速排序机.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/排序/快速排序机.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/抽象排序机.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/排序/抽象排序机.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/插入排序机.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/排序/插入排序机.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/根数排序机.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/排序/根数排序机.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/水桶排序机.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/排序/水桶排序机.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/泡沫排序机.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/排序/泡沫排序机.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/算数排序机.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/排序/算数排序机.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/系列发生器.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/排序/系列发生器.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/选择排序机.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/排序/选择排序机.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/递归合并排序机.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/排序/递归合并排序机.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/priorityqueue/fibonacciheap/FibonacciHeap.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/priorityqueue/fibonacciheap/FibonacciNode.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Algorithms Ticks/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Algorithms Ticks/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Algorithms Ticks/src/uk/ac/cam/olb22/Algorithms/Tick3/Graph.java" afterPath="$PROJECT_DIR$/../Algorithms Ticks/src/uk/ac/cam/olb22/Algorithms/Tick3/Graph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Algorithms Ticks/src/uk/ac/cam/rkh23/Algorithms/Tick3/GraphBase.java" afterPath="$PROJECT_DIR$/../Algorithms Ticks/src/uk/ac/cam/rkh23/Algorithms/Tick3/GraphBase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../MLRWD/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../MLRWD/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/Main.java" afterPath="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,8 +21,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
-              <caret line="84" column="22" lean-forward="true" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
+            <state relative-caret-position="588">
+              <caret line="86" column="66" lean-forward="false" selection-start-line="86" selection-start-column="66" selection-end-line="86" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -65,104 +30,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RedBlackSet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/sets/RedBlackSet.java">
+      <file leaf-file-name="FibonacciHeap.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/priorityqueue/fibonacciheap/FibonacciHeap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="878">
-              <caret line="76" column="37" lean-forward="false" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
+            <state relative-caret-position="559">
+              <caret line="145" column="21" lean-forward="false" selection-start-line="145" selection-start-column="21" selection-end-line="145" selection-end-column="21" />
               <folding>
-                <element signature="e#256#257#0" expanded="true" />
-                <element signature="e#283#284#0" expanded="true" />
-                <element signature="e#385#386#0" expanded="true" />
-                <element signature="e#413#414#0" expanded="true" />
-                <element signature="e#463#464#0" expanded="true" />
-                <element signature="e#491#492#0" expanded="true" />
-                <element signature="e#535#536#0" expanded="true" />
-                <element signature="e#559#560#0" expanded="true" />
-                <element signature="e#597#598#0" expanded="true" />
-                <element signature="e#621#622#0" expanded="true" />
-                <element signature="e#659#660#0" expanded="true" />
-                <element signature="e#683#684#0" expanded="true" />
-                <element signature="e#734#735#0" expanded="true" />
-                <element signature="e#758#759#0" expanded="true" />
-                <element signature="e#807#808#0" expanded="true" />
-                <element signature="e#831#832#0" expanded="true" />
-                <element signature="e#896#897#0" expanded="true" />
-                <element signature="e#923#924#0" expanded="true" />
-                <element signature="e#968#969#0" expanded="true" />
-                <element signature="e#995#996#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#431#432#0" expanded="true" />
+                <element signature="e#457#458#0" expanded="true" />
+                <element signature="e#489#490#0" expanded="true" />
+                <element signature="e#523#524#0" expanded="true" />
+                <element signature="e#794#795#0" expanded="true" />
+                <element signature="e#848#849#0" expanded="true" />
+                <element signature="e#1137#1138#0" expanded="true" />
+                <element signature="e#1163#1164#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BinarySearchSet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/sets/BinarySearchSet.java">
+      <file leaf-file-name="FibonacciNode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/priorityqueue/fibonacciheap/FibonacciNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4050">
-              <caret line="98" column="13" lean-forward="false" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
+            <state relative-caret-position="435">
+              <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding>
-                <element signature="e#3578#3579#0" expanded="true" />
-                <element signature="e#3613#3614#0" expanded="true" />
-                <element signature="e#3774#3775#0" expanded="true" />
-                <element signature="e#3805#3806#0" expanded="true" />
-                <element signature="e#6434#6435#0" expanded="true" />
-                <element signature="e#6476#6477#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DictionaryInterface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/dictionarys/DictionaryInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DirectAddressingDictionary.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/dictionarys/DirectAddressingDictionary.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-              <folding>
-                <element signature="e#977#978#0" expanded="true" />
-                <element signature="e#1027#1028#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListDeque.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/lists/ListDeque.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="936">
-              <caret line="57" column="9" lean-forward="false" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
-              <folding>
-                <element signature="e#241#242#0" expanded="true" />
-                <element signature="e#290#291#0" expanded="true" />
-                <element signature="e#1430#1431#0" expanded="true" />
-                <element signature="e#1476#1477#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListQueue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/lists/ListQueue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="47" selection-end-column="9" />
-              <folding>
-                <element signature="e#241#242#0" expanded="true" />
-                <element signature="e#276#277#0" expanded="true" />
-                <element signature="e#719#720#0" expanded="true" />
-                <element signature="e#754#755#0" expanded="true" />
-                <element signature="e#858#859#0" expanded="true" />
-                <element signature="e#904#905#0" expanded="true" />
+                <element signature="e#411#412#0" expanded="true" />
+                <element signature="e#441#442#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -195,13 +90,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/抽象排序机.java" />
-        <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/插入排序机.java" />
-        <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/选择排序机.java" />
-        <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/泡沫排序机.java" />
-        <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/二进插入排序机.java" />
-        <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/递归合并排序机.java" />
-        <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/分类/从下合并排序机.java" />
         <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/堆排序.java" />
         <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/算数排序机.java" />
         <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/算法/排序/抽象排序机.java" />
@@ -243,9 +131,16 @@
         <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/dictionarys/SetInterface.java" />
         <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/sets/SetInterface.java" />
         <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/sets/AbstractSet.java" />
-        <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/Main.java" />
         <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/sets/BinarySearchSet.java" />
         <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/sets/RedBlackSet.java" />
+        <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/PriorityQueue.java" />
+        <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/priorityqueue/PriorityQueue.java" />
+        <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/priorityqueue/fibonacciheap/FibonacciNode.java" />
+        <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/priorityqueue/AbstractPriorityQueue.java" />
+        <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/priorityqueue/FibonacciQueue.java" />
+        <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/priorityqueue/PriorityQueueInterface.java" />
+        <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/priorityqueue/fibonacciheap/FibonacciHeap.java" />
+        <option value="$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/Main.java" />
       </list>
     </option>
   </component>
@@ -272,6 +167,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -388,6 +284,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="fibonacciheap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Algo Notes Code Up" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Algo Notes Code Up" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="English" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datatypes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="lists" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -446,9 +372,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -742,35 +667,36 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="42" width="3200" height="1758" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885003" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951483" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32750505" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32750505" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19517685" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952252" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1977492" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987895" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952252" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -799,7 +725,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="28" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/Main.java</url>
+          <line>86</line>
+          <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -808,45 +742,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1240">
-          <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/动态规划/斐波那契数字.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/排序/二进插入排序机.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="8" column="41" lean-forward="false" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/排序/递归合并排序机.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/排序/堆排序机.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/Chinese/算法/排序/快速排序机.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1049,9 +944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
           <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1059,7 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
           <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="13" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1067,7 +958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="957">
           <caret line="33" column="23" lean-forward="false" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1083,10 +973,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding>
-            <element signature="e#185#186#0" expanded="false" />
-            <element signature="e#218#219#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1102,7 +988,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="897">
           <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1124,8 +1009,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/lists/ListQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="47" selection-end-column="9" />
+        <state relative-caret-position="1073">
+          <caret line="41" column="25" lean-forward="false" selection-start-line="41" selection-start-column="25" selection-end-line="47" selection-end-column="9" />
           <folding>
             <element signature="e#241#242#0" expanded="true" />
             <element signature="e#276#277#0" expanded="true" />
@@ -1139,7 +1024,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/lists/ListDeque.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
+        <state relative-caret-position="1595">
           <caret line="57" column="9" lean-forward="false" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
           <folding>
             <element signature="e#241#242#0" expanded="true" />
@@ -1155,8 +1040,8 @@
         <state relative-caret-position="493">
           <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
           <folding>
-            <element signature="e#977#978#0" expanded="true" />
-            <element signature="e#1027#1028#0" expanded="true" />
+            <element signature="e#977#978#0" expanded="false" />
+            <element signature="e#1027#1028#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1165,7 +1050,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="725">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1173,6 +1057,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/sets/RedBlackSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="879">
+          <caret line="76" column="37" lean-forward="false" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/sets/BinarySearchSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="98" column="13" lean-forward="false" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/priorityqueue/AbstractPriorityQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1185,56 +1093,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/priorityqueue/FibonacciQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="57" lean-forward="false" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/priorityqueue/PriorityQueueInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="8" column="41" lean-forward="true" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/priorityqueue/fibonacciheap/FibonacciNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#441#442#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="84" column="22" lean-forward="true" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
+        <state relative-caret-position="588">
+          <caret line="86" column="66" lean-forward="false" selection-start-line="86" selection-start-column="66" selection-end-line="86" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/sets/BinarySearchSet.java">
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/priorityqueue/fibonacciheap/FibonacciHeap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4050">
-          <caret line="98" column="13" lean-forward="false" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
+        <state relative-caret-position="559">
+          <caret line="145" column="21" lean-forward="false" selection-start-line="145" selection-start-column="21" selection-end-line="145" selection-end-column="21" />
           <folding>
-            <element signature="e#3578#3579#0" expanded="true" />
-            <element signature="e#3613#3614#0" expanded="true" />
-            <element signature="e#3774#3775#0" expanded="true" />
-            <element signature="e#3805#3806#0" expanded="true" />
-            <element signature="e#6434#6435#0" expanded="true" />
-            <element signature="e#6476#6477#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/olb22/algo/English/datatypes/sets/RedBlackSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="878">
-          <caret line="76" column="37" lean-forward="false" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
-          <folding>
-            <element signature="e#256#257#0" expanded="true" />
-            <element signature="e#283#284#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
-            <element signature="e#413#414#0" expanded="true" />
-            <element signature="e#463#464#0" expanded="true" />
-            <element signature="e#491#492#0" expanded="true" />
-            <element signature="e#535#536#0" expanded="true" />
-            <element signature="e#559#560#0" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#621#622#0" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-            <element signature="e#683#684#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#758#759#0" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#831#832#0" expanded="true" />
-            <element signature="e#896#897#0" expanded="true" />
-            <element signature="e#923#924#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-            <element signature="e#995#996#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#489#490#0" expanded="true" />
+            <element signature="e#523#524#0" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
+            <element signature="e#1137#1138#0" expanded="true" />
+            <element signature="e#1163#1164#0" expanded="true" />
           </folding>
         </state>
       </provider>

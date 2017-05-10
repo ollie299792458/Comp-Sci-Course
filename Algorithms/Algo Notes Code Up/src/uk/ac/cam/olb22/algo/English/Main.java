@@ -1,5 +1,7 @@
 package uk.ac.cam.olb22.algo.English;
 
+import uk.ac.cam.olb22.algo.English.datatypes.priorityqueue.fibonacciheap.FibonacciHeap;
+import uk.ac.cam.olb22.algo.English.datatypes.priorityqueue.fibonacciheap.FibonacciNode;
 import uk.ac.cam.olb22.algo.English.datatypes.sets.AbstractSet;
 import uk.ac.cam.olb22.algo.English.datatypes.lists.DequeInterface;
 import uk.ac.cam.olb22.algo.English.datatypes.lists.ListDeque;
@@ -67,6 +69,24 @@ public class Main {
         for (AbstractSet set: sets) {
             testSet(set);
         }
+
+        System.out.println();
+        System.out.println("Fibonacci Heap test");
+        FibonacciHeap fh = new FibonacciHeap();
+        System.out.println(fh.extractMin());
+        System.out.println(fh.first());
+        System.out.println(fh.isEmpty());
+        fh.merge(null);
+        fh.insert("Hello", 0);
+        System.out.println(fh.isEmpty());
+        System.out.println(fh.first().getPayLoad().toString());
+        System.out.println(fh.extractMin().getPayLoad().toString());
+        fh.insert("Hello2", -1);
+        fh.insert("Hello", 0);
+        fh.insert("Hello3", -4);
+        System.out.println(fh.extractMin().getPayLoad().toString());
+        fh.merge(new FibonacciHeap(new FibonacciNode("Hello4", -100)));
+        System.out.println(fh.extractMin().getPayLoad().toString());
     }
 
     private static void testSet(AbstractSet set) {
