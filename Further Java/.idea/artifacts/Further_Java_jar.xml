@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Further Java:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Further_Java_jar</output-path>
+    <root id="archive" name="Further Java.jar">
+      <element id="module-output" name="Further Java" />
+    </root>
+  </artifact>
+</component>
