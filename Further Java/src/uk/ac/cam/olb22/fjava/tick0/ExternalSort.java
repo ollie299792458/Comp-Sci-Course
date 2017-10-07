@@ -4,15 +4,13 @@ import java.io.*;
 import java.security.DigestInputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 
 public class ExternalSort {
 
-    private static final int INTS_PER_CHUNK = 4;//(int) (Runtime.getRuntime().maxMemory() / 4) - 700000;
+    private static final int INTS_PER_CHUNK = (int) (Runtime.getRuntime().freeMemory() / 6);
     private static final int CONCURRENT_FILES = 2;
+    private static final int BUFFER_SIZE = (int) (Runtime.getRuntime().freeMemory()/(CONCURRENT_FILES*20));
 
     public static void sort(String afName, String bfName) throws FileNotFoundException, IOException {
         //Open the files
@@ -24,7 +22,7 @@ public class ExternalSort {
         //writeOutFiles(afName, bfName);
 
         //debug
-        System.out.println("Starting Quicksort Pass:"+af.length());
+        //System.out.println("Starting Quicksort Pass:"+af.length()/Integer.BYTES);
 
         //TODO maybe check the size of all numbers, then use a short array instead (if all < Short.MAX_VALUE)
 
@@ -75,56 +73,60 @@ public class ExternalSort {
         bdo.close();
 
         //debug
-        af = new RandomAccessFile(afName, "r");
-        System.out.println("Starting Merge Passes:"+af.length());
-        af.close();
+        //writeOutFiles(afName, bfName);
+
+        //debug
+        /*af = new RandomAccessFile(afName, "r");
+        System.out.println("Starting Merge Passes:"+af.length()/Integer.BYTES);
+        af.close();*/
 
 
         /* **** MERGE PASS **** */
-        //point at which merge is complete
-        int maxChunksInASegment = (int) (intsInFile / INTS_PER_CHUNK + (intsInFile % INTS_PER_CHUNK > 0 ? 1 : 0));
+        //point at which merge is complete, times 2 for some unknown reason, but it works
+        int maxChunksInASegment = (int) (intsInFile / INTS_PER_CHUNK + (intsInFile % INTS_PER_CHUNK > 0 ? 1 : 0))*2;
 
         //initially merge single chunks
         int chunksInASegment = 1;
 
         //initial input and output files
-        String foName = bfName;
-        String fiName = afName;
+        String foName = afName;
+        String fiName = bfName;
 
         //while all segments haven't been merged
-        while (maxChunksInASegment > chunksInASegment) {
+        while (maxChunksInASegment >= chunksInASegment) {
 
-            //inner loop deals with not having enough concurrent files for all the segments that must be merged on earlier passes
+            //inner loop deals with not having enough concurrent files for all the segments that must be merged
             //end state for inner loop
-            long maxOffset = intsInFile;
+            long maxOffsetInt = intsInFile;
 
-            //initially start at the begining of the file
-            long currentOffset = 0;
+            //initially start at the beginning of the file
+            long currentOffsetInt = 0;
 
             //file to output too
             DataOutputStream fo = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(new RandomAccessFile(foName, "rw").getFD())));
 
             //while the whole file hasn't been merged
-            while (currentOffset < maxOffset) {
+            while (currentOffsetInt < maxOffsetInt) {
 
                 //arrays of random access files, integers remaining in each segment, and an arraylist 'data' as the buffer
                 RandomAccessFile[] rafs = new RandomAccessFile[CONCURRENT_FILES];
                 int[] intsRemaining = new int[CONCURRENT_FILES];
-                //todo keep data sorted by first integer in list
-                ArrayList<List<Integer>> data = new ArrayList<>(CONCURRENT_FILES);
+                int[][] buffer = new int[CONCURRENT_FILES][BUFFER_SIZE];
+                int[] bufferIndex = new int[CONCURRENT_FILES];
 
                 //open all the random access files, populate integers remaining, and return number of rafs opened (if not enough segments)
-                int length = getFiles(rafs, fiName, intsRemaining, chunksInASegment, currentOffset);
+                int length = getFiles(rafs, fiName, intsRemaining, chunksInASegment, currentOffsetInt, intsInFile);
 
                 //if not enough segments, update arrays
                 if (length != CONCURRENT_FILES) {
                     rafs = Arrays.copyOf(rafs, length);
                     intsRemaining = Arrays.copyOf(intsRemaining, length);
-                    data = new ArrayList<>(length);
+                    buffer = new int[length][BUFFER_SIZE];
+                    bufferIndex = new int[length];
                 }
 
                 //load data into the buggers, makes use of the refill buffer method
-                loadInitialData(data, rafs, intsRemaining, chunksInASegment);
+                loadInitialData(buffer, bufferIndex, rafs, intsRemaining, chunksInASegment);
 
                 //count down for when all segments have been fully read
                 int notNullCount = length;
@@ -133,27 +135,38 @@ public class ExternalSort {
                 while (notNullCount > 0) {
 
                     //find the smallest integer
-                    int index = findSmallestIndex(data, intsRemaining);
+                    int index = findIndexOfSmallest(buffer, bufferIndex, intsRemaining);
+
+                    assert index >= 0;
 
                     //write the integer to the output file and remove it from the segments
-                    fo.writeInt(data.get(index).get(0));
-                    data.get(index).remove(0);
+                    fo.writeInt(buffer[index][bufferIndex[index]]);
                     intsRemaining[index]--;
+                    bufferIndex[index]++;
 
-                    //if the buffer is now empty either:
-                    if (data.get(index).size() == 0) {
-                        //just refill it
-                        int res = refillBuffer(data.get(index), rafs[index], intsRemaining[index], chunksInASegment);
-                        //or, if the segment is empty, make this clear
-                        if (res == 0) {
-                            rafs[index] = null;
-                            notNullCount--;
-                            data.get(index).clear();
-                        }
+                    assert intsRemaining[index] >= 0;
+
+                    //if the segment is empty, make this clear
+                    if (intsRemaining[index] == 0) {
+                        notNullCount--;
+                        bufferIndex[index] = -1;
+                    }
+
+                    //if the buffer is now empty
+                    if (buffer[index].length <= bufferIndex[index]) {
+                        //refill it
+                        refillBuffer(buffer[index], rafs[index], intsRemaining[index]);
+                        bufferIndex[index]=0;
                     }
                 }
 
-                currentOffset += CONCURRENT_FILES*chunksInASegment;
+                //increment the 'counter'
+                currentOffsetInt += CONCURRENT_FILES * chunksInASegment * INTS_PER_CHUNK;
+
+                //close all the files
+                for (RandomAccessFile raf: rafs) {
+                    raf.close();
+                }
             }
             fo.flush();
             fo.close();
@@ -168,86 +181,113 @@ public class ExternalSort {
         }
 
         //debug
-        af = new RandomAccessFile(afName, "r");
-        System.out.println("Copy pass:"+af.length());
-        af.close();
+        /*af = new RandomAccessFile(afName, "r");
+        System.out.println("Copy pass:"+af.length()/Integer.BYTES);
+        af.close();*/
 
-        //if file
-        if (!foName.equals(afName) || intsInFile < INTS_PER_CHUNK) {
+        //make sure the file ends up in A
+        if (!foName.equals(afName) || INTS_PER_CHUNK <= intsInFile) {
             moveFileFromTo(bfName, afName, intsInFile);
         }
 
         //debug
-        af = new RandomAccessFile(afName, "r");
-        System.out.println("Done:"+af.length());
-        af.close();
+        /*af = new RandomAccessFile(afName, "r");
+        System.out.println("Done:"+af.length()/Integer.BYTES);
+        af.close();*/
+
+        //debug
         //writeOutFiles(afName, bfName);
     }
 
-    private static int findSmallestIndex(ArrayList<List<Integer>> data, int[] remaining) {
+    private static int findIndexOfSmallest(int[][] buffer, int[] bufferIndex, int[] remaining) {
+        //look for integers smaller than the biggest one
         int minVal = Integer.MAX_VALUE;
         int index = -1;
-        for (int i = 0; i < data.size(); i++) {
+
+        //for every segment
+        for (int i = 0; i < buffer.length; i++) {
+            //if the segment isn't empty
             if (remaining[i] != 0) {
-                if (data.get(i).get(0) < minVal) {
+                //if the first integer is less than the lowest so far
+                if (buffer[i][bufferIndex[i]] < minVal) {
+                    //mark that as the lowest integer
                     index = i;
-                    minVal = data.get(i).get(0);
+                    minVal = buffer[i][bufferIndex[i]];
                 }
             }
         }
         return index;
     }
 
-    private static void loadInitialData(ArrayList<List<Integer>> data, RandomAccessFile[] rafs, int[] intsRemaining, int chunksInASegment) throws IOException {
+    private static void loadInitialData(int[][] buffer, int[] bufferIndex, RandomAccessFile[] rafs, int[] intsRemaining, int chunksInASegment) throws IOException {
         for (int i = 0; i < rafs.length; i++) {
-            data.add(new LinkedList<>());
-            int sucked = refillBuffer(data.get(i), rafs[i], intsRemaining[i], chunksInASegment);
+            long sucked = refillBuffer(buffer[i], rafs[i], intsRemaining[i]);
+            bufferIndex[i] = 0;
         }
     }
 
-    private static int refillBuffer(List<Integer> buffer, RandomAccessFile raf, int remaining, int chunksInASegment) throws IOException {
-        int count = chunksInASegment*INTS_PER_CHUNK;
+    private static int refillBuffer(int[] buffer, RandomAccessFile raf, int remaining) throws IOException {
+        int count = BUFFER_SIZE;
 
-        if (remaining < chunksInASegment*INTS_PER_CHUNK) {
+        //if there is less than a full buffer load left only load so much
+        if (remaining < count) {
             count = remaining;
         }
 
-        buffer.clear();
+        //fill in the buffer from the file
         for (int i = 0; i < count; i++) {
-            buffer.add(raf.readInt());
+            buffer[i] = raf.readInt();
+            if (i != 0 && buffer[i-1] > buffer[i]) {
+                System.out.println(i+" "+remaining);
+            }
         }
         return count;
     }
 
-    private static int getFiles(RandomAccessFile[] rafs, String fiName, int[] intsRemaining, int chunksInASegment, long offset) throws IOException {
-        long currentPostition = offset;
-        RandomAccessFile file = new RandomAccessFile(fiName, "r");
-        long flength = file.length()/4;
+    private static int getFiles(RandomAccessFile[] rafs, String fiName, int[] intsRemaining, int chunksInASegment, long offsetInt, long fLengthInt) throws IOException {
+        long currentPostitionInt = offsetInt;
 
         for (int i = 0; i < rafs.length; i++) {
 
-            file = new RandomAccessFile(fiName, "r");
-            file.seek(currentPostition*Integer.BYTES);
+            //create a fresh file for each point
+            RandomAccessFile file = new RandomAccessFile(fiName, "r");
+
+            //seek to the right position
+            file.seek(currentPostitionInt*Integer.BYTES);
+
+            //add the file to the array of files
             rafs[i] = file;
+
+            //set the number of integers remaining in the files segment
             intsRemaining[i] = chunksInASegment*INTS_PER_CHUNK;
 
-            if (currentPostition + (long) chunksInASegment*INTS_PER_CHUNK >= flength) {
-                long segmentlength = flength - currentPostition;
-                intsRemaining[i] = (int) segmentlength;
+            //if the files segment is at the end of the file, update the number of integers remaining appropriately
+            if (currentPostitionInt + (long) chunksInASegment*INTS_PER_CHUNK >= fLengthInt) {
+                long segmentlengthInt = fLengthInt - currentPostitionInt;
+                intsRemaining[i] = (int) segmentlengthInt;
+                //and return the number of files read
                 return i+1;
             }
 
-            currentPostition += chunksInASegment*INTS_PER_CHUNK;
+            currentPostitionInt += chunksInASegment*INTS_PER_CHUNK;
         }
 
-        return CONCURRENT_FILES;
+        //debug
+        /*
+        int total = 0;
+        for (int k : intsRemaining) {
+            total += k;
+        }
+        System.out.println(offsetInt + total+" "+currentPostitionInt);*/
+
+        return rafs.length;
     }
 
     private static void moveFileFromTo(String from, String to, long length) throws IOException {
         DataInputStream fromS = new DataInputStream(new BufferedInputStream(new FileInputStream(new RandomAccessFile(from, "r").getFD())));
         DataOutputStream toS = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(new RandomAccessFile(to, "rw").getFD())));
 
-        long size = length*Integer.BYTES;
+        long size = length;
 
         for (long i = 0; i < size; i++) {
             toS.writeInt(fromS.readInt());
