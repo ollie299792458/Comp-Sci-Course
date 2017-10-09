@@ -12,7 +12,7 @@ static char strings[][80] = {
   "University-of-Cambridge"
 };
 
-int main(void) {
+int main(void) { 
   for (int i = 0; i < 8; i++) {
     printf("Original: %s\n", strings[i]);
     reverse_words(strings[i]);
@@ -29,8 +29,8 @@ Original: University of Cambridge
 Reversed: ytisrevinU fo egdirbmaC
 Original: Hello, world
 Reversed: olleH, dlrow
-Original:  Hello
-Reversed:  olleH
+Original:  Hello 
+Reversed:  olleH 
 Original: University of Cambridge!
 Reversed: ytisrevinU fo egdirbmaC!
 Original:  University of Cambridge
@@ -43,5 +43,5 @@ Reversed: ytisrevinU-fo-egdirbmaC
 */
 
 
-
-
+  
+  
