@@ -8,9 +8,9 @@ import java.util.Arrays;
 
 public class ExternalSort {
 
-    private static final int INTS_PER_CHUNK = (int) (Runtime.getRuntime().freeMemory() / 6);
+    private static final int INTS_PER_CHUNK = (int) (Runtime.getRuntime().freeMemory() / 100);
     private static final int CONCURRENT_FILES = 2;
-    private static final int BUFFER_SIZE = (int) (Runtime.getRuntime().freeMemory()/(CONCURRENT_FILES*20));
+    private static final int BUFFER_SIZE = (int) (Runtime.getRuntime().freeMemory()/(CONCURRENT_FILES*200));
 
     public static void sort(String afName, String bfName) throws FileNotFoundException, IOException {
         //Open the files
