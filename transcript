@@ -1,0 +1,102 @@
+vlib work
+vmap work work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work work 
+# Copying /opt/altera_lite/16.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+vlog -reportprogress 300 -work work {/home/ecad/Documents/Git Reps/Comp-Sci-Course/ECAD/exercise0/tb_light.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:05:45 on Oct 12,2017
+# vlog -reportprogress 300 -work work /home/ecad/Documents/Git Reps/Comp-Sci-Course/ECAD/exercise0/tb_light.sv 
+# -- Compiling module tb_tlight
+# 
+# Top level modules:
+# 	tb_tlight
+# End time: 14:05:45 on Oct 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {/home/ecad/Documents/Git Reps/Comp-Sci-Course/ECAD/exercise0/tlight.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:05:46 on Oct 12,2017
+# vlog -reportprogress 300 -work work /home/ecad/Documents/Git Reps/Comp-Sci-Course/ECAD/exercise0/tlight.sv 
+# -- Compiling module tlight
+# 
+# Top level modules:
+# 	tlight
+# End time: 14:05:46 on Oct 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {/home/ecad/Documents/Git Reps/Comp-Sci-Course/ECAD/exercise0/tb_light.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:05:49 on Oct 12,2017
+# vlog -reportprogress 300 -work work /home/ecad/Documents/Git Reps/Comp-Sci-Course/ECAD/exercise0/tb_light.sv 
+# -- Compiling module tb_tlight
+# 
+# Top level modules:
+# 	tb_tlight
+# End time: 14:05:49 on Oct 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_tlight
+# vsim work.tb_tlight 
+# Start time: 14:06:03 on Oct 12,2017
+# Loading sv_std.std
+# Loading work.tb_tlight
+# Loading work.tlight
+run
+# time=    0: (r,a,g) = (x,x,x)
+# time=   10: (r,a,g) = (x,x,x)
+# time=   20: (r,a,g) = (x,x,x)
+# time=   30: (r,a,g) = (x,x,x)
+# time=   40: (r,a,g) = (x,x,x)
+# time=   50: (r,a,g) = (x,x,x)
+# time=   60: (r,a,g) = (x,x,x)
+# time=   70: (r,a,g) = (x,x,x)
+# time=   80: (r,a,g) = (x,x,x)
+# time=   90: (r,a,g) = (x,x,x)
+# time=  100: (r,a,g) = (x,x,x)
+run
+# time=  110: (r,a,g) = (x,x,x)
+# time=  120: (r,a,g) = (x,x,x)
+# time=  130: (r,a,g) = (x,x,x)
+# time=  140: (r,a,g) = (x,x,x)
+# time=  150: (r,a,g) = (x,x,x)
+# time=  160: (r,a,g) = (x,x,x)
+# time=  170: (r,a,g) = (x,x,x)
+# time=  180: (r,a,g) = (x,x,x)
+# time=  190: (r,a,g) = (x,x,x)
+# time=  200: (r,a,g) = (x,x,x)
+add wave -position end  sim:/tb_tlight/r
+add wave -position end  sim:/tb_tlight/a
+add wave -position end  sim:/tb_tlight/g
+add wave -position end  sim:/tb_tlight/clk
+run
+# time=  210: (r,a,g) = (x,x,x)
+# time=  220: (r,a,g) = (x,x,x)
+# time=  230: (r,a,g) = (x,x,x)
+# time=  240: (r,a,g) = (x,x,x)
+# time=  250: (r,a,g) = (x,x,x)
+# time=  260: (r,a,g) = (x,x,x)
+# time=  270: (r,a,g) = (x,x,x)
+# time=  280: (r,a,g) = (x,x,x)
+# time=  290: (r,a,g) = (x,x,x)
+# time=  300: (r,a,g) = (x,x,x)
+run
+# time=  310: (r,a,g) = (x,x,x)
+# time=  320: (r,a,g) = (x,x,x)
+# time=  330: (r,a,g) = (x,x,x)
+# time=  340: (r,a,g) = (x,x,x)
+# time=  350: (r,a,g) = (x,x,x)
+# time=  360: (r,a,g) = (x,x,x)
+# time=  370: (r,a,g) = (x,x,x)
+# time=  380: (r,a,g) = (x,x,x)
+# time=  390: (r,a,g) = (x,x,x)
+# time=  400: (r,a,g) = (x,x,x)
+run
+# time=  410: (r,a,g) = (x,x,x)
+# time=  420: (r,a,g) = (x,x,x)
+# time=  430: (r,a,g) = (x,x,x)
+# time=  440: (r,a,g) = (x,x,x)
+# time=  450: (r,a,g) = (x,x,x)
+# time=  460: (r,a,g) = (x,x,x)
+# time=  470: (r,a,g) = (x,x,x)
+# time=  480: (r,a,g) = (x,x,x)
+# time=  490: (r,a,g) = (x,x,x)
+# time=  500: (r,a,g) = (x,x,x)
