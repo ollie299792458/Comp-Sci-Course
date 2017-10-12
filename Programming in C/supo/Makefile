@@ -14,8 +14,14 @@ lecture2_2:
 	cc -Wall -c lecture2_2.c
 	cc -o lecture2_2 lecture2_2.o
 
+lecture3:
+	cc -Wall -c lecture3.c calc.c
+	cc -o lecture3 lecture3.o
+	cc -o calc calc.o
+
 clean:
 	rm -f lecture1_3.o lecture1_3 
 	rm -f lecture1_4.o lecture1_4 
 	rm -f lecture2_1 lecture2_1.o
 	rm -f lecture2_2 lecture2_2.o
+	rm -f lecture3 lecture3.o calc calc.o

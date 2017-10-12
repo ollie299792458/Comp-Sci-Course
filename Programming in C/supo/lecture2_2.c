@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+//question 3
+#define SWAP(t,x,y) t temp = x; x = y; y = temp
+#define SWAP2(t,x,y) t *ax = &x; t *ay = &y; t temp = *ax; *ax = *ay; *ay = temp 
+
 void merge(int in[], int out[], int start, int end) {
     if (start + 1 == end) {
        return;
@@ -52,5 +56,11 @@ int main() {
     int i[] = {1,2,4,3,9,2,3,4};
     mergesort(i, 8);
     print_array(i, 8);
+    
+    int a = 0;
+    int b = 1;
+    SWAP2(int, a, b);
+    printf("a:%d,b:%d\n", a, b);
+    
     return 0;
 }
