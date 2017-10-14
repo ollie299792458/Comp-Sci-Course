@@ -52,8 +52,37 @@ float cube(vec3 p) {
     return min(max(d.x, max(d.y, d.z)), 0.0) + length(max(d, 0.0));
 }
 
+float sphereUnionCube(vec3 p) {
+    return min(cube(p), sphere(p-vec3(1,0,1)));
+}
+
+float sphereDifferenceCube(vec3 p) {
+    return max(cube(p), -sphere(p-vec3(1,0,1)));
+}
+
+float sphereIntersectCube(vec3 p) {
+    return max(cube(p), sphere(p-vec3(1,0,1)));
+}
+
+float smin(float a, float b) {
+    float k = 0.2;
+    float h = clamp(0.5 + 0.5 * (b - a) / k, 0,1);
+    return mix(b, a, h) - k * h * (1 - h);
+}
+
+float sphereSmoothCube(vec3 p) {
+    return smin(cube(p), sphere(p-vec3(1,0,1)));
+}
+
+float getSDF(vec3 p) {
+    return min(min(sphereUnionCube(p - vec3(-3, 0, -3)), //union
+                sphereDifferenceCube(p - vec3(3, 0, -3))), //difference
+            min(sphereIntersectCube(p - vec3(3, 0, 3)),  //intersection
+                sphereSmoothCube(p - vec3(-3, 0, 3)))); //smooth
+}
+
 vec3 getNormal(vec3 pt) {
-  return normalize(GRADIENT(pt, cube));
+  return normalize(GRADIENT(pt, getSDF));
 }
 
 vec3 getColor(vec3 pt) {
@@ -88,7 +117,7 @@ vec3 raymarch(vec3 camPos, vec3 rayDir) {
   float t = 0;
 
   for (float d = 1000; step < RENDER_DEPTH && abs(d) > CLOSE_ENOUGH; t += abs(d)) {
-    d = cube(camPos + t * rayDir);
+    d = getSDF(camPos + t * rayDir);
     step++;
   }
 

@@ -42,21 +42,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragment_shader.glsl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="fragment_shader.glsl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/fragment_shader.glsl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
-              <caret line="55" column="36" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="107" selection-end-column="1" />
+            <state relative-caret-position="696">
+              <caret line="80" column="43" lean-forward="false" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragment_shader -  Task1.glsl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/fragment_shader -  Task1.glsl">
+      <file leaf-file-name="Camera.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/furthergfx/crsid/tick/Camera.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="890">
-              <caret line="107" column="1" lean-forward="false" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
+            <state relative-caret-position="-899">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -67,6 +67,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>sphere</find>
+      <find>get</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -77,8 +78,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/fragment_shader.glsl" />
         <option value="$PROJECT_DIR$/resources/fragment_shader -  Task1.glsl" />
+        <option value="$PROJECT_DIR$/resources/fragment_shader.glsl" />
       </list>
     </option>
   </component>
@@ -343,18 +344,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/fragment_shader.glsl">
+    <entry file="file://$PROJECT_DIR$/resources/fragment_shader -  Task1.glsl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="55" column="36" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="107" selection-end-column="1" />
+        <state relative-caret-position="890">
+          <caret line="90" column="34" lean-forward="true" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/fragment_shader -  Task1.glsl">
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/furthergfx/crsid/tick/Camera.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="890">
-          <caret line="107" column="1" lean-forward="false" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
+        <state relative-caret-position="-899">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/fragment_shader.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="80" column="43" lean-forward="false" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
           <folding />
         </state>
       </provider>
