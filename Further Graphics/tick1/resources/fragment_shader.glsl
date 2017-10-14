@@ -74,11 +74,19 @@ float sphereSmoothCube(vec3 p) {
     return smin(cube(p), sphere(p-vec3(1,0,1)));
 }
 
-float getSDF(vec3 p) {
+float getShapes(vec3 p) {
     return min(min(sphereUnionCube(p - vec3(-3, 0, -3)), //union
                 sphereDifferenceCube(p - vec3(3, 0, -3))), //difference
             min(sphereIntersectCube(p - vec3(3, 0, 3)),  //intersection
                 sphereSmoothCube(p - vec3(-3, 0, 3)))); //smooth
+}
+
+float getPlane(vec3 p) {
+    return p.y + 1.0;
+}
+
+float getSDF(vec3 p) {
+    return min(getShapes(p), getPlane(p));
 }
 
 vec3 getNormal(vec3 pt) {

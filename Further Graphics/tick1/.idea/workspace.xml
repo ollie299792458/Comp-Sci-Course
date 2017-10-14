@@ -45,8 +45,8 @@
       <file leaf-file-name="fragment_shader.glsl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/fragment_shader.glsl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="80" column="43" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="136" selection-end-column="1" />
+            <state relative-caret-position="297">
+              <caret line="95" column="24" lean-forward="false" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -79,8 +79,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/resources/fragment_shader -  Task1.glsl" />
-        <option value="$PROJECT_DIR$/resources/fragment_shader.glsl" />
         <option value="$PROJECT_DIR$/resources/fragment_shader - Task2.glsl" />
+        <option value="$PROJECT_DIR$/resources/fragment_shader.glsl" />
       </list>
     </option>
   </component>
@@ -371,8 +371,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/fragment_shader.glsl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="80" column="43" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="136" selection-end-column="1" />
+        <state relative-caret-position="297">
+          <caret line="95" column="24" lean-forward="false" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
           <folding />
         </state>
       </provider>
