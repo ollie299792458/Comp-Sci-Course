@@ -83,7 +83,7 @@ vec3 raymarch(vec3 camPos, vec3 rayDir) {
   float t = 0;
 
   for (float d = 1000; step < RENDER_DEPTH && abs(d) > CLOSE_ENOUGH; t += abs(d)) {
-//    d = sphere(camPos + t * rayDir);
+    d = sphere(camPos + t * rayDir);
     step++;
   }
 
