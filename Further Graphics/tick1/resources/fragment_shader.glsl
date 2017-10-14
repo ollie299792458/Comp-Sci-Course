@@ -94,7 +94,15 @@ vec3 getNormal(vec3 pt) {
 }
 
 vec3 getColor(vec3 pt) {
-  return vec3(1);
+    //more efficient to check if plane or shape elsewhere
+    float dist = getShapes(pt);
+    if (getPlane(pt) < dist) {
+        if (dist > 3 && mod(dist, 5) < 0.25) {
+            return vec3(0,0,0);
+        }
+        return mix(vec3(0.4,1,0.4), vec3(0.4,0.4,1), mod(dist, 1));
+    }
+    return vec3(1);
 }
 
 ///////////////////////////////////////////////////////////////////////////////
