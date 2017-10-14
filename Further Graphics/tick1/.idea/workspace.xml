@@ -42,17 +42,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragment_shader.glsl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="fragment_shader.glsl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/fragment_shader.glsl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="102" column="61" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="152" selection-end-column="1" />
+            <state relative-caret-position="-7">
+              <caret line="77" column="23" lean-forward="false" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragment_shader - Task3.glsl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fragment_shader - Task3.glsl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/fragment_shader - Task3.glsl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="890">
@@ -90,8 +90,8 @@
       <list>
         <option value="$PROJECT_DIR$/resources/fragment_shader -  Task1.glsl" />
         <option value="$PROJECT_DIR$/resources/fragment_shader - Task2.glsl" />
-        <option value="$PROJECT_DIR$/resources/fragment_shader.glsl" />
         <option value="$PROJECT_DIR$/resources/fragment_shader - Task3.glsl" />
+        <option value="$PROJECT_DIR$/resources/fragment_shader.glsl" />
       </list>
     </option>
   </component>
@@ -380,18 +380,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/fragment_shader.glsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="102" column="61" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="152" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/fragment_shader - Task3.glsl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="890">
           <caret line="152" column="1" lean-forward="false" selection-start-line="152" selection-start-column="1" selection-end-line="152" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/fragment_shader.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="77" column="23" lean-forward="false" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
           <folding />
         </state>
       </provider>
