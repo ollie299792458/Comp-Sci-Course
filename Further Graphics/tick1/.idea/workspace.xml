@@ -46,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/resources/fragment_shader.glsl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="696">
-              <caret line="80" column="43" lean-forward="false" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
+              <caret line="80" column="43" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="136" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -80,6 +80,7 @@
       <list>
         <option value="$PROJECT_DIR$/resources/fragment_shader -  Task1.glsl" />
         <option value="$PROJECT_DIR$/resources/fragment_shader.glsl" />
+        <option value="$PROJECT_DIR$/resources/fragment_shader - Task2.glsl" />
       </list>
     </option>
   </component>
@@ -360,10 +361,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/fragment_shader - Task2.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="890">
+          <caret line="136" column="1" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/fragment_shader.glsl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
-          <caret line="80" column="43" lean-forward="false" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
+          <caret line="80" column="43" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="136" selection-end-column="1" />
           <folding />
         </state>
       </provider>
