@@ -94,10 +94,10 @@ vec3 getNormal(vec3 pt) {
 }
 
 vec3 getColor(vec3 pt) {
-    //more efficient to check if plane or shape elsewhere
+    //more efficient to check if plane or shape elsewhere, but this is prettier
     float dist = getShapes(pt);
     if (getPlane(pt) < dist) {
-        if (dist > 3 && mod(dist, 5) < 0.25) {
+        if (mod(dist, 5) > 4.75) {
             return vec3(0,0,0);
         }
         return mix(vec3(0.4,1,0.4), vec3(0.4,0.4,1), mod(dist, 1));
