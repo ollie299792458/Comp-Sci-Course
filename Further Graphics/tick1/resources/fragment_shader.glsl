@@ -48,8 +48,7 @@ float sphere(vec3 pt) {
 }
 
 float cube(vec3 p) {
-    vec3 d = abs(p) - vec3(1); // 1 = radius
-    return min(max(d.x, max(d.y, d.z)), 0.0) + length(max(d, 0.0));
+    return max(max(abs(p.x), abs(p.y)), abs(p.z)) - 1; // 1 = radius
 }
 
 vec3 getNormal(vec3 pt) {
