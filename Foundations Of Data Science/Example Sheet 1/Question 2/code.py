@@ -23,3 +23,6 @@ plt.plot(range(10), day1, "Day 1")
 plt.plot(range(10), day2, "Day 2")
 plt.plot(range(10), day3, "Day 3")
 plt.show
+
+
+NOTE  INCOMPLETE AND NON-FUNCTIONAL, GO TO AZURE NOTEBOOK FOR "WORKING" VERSION
