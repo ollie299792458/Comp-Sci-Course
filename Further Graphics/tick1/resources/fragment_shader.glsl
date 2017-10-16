@@ -112,12 +112,21 @@ vec3 getColor(vec3 pt) {
 
 float shade(vec3 eye, vec3 pt, vec3 n) {
   float val = 0;
-  
-  val += 0.1;  // Ambient
+  float ka = 0.1;
+  float kd = 1.0;
+  float ks = 1.0;
+  float a = 256;
+
+  val += ka;  // Ambient
   
   for (int i = 0; i < LIGHT_POS.length(); i++) {
-    vec3 l = normalize(LIGHT_POS[i] - pt); 
-    val += max(dot(n, l), 0);
+    vec3 l = normalize(LIGHT_POS[i] - pt);
+
+    val += kd*max(dot(n, l), 0); //Diffuse
+
+    vec3 r = normalize(2*dot(l,n)*n-l);
+    vec3 v = normalize(eye-pt);
+    val += ks*pow(max(dot(r,v),0),a); //Specular
   }
   return val;
 }
