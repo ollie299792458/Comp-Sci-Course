@@ -81,7 +81,12 @@ float torus(vec3 p) {
 }
 
 float getShapes(vec3 p) {
-    return torus(p-vec3(0,3,0));
+    mat3 t = mat3(
+    vec3(1,0,0),
+    vec3(0,0,1),
+    vec3(0,1,0)
+    );
+    return torus(p*inverse(t)-vec3(0,0,3));
 }
 
 float getPlane(vec3 p) {
@@ -110,6 +115,22 @@ vec3 getColor(vec3 pt) {
 
 ///////////////////////////////////////////////////////////////////////////////
 
+float shadow(vec3 pt, vec3 l, float length) {
+    float kd = 1;
+    int step = 0;
+    for (float t = 0.1;t < length && step < RENDER_DEPTH && kd > 0.001; ) {
+        float d = abs(getSDF(pt + t * l));
+        if (d < 0.001) {
+            kd = 0;
+        } else {
+            kd = min(kd, 16 * d / t);
+        }
+        t += d;
+        step++;
+    }
+    return kd;
+}
+
 float shade(vec3 eye, vec3 pt, vec3 n) {
   float val = 0;
   float ka = 0.1;
@@ -122,11 +143,17 @@ float shade(vec3 eye, vec3 pt, vec3 n) {
   for (int i = 0; i < LIGHT_POS.length(); i++) {
     vec3 l = normalize(LIGHT_POS[i] - pt);
 
-    val += kd*max(dot(n, l), 0); //Diffuse
+    float subval = 0;
+    subval += kd*max(dot(n, l), 0); //Diffuse
 
     vec3 r = normalize(2*dot(l,n)*n-l);
     vec3 v = normalize(eye-pt);
-    val += ks*pow(max(dot(r,v),0),a); //Specular
+    subval += ks*pow(max(dot(r,v),0),a); //Specular
+
+    //Shadows
+    float sha = shadow(pt, l, length(LIGHT_POS[i]-pt));
+
+    val += sha*subval;
   }
   return val;
 }
