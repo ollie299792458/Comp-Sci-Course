@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13fedaf5-d95a-40df-b96c-c3089d8b6542" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/fragment_shader - Task5.glsl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fragment_shader.glsl" afterPath="$PROJECT_DIR$/resources/fragment_shader.glsl" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -48,8 +48,8 @@
       <file leaf-file-name="fragment_shader.glsl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/fragment_shader.glsl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="157" column="12" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="191" selection-end-column="1" />
+            <state relative-caret-position="145">
+              <caret line="82" column="25" lean-forward="false" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -95,8 +95,8 @@
         <option value="$PROJECT_DIR$/resources/fragment_shader - Task2.glsl" />
         <option value="$PROJECT_DIR$/resources/fragment_shader - Task3.glsl" />
         <option value="$PROJECT_DIR$/resources/fragment_shader - Task4.glsl" />
-        <option value="$PROJECT_DIR$/resources/fragment_shader.glsl" />
         <option value="$PROJECT_DIR$/resources/fragment_shader - Task5.glsl" />
+        <option value="$PROJECT_DIR$/resources/fragment_shader.glsl" />
       </list>
     </option>
   </component>
@@ -463,8 +463,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/fragment_shader.glsl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="157" column="12" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="191" selection-end-column="1" />
+        <state relative-caret-position="145">
+          <caret line="82" column="25" lean-forward="false" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
           <folding />
         </state>
       </provider>

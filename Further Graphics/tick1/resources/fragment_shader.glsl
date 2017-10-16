@@ -75,18 +75,29 @@ float sphereSmoothCube(vec3 p) {
 }
 
 float torus(vec3 p) {
-    vec2 t = vec2(3,1);
+    vec2 t = vec2(3,0.5);
     vec2 q = vec2(length(p.xz) - t.x, p.y);
     return length(q) - t.y;
 }
 
 float getShapes(vec3 p) {
-    mat3 t = mat3(
-    vec3(1,0,0),
-    vec3(0,0,1),
-    vec3(0,1,0)
+    vec3 p1 = vec3(mod(p.x,8), p.y, mod(p.z+4,8)-4);
+    vec3 p2 = vec3(mod(p.x+4,8)-4, p.y, mod(p.z,8));
+    vec3 p3 = vec3(mod(p.x+4,8)-4, p.y, mod(p.z+4,8)-4);
+    mat3 t1 = mat3(
+        vec3(1,0,0),
+        vec3(0,0,1),
+        vec3(0,1,0)
     );
-    return torus(p*inverse(t)-vec3(0,0,3));
+    mat3 t2 = mat3(
+        vec3(0,1,0),
+        vec3(1,0,0),
+        vec3(0,0,1)
+        );
+    float torus1 = torus(p1*inverse(t1)-vec3(4,0,3));
+    float torus2 = torus(p2*inverse(t2)-vec3(3,0,4));
+    float torus3 = torus(p3-vec3(0,3,0));
+    return min(torus1, min(torus2, torus3));
 }
 
 float getPlane(vec3 p) {
