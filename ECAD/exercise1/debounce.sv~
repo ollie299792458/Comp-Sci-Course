@@ -1,0 +1,12 @@
+// debounce template
+
+module debounce
+  (
+	input wire       clk,       // 50MHz clock input
+	input wire       rst,       // reset input (positive)
+	input wire       bouncy_in, // bouncy asynchronous input
+	output reg 		 clean_out  // clean debounced output
+   );
+
+   
+endmodule // debounce

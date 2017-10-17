@@ -1343,3 +1343,45 @@ VirtualBox VM 5.0.40_Ubuntu r115130 linux.amd64 (Apr 20 2017 06:58:05) release l
 00:32:42.290545 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=1600x818
 00:32:42.290557 GUI: UIFrameBufferPrivate::performResize: Size=1600x818, Directly using source bitmap content
 00:32:42.290657 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 1600x818
+00:54:13.111364 VBVA: InfoScreen: [0] @0,0 1600x818, line 0x1900, BPP 0, flags 0x5
+00:54:13.111422 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007f8850e00000 w=1600 h=818 bpp=0 cbLine=0x1900 flags=0x5
+00:54:13.111461 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=1600x818, Sending to async-handler
+00:54:13.111546 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=1600x818
+00:54:13.111563 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=1600x818
+00:54:13.111579 GUI: UIFrameBufferPrivate::performResize: Size=1600x818, Using fallback buffer since no source bitmap is provided
+00:54:13.111604 VBVA: InfoScreen: [0] @0,0 1600x818, line 0x1900, BPP 0, flags 0x5
+00:54:13.111648 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007f8850e00000 w=1600 h=818 bpp=0 cbLine=0x1900 flags=0x5
+00:54:13.111675 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=1600x818, Sending to async-handler
+00:54:13.111895 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 1600x818
+00:54:13.113765 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=1600x818
+00:54:13.113784 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=1600x818
+00:54:13.113792 GUI: UIFrameBufferPrivate::performResize: Size=1600x818, Using fallback buffer since no source bitmap is provided
+00:54:13.114066 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 1600x818
+00:58:54.048515 VBVA: InfoScreen: [0] @0,0 1600x818, line 0x1900, BPP 32, flags 0x1
+00:58:54.048554 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007f8850e00000 w=1600 h=818 bpp=32 cbLine=0x1900 flags=0x1
+00:58:54.048584 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=1600x818, Sending to async-handler
+00:58:54.048610 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=1600x818
+00:58:54.048627 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=1600x818
+00:58:54.048636 GUI: UIFrameBufferPrivate::performResize: Size=1600x818, Directly using source bitmap content
+00:58:54.048710 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 1600x818
+01:08:34.353933 VBVA: InfoScreen: [0] @0,0 1600x818, line 0x1900, BPP 0, flags 0x5
+01:08:34.354080 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007f8850e00000 w=1600 h=818 bpp=0 cbLine=0x1900 flags=0x5
+01:08:34.354200 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=1600x818, Sending to async-handler
+01:08:34.354438 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=1600x818
+01:08:34.354523 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=1600x818
+01:08:34.354640 VBVA: InfoScreen: [0] @0,0 1600x818, line 0x1900, BPP 0, flags 0x5
+01:08:34.354719 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007f8850e00000 w=1600 h=818 bpp=0 cbLine=0x1900 flags=0x5
+01:08:34.354775 GUI: UIFrameBufferPrivate::performResize: Size=1600x818, Using fallback buffer since no source bitmap is provided
+01:08:34.354904 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=1600x818, Sending to async-handler
+01:08:34.355923 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 1600x818
+01:08:34.367465 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=1600x818
+01:08:34.367595 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=1600x818
+01:08:34.367651 GUI: UIFrameBufferPrivate::performResize: Size=1600x818, Using fallback buffer since no source bitmap is provided
+01:08:34.368924 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 1600x818
+01:13:34.354482 VBVA: InfoScreen: [0] @0,0 1600x818, line 0x1900, BPP 0, flags 0x5
+01:13:34.354631 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007f8850e00000 w=1600 h=818 bpp=0 cbLine=0x1900 flags=0x5
+01:13:34.354731 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=1600x818, Sending to async-handler
+01:13:34.354926 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=1600x818
+01:13:34.354996 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=1600x818
+01:13:34.355035 GUI: UIFrameBufferPrivate::performResize: Size=1600x818, Using fallback buffer since no source bitmap is provided
+01:13:34.355951 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 1600x818
