@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13fedaf5-d95a-40df-b96c-c3089d8b6542" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/fragment_shader - Task6.glsl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Task6.png" afterPath="$PROJECT_DIR$/Task6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fragment_shader.glsl" afterPath="$PROJECT_DIR$/resources/fragment_shader.glsl" />
-    </list>
+    <list default="true" id="13fedaf5-d95a-40df-b96c-c3089d8b6542" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />

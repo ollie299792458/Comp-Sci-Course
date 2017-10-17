@@ -6,7 +6,7 @@
 ** Use VBoxManage or the VirtualBox Manager GUI to make changes.
 -->
 <VirtualBox xmlns="http://www.innotek.de/VirtualBox-settings" version="1.15-linux">
-  <Machine uuid="{7afb9663-15ad-4725-80b3-248a228cff45}" name="ECAD-Labs" OSType="Ubuntu_64" snapshotFolder="Snapshots" lastStateChange="2017-10-12T12:47:09Z">
+  <Machine uuid="{7afb9663-15ad-4725-80b3-248a228cff45}" name="ECAD-Labs" OSType="Ubuntu_64" snapshotFolder="Snapshots" lastStateChange="2017-10-17T13:25:07Z">
     <MediaRegistry>
       <HardDisks>
         <HardDisk uuid="{871c41fa-371f-4aaf-ab94-fb2b40eb7457}" location="ECAD-Labs.vmdk" format="VMDK" type="Normal"/>
@@ -18,7 +18,7 @@
     </MediaRegistry>
     <ExtraData>
       <ExtraDataItem name="GUI/LastCloseAction" value="PowerOff"/>
-      <ExtraDataItem name="GUI/LastGuestSizeHint" value="800,818"/>
+      <ExtraDataItem name="GUI/LastGuestSizeHint" value="1600,818"/>
       <ExtraDataItem name="GUI/LastNormalWindowPosition" value="0,126,1600,1674"/>
       <ExtraDataItem name="GUI/LastScaleWindowPosition" value="1280,690,640,480"/>
       <ExtraDataItem name="GUI/MenuBar/Enabled" value="false"/>
@@ -164,23 +164,23 @@
       <Guest memoryBalloonSize="0"/>
       <GuestProperties>
         <GuestProperty name="/VirtualBox/GuestAdd/HostVerLastChecked" value="5.0.40" timestamp="1507812470947418000" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestAdd/Revision" value="115130" timestamp="1507812440805591000" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestAdd/Version" value="5.0.40" timestamp="1507812440804140000" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestAdd/VersionExt" value="5.0.40" timestamp="1507812440805402000" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/MAC" value="08002704DF34" timestamp="1507812440808645000" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/Name" value="enp0s3" timestamp="1507812440809015000" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/Status" value="Up" timestamp="1507812440808692000" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/V4/Broadcast" value="10.0.2.255" timestamp="1507812440808426000" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/V4/IP" value="10.0.2.15" timestamp="1507812440808353000" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/V4/Netmask" value="255.255.255.0" timestamp="1507812440808472000" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestInfo/Net/Count" value="1" timestamp="1507813667585536000" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestInfo/OS/LoggedInUsers" value="1" timestamp="1507812440807829000" flags="TRANSIENT, TRANSRESET"/>
-        <GuestProperty name="/VirtualBox/GuestInfo/OS/LoggedInUsersList" value="ecad" timestamp="1507812440807092000" flags="TRANSIENT, TRANSRESET"/>
-        <GuestProperty name="/VirtualBox/GuestInfo/OS/NoLoggedInUsers" value="false" timestamp="1507812440808077000" flags="TRANSIENT, TRANSRESET"/>
-        <GuestProperty name="/VirtualBox/GuestInfo/OS/Product" value="Linux" timestamp="1507812440803786000" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestInfo/OS/Release" value="4.10.0-33-generic" timestamp="1507812440803835000" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestInfo/OS/Version" value="#37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24 UTC 2017" timestamp="1507812440803931000" flags=""/>
-        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="en_US" timestamp="1507813671104307000" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestAdd/Revision" value="115130" timestamp="1508246718347085000" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestAdd/Version" value="5.0.40" timestamp="1508246718345904000" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestAdd/VersionExt" value="5.0.40" timestamp="1508246718347020000" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/MAC" value="08002704DF34" timestamp="1508246718349127000" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/Name" value="enp0s3" timestamp="1508246718349252000" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/Status" value="Up" timestamp="1508246718349206000" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/V4/Broadcast" value="10.0.2.255" timestamp="1508246718348942000" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/V4/IP" value="10.0.2.15" timestamp="1508246718348865000" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/V4/Netmask" value="255.255.255.0" timestamp="1508246718349044000" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestInfo/Net/Count" value="1" timestamp="1508246718349311000" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestInfo/OS/LoggedInUsers" value="1" timestamp="1508246718348670000" flags="TRANSIENT, TRANSRESET"/>
+        <GuestProperty name="/VirtualBox/GuestInfo/OS/LoggedInUsersList" value="ecad" timestamp="1508246718348588000" flags="TRANSIENT, TRANSRESET"/>
+        <GuestProperty name="/VirtualBox/GuestInfo/OS/NoLoggedInUsers" value="false" timestamp="1508246718348768000" flags="TRANSIENT, TRANSRESET"/>
+        <GuestProperty name="/VirtualBox/GuestInfo/OS/Product" value="Linux" timestamp="1508246718345433000" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestInfo/OS/Release" value="4.10.0-37-generic" timestamp="1508246718345518000" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestInfo/OS/Version" value="#41~16.04.1-Ubuntu SMP Fri Oct 6 22:42:59 UTC 2017" timestamp="1508246718345699000" flags=""/>
+        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="en_US" timestamp="1508246718580726000" flags=""/>
       </GuestProperties>
     </Hardware>
     <StorageControllers>

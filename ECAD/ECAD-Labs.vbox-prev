@@ -20,6 +20,7 @@
       <ExtraDataItem name="GUI/LastCloseAction" value="PowerOff"/>
       <ExtraDataItem name="GUI/LastGuestSizeHint" value="800,818"/>
       <ExtraDataItem name="GUI/LastNormalWindowPosition" value="0,126,1600,1674"/>
+      <ExtraDataItem name="GUI/LastScaleWindowPosition" value="1280,690,640,480"/>
       <ExtraDataItem name="GUI/MenuBar/Enabled" value="false"/>
       <ExtraDataItem name="GUI/RestrictedRuntimeDevicesMenuActions" value="HardDrives"/>
       <ExtraDataItem name="GUI/RestrictedRuntimeMachineMenuActions" value="SaveState,PowerOff"/>
@@ -179,7 +180,7 @@
         <GuestProperty name="/VirtualBox/GuestInfo/OS/Product" value="Linux" timestamp="1507812440803786000" flags=""/>
         <GuestProperty name="/VirtualBox/GuestInfo/OS/Release" value="4.10.0-33-generic" timestamp="1507812440803835000" flags=""/>
         <GuestProperty name="/VirtualBox/GuestInfo/OS/Version" value="#37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24 UTC 2017" timestamp="1507812440803931000" flags=""/>
-        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="en_US" timestamp="1507813667805607000" flags=""/>
+        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="en_US" timestamp="1507813671104307000" flags=""/>
       </GuestProperties>
     </Hardware>
     <StorageControllers>
