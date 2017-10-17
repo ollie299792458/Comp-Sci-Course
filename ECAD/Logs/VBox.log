@@ -1385,3 +1385,10 @@ VirtualBox VM 5.0.40_Ubuntu r115130 linux.amd64 (Apr 20 2017 06:58:05) release l
 01:13:34.354996 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=1600x818
 01:13:34.355035 GUI: UIFrameBufferPrivate::performResize: Size=1600x818, Using fallback buffer since no source bitmap is provided
 01:13:34.355951 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 1600x818
+01:20:58.116194 VBVA: InfoScreen: [0] @0,0 1600x818, line 0x1900, BPP 32, flags 0x1
+01:20:58.116311 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007f8850e00000 w=1600 h=818 bpp=32 cbLine=0x1900 flags=0x1
+01:20:58.116395 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=1600x818, Sending to async-handler
+01:20:58.116497 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=1600x818
+01:20:58.116551 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=1600x818
+01:20:58.116590 GUI: UIFrameBufferPrivate::performResize: Size=1600x818, Directly using source bitmap content
+01:20:58.116835 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 1600x818
