@@ -23,6 +23,7 @@ always_ff @(posedge clk or posedge rst)
 if (rst)
 begin
     last_pos <= 0;
+    rotary_pos <= 0;
 end 
 else
 begin
