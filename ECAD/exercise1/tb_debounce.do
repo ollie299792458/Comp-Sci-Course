@@ -3,6 +3,7 @@
 # set up the "work" library
 vlib work
 # compile our SystemVerilog files
+vlog synchroniser.sv
 vlog debounce.sv
 vlog tb_debounce.sv
 # point the simulator at the compiled design

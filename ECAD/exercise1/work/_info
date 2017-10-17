@@ -1,0 +1,79 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/ecad/Documents/Git Reps/Comp-Sci-Course/ECAD/exercise1
+vdebounce
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1508253791
+!i10b 1
+!s100 ?>FjA<T6o6fJ;XKdI6`dB1
+IR_53CZRiD=hR:A<NJebEJ1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 debounce_sv_unit
+S1
+Z3 d/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise1
+w1508253747
+8debounce.sv
+Fdebounce.sv
+L0 3
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1508253791.000000
+!s107 debounce.sv|
+!s90 -reportprogress|300|debounce.sv|
+!i113 1
+Z6 tCvgOpt 0
+vsynchroniser
+R0
+R1
+!i10b 1
+!s100 @iLA`=E5OhK>0c6zE9l^83
+Idiz?ncTlNQC1ScVf98T882
+R2
+!s105 synchroniser_sv_unit
+S1
+R3
+w1508252931
+8synchroniser.sv
+Fsynchroniser.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 synchroniser.sv|
+!s90 -reportprogress|300|synchroniser.sv|
+!i113 1
+R6
+vtb_debounce
+R0
+R1
+!i10b 1
+!s100 64XM::6oZ@IDEYFa^9?ad1
+I<Wd^Slk4@0L:z_>KAce1I2
+R2
+!s105 tb_debounce_sv_unit
+S1
+R3
+w1508251571
+8tb_debounce.sv
+Ftb_debounce.sv
+L0 8
+R4
+r1
+!s85 0
+31
+R5
+!s107 tb_debounce.sv|
+!s90 -reportprogress|300|tb_debounce.sv|
+!i113 1
+R6
