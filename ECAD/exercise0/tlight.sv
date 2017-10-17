@@ -3,7 +3,7 @@ module tlight(input logic clk,
               output logic a,
               output logic g);
 
-logic [2:0] state;
+reg [2:0] state;
 
 initial
 begin
@@ -11,7 +11,7 @@ begin
 end;
 
 // enter code here
-always @(posedge clk)
+always_ff @(posedge clk)
 begin
   state <= (state == 3'b100) ? 3'b110:
           (state == 3'b110) ? 3'b001:
