@@ -81,6 +81,8 @@ float torus(vec3 p) {
 }
 
 float getShapes(vec3 p) {
+    //LETS JUST RANDOMLY CHANGE THE HEIGHT REQUIREMENT WITHOUT TELLING ANYONE
+    p -= vec3(0,0,4);
     vec3 p1 = vec3(mod(p.x,8), p.y, mod(p.z+4,8)-4);
     vec3 p2 = vec3(mod(p.x+4,8)-4, p.y, mod(p.z,8));
     vec3 p3 = vec3(mod(p.x+4,8)-4, p.y, mod(p.z+4,8)-4);
@@ -94,9 +96,9 @@ float getShapes(vec3 p) {
         vec3(1,0,0),
         vec3(0,0,1)
         );
-    float torus1 = torus(p1*inverse(t1)-vec3(4,0,3));
-    float torus2 = torus(p2*inverse(t2)-vec3(3,0,4));
-    float torus3 = torus(p3-vec3(0,3,0));
+    float torus1 = torus(p1*inverse(t1)-vec3(4,0,0));
+    float torus2 = torus(p2*inverse(t2)-vec3(0,0,4));
+    float torus3 = torus(p3);
     return min(torus1, min(torus2, torus3));
 }
 
