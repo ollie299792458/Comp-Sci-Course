@@ -1322,3 +1322,17 @@ VirtualBox VM 5.0.40_Ubuntu r115130 linux.amd64 (Apr 20 2017 06:58:05) release l
 00:00:11.542598 GUI: UIMediumEnumerator:  Items currently in usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
 00:00:11.542752 GUI: UIMediumEnumerator: Machine (or snapshot) event processed, ID = 7afb9663-15ad-4725-80b3-248a228cff45
 00:00:11.573508 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:32:03.766767 VBVA: InfoScreen: [0] @0,0 1600x818, line 0x1900, BPP 0, flags 0x5
+00:32:03.766891 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007f8850e00000 w=1600 h=818 bpp=0 cbLine=0x1900 flags=0x5
+00:32:03.766984 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=1600x818, Sending to async-handler
+00:32:03.767155 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=1600x818
+00:32:03.767229 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=1600x818
+00:32:03.767286 GUI: UIFrameBufferPrivate::performResize: Size=1600x818, Using fallback buffer since no source bitmap is provided
+00:32:03.767341 VBVA: InfoScreen: [0] @0,0 1600x818, line 0x1900, BPP 0, flags 0x5
+00:32:03.767396 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007f8850e00000 w=1600 h=818 bpp=0 cbLine=0x1900 flags=0x5
+00:32:03.767469 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=1600x818, Sending to async-handler
+00:32:03.768177 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 1600x818
+00:32:03.775165 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=1600x818
+00:32:03.775237 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=1600x818
+00:32:03.775267 GUI: UIFrameBufferPrivate::performResize: Size=1600x818, Using fallback buffer since no source bitmap is provided
+00:32:03.776000 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 1600x818

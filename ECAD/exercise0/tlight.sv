@@ -5,6 +5,11 @@ module tlight(input logic clk,
 
 logic [2:0] state;
 
+initial
+begin
+    state = 0;
+end;
+
 // enter code here
 always_ff @(posedge clk)
 begin
