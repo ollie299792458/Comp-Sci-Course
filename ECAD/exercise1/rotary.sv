@@ -30,11 +30,11 @@ begin
     if (last_pos != clean_rotary) begin
         if (clean_rotary == 2'b00) begin
             if (last_pos == 2'b01) begin
-                rot_cw <= 1;
-                rotary_pos <= rotary_pos + 1;
-            end else if (last_pos == 2'b10) begin
                 rot_ccw <= 1;
                 rotary_pos <= rotary_pos - 1;
+            end else if (last_pos == 2'b10) begin
+                rot_cw <= 1;
+                rotary_pos <= rotary_pos + 1;
             end;
         end;
         if (last_pos == 2'b00) begin

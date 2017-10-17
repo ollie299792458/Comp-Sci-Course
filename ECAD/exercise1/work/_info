@@ -10,7 +10,7 @@ cModel Technology
 d/home/ecad/Documents/Git Reps/Comp-Sci-Course/ECAD/exercise1
 vdebounce
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z1 !s110 1508256095
+Z1 !s110 1508256694
 !i10b 1
 !s100 ?>FjA<T6o6fJ;XKdI6`dB1
 IR_53CZRiD=hR:A<NJebEJ1
@@ -26,22 +26,22 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1508256095.000000
+Z5 !s108 1508256694.000000
 !s107 debounce.sv|
 !s90 -reportprogress|300|debounce.sv|
 !i113 1
 Z6 tCvgOpt 0
 vrotary
 R0
-R1
+Z7 !s110 1508256695
 !i10b 1
-!s100 FV^P3:?_;43^GWaGoX2lW1
-I;oPBROb;3i6LdNCogL5RJ3
+!s100 >Ed57lT:?bOTG8YSeBHUV1
+I0OHO@CVUAW`=bTKS^KiTj2
 R2
 !s105 rotary_sv_unit
 S1
 R3
-w1508256091
+w1508256673
 8rotary.sv
 Frotary.sv
 L0 3
@@ -49,7 +49,7 @@ R4
 r1
 !s85 0
 31
-R5
+Z8 !s108 1508256695.000000
 !s107 rotary.sv|
 !s90 -reportprogress|300|rotary.sv|
 !i113 1
@@ -87,7 +87,7 @@ R2
 !s105 tb_debounce_sv_unit
 S1
 R3
-Z7 w1508251571
+Z9 w1508251571
 8tb_debounce.sv
 Ftb_debounce.sv
 L0 8
@@ -102,7 +102,7 @@ r1
 R6
 vtb_rotary
 R0
-R1
+R7
 !i10b 1
 !s100 ==bc`:bM?3cW8@6?eScdJ3
 I1dN@<cd0iLMl6`dcn_b_m1
@@ -110,7 +110,7 @@ R2
 !s105 tb_rotary_sv_unit
 S1
 R3
-R7
+R9
 8tb_rotary.sv
 Ftb_rotary.sv
 L0 8
@@ -118,7 +118,7 @@ R4
 r1
 !s85 0
 31
-R5
+R8
 !s107 tb_rotary.sv|
 !s90 -reportprogress|300|tb_rotary.sv|
 !i113 1
