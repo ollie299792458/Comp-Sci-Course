@@ -11,7 +11,7 @@ begin
 end;
 
 // enter code here
-always_ff @(posedge clk)
+always @(posedge clk)
 begin
   state <= (state == 3'b100) ? 3'b110:
           (state == 3'b110) ? 3'b001:
