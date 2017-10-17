@@ -5,20 +5,19 @@ module tlight(input logic clk,
 
 logic [2:0] state;
 
-/*initial
+initial
 begin
     state = 0;
-end;*/
+end;
 
 // enter code here
-always_ff @(posedge clk)
+always @(posedge clk)
 begin
-  state <= 3'b101;
-  /*state <= (state == 3'b100) ? 3'b110:
+  state <= (state == 3'b100) ? 3'b110:
           (state == 3'b110) ? 3'b001:
           (state == 3'b001) ? 3'b010:
           (state == 3'b010) ? 3'b100:
-          3'b001;*/
+          3'b001;
 end;
 
 assign g = state[0];
