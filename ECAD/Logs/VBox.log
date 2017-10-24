@@ -1350,3 +1350,30 @@ VirtualBox VM 5.0.40_Ubuntu r115130 linux.amd64 (Apr 20 2017 06:58:05) release l
 00:09:36.440901 GUI: UIMediumEnumerator: Medium-enumeration finished!
 00:09:36.731349 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 800x818
 00:09:36.731536 VMMDev: SetVideoModeHint: Got a video mode hint (800x818x32)@(0x0),(1;0) at 0
+00:29:23.905914 VUSB: Attached '00007f1781ac25e0[proxy 09fb:6810]' to port 1
+00:29:23.908589 EHCI: USB Operational
+00:29:42.098917 VUSB: Detached '00007f1781ac25e0[proxy 09fb:6810]' from port 1
+00:29:42.244615 EHCI: USB Suspended
+00:29:43.489433 VUSB: Attached '00007f1781ac25e0[proxy 09fb:6810]' to port 1
+00:29:43.490418 EHCI: USB Operational
+00:31:28.428092 VUSB: Detached '00007f1781ac25e0[proxy 09fb:6810]' from port 1
+00:31:28.575887 EHCI: USB Suspended
+00:31:30.867082 VUSB: Attached '00007f1781ac4bc0[proxy 09fb:6810]' to port 1
+00:31:30.867908 EHCI: USB Operational
+00:32:31.709140 VUSB: Detached '00007f1781ac4bc0[proxy 09fb:6810]' from port 1
+00:32:31.855831 EHCI: USB Suspended
+00:32:33.705950 VUSB: Attached '00007f1781ac34c0[proxy 09fb:6010]' to port 1
+00:32:33.707078 EHCI: USB Operational
+00:46:13.958044 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 0, flags 0x5
+00:46:13.959023 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007f1758e00000 w=800 h=818 bpp=0 cbLine=0xC80 flags=0x5
+00:46:13.960872 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+00:46:13.961024 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+00:46:13.961247 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 0, flags 0x5
+00:46:13.961288 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007f1758e00000 w=800 h=818 bpp=0 cbLine=0xC80 flags=0x5
+00:46:13.961340 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+00:46:13.961405 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+00:46:13.961464 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Using fallback buffer since no source bitmap is provided
+00:46:13.966344 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+00:46:13.980518 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+00:46:13.980591 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+00:46:13.980776 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
