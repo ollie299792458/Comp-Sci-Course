@@ -211,15 +211,24 @@ module toplevel(
 );
 
 // code goes here
-logic [27:0] count;
+logic rst = KEY[0];
 
-always_ff @(posedge CLOCK_50) begin
-	count <= count + 1;
-end
+//shift reg
+logic clk;
+logic loadn;
+shiftregctl(CLOCK_50, KEY[0], clk, loadn, HELP);
 
-always_comb begin
-	LEDR <= count[27:18];
-end
+//rotary encoder
+//left
+logic [7:0] leftpos;
+logic leftcw;
+logic leftccw;
+rotary(CLOCK_50, rst, DIALL, leftpos, leftcw, leftccw);
+//right
+logic [7:0] rightpos;
+
+//bin to hex
+
 
 endmodule
 
