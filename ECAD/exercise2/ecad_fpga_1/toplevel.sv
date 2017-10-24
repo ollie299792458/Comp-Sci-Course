@@ -211,6 +211,15 @@ module toplevel(
 );
 
 // code goes here
+logic [27:0] count;
+
+always_ff @(posedge CLOCK_50) begin
+	count <= count + 1;
+end
+
+always_comb begin
+	LEDR <= count[27:18];
+end
 
 endmodule
 
