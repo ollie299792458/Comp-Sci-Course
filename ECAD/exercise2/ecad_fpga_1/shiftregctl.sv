@@ -45,4 +45,4 @@ module shiftregctl (
         end
       end
   
-endmodule
+endmodules
