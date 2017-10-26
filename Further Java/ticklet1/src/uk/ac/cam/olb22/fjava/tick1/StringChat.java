@@ -17,16 +17,15 @@ public class StringChat {
             return;
         }
 
-        //"s" is declared final to prevent it being assigned to in either thread, to allow concurrency
-        Socket s;
+        //"socket" is declared final to prevent it being assigned to in either thread, to allow concurrency
+        final Socket socket;
         try {
-            s = new Socket(server, port);
+            socket = new Socket(server, port);
         } catch (SecurityException|IOException e) {
             System.err.println("Cannot connect to "+server+" on port "+port);
             return;
         }
-        final Socket socket = s;
-        s = null;
+      
         Thread output = new Thread() {
             @Override
             public void run() {
