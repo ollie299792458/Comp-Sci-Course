@@ -1,8 +1,5 @@
-#include <stdio.c>
-
-int main(int argc, char *argv[]) {
-    ecode("encode_in_test","out_file");
-}
+#include <stdio.h>
+#include <stdint.h>
 
 int encode(char *in_file, char *out_file) {
     FILE *in;
@@ -35,7 +32,7 @@ int encode(char *in_file, char *out_file) {
                     buffer &= ~(1<<i);
                     i--;
                     break;
-                case 'd' : 
+                case 'd' :
                      buffer |= (1<<i);
                      i--;
                      buffer |= (1<<i);
@@ -65,14 +62,28 @@ int encode(char *in_file, char *out_file) {
             i = i+8;
             buffer = buffer << 8;
         }
-        if (i < 8) {
+        if (i < 15) {
+            //ends up padding the end of the byte with 1s rather than 0s, but a non issue
             uint8_t write = buffer >> 8;
             putc((char) write, out);
-            i = i+8;
-            buffer = buffer << 8;
         }
-        close(file);
-        close(file); //should really close files better... but...
+        fclose(in);
+        fclose(out);
+        return 0;
+    } else {
+        if (in) {
+            fclose(in);
+            return -3;
+        } else if (out) {
+            fclose(out);
+            return -2;
+        } else {
+            return -1;
+        }
     }
-    
+}
+
+int main(int argc, char *argv[]) {
+    int res = encode("encoder_in_test","out_file");
+    printf("%d\n",res);
 }
