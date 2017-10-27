@@ -29,6 +29,6 @@ int decode(char *in_file, char *out_file) {
 }
 
 int main(int argc, char *argv[]) {
-    int res = encode("encoder_in_test","out_file");
+    int res = decode("encoder_in_test","out_file");
     printf("%d\n",res);
 }
