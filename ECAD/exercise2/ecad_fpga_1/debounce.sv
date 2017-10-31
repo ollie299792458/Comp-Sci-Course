@@ -1,4 +1,4 @@
-// debounce template
+// debouncer
 
 module debounce
   (

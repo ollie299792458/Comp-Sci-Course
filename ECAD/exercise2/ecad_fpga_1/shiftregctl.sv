@@ -43,6 +43,5 @@ module shiftregctl (
                 tmp[state] <= shiftreg_out;
             end
         end
-      end
-  
-endmodules
+    end
+endmodule

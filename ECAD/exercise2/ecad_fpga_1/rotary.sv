@@ -35,14 +35,14 @@ begin
             end else if (last_pos == 2'b10) begin
                 rot_cw <= 1;
                 rotary_pos <= rotary_pos + 1;
-            end;
-        end;
+            end
+        end
         if (last_pos == 2'b00) begin
             rot_cw <= 0;
             rot_ccw <= 0;
-        end;
-    end;
+        end
+    end
     last_pos <= clean_rotary;
-end;
+end
 
 endmodule // rotarydecoder

@@ -211,12 +211,35 @@ module toplevel(
 );
 
 // code goes here
-logic rst = KEY[0];
+//buttons code
+typedef struct packed {
+	logic button_b;
+	logic button_a;
+	logic button_y;
+	logic button_x;
+	logic spare0;
+	logic touch_irq;
+	logic spare1;
+	logic spare2;
+	logic nav_u;
+	logic nav_l;
+	logic nav_r;
+	logic nav_d;
+	logic nav_click;
+	logic dialr_click;
+	logic diall_click;
+	logic temperature_alarm;
+} buttonsT;
 
-//shift reg
-logic clk;
-logic loadn;
-shiftregctl(CLOCK_50, KEY[0], clk, loadn, HELP);
+//flip reset so active high and modules work
+logic rst;
+assign rst = ~KEY[0];
+
+//shift reg and buttons code
+logic [15:0] undecoded_buttons;
+shiftregctl(CLOCK_50, rst, SHIFT_CLKIN, SHIFT_LOAD, SHIFT_OUT, undecoded_buttons);
+buttonsT buttons_decoded;
+assign buttons_decoded = undecoded_buttons;
 
 //rotary encoder
 //left
@@ -226,10 +249,23 @@ logic leftccw;
 rotary(CLOCK_50, rst, DIALL, leftpos, leftcw, leftccw);
 //right
 logic [7:0] rightpos;
+logic rightcw;
+logic rightccw;
+rotary(CLOCK_50, rst, DIALL, rightpos, rightcw, rightccw);
 
-//bin to hex
+//bin to 7seg
+logic [3:0] leftfirsthex;
+logic [3:0] leftsecondhex;
+assign leftfirsthex = leftpos[3:0];
+assign leftsecondhex = leftpos[7:4];
+hex_to_7seg(leftfirsthex, HEX4);
+hex_to_7seg(leftsecondhex, HEX5);  
 
+logic [3:0] rightfirsthex;
+logic [3:0] rightsecondhex;
+assign rightfirsthex = rightpos[3:0];
+assign rightsecondhex = rightpos[7:4];
+hex_to_7seg(rightfirsthex, HEX2);
+hex_to_7seg(rightsecondhex, HEX3);
 
-endmodule
-
-  
+endmodule  
