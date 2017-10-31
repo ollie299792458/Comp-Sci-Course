@@ -1,0 +1,632 @@
+Analysis & Synthesis report for toplevel
+Tue Oct 31 15:17:17 2017
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "rotary:comb_32"
+ 11. Port Connectivity Checks: "rotary:comb_31"
+ 12. Port Connectivity Checks: "shiftregctl:comb_4"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Oct 31 15:17:17 2017       ;
+; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Revision Name                   ; toplevel                                    ;
+; Top-level Entity Name           ; toplevel                                    ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 132                                         ;
+; Total pins                      ; 246                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; toplevel           ; toplevel           ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Verilog Show LMF Mapping Messages                                               ; Off                ;                    ;
+; Verilog Version                                                                 ; SystemVerilog_2005 ; Verilog_2001       ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                             ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
+; synchroniser.sv                  ; yes             ; User SystemVerilog HDL File  ; /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/synchroniser.sv ;         ;
+; shiftregctl.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/shiftregctl.sv  ;         ;
+; rotary.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/rotary.sv       ;         ;
+; hex_to_7seg.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/hex_to_7seg.sv  ;         ;
+; debounce.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/debounce.sv     ;         ;
+; toplevel.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv     ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 99             ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 175            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 18             ;
+;     -- 5 input functions                    ; 24             ;
+;     -- 4 input functions                    ; 38             ;
+;     -- <=3 input functions                  ; 95             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 132            ;
+;                                             ;                ;
+; I/O pins                                    ; 246            ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 132            ;
+; Total fan-out                               ; 1467           ;
+; Average fan-out                             ; 1.70           ;
++---------------------------------------------+----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                   ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Entity Name  ; Library Name ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+--------------+--------------+
+; |toplevel                      ; 175 (0)             ; 132 (0)                   ; 0                 ; 0          ; 246  ; 0            ; |toplevel                                                     ; toplevel     ; work         ;
+;    |hex_to_7seg:comb_41|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|hex_to_7seg:comb_41                                 ; hex_to_7seg  ; work         ;
+;    |hex_to_7seg:comb_42|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|hex_to_7seg:comb_42                                 ; hex_to_7seg  ; work         ;
+;    |hex_to_7seg:comb_51|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|hex_to_7seg:comb_51                                 ; hex_to_7seg  ; work         ;
+;    |hex_to_7seg:comb_52|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|hex_to_7seg:comb_52                                 ; hex_to_7seg  ; work         ;
+;    |rotary:comb_31|            ; 51 (9)              ; 48 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_31                                      ; rotary       ; work         ;
+;       |debounce:dut_one|       ; 21 (21)             ; 19 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_31|debounce:dut_one                     ; debounce     ; work         ;
+;          |synchroniser:dosync| ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_31|debounce:dut_one|synchroniser:dosync ; synchroniser ; work         ;
+;       |debounce:dut_two|       ; 21 (21)             ; 19 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_31|debounce:dut_two                     ; debounce     ; work         ;
+;          |synchroniser:dosync| ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_31|debounce:dut_two|synchroniser:dosync ; synchroniser ; work         ;
+;    |rotary:comb_32|            ; 51 (9)              ; 48 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_32                                      ; rotary       ; work         ;
+;       |debounce:dut_one|       ; 21 (21)             ; 19 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_32|debounce:dut_one                     ; debounce     ; work         ;
+;          |synchroniser:dosync| ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_32|debounce:dut_one|synchroniser:dosync ; synchroniser ; work         ;
+;       |debounce:dut_two|       ; 21 (21)             ; 19 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_32|debounce:dut_two                     ; debounce     ; work         ;
+;          |synchroniser:dosync| ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_32|debounce:dut_two|synchroniser:dosync ; synchroniser ; work         ;
+;    |shiftregctl:comb_4|        ; 45 (45)             ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|shiftregctl:comb_4                                  ; shiftregctl  ; work         ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; rotary:comb_32|last_pos[2..7]          ; Stuck at GND due to stuck port data_in ;
+; rotary:comb_31|last_pos[2..7]          ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 12 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 132   ;
+; Number of registers using Synchronous Clear  ; 70    ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 88    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 101   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |toplevel|rotary:comb_32|debounce:dut_one|counter[14] ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |toplevel|rotary:comb_32|debounce:dut_two|counter[13] ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |toplevel|rotary:comb_31|debounce:dut_one|counter[2]  ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |toplevel|rotary:comb_31|debounce:dut_two|counter[6]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |toplevel|shiftregctl:comb_4|state[0]                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rotary:comb_32"                                                                        ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; rot_cw  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rot_ccw ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rotary:comb_31"                                                                        ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; rot_cw  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rot_ccw ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "shiftregctl:comb_4"                                                                           ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; buttons[11..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; buttons[3]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; buttons[0]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 132                         ;
+;     CLR               ; 12                          ;
+;     ENA               ; 25                          ;
+;     ENA CLR           ; 16                          ;
+;     ENA CLR SCLR      ; 60                          ;
+;     SCLR              ; 10                          ;
+;     SLD               ; 1                           ;
+;     plain             ; 8                           ;
+; arriav_io_obuf        ; 63                          ;
+; arriav_lcell_comb     ; 181                         ;
+;     arith             ; 84                          ;
+;         1 data inputs ; 69                          ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 14                          ;
+;     normal            ; 97                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 38                          ;
+;         5 data inputs ; 24                          ;
+;         6 data inputs ; 18                          ;
+; boundary_port         ; 246                         ;
+;                       ;                             ;
+; Max LUT depth         ; 2.40                        ;
+; Average LUT depth     ; 1.48                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Tue Oct 31 15:16:58 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ecad_fpga -c toplevel
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20029): Only one processor detected - disabling parallel compilation
+Info (12021): Found 1 design units, including 1 entities, in source file synchroniser.sv
+    Info (12023): Found entity 1: synchroniser File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/synchroniser.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shiftregctl.sv
+    Info (12023): Found entity 1: shiftregctl File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/shiftregctl.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rotary.sv
+    Info (12023): Found entity 1: rotary File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/rotary.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file hex_to_7seg.sv
+    Info (12023): Found entity 1: hex_to_7seg File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/hex_to_7seg.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file debounce.sv
+    Info (12023): Found entity 1: debounce File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/debounce.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file toplevel.sv
+    Info (12023): Found entity 1: toplevel File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 32
+Critical Warning (10846): Verilog HDL Instantiation warning at toplevel.sv(240): instance has no name File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 240
+Critical Warning (10846): Verilog HDL Instantiation warning at toplevel.sv(265): instance has no name File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 265
+Critical Warning (10846): Verilog HDL Instantiation warning at toplevel.sv(270): instance has no name File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 270
+Critical Warning (10846): Verilog HDL Instantiation warning at toplevel.sv(277): instance has no name File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 277
+Critical Warning (10846): Verilog HDL Instantiation warning at toplevel.sv(278): instance has no name File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 278
+Critical Warning (10846): Verilog HDL Instantiation warning at toplevel.sv(284): instance has no name File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 284
+Critical Warning (10846): Verilog HDL Instantiation warning at toplevel.sv(285): instance has no name File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 285
+Info (12127): Elaborating entity "toplevel" for the top level hierarchy
+Warning (10034): Output port "DRAM_ADDR" at toplevel.sv(55) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 55
+Warning (10034): Output port "DRAM_BA" at toplevel.sv(56) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 56
+Warning (10034): Output port "HEX0" at toplevel.sv(78) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 78
+Warning (10034): Output port "HEX1" at toplevel.sv(79) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 79
+Warning (10034): Output port "VGA_B" at toplevel.sv(169) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 169
+Warning (10034): Output port "VGA_G" at toplevel.sv(172) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 172
+Warning (10034): Output port "VGA_R" at toplevel.sv(174) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 174
+Warning (10034): Output port "LCD_R" at toplevel.sv(187) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 187
+Warning (10034): Output port "LCD_G" at toplevel.sv(188) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 188
+Warning (10034): Output port "LCD_B" at toplevel.sv(189) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 189
+Warning (10034): Output port "ADC_DIN" at toplevel.sv(36) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 36
+Warning (10034): Output port "ADC_SCLK" at toplevel.sv(38) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 38
+Warning (10034): Output port "AUD_DACDAT" at toplevel.sv(44) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 44
+Warning (10034): Output port "AUD_XCK" at toplevel.sv(46) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 46
+Warning (10034): Output port "DRAM_CAS_N" at toplevel.sv(57) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 57
+Warning (10034): Output port "DRAM_CKE" at toplevel.sv(58) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 58
+Warning (10034): Output port "DRAM_CLK" at toplevel.sv(59) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 59
+Warning (10034): Output port "DRAM_CS_N" at toplevel.sv(60) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 60
+Warning (10034): Output port "DRAM_LDQM" at toplevel.sv(62) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 62
+Warning (10034): Output port "DRAM_RAS_N" at toplevel.sv(63) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 63
+Warning (10034): Output port "DRAM_UDQM" at toplevel.sv(64) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 64
+Warning (10034): Output port "DRAM_WE_N" at toplevel.sv(65) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 65
+Warning (10034): Output port "FAN_CTRL" at toplevel.sv(68) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 68
+Warning (10034): Output port "FPGA_I2C_SCLK" at toplevel.sv(71) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 71
+Warning (10034): Output port "IRDA_TXD" at toplevel.sv(143) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 143
+Warning (10034): Output port "TD_RESET_N" at toplevel.sv(164) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 164
+Warning (10034): Output port "VGA_BLANK_N" at toplevel.sv(170) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 170
+Warning (10034): Output port "VGA_CLK" at toplevel.sv(171) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 171
+Warning (10034): Output port "VGA_HS" at toplevel.sv(173) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 173
+Warning (10034): Output port "VGA_SYNC_N" at toplevel.sv(175) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 175
+Warning (10034): Output port "VGA_VS" at toplevel.sv(176) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 176
+Warning (10034): Output port "LEDRINGn" at toplevel.sv(184) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 184
+Warning (10034): Output port "LCD_HSYNC" at toplevel.sv(193) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 193
+Warning (10034): Output port "LCD_VSYNC" at toplevel.sv(194) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 194
+Warning (10034): Output port "LCD_DEN" at toplevel.sv(195) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 195
+Warning (10034): Output port "LCD_DCLK" at toplevel.sv(196) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 196
+Warning (10034): Output port "LCD_ON" at toplevel.sv(197) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 197
+Warning (10034): Output port "LCD_BACKLIGHT" at toplevel.sv(198) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 198
+Warning (10034): Output port "TOUCH_WAKE" at toplevel.sv(206) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 206
+Info (12128): Elaborating entity "shiftregctl" for hierarchy "shiftregctl:comb_4" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 240
+Warning (10230): Verilog HDL assignment warning at shiftregctl.sv(32): truncated value with size 32 to match size of target (9) File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/shiftregctl.sv Line: 32
+Warning (10230): Verilog HDL assignment warning at shiftregctl.sv(42): truncated value with size 32 to match size of target (5) File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/shiftregctl.sv Line: 42
+Info (12128): Elaborating entity "rotary" for hierarchy "rotary:comb_31" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 265
+Warning (10230): Verilog HDL assignment warning at rotary.sv(34): truncated value with size 32 to match size of target (8) File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/rotary.sv Line: 34
+Warning (10230): Verilog HDL assignment warning at rotary.sv(37): truncated value with size 32 to match size of target (8) File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/rotary.sv Line: 37
+Info (12128): Elaborating entity "debounce" for hierarchy "rotary:comb_31|debounce:dut_one" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/rotary.sv Line: 18
+Warning (10230): Verilog HDL assignment warning at debounce.sv(27): truncated value with size 32 to match size of target (15) File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/debounce.sv Line: 27
+Info (12128): Elaborating entity "synchroniser" for hierarchy "rotary:comb_31|debounce:dut_one|synchroniser:dosync" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/debounce.sv Line: 15
+Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:comb_41" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 277
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "ADC_CS_N" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 35
+    Warning (13040): bidirectional pin "AUD_ADCLRCK" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 42
+    Warning (13040): bidirectional pin "AUD_BCLK" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 43
+    Warning (13040): bidirectional pin "AUD_DACLRCK" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 45
+    Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
+    Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
+    Warning (13040): bidirectional pin "DRAM_DQ[2]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
+    Warning (13040): bidirectional pin "DRAM_DQ[3]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
+    Warning (13040): bidirectional pin "DRAM_DQ[4]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
+    Warning (13040): bidirectional pin "DRAM_DQ[5]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
+    Warning (13040): bidirectional pin "DRAM_DQ[6]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
+    Warning (13040): bidirectional pin "DRAM_DQ[7]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
+    Warning (13040): bidirectional pin "DRAM_DQ[8]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
+    Warning (13040): bidirectional pin "DRAM_DQ[9]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
+    Warning (13040): bidirectional pin "DRAM_DQ[10]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
+    Warning (13040): bidirectional pin "DRAM_DQ[11]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
+    Warning (13040): bidirectional pin "DRAM_DQ[12]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
+    Warning (13040): bidirectional pin "DRAM_DQ[13]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
+    Warning (13040): bidirectional pin "DRAM_DQ[14]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
+    Warning (13040): bidirectional pin "DRAM_DQ[15]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
+    Warning (13040): bidirectional pin "FPGA_I2C_SDAT" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 72
+    Warning (13040): bidirectional pin "GPIO_0[0]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[1]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[2]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[3]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[4]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[5]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[6]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[7]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[8]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[9]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[10]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[11]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[12]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[13]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[14]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[15]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[16]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[17]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[18]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[19]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[20]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[21]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[22]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[23]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[24]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[25]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[26]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[27]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[28]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[29]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[30]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[31]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[32]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[33]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[34]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "GPIO_0[35]" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
+    Warning (13040): bidirectional pin "PS2_CLK" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 152
+    Warning (13040): bidirectional pin "PS2_CLK2" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 153
+    Warning (13040): bidirectional pin "PS2_DAT" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 154
+    Warning (13040): bidirectional pin "PS2_DAT2" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 155
+    Warning (13040): bidirectional pin "DISPLAY_SDA" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 208
+    Warning (13040): bidirectional pin "DISPLAY_SCL" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 211
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ADC_DIN" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 36
+    Warning (13410): Pin "ADC_SCLK" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 38
+    Warning (13410): Pin "AUD_DACDAT" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 44
+    Warning (13410): Pin "AUD_XCK" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 46
+    Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 55
+    Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 55
+    Warning (13410): Pin "DRAM_ADDR[2]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 55
+    Warning (13410): Pin "DRAM_ADDR[3]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 55
+    Warning (13410): Pin "DRAM_ADDR[4]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 55
+    Warning (13410): Pin "DRAM_ADDR[5]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 55
+    Warning (13410): Pin "DRAM_ADDR[6]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 55
+    Warning (13410): Pin "DRAM_ADDR[7]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 55
+    Warning (13410): Pin "DRAM_ADDR[8]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 55
+    Warning (13410): Pin "DRAM_ADDR[9]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 55
+    Warning (13410): Pin "DRAM_ADDR[10]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 55
+    Warning (13410): Pin "DRAM_ADDR[11]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 55
+    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 55
+    Warning (13410): Pin "DRAM_BA[0]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 56
+    Warning (13410): Pin "DRAM_BA[1]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 56
+    Warning (13410): Pin "DRAM_CAS_N" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 57
+    Warning (13410): Pin "DRAM_CKE" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 58
+    Warning (13410): Pin "DRAM_CLK" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 59
+    Warning (13410): Pin "DRAM_CS_N" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 60
+    Warning (13410): Pin "DRAM_LDQM" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 62
+    Warning (13410): Pin "DRAM_RAS_N" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 63
+    Warning (13410): Pin "DRAM_UDQM" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 64
+    Warning (13410): Pin "DRAM_WE_N" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 65
+    Warning (13410): Pin "FAN_CTRL" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 68
+    Warning (13410): Pin "FPGA_I2C_SCLK" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 71
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 78
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 78
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 78
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 78
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 78
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 78
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 78
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 79
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 79
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 79
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 79
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 79
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 79
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 79
+    Warning (13410): Pin "IRDA_TXD" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 143
+    Warning (13410): Pin "TD_RESET_N" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 164
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 169
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 169
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 169
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 169
+    Warning (13410): Pin "VGA_B[4]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 169
+    Warning (13410): Pin "VGA_B[5]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 169
+    Warning (13410): Pin "VGA_B[6]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 169
+    Warning (13410): Pin "VGA_B[7]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 169
+    Warning (13410): Pin "VGA_BLANK_N" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 170
+    Warning (13410): Pin "VGA_CLK" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 171
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 172
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 172
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 172
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 172
+    Warning (13410): Pin "VGA_G[4]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 172
+    Warning (13410): Pin "VGA_G[5]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 172
+    Warning (13410): Pin "VGA_G[6]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 172
+    Warning (13410): Pin "VGA_G[7]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 172
+    Warning (13410): Pin "VGA_HS" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 173
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 174
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 174
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 174
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 174
+    Warning (13410): Pin "VGA_R[4]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 174
+    Warning (13410): Pin "VGA_R[5]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 174
+    Warning (13410): Pin "VGA_R[6]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 174
+    Warning (13410): Pin "VGA_R[7]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 174
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 175
+    Warning (13410): Pin "VGA_VS" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 176
+    Warning (13410): Pin "LEDRINGn" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 184
+    Warning (13410): Pin "LCD_R[0]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 187
+    Warning (13410): Pin "LCD_R[1]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 187
+    Warning (13410): Pin "LCD_R[2]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 187
+    Warning (13410): Pin "LCD_R[3]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 187
+    Warning (13410): Pin "LCD_R[4]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 187
+    Warning (13410): Pin "LCD_R[5]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 187
+    Warning (13410): Pin "LCD_R[6]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 187
+    Warning (13410): Pin "LCD_R[7]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 187
+    Warning (13410): Pin "LCD_G[0]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 188
+    Warning (13410): Pin "LCD_G[1]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 188
+    Warning (13410): Pin "LCD_G[2]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 188
+    Warning (13410): Pin "LCD_G[3]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 188
+    Warning (13410): Pin "LCD_G[4]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 188
+    Warning (13410): Pin "LCD_G[5]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 188
+    Warning (13410): Pin "LCD_G[6]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 188
+    Warning (13410): Pin "LCD_G[7]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 188
+    Warning (13410): Pin "LCD_B[0]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 189
+    Warning (13410): Pin "LCD_B[1]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 189
+    Warning (13410): Pin "LCD_B[2]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 189
+    Warning (13410): Pin "LCD_B[3]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 189
+    Warning (13410): Pin "LCD_B[4]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 189
+    Warning (13410): Pin "LCD_B[5]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 189
+    Warning (13410): Pin "LCD_B[6]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 189
+    Warning (13410): Pin "LCD_B[7]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 189
+    Warning (13410): Pin "LCD_HSYNC" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 193
+    Warning (13410): Pin "LCD_VSYNC" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 194
+    Warning (13410): Pin "LCD_DEN" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 195
+    Warning (13410): Pin "LCD_DCLK" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 196
+    Warning (13410): Pin "LCD_ON" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 197
+    Warning (13410): Pin "LCD_BACKLIGHT" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 198
+    Warning (13410): Pin "TOUCH_WAKE" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 206
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 30 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ADC_DOUT" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 37
+    Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 41
+    Warning (15610): No output dependent on input pin "CLOCK2_50" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 50
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 51
+    Warning (15610): No output dependent on input pin "CLOCK4_50" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 52
+    Warning (15610): No output dependent on input pin "IRDA_RXD" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 142
+    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 146
+    Warning (15610): No output dependent on input pin "KEY[2]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 146
+    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 146
+    Warning (15610): No output dependent on input pin "SW[0]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 158
+    Warning (15610): No output dependent on input pin "SW[1]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 158
+    Warning (15610): No output dependent on input pin "SW[2]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 158
+    Warning (15610): No output dependent on input pin "SW[3]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 158
+    Warning (15610): No output dependent on input pin "SW[4]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 158
+    Warning (15610): No output dependent on input pin "SW[5]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 158
+    Warning (15610): No output dependent on input pin "SW[6]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 158
+    Warning (15610): No output dependent on input pin "SW[7]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 158
+    Warning (15610): No output dependent on input pin "SW[8]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 158
+    Warning (15610): No output dependent on input pin "SW[9]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 158
+    Warning (15610): No output dependent on input pin "TD_CLK27" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 161
+    Warning (15610): No output dependent on input pin "TD_DATA[0]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 162
+    Warning (15610): No output dependent on input pin "TD_DATA[1]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 162
+    Warning (15610): No output dependent on input pin "TD_DATA[2]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 162
+    Warning (15610): No output dependent on input pin "TD_DATA[3]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 162
+    Warning (15610): No output dependent on input pin "TD_DATA[4]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 162
+    Warning (15610): No output dependent on input pin "TD_DATA[5]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 162
+    Warning (15610): No output dependent on input pin "TD_DATA[6]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 162
+    Warning (15610): No output dependent on input pin "TD_DATA[7]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 162
+    Warning (15610): No output dependent on input pin "TD_HS" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 163
+    Warning (15610): No output dependent on input pin "TD_VS" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 165
+Info (21057): Implemented 449 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 37 input pins
+    Info (21059): Implemented 146 output pins
+    Info (21060): Implemented 63 bidirectional pins
+    Info (21061): Implemented 203 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 254 warnings
+    Info: Peak virtual memory: 1009 megabytes
+    Info: Processing ended: Tue Oct 31 15:17:17 2017
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:17
+
+
