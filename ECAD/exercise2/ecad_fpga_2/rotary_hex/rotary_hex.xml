@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2017.10.31.16:52:23"
+ outputDirectory="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone V"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="5CSEMA5F31C6"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="6"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="clk" kind="clock" start="0">
+   <property name="clockRate" value="50000000" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk_clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="eightbitstosevenseg_0_led_pins" kind="conduit" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <port
+       name="eightbitstosevenseg_0_led_pins_led0"
+       direction="output"
+       role="led0"
+       width="7" />
+   <port
+       name="eightbitstosevenseg_0_led_pins_led1"
+       direction="output"
+       role="led1"
+       width="7" />
+  </interface>
+  <interface name="eightbitstosevenseg_1_led_pins" kind="conduit" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <port
+       name="eightbitstosevenseg_1_led_pins_led0"
+       direction="output"
+       role="led0"
+       width="7" />
+   <port
+       name="eightbitstosevenseg_1_led_pins_led1"
+       direction="output"
+       role="led1"
+       width="7" />
+  </interface>
+  <interface name="reset" kind="reset" start="0">
+   <property name="associatedClock" value="" />
+   <property name="synchronousEdges" value="NONE" />
+   <port name="reset_reset_n" direction="input" role="reset_n" width="1" />
+  </interface>
+  <interface name="rotaryctl_0_rotary_event" kind="conduit" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="" />
+   <port
+       name="rotaryctl_0_rotary_event_rotary_cw"
+       direction="output"
+       role="rotary_cw"
+       width="1" />
+   <port
+       name="rotaryctl_0_rotary_event_rotary_ccw"
+       direction="output"
+       role="rotary_ccw"
+       width="1" />
+  </interface>
+  <interface name="rotaryctl_0_rotary_in" kind="conduit" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="" />
+   <port
+       name="rotaryctl_0_rotary_in_rotary_in"
+       direction="input"
+       role="rotary_in"
+       width="2" />
+  </interface>
+  <interface name="rotaryctl_1_rotary_event" kind="conduit" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="" />
+   <port
+       name="rotaryctl_1_rotary_event_rotary_cw"
+       direction="output"
+       role="rotary_cw"
+       width="1" />
+   <port
+       name="rotaryctl_1_rotary_event_rotary_ccw"
+       direction="output"
+       role="rotary_ccw"
+       width="1" />
+  </interface>
+  <interface name="rotaryctl_1_rotary_in" kind="conduit" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="" />
+   <port
+       name="rotaryctl_1_rotary_in_rotary_in"
+       direction="input"
+       role="rotary_in"
+       width="2" />
+  </interface>
+  <interface name="shiftregctl_0_buttons" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port
+       name="shiftregctl_0_buttons_export"
+       direction="output"
+       role="export"
+       width="16" />
+  </interface>
+  <interface name="shiftregctl_0_shiftreg_ext" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port
+       name="shiftregctl_0_shiftreg_ext_shiftreg_clk"
+       direction="output"
+       role="shiftreg_clk"
+       width="1" />
+   <port
+       name="shiftregctl_0_shiftreg_ext_shiftreg_loadn"
+       direction="output"
+       role="shiftreg_loadn"
+       width="1" />
+   <port
+       name="shiftregctl_0_shiftreg_ext_shiftreg_out"
+       direction="input"
+       role="shiftreg_out"
+       width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="rotary_hex:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEMA5F31C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1509468742,AUTO_UNIQUE_ID=(EightBitsToSevenSeg:1.0:)(EightBitsToSevenSeg:1.0:)(RotaryCtl:1.0.1:)(RotaryCtl:1.0.1:)(ShiftRegCtl:1.0:)(clock_source:16.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(clock:16.1:)(clock:16.1:)(clock:16.1:)(clock:16.1:)(clock:16.1:)(conduit:16.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:16.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(reset:16.1:)(reset:16.1:)(reset:16.1:)(reset:16.1:)(reset:16.1:)"
+   instancePathKey="rotary_hex"
+   kind="rotary_hex"
+   version="1.0"
+   name="rotary_hex">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="1509468742" />
+  <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <generatedFiles>
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex/synthesis/rotary_hex.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex/synthesis/submodules/EightBitsToSevenSeg.sv"
+       type="SYSTEM_VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex/synthesis/submodules/debounce.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex/synthesis/submodules/rotary.sv"
+       type="SYSTEM_VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex/synthesis/submodules/synchroniser.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex/synthesis/submodules/shiftregctl.sv"
+       type="SYSTEM_VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex/synthesis/submodules/altera_reset_controller.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex/synthesis/submodules/altera_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex/synthesis/submodules/altera_reset_controller.sdc"
+       type="SDC"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/EightBitsToSevenSeg_hw.tcl" />
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/RotaryCtl_hw.tcl" />
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/ShiftRegCtl_hw.tcl" />
+   <file
+       path="/opt/altera_lite/16.1/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="rotary_hex">queue size: 0 starting:rotary_hex "rotary_hex"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>6</b> modules, <b>12</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug" culprit="reset_adaptation_transform"><![CDATA[After transform: <b>7</b> modules, <b>14</b> connections]]></message>
+   <message level="Debug" culprit="rotary_hex"><![CDATA["<b>rotary_hex</b>" reuses <b>EightBitsToSevenSeg</b> "<b>submodules/EightBitsToSevenSeg</b>"]]></message>
+   <message level="Debug" culprit="rotary_hex"><![CDATA["<b>rotary_hex</b>" reuses <b>EightBitsToSevenSeg</b> "<b>submodules/EightBitsToSevenSeg</b>"]]></message>
+   <message level="Debug" culprit="rotary_hex"><![CDATA["<b>rotary_hex</b>" reuses <b>RotaryCtl</b> "<b>submodules/rotary</b>"]]></message>
+   <message level="Debug" culprit="rotary_hex"><![CDATA["<b>rotary_hex</b>" reuses <b>RotaryCtl</b> "<b>submodules/rotary</b>"]]></message>
+   <message level="Debug" culprit="rotary_hex"><![CDATA["<b>rotary_hex</b>" reuses <b>ShiftRegCtl</b> "<b>submodules/shiftregctl</b>"]]></message>
+   <message level="Debug" culprit="rotary_hex"><![CDATA["<b>rotary_hex</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
+   <message level="Debug" culprit="rotary_hex">queue size: 5 starting:EightBitsToSevenSeg "submodules/EightBitsToSevenSeg"</message>
+   <message level="Info" culprit="EightBitsToSevenSeg_0"><![CDATA["<b>rotary_hex</b>" instantiated <b>EightBitsToSevenSeg</b> "<b>EightBitsToSevenSeg_0</b>"]]></message>
+   <message level="Debug" culprit="rotary_hex">queue size: 3 starting:RotaryCtl "submodules/rotary"</message>
+   <message level="Info" culprit="RotaryCtl_0"><![CDATA["<b>rotary_hex</b>" instantiated <b>RotaryCtl</b> "<b>RotaryCtl_0</b>"]]></message>
+   <message level="Debug" culprit="rotary_hex">queue size: 1 starting:ShiftRegCtl "submodules/shiftregctl"</message>
+   <message level="Info" culprit="ShiftRegCtl_0"><![CDATA["<b>rotary_hex</b>" instantiated <b>ShiftRegCtl</b> "<b>ShiftRegCtl_0</b>"]]></message>
+   <message level="Debug" culprit="rotary_hex">queue size: 0 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>rotary_hex</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="EightBitsToSevenSeg:1.0:"
+   instancePathKey="rotary_hex:.:EightBitsToSevenSeg_0"
+   kind="EightBitsToSevenSeg"
+   version="1.0"
+   name="EightBitsToSevenSeg">
+  <generatedFiles>
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex/synthesis/submodules/EightBitsToSevenSeg.sv"
+       type="SYSTEM_VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/EightBitsToSevenSeg_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="rotary_hex"
+     as="EightBitsToSevenSeg_0,EightBitsToSevenSeg_1" />
+  <messages>
+   <message level="Debug" culprit="rotary_hex">queue size: 5 starting:EightBitsToSevenSeg "submodules/EightBitsToSevenSeg"</message>
+   <message level="Info" culprit="EightBitsToSevenSeg_0"><![CDATA["<b>rotary_hex</b>" instantiated <b>EightBitsToSevenSeg</b> "<b>EightBitsToSevenSeg_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="RotaryCtl:1.0.1:"
+   instancePathKey="rotary_hex:.:RotaryCtl_0"
+   kind="RotaryCtl"
+   version="1.0.1"
+   name="rotary">
+  <generatedFiles>
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex/synthesis/submodules/debounce.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex/synthesis/submodules/rotary.sv"
+       type="SYSTEM_VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex/synthesis/submodules/synchroniser.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/RotaryCtl_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="rotary_hex" as="RotaryCtl_0,RotaryCtl_1" />
+  <messages>
+   <message level="Debug" culprit="rotary_hex">queue size: 3 starting:RotaryCtl "submodules/rotary"</message>
+   <message level="Info" culprit="RotaryCtl_0"><![CDATA["<b>rotary_hex</b>" instantiated <b>RotaryCtl</b> "<b>RotaryCtl_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="ShiftRegCtl:1.0:"
+   instancePathKey="rotary_hex:.:ShiftRegCtl_0"
+   kind="ShiftRegCtl"
+   version="1.0"
+   name="shiftregctl">
+  <generatedFiles>
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex/synthesis/submodules/shiftregctl.sv"
+       type="SYSTEM_VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/ShiftRegCtl_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="rotary_hex" as="ShiftRegCtl_0" />
+  <messages>
+   <message level="Debug" culprit="rotary_hex">queue size: 1 starting:ShiftRegCtl "submodules/shiftregctl"</message>
+   <message level="Info" culprit="ShiftRegCtl_0"><![CDATA["<b>rotary_hex</b>" instantiated <b>ShiftRegCtl</b> "<b>ShiftRegCtl_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_reset_controller:16.1:ADAPT_RESET_REQUEST=0,MIN_RST_ASSERTION_TIME=3,NUM_RESET_INPUTS=1,OUTPUT_RESET_SYNC_EDGES=deassert,RESET_REQUEST_PRESENT=0,RESET_REQ_EARLY_DSRT_TIME=1,RESET_REQ_WAIT_TIME=1,SYNC_DEPTH=2,USE_RESET_REQUEST_IN0=0,USE_RESET_REQUEST_IN1=0,USE_RESET_REQUEST_IN10=0,USE_RESET_REQUEST_IN11=0,USE_RESET_REQUEST_IN12=0,USE_RESET_REQUEST_IN13=0,USE_RESET_REQUEST_IN14=0,USE_RESET_REQUEST_IN15=0,USE_RESET_REQUEST_IN2=0,USE_RESET_REQUEST_IN3=0,USE_RESET_REQUEST_IN4=0,USE_RESET_REQUEST_IN5=0,USE_RESET_REQUEST_IN6=0,USE_RESET_REQUEST_IN7=0,USE_RESET_REQUEST_IN8=0,USE_RESET_REQUEST_IN9=0,USE_RESET_REQUEST_INPUT=0"
+   instancePathKey="rotary_hex:.:rst_controller"
+   kind="altera_reset_controller"
+   version="16.1"
+   name="altera_reset_controller">
+  <generatedFiles>
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex/synthesis/submodules/altera_reset_controller.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex/synthesis/submodules/altera_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex/synthesis/submodules/altera_reset_controller.sdc"
+       type="SDC"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="/opt/altera_lite/16.1/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="rotary_hex" as="rst_controller" />
+  <messages>
+   <message level="Debug" culprit="rotary_hex">queue size: 0 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>rotary_hex</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>

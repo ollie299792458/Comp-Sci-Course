@@ -231,13 +231,28 @@ typedef struct packed {
 	logic temperature_alarm;
 } buttonsT;
 
-//flip reset so active high and modules work
-logic rst;
-assign rst = ~KEY[0];
+logic[15:0] undecoded_buttons;
+
+rotary_hex u0 (
+    .clk_clk                                   (CLOCK_50),                                   //                            clk.clk
+    .eightbitstosevenseg_0_led_pins_led0       (HEX0),       // eightbitstosevenseg_0_led_pins.led0
+    .eightbitstosevenseg_0_led_pins_led1       (HEX1),       //                               .led1
+    .reset_reset_n                             (KEY[0]),                             //                          reset.reset_n
+    //.rotaryctl_0_rotary_event_rotary_cw        (<connected-to-rotaryctl_0_rotary_event_rotary_cw>),        //       rotaryctl_0_rotary_event.rotary_cw
+    //.rotaryctl_0_rotary_event_rotary_ccw       (<connected-to-rotaryctl_0_rotary_event_rotary_ccw>),       //                               .rotary_ccw
+    .rotaryctl_0_rotary_in_rotary_in           (DIALL),           //          rotaryctl_0_rotary_in.rotary_in
+    .eightbitstosevenseg_1_led_pins_led0       (HEX2),       // eightbitstosevenseg_1_led_pins.led0
+    .eightbitstosevenseg_1_led_pins_led1       (HEX3),       //                               .led1
+    .rotaryctl_1_rotary_in_rotary_in           (DIALR),           //          rotaryctl_1_rotary_in.rotary_in
+    //.rotaryctl_1_rotary_event_rotary_cw        (<connected-to-rotaryctl_1_rotary_event_rotary_cw>),        //       rotaryctl_1_rotary_event.rotary_cw
+    //.rotaryctl_1_rotary_event_rotary_ccw       (<connected-to-rotaryctl_1_rotary_event_rotary_ccw>),       //                               .rotary_ccw
+    .shiftregctl_0_buttons_export              (undecoded_buttons),              //          shiftregctl_0_buttons.export
+    .shiftregctl_0_shiftreg_ext_shiftreg_clk   (SHIFT_CLKIN),   //     shiftregctl_0_shiftreg_ext.shiftreg_clk
+    .shiftregctl_0_shiftreg_ext_shiftreg_loadn (SHIFT_LOAD), //                               .shiftreg_loadn
+    .shiftregctl_0_shiftreg_ext_shiftreg_out   (SHIFT_OUT)    //                               .shiftreg_out
+);
 
 //shift reg and buttons code
-logic [15:0] undecoded_buttons;
-shiftregctl(CLOCK_50, rst, SHIFT_CLKIN, SHIFT_LOAD, SHIFT_OUT, undecoded_buttons);
 buttonsT buttons_decoded;
 assign buttons_decoded = undecoded_buttons;
 
@@ -255,33 +270,5 @@ begin
     LEDR[8] = buttons_decoded.nav_u;
     LEDR[9] = buttons_decoded.nav_l;
 end
-
-
-//rotary encoder
-//left
-logic [7:0] leftpos;
-logic leftcw;
-logic leftccw;
-rotary(CLOCK_50, rst, DIALL, leftpos, leftcw, leftccw);
-//right
-logic [7:0] rightpos;
-logic rightcw;
-logic rightccw;
-rotary(CLOCK_50, rst, DIALR, rightpos, rightcw, rightccw);
-
-//bin to 7seg
-logic [3:0] leftfirsthex;
-logic [3:0] leftsecondhex;
-assign leftfirsthex = leftpos[3:0];
-assign leftsecondhex = leftpos[7:4];
-hex_to_7seg(leftfirsthex, HEX4);
-hex_to_7seg(leftsecondhex, HEX5);  
-
-logic [3:0] rightfirsthex;
-logic [3:0] rightsecondhex;
-assign rightfirsthex = rightpos[3:0];
-assign rightsecondhex = rightpos[7:4];
-hex_to_7seg(rightfirsthex, HEX2);
-hex_to_7seg(rightsecondhex, HEX3);
 
 endmodule  

@@ -9,7 +9,7 @@ AUD_BCLK <> <UNC>
 AUD_DACDAT <= <GND>
 AUD_DACLRCK <> <UNC>
 AUD_XCK <= <GND>
-CLOCK_50 => CLOCK_50.IN3
+CLOCK_50 => CLOCK_50.IN1
 CLOCK2_50 => ~NO_FANOUT~
 CLOCK3_50 => ~NO_FANOUT~
 CLOCK4_50 => ~NO_FANOUT~
@@ -91,64 +91,64 @@ GPIO_0[32] <> <UNC>
 GPIO_0[33] <> <UNC>
 GPIO_0[34] <> <UNC>
 GPIO_0[35] <> <UNC>
-HEX0[0] <= <GND>
-HEX0[1] <= <GND>
-HEX0[2] <= <GND>
-HEX0[3] <= <GND>
-HEX0[4] <= <GND>
-HEX0[5] <= <GND>
-HEX0[6] <= <GND>
-HEX1[0] <= <GND>
-HEX1[1] <= <GND>
-HEX1[2] <= <GND>
-HEX1[3] <= <GND>
-HEX1[4] <= <GND>
-HEX1[5] <= <GND>
-HEX1[6] <= <GND>
-HEX2[0] <= hex_to_7seg:comb_51.port1
-HEX2[1] <= hex_to_7seg:comb_51.port1
-HEX2[2] <= hex_to_7seg:comb_51.port1
-HEX2[3] <= hex_to_7seg:comb_51.port1
-HEX2[4] <= hex_to_7seg:comb_51.port1
-HEX2[5] <= hex_to_7seg:comb_51.port1
-HEX2[6] <= hex_to_7seg:comb_51.port1
-HEX3[0] <= hex_to_7seg:comb_52.port1
-HEX3[1] <= hex_to_7seg:comb_52.port1
-HEX3[2] <= hex_to_7seg:comb_52.port1
-HEX3[3] <= hex_to_7seg:comb_52.port1
-HEX3[4] <= hex_to_7seg:comb_52.port1
-HEX3[5] <= hex_to_7seg:comb_52.port1
-HEX3[6] <= hex_to_7seg:comb_52.port1
-HEX4[0] <= hex_to_7seg:comb_41.port1
-HEX4[1] <= hex_to_7seg:comb_41.port1
-HEX4[2] <= hex_to_7seg:comb_41.port1
-HEX4[3] <= hex_to_7seg:comb_41.port1
-HEX4[4] <= hex_to_7seg:comb_41.port1
-HEX4[5] <= hex_to_7seg:comb_41.port1
-HEX4[6] <= hex_to_7seg:comb_41.port1
-HEX5[0] <= hex_to_7seg:comb_42.port1
-HEX5[1] <= hex_to_7seg:comb_42.port1
-HEX5[2] <= hex_to_7seg:comb_42.port1
-HEX5[3] <= hex_to_7seg:comb_42.port1
-HEX5[4] <= hex_to_7seg:comb_42.port1
-HEX5[5] <= hex_to_7seg:comb_42.port1
-HEX5[6] <= hex_to_7seg:comb_42.port1
+HEX0[0] <= rotary_hex:u0.eightbitstosevenseg_0_led_pins_led0
+HEX0[1] <= rotary_hex:u0.eightbitstosevenseg_0_led_pins_led0
+HEX0[2] <= rotary_hex:u0.eightbitstosevenseg_0_led_pins_led0
+HEX0[3] <= rotary_hex:u0.eightbitstosevenseg_0_led_pins_led0
+HEX0[4] <= rotary_hex:u0.eightbitstosevenseg_0_led_pins_led0
+HEX0[5] <= rotary_hex:u0.eightbitstosevenseg_0_led_pins_led0
+HEX0[6] <= rotary_hex:u0.eightbitstosevenseg_0_led_pins_led0
+HEX1[0] <= rotary_hex:u0.eightbitstosevenseg_0_led_pins_led1
+HEX1[1] <= rotary_hex:u0.eightbitstosevenseg_0_led_pins_led1
+HEX1[2] <= rotary_hex:u0.eightbitstosevenseg_0_led_pins_led1
+HEX1[3] <= rotary_hex:u0.eightbitstosevenseg_0_led_pins_led1
+HEX1[4] <= rotary_hex:u0.eightbitstosevenseg_0_led_pins_led1
+HEX1[5] <= rotary_hex:u0.eightbitstosevenseg_0_led_pins_led1
+HEX1[6] <= rotary_hex:u0.eightbitstosevenseg_0_led_pins_led1
+HEX2[0] <= rotary_hex:u0.eightbitstosevenseg_1_led_pins_led0
+HEX2[1] <= rotary_hex:u0.eightbitstosevenseg_1_led_pins_led0
+HEX2[2] <= rotary_hex:u0.eightbitstosevenseg_1_led_pins_led0
+HEX2[3] <= rotary_hex:u0.eightbitstosevenseg_1_led_pins_led0
+HEX2[4] <= rotary_hex:u0.eightbitstosevenseg_1_led_pins_led0
+HEX2[5] <= rotary_hex:u0.eightbitstosevenseg_1_led_pins_led0
+HEX2[6] <= rotary_hex:u0.eightbitstosevenseg_1_led_pins_led0
+HEX3[0] <= rotary_hex:u0.eightbitstosevenseg_1_led_pins_led1
+HEX3[1] <= rotary_hex:u0.eightbitstosevenseg_1_led_pins_led1
+HEX3[2] <= rotary_hex:u0.eightbitstosevenseg_1_led_pins_led1
+HEX3[3] <= rotary_hex:u0.eightbitstosevenseg_1_led_pins_led1
+HEX3[4] <= rotary_hex:u0.eightbitstosevenseg_1_led_pins_led1
+HEX3[5] <= rotary_hex:u0.eightbitstosevenseg_1_led_pins_led1
+HEX3[6] <= rotary_hex:u0.eightbitstosevenseg_1_led_pins_led1
+HEX4[0] <= <GND>
+HEX4[1] <= <GND>
+HEX4[2] <= <GND>
+HEX4[3] <= <GND>
+HEX4[4] <= <GND>
+HEX4[5] <= <GND>
+HEX4[6] <= <GND>
+HEX5[0] <= <GND>
+HEX5[1] <= <GND>
+HEX5[2] <= <GND>
+HEX5[3] <= <GND>
+HEX5[4] <= <GND>
+HEX5[5] <= <GND>
+HEX5[6] <= <GND>
 IRDA_RXD => ~NO_FANOUT~
 IRDA_TXD <= <GND>
-KEY[0] => rst.IN3
+KEY[0] => KEY[0].IN1
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
 KEY[3] => ~NO_FANOUT~
-LEDR[0] <= shiftregctl:comb_4.port5
-LEDR[1] <= shiftregctl:comb_4.port5
-LEDR[2] <= shiftregctl:comb_4.port5
-LEDR[3] <= shiftregctl:comb_4.port5
-LEDR[4] <= shiftregctl:comb_4.port5
-LEDR[5] <= shiftregctl:comb_4.port5
-LEDR[6] <= shiftregctl:comb_4.port5
-LEDR[7] <= shiftregctl:comb_4.port5
-LEDR[8] <= shiftregctl:comb_4.port5
-LEDR[9] <= shiftregctl:comb_4.port5
+LEDR[0] <= rotary_hex:u0.shiftregctl_0_buttons_export
+LEDR[1] <= rotary_hex:u0.shiftregctl_0_buttons_export
+LEDR[2] <= rotary_hex:u0.shiftregctl_0_buttons_export
+LEDR[3] <= rotary_hex:u0.shiftregctl_0_buttons_export
+LEDR[4] <= rotary_hex:u0.shiftregctl_0_buttons_export
+LEDR[5] <= rotary_hex:u0.shiftregctl_0_buttons_export
+LEDR[6] <= rotary_hex:u0.shiftregctl_0_buttons_export
+LEDR[7] <= rotary_hex:u0.shiftregctl_0_buttons_export
+LEDR[8] <= rotary_hex:u0.shiftregctl_0_buttons_export
+LEDR[9] <= rotary_hex:u0.shiftregctl_0_buttons_export
 PS2_CLK <> <UNC>
 PS2_CLK2 <> <UNC>
 PS2_DAT <> <UNC>
@@ -239,15 +239,283 @@ LCD_DEN <= <GND>
 LCD_DCLK <= <GND>
 LCD_ON <= <GND>
 LCD_BACKLIGHT <= <GND>
-SHIFT_CLKIN <= shiftregctl:comb_4.port2
-SHIFT_LOAD <= shiftregctl:comb_4.port3
+SHIFT_CLKIN <= rotary_hex:u0.shiftregctl_0_shiftreg_ext_shiftreg_clk
+SHIFT_LOAD <= rotary_hex:u0.shiftregctl_0_shiftreg_ext_shiftreg_loadn
 SHIFT_OUT => SHIFT_OUT.IN1
 TOUCH_WAKE <= <GND>
 DISPLAY_SDA <> <UNC>
 DISPLAY_SCL <> <UNC>
 
 
-|toplevel|shiftregctl:comb_4
+|toplevel|rotary_hex:u0
+clk_clk => clk_clk.IN6
+eightbitstosevenseg_0_led_pins_led0[0] <= EightBitsToSevenSeg:eightbitstosevenseg_0.digit0
+eightbitstosevenseg_0_led_pins_led0[1] <= EightBitsToSevenSeg:eightbitstosevenseg_0.digit0
+eightbitstosevenseg_0_led_pins_led0[2] <= EightBitsToSevenSeg:eightbitstosevenseg_0.digit0
+eightbitstosevenseg_0_led_pins_led0[3] <= EightBitsToSevenSeg:eightbitstosevenseg_0.digit0
+eightbitstosevenseg_0_led_pins_led0[4] <= EightBitsToSevenSeg:eightbitstosevenseg_0.digit0
+eightbitstosevenseg_0_led_pins_led0[5] <= EightBitsToSevenSeg:eightbitstosevenseg_0.digit0
+eightbitstosevenseg_0_led_pins_led0[6] <= EightBitsToSevenSeg:eightbitstosevenseg_0.digit0
+eightbitstosevenseg_0_led_pins_led1[0] <= EightBitsToSevenSeg:eightbitstosevenseg_0.digit1
+eightbitstosevenseg_0_led_pins_led1[1] <= EightBitsToSevenSeg:eightbitstosevenseg_0.digit1
+eightbitstosevenseg_0_led_pins_led1[2] <= EightBitsToSevenSeg:eightbitstosevenseg_0.digit1
+eightbitstosevenseg_0_led_pins_led1[3] <= EightBitsToSevenSeg:eightbitstosevenseg_0.digit1
+eightbitstosevenseg_0_led_pins_led1[4] <= EightBitsToSevenSeg:eightbitstosevenseg_0.digit1
+eightbitstosevenseg_0_led_pins_led1[5] <= EightBitsToSevenSeg:eightbitstosevenseg_0.digit1
+eightbitstosevenseg_0_led_pins_led1[6] <= EightBitsToSevenSeg:eightbitstosevenseg_0.digit1
+eightbitstosevenseg_1_led_pins_led0[0] <= EightBitsToSevenSeg:eightbitstosevenseg_1.digit0
+eightbitstosevenseg_1_led_pins_led0[1] <= EightBitsToSevenSeg:eightbitstosevenseg_1.digit0
+eightbitstosevenseg_1_led_pins_led0[2] <= EightBitsToSevenSeg:eightbitstosevenseg_1.digit0
+eightbitstosevenseg_1_led_pins_led0[3] <= EightBitsToSevenSeg:eightbitstosevenseg_1.digit0
+eightbitstosevenseg_1_led_pins_led0[4] <= EightBitsToSevenSeg:eightbitstosevenseg_1.digit0
+eightbitstosevenseg_1_led_pins_led0[5] <= EightBitsToSevenSeg:eightbitstosevenseg_1.digit0
+eightbitstosevenseg_1_led_pins_led0[6] <= EightBitsToSevenSeg:eightbitstosevenseg_1.digit0
+eightbitstosevenseg_1_led_pins_led1[0] <= EightBitsToSevenSeg:eightbitstosevenseg_1.digit1
+eightbitstosevenseg_1_led_pins_led1[1] <= EightBitsToSevenSeg:eightbitstosevenseg_1.digit1
+eightbitstosevenseg_1_led_pins_led1[2] <= EightBitsToSevenSeg:eightbitstosevenseg_1.digit1
+eightbitstosevenseg_1_led_pins_led1[3] <= EightBitsToSevenSeg:eightbitstosevenseg_1.digit1
+eightbitstosevenseg_1_led_pins_led1[4] <= EightBitsToSevenSeg:eightbitstosevenseg_1.digit1
+eightbitstosevenseg_1_led_pins_led1[5] <= EightBitsToSevenSeg:eightbitstosevenseg_1.digit1
+eightbitstosevenseg_1_led_pins_led1[6] <= EightBitsToSevenSeg:eightbitstosevenseg_1.digit1
+reset_reset_n => _.IN1
+rotaryctl_0_rotary_event_rotary_cw <= rotary:rotaryctl_0.rot_cw
+rotaryctl_0_rotary_event_rotary_ccw <= rotary:rotaryctl_0.rot_ccw
+rotaryctl_0_rotary_in_rotary_in[0] => rotaryctl_0_rotary_in_rotary_in[0].IN1
+rotaryctl_0_rotary_in_rotary_in[1] => rotaryctl_0_rotary_in_rotary_in[1].IN1
+rotaryctl_1_rotary_event_rotary_cw <= rotary:rotaryctl_1.rot_cw
+rotaryctl_1_rotary_event_rotary_ccw <= rotary:rotaryctl_1.rot_ccw
+rotaryctl_1_rotary_in_rotary_in[0] => rotaryctl_1_rotary_in_rotary_in[0].IN1
+rotaryctl_1_rotary_in_rotary_in[1] => rotaryctl_1_rotary_in_rotary_in[1].IN1
+shiftregctl_0_buttons_export[0] <= shiftregctl:shiftregctl_0.buttons
+shiftregctl_0_buttons_export[1] <= shiftregctl:shiftregctl_0.buttons
+shiftregctl_0_buttons_export[2] <= shiftregctl:shiftregctl_0.buttons
+shiftregctl_0_buttons_export[3] <= shiftregctl:shiftregctl_0.buttons
+shiftregctl_0_buttons_export[4] <= shiftregctl:shiftregctl_0.buttons
+shiftregctl_0_buttons_export[5] <= shiftregctl:shiftregctl_0.buttons
+shiftregctl_0_buttons_export[6] <= shiftregctl:shiftregctl_0.buttons
+shiftregctl_0_buttons_export[7] <= shiftregctl:shiftregctl_0.buttons
+shiftregctl_0_buttons_export[8] <= shiftregctl:shiftregctl_0.buttons
+shiftregctl_0_buttons_export[9] <= shiftregctl:shiftregctl_0.buttons
+shiftregctl_0_buttons_export[10] <= shiftregctl:shiftregctl_0.buttons
+shiftregctl_0_buttons_export[11] <= shiftregctl:shiftregctl_0.buttons
+shiftregctl_0_buttons_export[12] <= shiftregctl:shiftregctl_0.buttons
+shiftregctl_0_buttons_export[13] <= shiftregctl:shiftregctl_0.buttons
+shiftregctl_0_buttons_export[14] <= shiftregctl:shiftregctl_0.buttons
+shiftregctl_0_buttons_export[15] <= shiftregctl:shiftregctl_0.buttons
+shiftregctl_0_shiftreg_ext_shiftreg_clk <= shiftregctl:shiftregctl_0.shiftreg_clk
+shiftregctl_0_shiftreg_ext_shiftreg_loadn <= shiftregctl:shiftregctl_0.shiftreg_loadn
+shiftregctl_0_shiftreg_ext_shiftreg_out => shiftregctl_0_shiftreg_ext_shiftreg_out.IN1
+
+
+|toplevel|rotary_hex:u0|EightBitsToSevenSeg:eightbitstosevenseg_0
+clock => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+hexval[0] => Decoder0.IN3
+hexval[1] => Decoder0.IN2
+hexval[2] => Decoder0.IN1
+hexval[3] => Decoder0.IN0
+hexval[4] => Decoder1.IN3
+hexval[5] => Decoder1.IN2
+hexval[6] => Decoder1.IN1
+hexval[7] => Decoder1.IN0
+digit0[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+digit0[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+digit0[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+digit0[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+digit0[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+digit0[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+digit0[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+digit1[0] <= WideOr13.DB_MAX_OUTPUT_PORT_TYPE
+digit1[1] <= WideOr12.DB_MAX_OUTPUT_PORT_TYPE
+digit1[2] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
+digit1[3] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+digit1[4] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+digit1[5] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+digit1[6] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|rotary_hex:u0|EightBitsToSevenSeg:eightbitstosevenseg_1
+clock => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+hexval[0] => Decoder0.IN3
+hexval[1] => Decoder0.IN2
+hexval[2] => Decoder0.IN1
+hexval[3] => Decoder0.IN0
+hexval[4] => Decoder1.IN3
+hexval[5] => Decoder1.IN2
+hexval[6] => Decoder1.IN1
+hexval[7] => Decoder1.IN0
+digit0[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+digit0[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+digit0[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+digit0[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+digit0[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+digit0[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+digit0[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+digit1[0] <= WideOr13.DB_MAX_OUTPUT_PORT_TYPE
+digit1[1] <= WideOr12.DB_MAX_OUTPUT_PORT_TYPE
+digit1[2] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
+digit1[3] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+digit1[4] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+digit1[5] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+digit1[6] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|rotary_hex:u0|rotary:rotaryctl_0
+clk => clk.IN2
+rst => rst.IN2
+rotary_in[0] => rotary_in[0].IN1
+rotary_in[1] => rotary_in[1].IN1
+rotary_pos[0] <= rotary_pos[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[1] <= rotary_pos[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[2] <= rotary_pos[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[3] <= rotary_pos[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[4] <= rotary_pos[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[5] <= rotary_pos[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[6] <= rotary_pos[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[7] <= rotary_pos[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rot_cw <= rot_cw~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rot_ccw <= rot_ccw~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one
+clk => clk.IN1
+rst => clean_out~reg0.ACLR
+rst => prev_syncbouncy.ACLR
+rst => counter[0].ACLR
+rst => counter[1].ACLR
+rst => counter[2].ACLR
+rst => counter[3].ACLR
+rst => counter[4].ACLR
+rst => counter[5].ACLR
+rst => counter[6].ACLR
+rst => counter[7].ACLR
+rst => counter[8].ACLR
+rst => counter[9].ACLR
+rst => counter[10].ACLR
+rst => counter[11].ACLR
+rst => counter[12].ACLR
+rst => counter[13].ACLR
+rst => counter[14].ACLR
+bouncy_in => bouncy_in.IN1
+clean_out <= clean_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|synchroniser:dosync
+clk => sync~reg0.CLK
+clk => metastable.CLK
+async => metastable.DATAIN
+sync <= sync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two
+clk => clk.IN1
+rst => clean_out~reg0.ACLR
+rst => prev_syncbouncy.ACLR
+rst => counter[0].ACLR
+rst => counter[1].ACLR
+rst => counter[2].ACLR
+rst => counter[3].ACLR
+rst => counter[4].ACLR
+rst => counter[5].ACLR
+rst => counter[6].ACLR
+rst => counter[7].ACLR
+rst => counter[8].ACLR
+rst => counter[9].ACLR
+rst => counter[10].ACLR
+rst => counter[11].ACLR
+rst => counter[12].ACLR
+rst => counter[13].ACLR
+rst => counter[14].ACLR
+bouncy_in => bouncy_in.IN1
+clean_out <= clean_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|synchroniser:dosync
+clk => sync~reg0.CLK
+clk => metastable.CLK
+async => metastable.DATAIN
+sync <= sync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|rotary_hex:u0|rotary:rotaryctl_1
+clk => clk.IN2
+rst => rst.IN2
+rotary_in[0] => rotary_in[0].IN1
+rotary_in[1] => rotary_in[1].IN1
+rotary_pos[0] <= rotary_pos[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[1] <= rotary_pos[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[2] <= rotary_pos[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[3] <= rotary_pos[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[4] <= rotary_pos[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[5] <= rotary_pos[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[6] <= rotary_pos[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[7] <= rotary_pos[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rot_cw <= rot_cw~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rot_ccw <= rot_ccw~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one
+clk => clk.IN1
+rst => clean_out~reg0.ACLR
+rst => prev_syncbouncy.ACLR
+rst => counter[0].ACLR
+rst => counter[1].ACLR
+rst => counter[2].ACLR
+rst => counter[3].ACLR
+rst => counter[4].ACLR
+rst => counter[5].ACLR
+rst => counter[6].ACLR
+rst => counter[7].ACLR
+rst => counter[8].ACLR
+rst => counter[9].ACLR
+rst => counter[10].ACLR
+rst => counter[11].ACLR
+rst => counter[12].ACLR
+rst => counter[13].ACLR
+rst => counter[14].ACLR
+bouncy_in => bouncy_in.IN1
+clean_out <= clean_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|synchroniser:dosync
+clk => sync~reg0.CLK
+clk => metastable.CLK
+async => metastable.DATAIN
+sync <= sync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two
+clk => clk.IN1
+rst => clean_out~reg0.ACLR
+rst => prev_syncbouncy.ACLR
+rst => counter[0].ACLR
+rst => counter[1].ACLR
+rst => counter[2].ACLR
+rst => counter[3].ACLR
+rst => counter[4].ACLR
+rst => counter[5].ACLR
+rst => counter[6].ACLR
+rst => counter[7].ACLR
+rst => counter[8].ACLR
+rst => counter[9].ACLR
+rst => counter[10].ACLR
+rst => counter[11].ACLR
+rst => counter[12].ACLR
+rst => counter[13].ACLR
+rst => counter[14].ACLR
+bouncy_in => bouncy_in.IN1
+clean_out <= clean_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|synchroniser:dosync
+clk => sync~reg0.CLK
+clk => metastable.CLK
+async => metastable.DATAIN
+sync <= sync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|rotary_hex:u0|shiftregctl:shiftregctl_0
 clock_50m => buttons[0]~reg0.CLK
 clock_50m => buttons[1]~reg0.CLK
 clock_50m => buttons[2]~reg0.CLK
@@ -380,213 +648,59 @@ buttons[14] <= buttons[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 buttons[15] <= buttons[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|toplevel|rotary:comb_31
+|toplevel|rotary_hex:u0|altera_reset_controller:rst_controller
+reset_in0 => merged_reset.IN0
+reset_in1 => merged_reset.IN1
+reset_in2 => merged_reset.IN1
+reset_in3 => merged_reset.IN1
+reset_in4 => merged_reset.IN1
+reset_in5 => merged_reset.IN1
+reset_in6 => merged_reset.IN1
+reset_in7 => merged_reset.IN1
+reset_in8 => merged_reset.IN1
+reset_in9 => merged_reset.IN1
+reset_in10 => merged_reset.IN1
+reset_in11 => merged_reset.IN1
+reset_in12 => merged_reset.IN1
+reset_in13 => merged_reset.IN1
+reset_in14 => merged_reset.IN1
+reset_in15 => merged_reset.IN1
+reset_req_in0 => ~NO_FANOUT~
+reset_req_in1 => ~NO_FANOUT~
+reset_req_in2 => ~NO_FANOUT~
+reset_req_in3 => ~NO_FANOUT~
+reset_req_in4 => ~NO_FANOUT~
+reset_req_in5 => ~NO_FANOUT~
+reset_req_in6 => ~NO_FANOUT~
+reset_req_in7 => ~NO_FANOUT~
+reset_req_in8 => ~NO_FANOUT~
+reset_req_in9 => ~NO_FANOUT~
+reset_req_in10 => ~NO_FANOUT~
+reset_req_in11 => ~NO_FANOUT~
+reset_req_in12 => ~NO_FANOUT~
+reset_req_in13 => ~NO_FANOUT~
+reset_req_in14 => ~NO_FANOUT~
+reset_req_in15 => ~NO_FANOUT~
 clk => clk.IN2
-rst => rst.IN2
-rotary_in[0] => rotary_in[0].IN1
-rotary_in[1] => rotary_in[1].IN1
-rotary_pos[0] <= rotary_pos[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rotary_pos[1] <= rotary_pos[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rotary_pos[2] <= rotary_pos[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rotary_pos[3] <= rotary_pos[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rotary_pos[4] <= rotary_pos[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rotary_pos[5] <= rotary_pos[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rotary_pos[6] <= rotary_pos[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rotary_pos[7] <= rotary_pos[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rot_cw <= rot_cw~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rot_ccw <= rot_ccw~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reset_out <= altera_reset_synchronizer:alt_rst_sync_uq1.reset_out
+reset_req <= altera_reset_synchronizer:alt_rst_req_sync_uq1.reset_out
 
 
-|toplevel|rotary:comb_31|debounce:dut_one
-clk => clk.IN1
-rst => clean_out~reg0.ACLR
-rst => prev_syncbouncy.ACLR
-rst => counter[0].ACLR
-rst => counter[1].ACLR
-rst => counter[2].ACLR
-rst => counter[3].ACLR
-rst => counter[4].ACLR
-rst => counter[5].ACLR
-rst => counter[6].ACLR
-rst => counter[7].ACLR
-rst => counter[8].ACLR
-rst => counter[9].ACLR
-rst => counter[10].ACLR
-rst => counter[11].ACLR
-rst => counter[12].ACLR
-rst => counter[13].ACLR
-rst => counter[14].ACLR
-bouncy_in => bouncy_in.IN1
-clean_out <= clean_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|toplevel|rotary_hex:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
+reset_in => altera_reset_synchronizer_int_chain_out.PRESET
+reset_in => altera_reset_synchronizer_int_chain[0].PRESET
+reset_in => altera_reset_synchronizer_int_chain[1].PRESET
+clk => altera_reset_synchronizer_int_chain_out.CLK
+clk => altera_reset_synchronizer_int_chain[0].CLK
+clk => altera_reset_synchronizer_int_chain[1].CLK
+reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|toplevel|rotary:comb_31|debounce:dut_one|synchroniser:dosync
-clk => sync~reg0.CLK
-clk => metastable.CLK
-async => metastable.DATAIN
-sync <= sync~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|toplevel|rotary:comb_31|debounce:dut_two
-clk => clk.IN1
-rst => clean_out~reg0.ACLR
-rst => prev_syncbouncy.ACLR
-rst => counter[0].ACLR
-rst => counter[1].ACLR
-rst => counter[2].ACLR
-rst => counter[3].ACLR
-rst => counter[4].ACLR
-rst => counter[5].ACLR
-rst => counter[6].ACLR
-rst => counter[7].ACLR
-rst => counter[8].ACLR
-rst => counter[9].ACLR
-rst => counter[10].ACLR
-rst => counter[11].ACLR
-rst => counter[12].ACLR
-rst => counter[13].ACLR
-rst => counter[14].ACLR
-bouncy_in => bouncy_in.IN1
-clean_out <= clean_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|toplevel|rotary:comb_31|debounce:dut_two|synchroniser:dosync
-clk => sync~reg0.CLK
-clk => metastable.CLK
-async => metastable.DATAIN
-sync <= sync~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|toplevel|rotary:comb_32
-clk => clk.IN2
-rst => rst.IN2
-rotary_in[0] => rotary_in[0].IN1
-rotary_in[1] => rotary_in[1].IN1
-rotary_pos[0] <= rotary_pos[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rotary_pos[1] <= rotary_pos[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rotary_pos[2] <= rotary_pos[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rotary_pos[3] <= rotary_pos[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rotary_pos[4] <= rotary_pos[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rotary_pos[5] <= rotary_pos[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rotary_pos[6] <= rotary_pos[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rotary_pos[7] <= rotary_pos[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rot_cw <= rot_cw~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rot_ccw <= rot_ccw~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|toplevel|rotary:comb_32|debounce:dut_one
-clk => clk.IN1
-rst => clean_out~reg0.ACLR
-rst => prev_syncbouncy.ACLR
-rst => counter[0].ACLR
-rst => counter[1].ACLR
-rst => counter[2].ACLR
-rst => counter[3].ACLR
-rst => counter[4].ACLR
-rst => counter[5].ACLR
-rst => counter[6].ACLR
-rst => counter[7].ACLR
-rst => counter[8].ACLR
-rst => counter[9].ACLR
-rst => counter[10].ACLR
-rst => counter[11].ACLR
-rst => counter[12].ACLR
-rst => counter[13].ACLR
-rst => counter[14].ACLR
-bouncy_in => bouncy_in.IN1
-clean_out <= clean_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|toplevel|rotary:comb_32|debounce:dut_one|synchroniser:dosync
-clk => sync~reg0.CLK
-clk => metastable.CLK
-async => metastable.DATAIN
-sync <= sync~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|toplevel|rotary:comb_32|debounce:dut_two
-clk => clk.IN1
-rst => clean_out~reg0.ACLR
-rst => prev_syncbouncy.ACLR
-rst => counter[0].ACLR
-rst => counter[1].ACLR
-rst => counter[2].ACLR
-rst => counter[3].ACLR
-rst => counter[4].ACLR
-rst => counter[5].ACLR
-rst => counter[6].ACLR
-rst => counter[7].ACLR
-rst => counter[8].ACLR
-rst => counter[9].ACLR
-rst => counter[10].ACLR
-rst => counter[11].ACLR
-rst => counter[12].ACLR
-rst => counter[13].ACLR
-rst => counter[14].ACLR
-bouncy_in => bouncy_in.IN1
-clean_out <= clean_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|toplevel|rotary:comb_32|debounce:dut_two|synchroniser:dosync
-clk => sync~reg0.CLK
-clk => metastable.CLK
-async => metastable.DATAIN
-sync <= sync~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|toplevel|hex_to_7seg:comb_41
-hexval[0] => Decoder0.IN3
-hexval[1] => Decoder0.IN2
-hexval[2] => Decoder0.IN1
-hexval[3] => Decoder0.IN0
-ledcode[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|toplevel|hex_to_7seg:comb_42
-hexval[0] => Decoder0.IN3
-hexval[1] => Decoder0.IN2
-hexval[2] => Decoder0.IN1
-hexval[3] => Decoder0.IN0
-ledcode[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|toplevel|hex_to_7seg:comb_51
-hexval[0] => Decoder0.IN3
-hexval[1] => Decoder0.IN2
-hexval[2] => Decoder0.IN1
-hexval[3] => Decoder0.IN0
-ledcode[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|toplevel|hex_to_7seg:comb_52
-hexval[0] => Decoder0.IN3
-hexval[1] => Decoder0.IN2
-hexval[2] => Decoder0.IN1
-hexval[3] => Decoder0.IN0
-ledcode[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-ledcode[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+|toplevel|rotary_hex:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1
+reset_in => altera_reset_synchronizer_int_chain[1].DATAIN
+clk => altera_reset_synchronizer_int_chain_out.CLK
+clk => altera_reset_synchronizer_int_chain[0].CLK
+clk => altera_reset_synchronizer_int_chain[1].CLK
+reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 

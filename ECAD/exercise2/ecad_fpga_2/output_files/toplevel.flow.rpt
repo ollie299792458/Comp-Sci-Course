@@ -1,5 +1,5 @@
 Flow report for toplevel
-Tue Oct 31 15:18:40 2017
+Tue Oct 31 17:00:07 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Oct 31 15:18:30 2017       ;
+; Flow Status                     ; Successful - Tue Oct 31 16:59:57 2017       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; toplevel                                    ;
 ; Top-level Entity Name           ; toplevel                                    ;
@@ -49,7 +49,7 @@ agreement for further details.
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 98 / 32,070 ( < 1 % )                       ;
-; Total registers                 ; 141                                         ;
+; Total registers                 ; 146                                         ;
 ; Total pins                      ; 246 / 457 ( 54 % )                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
@@ -68,29 +68,35 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/31/2017 15:16:59 ;
+; Start date & time ; 10/31/2017 16:58:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; toplevel            ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                        ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 8796747652916.150946301904356          ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
-; VERILOG_INPUT_VERSION               ; SystemVerilog_2005                     ; Verilog_2001  ; --          ; --         ;
-; VERILOG_SHOW_LMF_MAPPING_MESSAGES   ; Off                                    ; --            ; --          ; --         ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                              ;
++-------------------------------------+--------------------------------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                                        ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+--------------------------------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 8796747652916.150946910206396                                ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                           ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; rotary_hex/synthesis/../rotary_hex.cmp                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; rotary_hex/synthesis/../../rotary_hex.qsys                   ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                       ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                       ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                       ; --            ; --          ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                          ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                        ; --            ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                 ; --            ; --          ; --         ;
+; SLD_FILE                            ; rotary_hex/synthesis/rotary_hex.debuginfo                    ; --            ; --          ; --         ;
+; SLD_INFO                            ; QSYS_NAME rotary_hex HAS_SOPCINFO 1 GENERATION_ID 1509468742 ; --            ; rotary_hex  ; --         ;
+; SOPCINFO_FILE                       ; rotary_hex/synthesis/../../rotary_hex.sopcinfo               ; --            ; --          ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                           ; --            ; --          ; --         ;
+; VERILOG_INPUT_VERSION               ; SystemVerilog_2005                                           ; Verilog_2001  ; --          ; --         ;
+; VERILOG_SHOW_LMF_MAPPING_MESSAGES   ; Off                                                          ; --            ; --          ; --         ;
++-------------------------------------+--------------------------------------------------------------+---------------+-------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -98,11 +104,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:19     ; 1.0                     ; 960 MB              ; 00:00:17                           ;
-; Fitter                    ; 00:01:03     ; 1.0                     ; 2050 MB             ; 00:01:02                           ;
-; Assembler                 ; 00:00:07     ; 1.0                     ; 976 MB              ; 00:00:07                           ;
-; TimeQuest Timing Analyzer ; 00:00:09     ; 1.0                     ; 1163 MB             ; 00:00:08                           ;
-; Total                     ; 00:01:38     ; --                      ; --                  ; 00:01:34                           ;
+; Analysis & Synthesis      ; 00:00:19     ; 1.0                     ; 960 MB              ; 00:00:18                           ;
+; Fitter                    ; 00:01:06     ; 1.0                     ; 2052 MB             ; 00:01:04                           ;
+; Assembler                 ; 00:00:07     ; 1.0                     ; 978 MB              ; 00:00:07                           ;
+; TimeQuest Timing Analyzer ; 00:00:09     ; 1.0                     ; 1165 MB             ; 00:00:08                           ;
+; Total                     ; 00:01:41     ; --                      ; --                  ; 00:01:37                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

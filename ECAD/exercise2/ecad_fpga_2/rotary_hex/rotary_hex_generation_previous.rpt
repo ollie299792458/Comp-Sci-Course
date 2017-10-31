@@ -1,0 +1,40 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex.qsys --block-symbol-file --output-directory=/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading ecad_fpga_2/rotary_hex.qsys
+Progress: Reading input file
+Progress: Adding EightBitsToSevenSeg_0 [EightBitsToSevenSeg 1.0]
+Progress: Parameterizing module EightBitsToSevenSeg_0
+Progress: Adding RotaryCtl_0 [RotaryCtl 1.0]
+Warning: RotaryCtl_0: Used RotaryCtl 1.0.1 (instead of 1.0)
+Progress: Parameterizing module RotaryCtl_0
+Progress: Adding clk_0 [clock_source 16.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex.qsys --synthesis=VERILOG --output-directory=/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/rotary_hex/synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading ecad_fpga_2/rotary_hex.qsys
+Progress: Reading input file
+Progress: Adding EightBitsToSevenSeg_0 [EightBitsToSevenSeg 1.0]
+Progress: Parameterizing module EightBitsToSevenSeg_0
+Progress: Adding RotaryCtl_0 [RotaryCtl 1.0]
+Warning: RotaryCtl_0: Used RotaryCtl 1.0.1 (instead of 1.0)
+Progress: Parameterizing module RotaryCtl_0
+Progress: Adding clk_0 [clock_source 16.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: rotary_hex: Generating rotary_hex "rotary_hex" for QUARTUS_SYNTH
+Info: EightBitsToSevenSeg_0: "rotary_hex" instantiated EightBitsToSevenSeg "EightBitsToSevenSeg_0"
+Info: RotaryCtl_0: "rotary_hex" instantiated RotaryCtl "RotaryCtl_0"
+Info: rst_controller: "rotary_hex" instantiated altera_reset_controller "rst_controller"
+Info: rotary_hex: Done "rotary_hex" with 4 modules, 8 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
