@@ -1,5 +1,5 @@
 Analysis & Synthesis report for toplevel
-Tue Oct 31 14:40:47 2017
+Tue Oct 31 15:17:17 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -15,11 +15,12 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   7. Registers Removed During Synthesis
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Port Connectivity Checks: "rotary:comb_21"
- 11. Port Connectivity Checks: "shiftregctl:comb_4"
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+ 10. Port Connectivity Checks: "rotary:comb_32"
+ 11. Port Connectivity Checks: "rotary:comb_31"
+ 12. Port Connectivity Checks: "shiftregctl:comb_4"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -46,13 +47,13 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 31 14:40:47 2017       ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 31 15:17:17 2017       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; toplevel                                    ;
 ; Top-level Entity Name           ; toplevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 64                                          ;
+; Total registers                 ; 132                                         ;
 ; Total pins                      ; 246                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -173,25 +174,25 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 47             ;
+; Estimate of Logic utilization (ALMs needed) ; 99             ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 83             ;
+; Combinational ALUT usage for logic          ; 175            ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 8              ;
-;     -- 5 input functions                    ; 6              ;
-;     -- 4 input functions                    ; 18             ;
-;     -- <=3 input functions                  ; 51             ;
+;     -- 6 input functions                    ; 18             ;
+;     -- 5 input functions                    ; 24             ;
+;     -- 4 input functions                    ; 38             ;
+;     -- <=3 input functions                  ; 95             ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 64             ;
+; Dedicated logic registers                   ; 132            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 246            ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 64             ;
-; Total fan-out                               ; 844            ;
-; Average fan-out                             ; 1.20           ;
+; Maximum fan-out                             ; 132            ;
+; Total fan-out                               ; 1467           ;
+; Average fan-out                             ; 1.70           ;
 +---------------------------------------------+----------------+
 
 
@@ -200,27 +201,35 @@ agreement for further details.
 +--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+--------------+--------------+
 ; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Entity Name  ; Library Name ;
 +--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+--------------+--------------+
-; |toplevel                      ; 83 (0)              ; 64 (0)                    ; 0                 ; 0          ; 246  ; 0            ; |toplevel                                                     ; toplevel     ; work         ;
-;    |hex_to_7seg:comb_30|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|hex_to_7seg:comb_30                                 ; hex_to_7seg  ; work         ;
-;    |hex_to_7seg:comb_31|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|hex_to_7seg:comb_31                                 ; hex_to_7seg  ; work         ;
-;    |rotary:comb_21|            ; 51 (9)              ; 48 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_21                                      ; rotary       ; work         ;
-;       |debounce:dut_one|       ; 21 (21)             ; 19 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_21|debounce:dut_one                     ; debounce     ; work         ;
-;          |synchroniser:dosync| ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_21|debounce:dut_one|synchroniser:dosync ; synchroniser ; work         ;
-;       |debounce:dut_two|       ; 21 (21)             ; 19 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_21|debounce:dut_two                     ; debounce     ; work         ;
-;          |synchroniser:dosync| ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_21|debounce:dut_two|synchroniser:dosync ; synchroniser ; work         ;
-;    |shiftregctl:comb_4|        ; 18 (18)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|shiftregctl:comb_4                                  ; shiftregctl  ; work         ;
+; |toplevel                      ; 175 (0)             ; 132 (0)                   ; 0                 ; 0          ; 246  ; 0            ; |toplevel                                                     ; toplevel     ; work         ;
+;    |hex_to_7seg:comb_41|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|hex_to_7seg:comb_41                                 ; hex_to_7seg  ; work         ;
+;    |hex_to_7seg:comb_42|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|hex_to_7seg:comb_42                                 ; hex_to_7seg  ; work         ;
+;    |hex_to_7seg:comb_51|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|hex_to_7seg:comb_51                                 ; hex_to_7seg  ; work         ;
+;    |hex_to_7seg:comb_52|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|hex_to_7seg:comb_52                                 ; hex_to_7seg  ; work         ;
+;    |rotary:comb_31|            ; 51 (9)              ; 48 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_31                                      ; rotary       ; work         ;
+;       |debounce:dut_one|       ; 21 (21)             ; 19 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_31|debounce:dut_one                     ; debounce     ; work         ;
+;          |synchroniser:dosync| ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_31|debounce:dut_one|synchroniser:dosync ; synchroniser ; work         ;
+;       |debounce:dut_two|       ; 21 (21)             ; 19 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_31|debounce:dut_two                     ; debounce     ; work         ;
+;          |synchroniser:dosync| ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_31|debounce:dut_two|synchroniser:dosync ; synchroniser ; work         ;
+;    |rotary:comb_32|            ; 51 (9)              ; 48 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_32                                      ; rotary       ; work         ;
+;       |debounce:dut_one|       ; 21 (21)             ; 19 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_32|debounce:dut_one                     ; debounce     ; work         ;
+;          |synchroniser:dosync| ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_32|debounce:dut_one|synchroniser:dosync ; synchroniser ; work         ;
+;       |debounce:dut_two|       ; 21 (21)             ; 19 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_32|debounce:dut_two                     ; debounce     ; work         ;
+;          |synchroniser:dosync| ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_32|debounce:dut_two|synchroniser:dosync ; synchroniser ; work         ;
+;    |shiftregctl:comb_4|        ; 45 (45)             ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|shiftregctl:comb_4                                  ; shiftregctl  ; work         ;
 +--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; rotary:comb_21|last_pos[2..7]         ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 6 ;                                        ;
-+---------------------------------------+----------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; rotary:comb_32|last_pos[2..7]          ; Stuck at GND due to stuck port data_in ;
+; rotary:comb_31|last_pos[2..7]          ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 12 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -228,29 +237,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 64    ;
-; Number of registers using Synchronous Clear  ; 30    ;
+; Total registers                              ; 132   ;
+; Number of registers using Synchronous Clear  ; 70    ;
 ; Number of registers using Synchronous Load   ; 1     ;
-; Number of registers using Asynchronous Clear ; 44    ;
+; Number of registers using Asynchronous Clear ; 88    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 53    ;
+; Number of registers using Clock Enable       ; 101   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |toplevel|rotary:comb_21|debounce:dut_one|counter[8] ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |toplevel|rotary:comb_21|debounce:dut_two|counter[0] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |toplevel|shiftregctl:comb_4|state[0]                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |toplevel|rotary:comb_32|debounce:dut_one|counter[14] ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |toplevel|rotary:comb_32|debounce:dut_two|counter[13] ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |toplevel|rotary:comb_31|debounce:dut_one|counter[2]  ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |toplevel|rotary:comb_31|debounce:dut_two|counter[6]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |toplevel|shiftregctl:comb_4|state[0]                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "rotary:comb_21"                                                                        ;
+; Port Connectivity Checks: "rotary:comb_32"                                                                        ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port    ; Type   ; Severity ; Details                                                                             ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
@@ -260,12 +271,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "shiftregctl:comb_4"                                                                    ;
+; Port Connectivity Checks: "rotary:comb_31"                                                                        ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port    ; Type   ; Severity ; Details                                                                             ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
-; buttons ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rot_cw  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rot_ccw ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "shiftregctl:comb_4"                                                                           ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; buttons[11..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; buttons[3]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; buttons[0]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -273,31 +296,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 64                          ;
-;     CLR               ; 6                           ;
-;     ENA               ; 15                          ;
-;     ENA CLR           ; 8                           ;
-;     ENA CLR SCLR      ; 30                          ;
+; arriav_ff             ; 132                         ;
+;     CLR               ; 12                          ;
+;     ENA               ; 25                          ;
+;     ENA CLR           ; 16                          ;
+;     ENA CLR SCLR      ; 60                          ;
+;     SCLR              ; 10                          ;
 ;     SLD               ; 1                           ;
-;     plain             ; 4                           ;
+;     plain             ; 8                           ;
 ; arriav_io_obuf        ; 63                          ;
-; arriav_lcell_comb     ; 87                          ;
-;     arith             ; 46                          ;
-;         1 data inputs ; 38                          ;
+; arriav_lcell_comb     ; 181                         ;
+;     arith             ; 84                          ;
+;         1 data inputs ; 69                          ;
 ;         2 data inputs ; 1                           ;
-;         3 data inputs ; 7                           ;
-;     normal            ; 41                          ;
+;         3 data inputs ; 14                          ;
+;     normal            ; 97                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 18                          ;
-;         5 data inputs ; 6                           ;
-;         6 data inputs ; 8                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 38                          ;
+;         5 data inputs ; 24                          ;
+;         6 data inputs ; 18                          ;
 ; boundary_port         ; 246                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.40                        ;
-; Average LUT depth     ; 1.31                        ;
+; Average LUT depth     ; 1.48                        ;
 +-----------------------+-----------------------------+
 
 
@@ -316,7 +340,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Tue Oct 31 14:40:25 2017
+    Info: Processing started: Tue Oct 31 15:16:58 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ecad_fpga -c toplevel
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20029): Only one processor detected - disabling parallel compilation
@@ -333,18 +357,17 @@ Info (12021): Found 1 design units, including 1 entities, in source file debounc
 Info (12021): Found 1 design units, including 1 entities, in source file toplevel.sv
     Info (12023): Found entity 1: toplevel File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 32
 Critical Warning (10846): Verilog HDL Instantiation warning at toplevel.sv(240): instance has no name File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 240
-Critical Warning (10846): Verilog HDL Instantiation warning at toplevel.sv(249): instance has no name File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 249
-Critical Warning (10846): Verilog HDL Instantiation warning at toplevel.sv(258): instance has no name File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 258
-Critical Warning (10846): Verilog HDL Instantiation warning at toplevel.sv(259): instance has no name File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 259
+Critical Warning (10846): Verilog HDL Instantiation warning at toplevel.sv(265): instance has no name File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 265
+Critical Warning (10846): Verilog HDL Instantiation warning at toplevel.sv(270): instance has no name File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 270
+Critical Warning (10846): Verilog HDL Instantiation warning at toplevel.sv(277): instance has no name File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 277
+Critical Warning (10846): Verilog HDL Instantiation warning at toplevel.sv(278): instance has no name File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 278
+Critical Warning (10846): Verilog HDL Instantiation warning at toplevel.sv(284): instance has no name File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 284
+Critical Warning (10846): Verilog HDL Instantiation warning at toplevel.sv(285): instance has no name File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 285
 Info (12127): Elaborating entity "toplevel" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at toplevel.sv(241): object "buttons_decoded" assigned a value but never read File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 241
 Warning (10034): Output port "DRAM_ADDR" at toplevel.sv(55) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 55
 Warning (10034): Output port "DRAM_BA" at toplevel.sv(56) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 56
 Warning (10034): Output port "HEX0" at toplevel.sv(78) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 78
 Warning (10034): Output port "HEX1" at toplevel.sv(79) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 79
-Warning (10034): Output port "HEX2" at toplevel.sv(80) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 80
-Warning (10034): Output port "HEX3" at toplevel.sv(81) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 81
-Warning (10034): Output port "LEDR" at toplevel.sv(149) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 149
 Warning (10034): Output port "VGA_B" at toplevel.sv(169) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 169
 Warning (10034): Output port "VGA_G" at toplevel.sv(172) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 172
 Warning (10034): Output port "VGA_R" at toplevel.sv(174) has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 174
@@ -383,13 +406,13 @@ Warning (10034): Output port "TOUCH_WAKE" at toplevel.sv(206) has no driver File
 Info (12128): Elaborating entity "shiftregctl" for hierarchy "shiftregctl:comb_4" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 240
 Warning (10230): Verilog HDL assignment warning at shiftregctl.sv(32): truncated value with size 32 to match size of target (9) File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/shiftregctl.sv Line: 32
 Warning (10230): Verilog HDL assignment warning at shiftregctl.sv(42): truncated value with size 32 to match size of target (5) File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/shiftregctl.sv Line: 42
-Info (12128): Elaborating entity "rotary" for hierarchy "rotary:comb_21" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 249
+Info (12128): Elaborating entity "rotary" for hierarchy "rotary:comb_31" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 265
 Warning (10230): Verilog HDL assignment warning at rotary.sv(34): truncated value with size 32 to match size of target (8) File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/rotary.sv Line: 34
 Warning (10230): Verilog HDL assignment warning at rotary.sv(37): truncated value with size 32 to match size of target (8) File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/rotary.sv Line: 37
-Info (12128): Elaborating entity "debounce" for hierarchy "rotary:comb_21|debounce:dut_one" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/rotary.sv Line: 18
+Info (12128): Elaborating entity "debounce" for hierarchy "rotary:comb_31|debounce:dut_one" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/rotary.sv Line: 18
 Warning (10230): Verilog HDL assignment warning at debounce.sv(27): truncated value with size 32 to match size of target (15) File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/debounce.sv Line: 27
-Info (12128): Elaborating entity "synchroniser" for hierarchy "rotary:comb_21|debounce:dut_one|synchroniser:dosync" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/debounce.sv Line: 15
-Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:comb_30" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 258
+Info (12128): Elaborating entity "synchroniser" for hierarchy "rotary:comb_31|debounce:dut_one|synchroniser:dosync" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/debounce.sv Line: 15
+Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:comb_41" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 277
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "ADC_CS_N" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 35
     Warning (13040): bidirectional pin "AUD_ADCLRCK" has no driver File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 42
@@ -498,31 +521,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX1[4]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 79
     Warning (13410): Pin "HEX1[5]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 79
     Warning (13410): Pin "HEX1[6]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 79
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 80
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 80
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 80
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 80
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 80
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 80
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 80
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 81
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 81
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 81
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 81
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 81
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 81
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 81
     Warning (13410): Pin "IRDA_TXD" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 143
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 149
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 149
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 149
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 149
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 149
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 149
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 149
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 149
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 149
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 149
     Warning (13410): Pin "TD_RESET_N" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 164
     Warning (13410): Pin "VGA_B[0]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 169
     Warning (13410): Pin "VGA_B[1]" is stuck at GND File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 169
@@ -588,7 +587,7 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 33 input pin(s) that do not drive logic
+Warning (21074): Design contains 30 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "ADC_DOUT" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 37
     Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 41
     Warning (15610): No output dependent on input pin "CLOCK2_50" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 50
@@ -619,18 +618,15 @@ Warning (21074): Design contains 33 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "TD_DATA[7]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 162
     Warning (15610): No output dependent on input pin "TD_HS" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 163
     Warning (15610): No output dependent on input pin "TD_VS" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 165
-    Warning (15610): No output dependent on input pin "DIALR[0]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 182
-    Warning (15610): No output dependent on input pin "DIALR[1]" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 182
-    Warning (15610): No output dependent on input pin "SHIFT_OUT" File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 203
-Info (21057): Implemented 339 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 449 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 37 input pins
     Info (21059): Implemented 146 output pins
     Info (21060): Implemented 63 bidirectional pins
-    Info (21061): Implemented 93 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 282 warnings
-    Info: Peak virtual memory: 1004 megabytes
-    Info: Processing ended: Tue Oct 31 14:40:47 2017
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:20
+    Info (21061): Implemented 203 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 254 warnings
+    Info: Peak virtual memory: 1009 megabytes
+    Info: Processing ended: Tue Oct 31 15:17:17 2017
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:17
 
 

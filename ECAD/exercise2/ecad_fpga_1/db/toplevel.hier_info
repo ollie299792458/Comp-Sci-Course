@@ -9,7 +9,7 @@ AUD_BCLK <> <UNC>
 AUD_DACDAT <= <GND>
 AUD_DACLRCK <> <UNC>
 AUD_XCK <= <GND>
-CLOCK_50 => CLOCK_50.IN2
+CLOCK_50 => CLOCK_50.IN3
 CLOCK2_50 => ~NO_FANOUT~
 CLOCK3_50 => ~NO_FANOUT~
 CLOCK4_50 => ~NO_FANOUT~
@@ -105,50 +105,50 @@ HEX1[3] <= <GND>
 HEX1[4] <= <GND>
 HEX1[5] <= <GND>
 HEX1[6] <= <GND>
-HEX2[0] <= <GND>
-HEX2[1] <= <GND>
-HEX2[2] <= <GND>
-HEX2[3] <= <GND>
-HEX2[4] <= <GND>
-HEX2[5] <= <GND>
-HEX2[6] <= <GND>
-HEX3[0] <= <GND>
-HEX3[1] <= <GND>
-HEX3[2] <= <GND>
-HEX3[3] <= <GND>
-HEX3[4] <= <GND>
-HEX3[5] <= <GND>
-HEX3[6] <= <GND>
-HEX4[0] <= hex_to_7seg:comb_31.port1
-HEX4[1] <= hex_to_7seg:comb_31.port1
-HEX4[2] <= hex_to_7seg:comb_31.port1
-HEX4[3] <= hex_to_7seg:comb_31.port1
-HEX4[4] <= hex_to_7seg:comb_31.port1
-HEX4[5] <= hex_to_7seg:comb_31.port1
-HEX4[6] <= hex_to_7seg:comb_31.port1
-HEX5[0] <= hex_to_7seg:comb_30.port1
-HEX5[1] <= hex_to_7seg:comb_30.port1
-HEX5[2] <= hex_to_7seg:comb_30.port1
-HEX5[3] <= hex_to_7seg:comb_30.port1
-HEX5[4] <= hex_to_7seg:comb_30.port1
-HEX5[5] <= hex_to_7seg:comb_30.port1
-HEX5[6] <= hex_to_7seg:comb_30.port1
+HEX2[0] <= hex_to_7seg:comb_51.port1
+HEX2[1] <= hex_to_7seg:comb_51.port1
+HEX2[2] <= hex_to_7seg:comb_51.port1
+HEX2[3] <= hex_to_7seg:comb_51.port1
+HEX2[4] <= hex_to_7seg:comb_51.port1
+HEX2[5] <= hex_to_7seg:comb_51.port1
+HEX2[6] <= hex_to_7seg:comb_51.port1
+HEX3[0] <= hex_to_7seg:comb_52.port1
+HEX3[1] <= hex_to_7seg:comb_52.port1
+HEX3[2] <= hex_to_7seg:comb_52.port1
+HEX3[3] <= hex_to_7seg:comb_52.port1
+HEX3[4] <= hex_to_7seg:comb_52.port1
+HEX3[5] <= hex_to_7seg:comb_52.port1
+HEX3[6] <= hex_to_7seg:comb_52.port1
+HEX4[0] <= hex_to_7seg:comb_41.port1
+HEX4[1] <= hex_to_7seg:comb_41.port1
+HEX4[2] <= hex_to_7seg:comb_41.port1
+HEX4[3] <= hex_to_7seg:comb_41.port1
+HEX4[4] <= hex_to_7seg:comb_41.port1
+HEX4[5] <= hex_to_7seg:comb_41.port1
+HEX4[6] <= hex_to_7seg:comb_41.port1
+HEX5[0] <= hex_to_7seg:comb_42.port1
+HEX5[1] <= hex_to_7seg:comb_42.port1
+HEX5[2] <= hex_to_7seg:comb_42.port1
+HEX5[3] <= hex_to_7seg:comb_42.port1
+HEX5[4] <= hex_to_7seg:comb_42.port1
+HEX5[5] <= hex_to_7seg:comb_42.port1
+HEX5[6] <= hex_to_7seg:comb_42.port1
 IRDA_RXD => ~NO_FANOUT~
 IRDA_TXD <= <GND>
-KEY[0] => rst.IN2
+KEY[0] => rst.IN3
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
 KEY[3] => ~NO_FANOUT~
-LEDR[0] <= <GND>
-LEDR[1] <= <GND>
-LEDR[2] <= <GND>
-LEDR[3] <= <GND>
-LEDR[4] <= <GND>
-LEDR[5] <= <GND>
-LEDR[6] <= <GND>
-LEDR[7] <= <GND>
-LEDR[8] <= <GND>
-LEDR[9] <= <GND>
+LEDR[0] <= shiftregctl:comb_4.port5
+LEDR[1] <= shiftregctl:comb_4.port5
+LEDR[2] <= shiftregctl:comb_4.port5
+LEDR[3] <= shiftregctl:comb_4.port5
+LEDR[4] <= shiftregctl:comb_4.port5
+LEDR[5] <= shiftregctl:comb_4.port5
+LEDR[6] <= shiftregctl:comb_4.port5
+LEDR[7] <= shiftregctl:comb_4.port5
+LEDR[8] <= shiftregctl:comb_4.port5
+LEDR[9] <= shiftregctl:comb_4.port5
 PS2_CLK <> <UNC>
 PS2_CLK2 <> <UNC>
 PS2_DAT <> <UNC>
@@ -206,8 +206,8 @@ VGA_SYNC_N <= <GND>
 VGA_VS <= <GND>
 DIALL[0] => DIALL[0].IN1
 DIALL[1] => DIALL[1].IN1
-DIALR[0] => ~NO_FANOUT~
-DIALR[1] => ~NO_FANOUT~
+DIALR[0] => DIALR[0].IN1
+DIALR[1] => DIALR[1].IN1
 LEDRINGn <= <GND>
 LCD_R[0] <= <GND>
 LCD_R[1] <= <GND>
@@ -380,7 +380,7 @@ buttons[14] <= buttons[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 buttons[15] <= buttons[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|toplevel|rotary:comb_21
+|toplevel|rotary:comb_31
 clk => clk.IN2
 rst => rst.IN2
 rotary_in[0] => rotary_in[0].IN1
@@ -397,7 +397,7 @@ rot_cw <= rot_cw~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rot_ccw <= rot_ccw~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|toplevel|rotary:comb_21|debounce:dut_one
+|toplevel|rotary:comb_31|debounce:dut_one
 clk => clk.IN1
 rst => clean_out~reg0.ACLR
 rst => prev_syncbouncy.ACLR
@@ -420,14 +420,14 @@ bouncy_in => bouncy_in.IN1
 clean_out <= clean_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|toplevel|rotary:comb_21|debounce:dut_one|synchroniser:dosync
+|toplevel|rotary:comb_31|debounce:dut_one|synchroniser:dosync
 clk => sync~reg0.CLK
 clk => metastable.CLK
 async => metastable.DATAIN
 sync <= sync~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|toplevel|rotary:comb_21|debounce:dut_two
+|toplevel|rotary:comb_31|debounce:dut_two
 clk => clk.IN1
 rst => clean_out~reg0.ACLR
 rst => prev_syncbouncy.ACLR
@@ -450,14 +450,91 @@ bouncy_in => bouncy_in.IN1
 clean_out <= clean_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|toplevel|rotary:comb_21|debounce:dut_two|synchroniser:dosync
+|toplevel|rotary:comb_31|debounce:dut_two|synchroniser:dosync
 clk => sync~reg0.CLK
 clk => metastable.CLK
 async => metastable.DATAIN
 sync <= sync~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|toplevel|hex_to_7seg:comb_30
+|toplevel|rotary:comb_32
+clk => clk.IN2
+rst => rst.IN2
+rotary_in[0] => rotary_in[0].IN1
+rotary_in[1] => rotary_in[1].IN1
+rotary_pos[0] <= rotary_pos[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[1] <= rotary_pos[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[2] <= rotary_pos[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[3] <= rotary_pos[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[4] <= rotary_pos[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[5] <= rotary_pos[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[6] <= rotary_pos[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rotary_pos[7] <= rotary_pos[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rot_cw <= rot_cw~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rot_ccw <= rot_ccw~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|rotary:comb_32|debounce:dut_one
+clk => clk.IN1
+rst => clean_out~reg0.ACLR
+rst => prev_syncbouncy.ACLR
+rst => counter[0].ACLR
+rst => counter[1].ACLR
+rst => counter[2].ACLR
+rst => counter[3].ACLR
+rst => counter[4].ACLR
+rst => counter[5].ACLR
+rst => counter[6].ACLR
+rst => counter[7].ACLR
+rst => counter[8].ACLR
+rst => counter[9].ACLR
+rst => counter[10].ACLR
+rst => counter[11].ACLR
+rst => counter[12].ACLR
+rst => counter[13].ACLR
+rst => counter[14].ACLR
+bouncy_in => bouncy_in.IN1
+clean_out <= clean_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|rotary:comb_32|debounce:dut_one|synchroniser:dosync
+clk => sync~reg0.CLK
+clk => metastable.CLK
+async => metastable.DATAIN
+sync <= sync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|rotary:comb_32|debounce:dut_two
+clk => clk.IN1
+rst => clean_out~reg0.ACLR
+rst => prev_syncbouncy.ACLR
+rst => counter[0].ACLR
+rst => counter[1].ACLR
+rst => counter[2].ACLR
+rst => counter[3].ACLR
+rst => counter[4].ACLR
+rst => counter[5].ACLR
+rst => counter[6].ACLR
+rst => counter[7].ACLR
+rst => counter[8].ACLR
+rst => counter[9].ACLR
+rst => counter[10].ACLR
+rst => counter[11].ACLR
+rst => counter[12].ACLR
+rst => counter[13].ACLR
+rst => counter[14].ACLR
+bouncy_in => bouncy_in.IN1
+clean_out <= clean_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|rotary:comb_32|debounce:dut_two|synchroniser:dosync
+clk => sync~reg0.CLK
+clk => metastable.CLK
+async => metastable.DATAIN
+sync <= sync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|hex_to_7seg:comb_41
 hexval[0] => Decoder0.IN3
 hexval[1] => Decoder0.IN2
 hexval[2] => Decoder0.IN1
@@ -471,7 +548,35 @@ ledcode[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 ledcode[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|toplevel|hex_to_7seg:comb_31
+|toplevel|hex_to_7seg:comb_42
+hexval[0] => Decoder0.IN3
+hexval[1] => Decoder0.IN2
+hexval[2] => Decoder0.IN1
+hexval[3] => Decoder0.IN0
+ledcode[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+ledcode[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+ledcode[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+ledcode[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+ledcode[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+ledcode[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+ledcode[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|hex_to_7seg:comb_51
+hexval[0] => Decoder0.IN3
+hexval[1] => Decoder0.IN2
+hexval[2] => Decoder0.IN1
+hexval[3] => Decoder0.IN0
+ledcode[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+ledcode[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+ledcode[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+ledcode[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+ledcode[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+ledcode[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+ledcode[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|hex_to_7seg:comb_52
 hexval[0] => Decoder0.IN3
 hexval[1] => Decoder0.IN2
 hexval[2] => Decoder0.IN1

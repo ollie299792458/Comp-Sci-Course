@@ -241,6 +241,22 @@ shiftregctl(CLOCK_50, rst, SHIFT_CLKIN, SHIFT_LOAD, SHIFT_OUT, undecoded_buttons
 buttonsT buttons_decoded;
 assign buttons_decoded = undecoded_buttons;
 
+//button routing
+always_comb
+begin
+    LEDR[0] = buttons_decoded.button_a;
+    LEDR[1] = buttons_decoded.button_b;
+    LEDR[2] = buttons_decoded.button_y;
+    LEDR[3] = buttons_decoded.button_x;
+    LEDR[4] = buttons_decoded.diall_click;
+    LEDR[5] = buttons_decoded.dialr_click;
+    LEDR[6] = buttons_decoded.nav_d;
+    LEDR[7] = buttons_decoded.nav_r;
+    LEDR[8] = buttons_decoded.nav_u;
+    LEDR[9] = buttons_decoded.nav_l;
+end
+
+
 //rotary encoder
 //left
 logic [7:0] leftpos;
@@ -251,7 +267,7 @@ rotary(CLOCK_50, rst, DIALL, leftpos, leftcw, leftccw);
 logic [7:0] rightpos;
 logic rightcw;
 logic rightccw;
-rotary(CLOCK_50, rst, DIALL, rightpos, rightcw, rightccw);
+rotary(CLOCK_50, rst, DIALR, rightpos, rightcw, rightccw);
 
 //bin to 7seg
 logic [3:0] leftfirsthex;
