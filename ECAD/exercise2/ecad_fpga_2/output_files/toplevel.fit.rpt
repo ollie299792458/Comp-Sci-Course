@@ -1,5 +1,5 @@
 Fitter report for toplevel
-Tue Oct 31 15:18:21 2017
+Tue Oct 31 16:59:48 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -64,7 +64,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Tue Oct 31 15:18:21 2017       ;
+; Fitter Status                   ; Successful - Tue Oct 31 16:59:48 2017       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; toplevel                                    ;
 ; Top-level Entity Name           ; toplevel                                    ;
@@ -72,7 +72,7 @@ agreement for further details.
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 98 / 32,070 ( < 1 % )                       ;
-; Total registers                 ; 141                                         ;
+; Total registers                 ; 146                                         ;
 ; Total pins                      ; 246 / 457 ( 54 % )                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
@@ -146,22 +146,24 @@ agreement for further details.
 +----------------------------------------------------------------------------+---------------------------------------+---------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Netlist Optimizations                                                                                                                                                                                                                                              ;
-+---------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-------------------------------------------------------+------------------+-----------------------+
-; Node                                        ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                                      ; Destination Port ; Destination Port Name ;
-+---------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-------------------------------------------------------+------------------+-----------------------+
-; CLOCK_50~inputCLKENA0                       ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                       ;                  ;                       ;
-; rotary:comb_31|debounce:dut_one|counter[1]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; rotary:comb_31|debounce:dut_one|counter[1]~DUPLICATE  ;                  ;                       ;
-; rotary:comb_31|rotary_pos[4]                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; rotary:comb_31|rotary_pos[4]~DUPLICATE                ;                  ;                       ;
-; rotary:comb_31|rotary_pos[7]                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; rotary:comb_31|rotary_pos[7]~DUPLICATE                ;                  ;                       ;
-; rotary:comb_32|debounce:dut_one|counter[11] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; rotary:comb_32|debounce:dut_one|counter[11]~DUPLICATE ;                  ;                       ;
-; rotary:comb_32|debounce:dut_two|counter[4]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; rotary:comb_32|debounce:dut_two|counter[4]~DUPLICATE  ;                  ;                       ;
-; rotary:comb_32|debounce:dut_two|counter[7]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; rotary:comb_32|debounce:dut_two|counter[7]~DUPLICATE  ;                  ;                       ;
-; rotary:comb_32|debounce:dut_two|counter[12] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; rotary:comb_32|debounce:dut_two|counter[12]~DUPLICATE ;                  ;                       ;
-; rotary:comb_32|last_pos[1]                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; rotary:comb_32|last_pos[1]~DUPLICATE                  ;                  ;                       ;
-; rotary:comb_32|rotary_pos[1]                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; rotary:comb_32|rotary_pos[1]~DUPLICATE                ;                  ;                       ;
-+---------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-------------------------------------------------------+------------------+-----------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Netlist Optimizations                                                                                                                                                                                                                                                                                  ;
++---------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-------------------------------------------------------------------------+------------------+-----------------------+
+; Node                                                          ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                                                        ; Destination Port ; Destination Port Name ;
++---------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-------------------------------------------------------------------------+------------------+-----------------------+
+; CLOCK_50~inputCLKENA0                                         ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                         ;                  ;                       ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|counter[12] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|counter[12]~DUPLICATE ;                  ;                       ;
+; rotary_hex:u0|rotary:rotaryctl_0|rotary_pos[2]                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; rotary_hex:u0|rotary:rotaryctl_0|rotary_pos[2]~DUPLICATE                ;                  ;                       ;
+; rotary_hex:u0|rotary:rotaryctl_0|rotary_pos[6]                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; rotary_hex:u0|rotary:rotaryctl_0|rotary_pos[6]~DUPLICATE                ;                  ;                       ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|counter[3]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|counter[3]~DUPLICATE  ;                  ;                       ;
+; rotary_hex:u0|rotary:rotaryctl_1|rotary_pos[1]                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; rotary_hex:u0|rotary:rotaryctl_1|rotary_pos[1]~DUPLICATE                ;                  ;                       ;
+; rotary_hex:u0|rotary:rotaryctl_1|rotary_pos[2]                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; rotary_hex:u0|rotary:rotaryctl_1|rotary_pos[2]~DUPLICATE                ;                  ;                       ;
+; rotary_hex:u0|rotary:rotaryctl_1|rotary_pos[3]                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; rotary_hex:u0|rotary:rotaryctl_1|rotary_pos[3]~DUPLICATE                ;                  ;                       ;
+; rotary_hex:u0|shiftregctl:shiftregctl_0|clk                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; rotary_hex:u0|shiftregctl:shiftregctl_0|clk~DUPLICATE                   ;                  ;                       ;
+; rotary_hex:u0|shiftregctl:shiftregctl_0|state[0]              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; rotary_hex:u0|shiftregctl:shiftregctl_0|state[0]~DUPLICATE              ;                  ;                       ;
+; rotary_hex:u0|shiftregctl:shiftregctl_0|state[1]              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; rotary_hex:u0|shiftregctl:shiftregctl_0|state[1]~DUPLICATE              ;                  ;                       ;
+; rotary_hex:u0|shiftregctl:shiftregctl_0|state[2]              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; rotary_hex:u0|shiftregctl:shiftregctl_0|state[2]~DUPLICATE              ;                  ;                       ;
++---------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-------------------------------------------------------------------------+------------------+-----------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -233,8 +235,8 @@ agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 864 ) ; 0.00 % ( 0 / 864 )         ; 0.00 % ( 0 / 864 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 864 ) ; 0.00 % ( 0 / 864 )         ; 0.00 % ( 0 / 864 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 867 ) ; 0.00 % ( 0 / 867 )         ; 0.00 % ( 0 / 867 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 867 ) ; 0.00 % ( 0 / 867 )         ; 0.00 % ( 0 / 867 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -257,7 +259,7 @@ agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 864 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 867 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -265,7 +267,7 @@ agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/output_files/toplevel.pin.
+The pin-out file can be found in /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/output_files/toplevel.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -275,12 +277,12 @@ The pin-out file can be found in /home/ecad/Documents/Git_Reps/Comp-Sci-Course/E
 +-------------------------------------------------------------+--------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 98 / 32,070        ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 98                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 107 / 32,070       ; < 1 % ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 112 / 32,070       ; < 1 % ;
 ;         [a] ALMs used for LUT logic and registers           ; 57                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 42                 ;       ;
-;         [c] ALMs used for registers                         ; 8                  ;       ;
+;         [b] ALMs used for LUT logic                         ; 45                 ;       ;
+;         [c] ALMs used for registers                         ; 10                 ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 9 / 32,070         ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 14 / 32,070        ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32,070         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -289,25 +291,25 @@ The pin-out file can be found in /home/ecad/Documents/Git_Reps/Comp-Sci-Course/E
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 16 / 3,207         ; < 1 % ;
-;     -- Logic LABs                                           ; 16                 ;       ;
+; Total LABs:  partially or completely used                   ; 23 / 3,207         ; < 1 % ;
+;     -- Logic LABs                                           ; 23                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 176                ;       ;
+; Combinational ALUT usage for logic                          ; 177                ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
 ;     -- 6 input functions                                    ; 18                 ;       ;
 ;     -- 5 input functions                                    ; 24                 ;       ;
 ;     -- 4 input functions                                    ; 38                 ;       ;
-;     -- <=3 input functions                                  ; 96                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 6                  ;       ;
+;     -- <=3 input functions                                  ; 97                 ;       ;
+; Combinational ALUT usage for route-throughs                 ; 7                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 141                ;       ;
+; Dedicated logic registers                                   ; 146                ;       ;
 ;     -- By type:                                             ;                    ;       ;
-;         -- Primary logic registers                          ; 129 / 64,140       ; < 1 % ;
-;         -- Secondary logic registers                        ; 12 / 64,140        ; < 1 % ;
+;         -- Primary logic registers                          ; 133 / 64,140       ; < 1 % ;
+;         -- Secondary logic registers                        ; 13 / 64,140        ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
-;         -- Design implementation registers                  ; 132                ;       ;
-;         -- Routing optimization registers                   ; 9                  ;       ;
+;         -- Design implementation registers                  ; 135                ;       ;
+;         -- Routing optimization registers                   ; 11                 ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 246 / 457          ; 54 %  ;
@@ -363,10 +365,10 @@ The pin-out file can be found in /home/ecad/Documents/Git_Reps/Comp-Sci-Course/E
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 0.8% / 0.8% / 1.1% ;       ;
-; Maximum fan-out                                             ; 141                ;       ;
-; Highest non-global fan-out                                  ; 125                ;       ;
-; Total fan-out                                               ; 1514               ;       ;
+; Peak interconnect usage (total/H/V)                         ; 0.8% / 0.8% / 1.0% ;       ;
+; Maximum fan-out                                             ; 146                ;       ;
+; Highest non-global fan-out                                  ; 124                ;       ;
+; Total fan-out                                               ; 1526               ;       ;
 ; Average fan-out                                             ; 1.72               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
@@ -378,12 +380,12 @@ The pin-out file can be found in /home/ecad/Documents/Git_Reps/Comp-Sci-Course/E
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 98 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 98                    ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 107 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 112 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
 ;         [a] ALMs used for LUT logic and registers           ; 57                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 42                    ; 0                              ;
-;         [c] ALMs used for registers                         ; 8                     ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 45                    ; 0                              ;
+;         [c] ALMs used for registers                         ; 10                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 9 / 32070 ( < 1 % )   ; 0 / 32070 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 14 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32070 ( 0 % )     ; 0 / 32070 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
@@ -392,28 +394,28 @@ The pin-out file can be found in /home/ecad/Documents/Git_Reps/Comp-Sci-Course/E
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 16 / 3207 ( < 1 % )   ; 0 / 3207 ( 0 % )               ;
-;     -- Logic LABs                                           ; 16                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 23 / 3207 ( < 1 % )   ; 0 / 3207 ( 0 % )               ;
+;     -- Logic LABs                                           ; 23                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
-; Combinational ALUT usage for logic                          ; 176                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 177                   ; 0                              ;
 ;     -- 7 input functions                                    ; 0                     ; 0                              ;
 ;     -- 6 input functions                                    ; 18                    ; 0                              ;
 ;     -- 5 input functions                                    ; 24                    ; 0                              ;
 ;     -- 4 input functions                                    ; 38                    ; 0                              ;
-;     -- <=3 input functions                                  ; 96                    ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 6                     ; 0                              ;
+;     -- <=3 input functions                                  ; 97                    ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 7                     ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
-;         -- Primary logic registers                          ; 129 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 12 / 64140 ( < 1 % )  ; 0 / 64140 ( 0 % )              ;
+;         -- Primary logic registers                          ; 133 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 13 / 64140 ( < 1 % )  ; 0 / 64140 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
-;         -- Design implementation registers                  ; 132                   ; 0                              ;
-;         -- Routing optimization registers                   ; 9                     ; 0                              ;
+;         -- Design implementation registers                  ; 135                   ; 0                              ;
+;         -- Routing optimization registers                   ; 11                    ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
@@ -430,8 +432,8 @@ The pin-out file can be found in /home/ecad/Documents/Git_Reps/Comp-Sci-Course/E
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 1514                  ; 0                              ;
-;     -- Registered Connections                               ; 480                   ; 0                              ;
+;     -- Total Connections                                    ; 1526                  ; 0                              ;
+;     -- Registered Connections                               ; 606                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
 ;     -- Top                                                  ; 126                   ; 0                              ;
@@ -468,13 +470,13 @@ The pin-out file can be found in /home/ecad/Documents/Git_Reps/Comp-Sci-Course/E
 ; CLOCK2_50  ; AA16  ; 4A       ; 56           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; CLOCK3_50  ; Y26   ; 5B       ; 89           ; 25           ; 3            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; CLOCK4_50  ; K14   ; 8A       ; 32           ; 81           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
-; CLOCK_50   ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 141                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; CLOCK_50   ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 146                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; DIALL[0]   ; AE24  ; 4A       ; 88           ; 0            ; 52           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; DIALL[1]   ; AD24  ; 4A       ; 88           ; 0            ; 35           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; DIALR[0]   ; AB21  ; 4A       ; 88           ; 0            ; 18           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; DIALR[1]   ; AB17  ; 4A       ; 56           ; 0            ; 17           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; IRDA_RXD   ; AA30  ; 5B       ; 89           ; 21           ; 20           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
-; KEY[0]     ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 125                   ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; KEY[0]     ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; KEY[1]     ; AA15  ; 3B       ; 36           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; KEY[2]     ; W15   ; 3B       ; 40           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; KEY[3]     ; Y16   ; 3B       ; 40           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
@@ -1863,28 +1865,29 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------+--------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                 ;
-+--------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------------------------------+--------------+--------------+
-; Compilation Hierarchy Node     ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Entity Name  ; Library Name ;
-+--------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------------------------------+--------------+--------------+
-; |toplevel                      ; 98.0 (0.5)           ; 106.0 (0.5)                      ; 8.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 176 (1)             ; 141 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 246  ; 0            ; |toplevel                                                     ; toplevel     ; work         ;
-;    |hex_to_7seg:comb_41|       ; 3.3 (3.3)            ; 3.3 (3.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|hex_to_7seg:comb_41                                 ; hex_to_7seg  ; work         ;
-;    |hex_to_7seg:comb_42|       ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|hex_to_7seg:comb_42                                 ; hex_to_7seg  ; work         ;
-;    |hex_to_7seg:comb_51|       ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|hex_to_7seg:comb_51                                 ; hex_to_7seg  ; work         ;
-;    |hex_to_7seg:comb_52|       ; 3.3 (3.3)            ; 3.5 (3.5)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|hex_to_7seg:comb_52                                 ; hex_to_7seg  ; work         ;
-;    |rotary:comb_31|            ; 27.7 (4.5)           ; 30.2 (5.2)                       ; 2.5 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 51 (9)              ; 51 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_31                                      ; rotary       ; work         ;
-;       |debounce:dut_one|       ; 11.9 (11.3)          ; 12.2 (11.7)                      ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 21 (21)             ; 20 (18)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_31|debounce:dut_one                     ; debounce     ; work         ;
-;          |synchroniser:dosync| ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_31|debounce:dut_one|synchroniser:dosync ; synchroniser ; work         ;
-;       |debounce:dut_two|       ; 11.2 (11.2)          ; 12.8 (12.0)                      ; 1.6 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 21 (21)             ; 19 (17)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_31|debounce:dut_two                     ; debounce     ; work         ;
-;          |synchroniser:dosync| ; 0.1 (0.1)            ; 0.8 (0.8)                        ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_31|debounce:dut_two|synchroniser:dosync ; synchroniser ; work         ;
-;    |rotary:comb_32|            ; 28.7 (4.9)           ; 31.5 (5.5)                       ; 2.8 (0.6)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 51 (9)              ; 54 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_32                                      ; rotary       ; work         ;
-;       |debounce:dut_one|       ; 12.5 (11.9)          ; 13.0 (12.5)                      ; 0.5 (0.6)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 21 (21)             ; 20 (18)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_32|debounce:dut_one                     ; debounce     ; work         ;
-;          |synchroniser:dosync| ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_32|debounce:dut_one|synchroniser:dosync ; synchroniser ; work         ;
-;       |debounce:dut_two|       ; 11.2 (11.2)          ; 13.0 (12.0)                      ; 1.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 21 (21)             ; 22 (20)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_32|debounce:dut_two                     ; debounce     ; work         ;
-;          |synchroniser:dosync| ; 0.1 (0.1)            ; 1.0 (1.0)                        ; 0.9 (0.9)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary:comb_32|debounce:dut_two|synchroniser:dosync ; synchroniser ; work         ;
-;    |shiftregctl:comb_4|        ; 27.5 (27.5)          ; 30.0 (30.0)                      ; 2.5 (2.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 45 (45)             ; 36 (36)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|shiftregctl:comb_4                                  ; shiftregctl  ; work         ;
-+--------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------------------------------+--------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
++-------------------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+---------------------------+--------------+
+; Compilation Hierarchy Node                            ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                       ; Entity Name               ; Library Name ;
++-------------------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+---------------------------+--------------+
+; |toplevel                                             ; 98.0 (0.5)           ; 111.0 (0.5)                      ; 13.0 (0.0)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 177 (1)             ; 146 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 246  ; 0            ; |toplevel                                                                                                 ; toplevel                  ; work         ;
+;    |rotary_hex:u0|                                    ; 97.5 (0.0)           ; 110.5 (0.0)                      ; 13.0 (0.0)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 176 (0)             ; 146 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary_hex:u0                                                                                   ; rotary_hex                ; rotary_hex   ;
+;       |EightBitsToSevenSeg:eightbitstosevenseg_0|     ; 6.5 (6.5)            ; 6.5 (6.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 14 (14)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary_hex:u0|EightBitsToSevenSeg:eightbitstosevenseg_0                                         ; EightBitsToSevenSeg       ; rotary_hex   ;
+;       |EightBitsToSevenSeg:eightbitstosevenseg_1|     ; 6.8 (6.8)            ; 6.8 (6.8)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 14 (14)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary_hex:u0|EightBitsToSevenSeg:eightbitstosevenseg_1                                         ; EightBitsToSevenSeg       ; rotary_hex   ;
+;       |altera_reset_controller:rst_controller|        ; 0.3 (0.0)            ; 1.5 (0.0)                        ; 1.2 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (0)               ; 3 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary_hex:u0|altera_reset_controller:rst_controller                                            ; altera_reset_controller   ; rotary_hex   ;
+;          |altera_reset_synchronizer:alt_rst_sync_uq1| ; 0.3 (0.3)            ; 1.5 (1.5)                        ; 1.2 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 3 (3)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary_hex:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1 ; altera_reset_synchronizer ; rotary_hex   ;
+;       |rotary:rotaryctl_0|                            ; 28.2 (4.5)           ; 31.5 (5.0)                       ; 3.3 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 51 (9)              ; 51 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary_hex:u0|rotary:rotaryctl_0                                                                ; rotary                    ; rotary_hex   ;
+;          |debounce:dut_one|                           ; 11.7 (11.7)          ; 13.5 (12.5)                      ; 1.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 21 (21)             ; 19 (17)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one                                               ; debounce                  ; rotary_hex   ;
+;             |synchroniser:dosync|                     ; 0.1 (0.1)            ; 1.0 (1.0)                        ; 0.9 (0.9)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|synchroniser:dosync                           ; synchroniser              ; rotary_hex   ;
+;          |debounce:dut_two|                           ; 11.9 (11.3)          ; 13.0 (12.5)                      ; 1.1 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 21 (21)             ; 20 (18)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two                                               ; debounce                  ; rotary_hex   ;
+;             |synchroniser:dosync|                     ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|synchroniser:dosync                           ; synchroniser              ; rotary_hex   ;
+;       |rotary:rotaryctl_1|                            ; 27.7 (4.5)           ; 31.7 (5.2)                       ; 4.0 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 51 (9)              ; 52 (13)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary_hex:u0|rotary:rotaryctl_1                                                                ; rotary                    ; rotary_hex   ;
+;          |debounce:dut_one|                           ; 11.5 (11.3)          ; 13.0 (12.0)                      ; 1.5 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 21 (21)             ; 19 (17)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one                                               ; debounce                  ; rotary_hex   ;
+;             |synchroniser:dosync|                     ; 0.2 (0.2)            ; 1.0 (1.0)                        ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|synchroniser:dosync                           ; synchroniser              ; rotary_hex   ;
+;          |debounce:dut_two|                           ; 11.7 (11.3)          ; 13.5 (12.5)                      ; 1.8 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 21 (21)             ; 20 (18)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two                                               ; debounce                  ; rotary_hex   ;
+;             |synchroniser:dosync|                     ; 0.3 (0.3)            ; 1.0 (1.0)                        ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|synchroniser:dosync                           ; synchroniser              ; rotary_hex   ;
+;       |shiftregctl:shiftregctl_0|                     ; 27.7 (27.7)          ; 32.5 (32.5)                      ; 4.8 (4.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 45 (45)             ; 40 (40)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |toplevel|rotary_hex:u0|shiftregctl:shiftregctl_0                                                         ; shiftregctl               ; rotary_hex   ;
++-------------------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -2133,278 +2136,157 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; DISPLAY_SDA   ; Bidir    ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; DISPLAY_SCL   ; Bidir    ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; CLOCK_50      ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; KEY[0]        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; SHIFT_OUT     ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; DIALR[0]      ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; DIALR[1]      ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; DIALL[0]      ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; KEY[0]        ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; SHIFT_OUT     ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; DIALL[0]      ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; DIALL[1]      ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; DIALR[0]      ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; DIALR[1]      ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +---------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                                             ;
-+------------------------------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                                          ; Pad To Core Index ; Setting ;
-+------------------------------------------------------------------------------+-------------------+---------+
-; ADC_DOUT                                                                     ;                   ;         ;
-; AUD_ADCDAT                                                                   ;                   ;         ;
-; CLOCK2_50                                                                    ;                   ;         ;
-; CLOCK3_50                                                                    ;                   ;         ;
-; CLOCK4_50                                                                    ;                   ;         ;
-; IRDA_RXD                                                                     ;                   ;         ;
-; KEY[1]                                                                       ;                   ;         ;
-; KEY[2]                                                                       ;                   ;         ;
-; KEY[3]                                                                       ;                   ;         ;
-; SW[0]                                                                        ;                   ;         ;
-; SW[1]                                                                        ;                   ;         ;
-; SW[2]                                                                        ;                   ;         ;
-; SW[3]                                                                        ;                   ;         ;
-; SW[4]                                                                        ;                   ;         ;
-; SW[5]                                                                        ;                   ;         ;
-; SW[6]                                                                        ;                   ;         ;
-; SW[7]                                                                        ;                   ;         ;
-; SW[8]                                                                        ;                   ;         ;
-; SW[9]                                                                        ;                   ;         ;
-; TD_CLK27                                                                     ;                   ;         ;
-; TD_DATA[0]                                                                   ;                   ;         ;
-; TD_DATA[1]                                                                   ;                   ;         ;
-; TD_DATA[2]                                                                   ;                   ;         ;
-; TD_DATA[3]                                                                   ;                   ;         ;
-; TD_DATA[4]                                                                   ;                   ;         ;
-; TD_DATA[5]                                                                   ;                   ;         ;
-; TD_DATA[6]                                                                   ;                   ;         ;
-; TD_DATA[7]                                                                   ;                   ;         ;
-; TD_HS                                                                        ;                   ;         ;
-; TD_VS                                                                        ;                   ;         ;
-; ADC_CS_N                                                                     ;                   ;         ;
-; AUD_ADCLRCK                                                                  ;                   ;         ;
-; AUD_BCLK                                                                     ;                   ;         ;
-; AUD_DACLRCK                                                                  ;                   ;         ;
-; DRAM_DQ[0]                                                                   ;                   ;         ;
-; DRAM_DQ[1]                                                                   ;                   ;         ;
-; DRAM_DQ[2]                                                                   ;                   ;         ;
-; DRAM_DQ[3]                                                                   ;                   ;         ;
-; DRAM_DQ[4]                                                                   ;                   ;         ;
-; DRAM_DQ[5]                                                                   ;                   ;         ;
-; DRAM_DQ[6]                                                                   ;                   ;         ;
-; DRAM_DQ[7]                                                                   ;                   ;         ;
-; DRAM_DQ[8]                                                                   ;                   ;         ;
-; DRAM_DQ[9]                                                                   ;                   ;         ;
-; DRAM_DQ[10]                                                                  ;                   ;         ;
-; DRAM_DQ[11]                                                                  ;                   ;         ;
-; DRAM_DQ[12]                                                                  ;                   ;         ;
-; DRAM_DQ[13]                                                                  ;                   ;         ;
-; DRAM_DQ[14]                                                                  ;                   ;         ;
-; DRAM_DQ[15]                                                                  ;                   ;         ;
-; FPGA_I2C_SDAT                                                                ;                   ;         ;
-; GPIO_0[0]                                                                    ;                   ;         ;
-; GPIO_0[1]                                                                    ;                   ;         ;
-; GPIO_0[2]                                                                    ;                   ;         ;
-; GPIO_0[3]                                                                    ;                   ;         ;
-; GPIO_0[4]                                                                    ;                   ;         ;
-; GPIO_0[5]                                                                    ;                   ;         ;
-; GPIO_0[6]                                                                    ;                   ;         ;
-; GPIO_0[7]                                                                    ;                   ;         ;
-; GPIO_0[8]                                                                    ;                   ;         ;
-; GPIO_0[9]                                                                    ;                   ;         ;
-; GPIO_0[10]                                                                   ;                   ;         ;
-; GPIO_0[11]                                                                   ;                   ;         ;
-; GPIO_0[12]                                                                   ;                   ;         ;
-; GPIO_0[13]                                                                   ;                   ;         ;
-; GPIO_0[14]                                                                   ;                   ;         ;
-; GPIO_0[15]                                                                   ;                   ;         ;
-; GPIO_0[16]                                                                   ;                   ;         ;
-; GPIO_0[17]                                                                   ;                   ;         ;
-; GPIO_0[18]                                                                   ;                   ;         ;
-; GPIO_0[19]                                                                   ;                   ;         ;
-; GPIO_0[20]                                                                   ;                   ;         ;
-; GPIO_0[21]                                                                   ;                   ;         ;
-; GPIO_0[22]                                                                   ;                   ;         ;
-; GPIO_0[23]                                                                   ;                   ;         ;
-; GPIO_0[24]                                                                   ;                   ;         ;
-; GPIO_0[25]                                                                   ;                   ;         ;
-; GPIO_0[26]                                                                   ;                   ;         ;
-; GPIO_0[27]                                                                   ;                   ;         ;
-; GPIO_0[28]                                                                   ;                   ;         ;
-; GPIO_0[29]                                                                   ;                   ;         ;
-; GPIO_0[30]                                                                   ;                   ;         ;
-; GPIO_0[31]                                                                   ;                   ;         ;
-; GPIO_0[32]                                                                   ;                   ;         ;
-; GPIO_0[33]                                                                   ;                   ;         ;
-; GPIO_0[34]                                                                   ;                   ;         ;
-; GPIO_0[35]                                                                   ;                   ;         ;
-; PS2_CLK                                                                      ;                   ;         ;
-; PS2_CLK2                                                                     ;                   ;         ;
-; PS2_DAT                                                                      ;                   ;         ;
-; PS2_DAT2                                                                     ;                   ;         ;
-; DISPLAY_SDA                                                                  ;                   ;         ;
-; DISPLAY_SCL                                                                  ;                   ;         ;
-; CLOCK_50                                                                     ;                   ;         ;
-; KEY[0]                                                                       ;                   ;         ;
-;      - rotary:comb_31|rotary_pos[0]                                          ; 0                 ; 0       ;
-;      - rotary:comb_31|rotary_pos[1]                                          ; 0                 ; 0       ;
-;      - rotary:comb_31|rotary_pos[2]                                          ; 0                 ; 0       ;
-;      - rotary:comb_31|rotary_pos[3]                                          ; 0                 ; 0       ;
-;      - rotary:comb_31|rotary_pos[4]                                          ; 0                 ; 0       ;
-;      - rotary:comb_31|rotary_pos[5]                                          ; 0                 ; 0       ;
-;      - rotary:comb_31|rotary_pos[6]                                          ; 0                 ; 0       ;
-;      - rotary:comb_31|rotary_pos[7]                                          ; 0                 ; 0       ;
-;      - rotary:comb_32|rotary_pos[0]                                          ; 0                 ; 0       ;
-;      - rotary:comb_32|rotary_pos[1]                                          ; 0                 ; 0       ;
-;      - rotary:comb_32|rotary_pos[2]                                          ; 0                 ; 0       ;
-;      - rotary:comb_32|rotary_pos[3]                                          ; 0                 ; 0       ;
-;      - rotary:comb_32|rotary_pos[4]                                          ; 0                 ; 0       ;
-;      - rotary:comb_32|rotary_pos[5]                                          ; 0                 ; 0       ;
-;      - rotary:comb_32|rotary_pos[6]                                          ; 0                 ; 0       ;
-;      - rotary:comb_32|rotary_pos[7]                                          ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_one|counter[14]                           ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_one|counter[13]                           ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_one|counter[12]                           ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_one|counter[11]                           ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_one|counter[10]                           ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_one|counter[9]                            ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_one|counter[8]                            ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_one|counter[7]                            ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_one|counter[6]                            ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_one|counter[5]                            ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_one|counter[4]                            ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_one|counter[3]                            ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_one|counter[2]                            ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_one|counter[0]                            ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_one|counter[1]                            ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_two|counter[13]                           ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_two|counter[12]                           ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_two|counter[11]                           ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_two|counter[10]                           ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_two|counter[9]                            ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_two|counter[8]                            ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_two|counter[7]                            ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_two|counter[6]                            ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_two|counter[5]                            ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_two|counter[4]                            ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_two|counter[3]                            ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_two|counter[2]                            ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_two|counter[1]                            ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_two|counter[14]                           ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_two|counter[0]                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_one|counter[2]                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_one|counter[5]                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_one|counter[6]                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_one|counter[7]                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_one|counter[8]                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_one|counter[9]                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_one|counter[10]                           ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_one|counter[11]                           ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_one|counter[12]                           ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_one|counter[13]                           ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_one|counter[14]                           ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_one|counter[4]                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_one|counter[3]                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_one|counter[1]                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_one|counter[0]                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_two|counter[6]                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_two|counter[14]                           ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_two|counter[13]                           ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_two|counter[12]                           ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_two|counter[11]                           ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_two|counter[10]                           ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_two|counter[9]                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_two|counter[8]                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_two|counter[7]                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_two|counter[5]                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_two|counter[4]                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_two|counter[3]                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_two|counter[2]                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_two|counter[1]                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_two|counter[0]                            ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|clk                                                ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|state[4]                                           ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|tmp[14]                                            ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|tmp[15]                                            ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|tmp[13]                                            ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|tmp[12]                                            ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|tmp[1]                                             ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|tmp[2]                                             ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|tmp[4]                                             ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|tmp[5]                                             ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|tmp[7]                                             ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|tmp[6]                                             ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_one|clean_out                             ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_two|clean_out                             ; 0                 ; 0       ;
-;      - rotary:comb_32|last_pos[1]                                            ; 0                 ; 0       ;
-;      - rotary:comb_32|last_pos[0]                                            ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_one|clean_out                             ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_two|clean_out                             ; 0                 ; 0       ;
-;      - rotary:comb_31|last_pos[1]                                            ; 0                 ; 0       ;
-;      - rotary:comb_31|last_pos[0]                                            ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|last_clk                                           ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|buttons[14]~0                                      ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|clk_div[8]                                         ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|state~1                                            ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|state[0]~2                                         ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|state~3                                            ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|state~4                                            ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|state~5                                            ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_one|prev_syncbouncy                       ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_two|prev_syncbouncy                       ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_one|prev_syncbouncy                       ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_two|prev_syncbouncy                       ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|clk_div[7]                                         ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|clk_div[6]                                         ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|clk_div[5]                                         ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|clk_div[4]                                         ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|clk_div[3]                                         ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|clk_div[2]                                         ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|clk_div[1]                                         ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|clk_div[0]                                         ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_one|counter[11]~DUPLICATE                 ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_two|counter[4]~DUPLICATE                  ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_two|counter[12]~DUPLICATE                 ; 0                 ; 0       ;
-;      - rotary:comb_32|debounce:dut_two|counter[7]~DUPLICATE                  ; 0                 ; 0       ;
-;      - rotary:comb_31|debounce:dut_one|counter[1]~DUPLICATE                  ; 0                 ; 0       ;
-;      - rotary:comb_32|rotary_pos[1]~DUPLICATE                                ; 0                 ; 0       ;
-;      - rotary:comb_31|rotary_pos[4]~DUPLICATE                                ; 0                 ; 0       ;
-;      - rotary:comb_31|rotary_pos[7]~DUPLICATE                                ; 0                 ; 0       ;
-;      - rotary:comb_32|last_pos[1]~DUPLICATE                                  ; 0                 ; 0       ;
-; SHIFT_OUT                                                                    ;                   ;         ;
-;      - shiftregctl:comb_4|tmp~0                                              ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|tmp~10                                             ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|tmp~11                                             ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|tmp~12                                             ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|tmp~15                                             ; 0                 ; 0       ;
-;      - shiftregctl:comb_4|tmp~20                                             ; 0                 ; 0       ;
-; DIALR[0]                                                                     ;                   ;         ;
-;      - rotary:comb_32|debounce:dut_one|synchroniser:dosync|metastable~feeder ; 1                 ; 0       ;
-; DIALR[1]                                                                     ;                   ;         ;
-;      - rotary:comb_32|debounce:dut_two|synchroniser:dosync|metastable~feeder ; 1                 ; 0       ;
-; DIALL[0]                                                                     ;                   ;         ;
-;      - rotary:comb_31|debounce:dut_one|synchroniser:dosync|metastable~feeder ; 0                 ; 0       ;
-; DIALL[1]                                                                     ;                   ;         ;
-;      - rotary:comb_31|debounce:dut_two|synchroniser:dosync|metastable        ; 0                 ; 0       ;
-+------------------------------------------------------------------------------+-------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                                                                                               ;
++------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                                                                                                            ; Pad To Core Index ; Setting ;
++------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
+; ADC_DOUT                                                                                                                                       ;                   ;         ;
+; AUD_ADCDAT                                                                                                                                     ;                   ;         ;
+; CLOCK2_50                                                                                                                                      ;                   ;         ;
+; CLOCK3_50                                                                                                                                      ;                   ;         ;
+; CLOCK4_50                                                                                                                                      ;                   ;         ;
+; IRDA_RXD                                                                                                                                       ;                   ;         ;
+; KEY[1]                                                                                                                                         ;                   ;         ;
+; KEY[2]                                                                                                                                         ;                   ;         ;
+; KEY[3]                                                                                                                                         ;                   ;         ;
+; SW[0]                                                                                                                                          ;                   ;         ;
+; SW[1]                                                                                                                                          ;                   ;         ;
+; SW[2]                                                                                                                                          ;                   ;         ;
+; SW[3]                                                                                                                                          ;                   ;         ;
+; SW[4]                                                                                                                                          ;                   ;         ;
+; SW[5]                                                                                                                                          ;                   ;         ;
+; SW[6]                                                                                                                                          ;                   ;         ;
+; SW[7]                                                                                                                                          ;                   ;         ;
+; SW[8]                                                                                                                                          ;                   ;         ;
+; SW[9]                                                                                                                                          ;                   ;         ;
+; TD_CLK27                                                                                                                                       ;                   ;         ;
+; TD_DATA[0]                                                                                                                                     ;                   ;         ;
+; TD_DATA[1]                                                                                                                                     ;                   ;         ;
+; TD_DATA[2]                                                                                                                                     ;                   ;         ;
+; TD_DATA[3]                                                                                                                                     ;                   ;         ;
+; TD_DATA[4]                                                                                                                                     ;                   ;         ;
+; TD_DATA[5]                                                                                                                                     ;                   ;         ;
+; TD_DATA[6]                                                                                                                                     ;                   ;         ;
+; TD_DATA[7]                                                                                                                                     ;                   ;         ;
+; TD_HS                                                                                                                                          ;                   ;         ;
+; TD_VS                                                                                                                                          ;                   ;         ;
+; ADC_CS_N                                                                                                                                       ;                   ;         ;
+; AUD_ADCLRCK                                                                                                                                    ;                   ;         ;
+; AUD_BCLK                                                                                                                                       ;                   ;         ;
+; AUD_DACLRCK                                                                                                                                    ;                   ;         ;
+; DRAM_DQ[0]                                                                                                                                     ;                   ;         ;
+; DRAM_DQ[1]                                                                                                                                     ;                   ;         ;
+; DRAM_DQ[2]                                                                                                                                     ;                   ;         ;
+; DRAM_DQ[3]                                                                                                                                     ;                   ;         ;
+; DRAM_DQ[4]                                                                                                                                     ;                   ;         ;
+; DRAM_DQ[5]                                                                                                                                     ;                   ;         ;
+; DRAM_DQ[6]                                                                                                                                     ;                   ;         ;
+; DRAM_DQ[7]                                                                                                                                     ;                   ;         ;
+; DRAM_DQ[8]                                                                                                                                     ;                   ;         ;
+; DRAM_DQ[9]                                                                                                                                     ;                   ;         ;
+; DRAM_DQ[10]                                                                                                                                    ;                   ;         ;
+; DRAM_DQ[11]                                                                                                                                    ;                   ;         ;
+; DRAM_DQ[12]                                                                                                                                    ;                   ;         ;
+; DRAM_DQ[13]                                                                                                                                    ;                   ;         ;
+; DRAM_DQ[14]                                                                                                                                    ;                   ;         ;
+; DRAM_DQ[15]                                                                                                                                    ;                   ;         ;
+; FPGA_I2C_SDAT                                                                                                                                  ;                   ;         ;
+; GPIO_0[0]                                                                                                                                      ;                   ;         ;
+; GPIO_0[1]                                                                                                                                      ;                   ;         ;
+; GPIO_0[2]                                                                                                                                      ;                   ;         ;
+; GPIO_0[3]                                                                                                                                      ;                   ;         ;
+; GPIO_0[4]                                                                                                                                      ;                   ;         ;
+; GPIO_0[5]                                                                                                                                      ;                   ;         ;
+; GPIO_0[6]                                                                                                                                      ;                   ;         ;
+; GPIO_0[7]                                                                                                                                      ;                   ;         ;
+; GPIO_0[8]                                                                                                                                      ;                   ;         ;
+; GPIO_0[9]                                                                                                                                      ;                   ;         ;
+; GPIO_0[10]                                                                                                                                     ;                   ;         ;
+; GPIO_0[11]                                                                                                                                     ;                   ;         ;
+; GPIO_0[12]                                                                                                                                     ;                   ;         ;
+; GPIO_0[13]                                                                                                                                     ;                   ;         ;
+; GPIO_0[14]                                                                                                                                     ;                   ;         ;
+; GPIO_0[15]                                                                                                                                     ;                   ;         ;
+; GPIO_0[16]                                                                                                                                     ;                   ;         ;
+; GPIO_0[17]                                                                                                                                     ;                   ;         ;
+; GPIO_0[18]                                                                                                                                     ;                   ;         ;
+; GPIO_0[19]                                                                                                                                     ;                   ;         ;
+; GPIO_0[20]                                                                                                                                     ;                   ;         ;
+; GPIO_0[21]                                                                                                                                     ;                   ;         ;
+; GPIO_0[22]                                                                                                                                     ;                   ;         ;
+; GPIO_0[23]                                                                                                                                     ;                   ;         ;
+; GPIO_0[24]                                                                                                                                     ;                   ;         ;
+; GPIO_0[25]                                                                                                                                     ;                   ;         ;
+; GPIO_0[26]                                                                                                                                     ;                   ;         ;
+; GPIO_0[27]                                                                                                                                     ;                   ;         ;
+; GPIO_0[28]                                                                                                                                     ;                   ;         ;
+; GPIO_0[29]                                                                                                                                     ;                   ;         ;
+; GPIO_0[30]                                                                                                                                     ;                   ;         ;
+; GPIO_0[31]                                                                                                                                     ;                   ;         ;
+; GPIO_0[32]                                                                                                                                     ;                   ;         ;
+; GPIO_0[33]                                                                                                                                     ;                   ;         ;
+; GPIO_0[34]                                                                                                                                     ;                   ;         ;
+; GPIO_0[35]                                                                                                                                     ;                   ;         ;
+; PS2_CLK                                                                                                                                        ;                   ;         ;
+; PS2_CLK2                                                                                                                                       ;                   ;         ;
+; PS2_DAT                                                                                                                                        ;                   ;         ;
+; PS2_DAT2                                                                                                                                       ;                   ;         ;
+; DISPLAY_SDA                                                                                                                                    ;                   ;         ;
+; DISPLAY_SCL                                                                                                                                    ;                   ;         ;
+; CLOCK_50                                                                                                                                       ;                   ;         ;
+; KEY[0]                                                                                                                                         ;                   ;         ;
+;      - rotary_hex:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out ; 1                 ; 0       ;
+;      - rotary_hex:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[0]  ; 1                 ; 0       ;
+;      - rotary_hex:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[1]  ; 1                 ; 0       ;
+; SHIFT_OUT                                                                                                                                      ;                   ;         ;
+;      - rotary_hex:u0|shiftregctl:shiftregctl_0|tmp~0                                                                                           ; 1                 ; 0       ;
+;      - rotary_hex:u0|shiftregctl:shiftregctl_0|tmp~10                                                                                          ; 1                 ; 0       ;
+;      - rotary_hex:u0|shiftregctl:shiftregctl_0|tmp~11                                                                                          ; 1                 ; 0       ;
+;      - rotary_hex:u0|shiftregctl:shiftregctl_0|tmp~12                                                                                          ; 1                 ; 0       ;
+;      - rotary_hex:u0|shiftregctl:shiftregctl_0|tmp~15                                                                                          ; 1                 ; 0       ;
+;      - rotary_hex:u0|shiftregctl:shiftregctl_0|tmp~20                                                                                          ; 1                 ; 0       ;
+; DIALL[0]                                                                                                                                       ;                   ;         ;
+;      - rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|synchroniser:dosync|metastable~feeder                                                 ; 1                 ; 0       ;
+; DIALL[1]                                                                                                                                       ;                   ;         ;
+;      - rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|synchroniser:dosync|metastable~feeder                                                 ; 0                 ; 0       ;
+; DIALR[0]                                                                                                                                       ;                   ;         ;
+;      - rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|synchroniser:dosync|metastable                                                        ; 0                 ; 0       ;
+; DIALR[1]                                                                                                                                       ;                   ;         ;
+;      - rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|synchroniser:dosync|metastable~feeder                                                 ; 0                 ; 0       ;
++------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                                                  ;
-+---------------------------------------------+---------------------+---------+-----------------------------------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                        ; Location            ; Fan-Out ; Usage                                               ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+---------------------------------------------+---------------------+---------+-----------------------------------------------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50                                    ; PIN_AF14            ; 141     ; Clock                                               ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; KEY[0]                                      ; PIN_AA14            ; 125     ; Async. clear, Clock enable, Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
-; rotary:comb_31|debounce:dut_one|always0~0   ; LABCELL_X83_Y9_N33  ; 16      ; Sync. clear                                         ; no     ; --                   ; --               ; --                        ;
-; rotary:comb_31|debounce:dut_one|clean_out~4 ; LABCELL_X83_Y9_N48  ; 16      ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
-; rotary:comb_31|debounce:dut_two|always0~0   ; MLABCELL_X84_Y9_N57 ; 15      ; Sync. clear                                         ; no     ; --                   ; --               ; --                        ;
-; rotary:comb_31|debounce:dut_two|clean_out~4 ; LABCELL_X83_Y9_N54  ; 15      ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
-; rotary:comb_31|rotary_pos[0]~0              ; LABCELL_X88_Y13_N54 ; 10      ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
-; rotary:comb_32|debounce:dut_one|always0~0   ; LABCELL_X66_Y3_N54  ; 16      ; Sync. clear                                         ; no     ; --                   ; --               ; --                        ;
-; rotary:comb_32|debounce:dut_one|clean_out~4 ; MLABCELL_X65_Y3_N18 ; 16      ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
-; rotary:comb_32|debounce:dut_two|always0~0   ; MLABCELL_X65_Y3_N42 ; 18      ; Sync. clear                                         ; no     ; --                   ; --               ; --                        ;
-; rotary:comb_32|debounce:dut_two|clean_out~4 ; MLABCELL_X65_Y3_N21 ; 18      ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
-; rotary:comb_32|rotary_pos[0]~0              ; LABCELL_X88_Y12_N24 ; 9       ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
-; shiftregctl:comb_4|buttons[14]~0            ; LABCELL_X81_Y4_N9   ; 10      ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
-; shiftregctl:comb_4|state[0]~2               ; LABCELL_X83_Y4_N54  ; 4       ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
-+---------------------------------------------+---------------------+---------+-----------------------------------------------------+--------+----------------------+------------------+---------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                                                                                                                               ;
++-----------------------------------------------------------------------------------------------------------------------------------------+----------------------+---------+-----------------------------------------------------+--------+----------------------+------------------+---------------------------+
+; Name                                                                                                                                    ; Location             ; Fan-Out ; Usage                                               ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------------------------------------------------------------------------------------------------------------------+----------------------+---------+-----------------------------------------------------+--------+----------------------+------------------+---------------------------+
+; CLOCK_50                                                                                                                                ; PIN_AF14             ; 146     ; Clock                                               ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; KEY[0]                                                                                                                                  ; PIN_AA14             ; 3       ; Async. clear                                        ; no     ; --                   ; --               ; --                        ;
+; rotary_hex:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out ; FF_X72_Y2_N5         ; 124     ; Async. clear, Clock enable, Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|always0~0                                                                             ; LABCELL_X83_Y6_N42   ; 15      ; Sync. clear                                         ; no     ; --                   ; --               ; --                        ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|clean_out~4                                                                           ; LABCELL_X83_Y6_N18   ; 15      ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|always0~0                                                                             ; LABCELL_X83_Y6_N36   ; 16      ; Sync. clear                                         ; no     ; --                   ; --               ; --                        ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|clean_out~4                                                                           ; LABCELL_X83_Y6_N45   ; 16      ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
+; rotary_hex:u0|rotary:rotaryctl_0|rotary_pos[0]~0                                                                                        ; LABCELL_X88_Y10_N12  ; 10      ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|always0~0                                                                             ; LABCELL_X83_Y11_N27  ; 15      ; Sync. clear                                         ; no     ; --                   ; --               ; --                        ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|clean_out~4                                                                           ; LABCELL_X83_Y11_N30  ; 15      ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|always0~0                                                                             ; LABCELL_X83_Y11_N9   ; 16      ; Sync. clear                                         ; no     ; --                   ; --               ; --                        ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|clean_out~4                                                                           ; MLABCELL_X82_Y10_N45 ; 16      ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
+; rotary_hex:u0|rotary:rotaryctl_1|rotary_pos[0]~0                                                                                        ; MLABCELL_X84_Y12_N42 ; 11      ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
+; rotary_hex:u0|shiftregctl:shiftregctl_0|buttons[14]~0                                                                                   ; LABCELL_X77_Y2_N18   ; 10      ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
+; rotary_hex:u0|shiftregctl:shiftregctl_0|state[0]~2                                                                                      ; MLABCELL_X78_Y2_N54  ; 7       ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
++-----------------------------------------------------------------------------------------------------------------------------------------+----------------------+---------+-----------------------------------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -2412,7 +2294,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------+----------------------+------------------+---------------------------+
 ; Name     ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
-; CLOCK_50 ; PIN_AF14 ; 141     ; Global Clock         ; GCLK6            ; --                        ;
+; CLOCK_50 ; PIN_AF14 ; 146     ; Global Clock         ; GCLK6            ; --                        ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -2421,14 +2303,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 207 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 6 / 13,420 ( < 1 % )    ;
-; C2 interconnects                            ; 72 / 119,108 ( < 1 % )  ;
-; C4 interconnects                            ; 42 / 56,300 ( < 1 % )   ;
+; Block interconnects                         ; 214 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 5 / 13,420 ( < 1 % )    ;
+; C2 interconnects                            ; 63 / 119,108 ( < 1 % )  ;
+; C4 interconnects                            ; 37 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 71 / 289,320 ( < 1 % )  ;
+; Direct links                                ; 53 / 289,320 ( < 1 % )  ;
 ; Global clocks                               ; 1 / 16 ( 6 % )          ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -2484,12 +2366,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 95 / 84,580 ( < 1 % )   ;
+; Local interconnects                         ; 99 / 84,580 ( < 1 % )   ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
-; R14 interconnects                           ; 14 / 12,676 ( < 1 % )   ;
-; R14/C12 interconnect drivers                ; 16 / 20,720 ( < 1 % )   ;
-; R3 interconnects                            ; 65 / 130,992 ( < 1 % )  ;
-; R6 interconnects                            ; 57 / 266,960 ( < 1 % )  ;
+; R14 interconnects                           ; 8 / 12,676 ( < 1 % )    ;
+; R14/C12 interconnect drivers                ; 11 / 20,720 ( < 1 % )   ;
+; R3 interconnects                            ; 88 / 130,992 ( < 1 % )  ;
+; R6 interconnects                            ; 72 / 266,960 ( < 1 % )  ;
 ; Spine clocks                                ; 2 / 360 ( < 1 % )       ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
@@ -2795,10 +2677,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CLOCK_50           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 ; KEY[0]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 ; SHIFT_OUT          ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Pass      ; Pass      ; Inapplicable ;
-; DIALR[0]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; DIALR[1]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 ; DIALL[0]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 ; DIALL[1]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; DIALR[0]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; DIALR[1]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 +--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+--------------+
 
 
@@ -2850,89 +2732,85 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; CLOCK_50        ; CLOCK_50             ; 9.3               ;
+; CLOCK_50        ; CLOCK_50             ; 9.9               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                                 ;
-+----------------------------------------------------------------+----------------------------------------------------------+-------------------+
-; Source Register                                                ; Destination Register                                     ; Delay Added in ns ;
-+----------------------------------------------------------------+----------------------------------------------------------+-------------------+
-; shiftregctl:comb_4|clk_div[0]                                  ; shiftregctl:comb_4|clk_div[7]                            ; 0.417             ;
-; shiftregctl:comb_4|state[3]                                    ; shiftregctl:comb_4|state[0]                              ; 0.325             ;
-; shiftregctl:comb_4|state[0]                                    ; shiftregctl:comb_4|state[1]                              ; 0.324             ;
-; rotary:comb_32|debounce:dut_two|counter[14]                    ; rotary:comb_32|debounce:dut_two|clean_out                ; 0.310             ;
-; rotary:comb_32|debounce:dut_two|counter[3]                     ; rotary:comb_32|debounce:dut_two|clean_out                ; 0.310             ;
-; rotary:comb_32|debounce:dut_two|counter[2]                     ; rotary:comb_32|debounce:dut_two|clean_out                ; 0.310             ;
-; rotary:comb_32|debounce:dut_two|counter[1]                     ; rotary:comb_32|debounce:dut_two|clean_out                ; 0.310             ;
-; rotary:comb_32|debounce:dut_two|counter[0]                     ; rotary:comb_32|debounce:dut_two|clean_out                ; 0.310             ;
-; rotary:comb_31|debounce:dut_one|counter[14]                    ; rotary:comb_31|debounce:dut_one|clean_out                ; 0.297             ;
-; rotary:comb_31|debounce:dut_one|counter[4]                     ; rotary:comb_31|debounce:dut_one|clean_out                ; 0.297             ;
-; rotary:comb_31|debounce:dut_one|counter[3]                     ; rotary:comb_31|debounce:dut_one|clean_out                ; 0.297             ;
-; rotary:comb_31|debounce:dut_one|counter[1]                     ; rotary:comb_31|debounce:dut_one|clean_out                ; 0.297             ;
-; rotary:comb_31|debounce:dut_one|counter[0]                     ; rotary:comb_31|debounce:dut_one|clean_out                ; 0.297             ;
-; rotary:comb_31|debounce:dut_two|counter[4]                     ; rotary:comb_31|debounce:dut_two|clean_out                ; 0.275             ;
-; rotary:comb_31|debounce:dut_two|counter[3]                     ; rotary:comb_31|debounce:dut_two|clean_out                ; 0.275             ;
-; rotary:comb_31|debounce:dut_two|counter[2]                     ; rotary:comb_31|debounce:dut_two|clean_out                ; 0.275             ;
-; rotary:comb_31|debounce:dut_two|counter[1]                     ; rotary:comb_31|debounce:dut_two|clean_out                ; 0.275             ;
-; rotary:comb_31|debounce:dut_two|counter[0]                     ; rotary:comb_31|debounce:dut_two|clean_out                ; 0.275             ;
-; rotary:comb_32|debounce:dut_one|counter[4]                     ; rotary:comb_32|debounce:dut_one|clean_out                ; 0.263             ;
-; rotary:comb_32|debounce:dut_one|counter[3]                     ; rotary:comb_32|debounce:dut_one|clean_out                ; 0.263             ;
-; rotary:comb_32|debounce:dut_one|counter[2]                     ; rotary:comb_32|debounce:dut_one|clean_out                ; 0.263             ;
-; rotary:comb_32|debounce:dut_one|counter[1]                     ; rotary:comb_32|debounce:dut_one|clean_out                ; 0.263             ;
-; rotary:comb_32|debounce:dut_one|counter[0]                     ; rotary:comb_32|debounce:dut_one|clean_out                ; 0.263             ;
-; rotary:comb_31|debounce:dut_two|synchroniser:dosync|sync       ; rotary:comb_31|debounce:dut_two|clean_out                ; 0.262             ;
-; rotary:comb_32|debounce:dut_two|counter[13]                    ; rotary:comb_32|debounce:dut_two|clean_out                ; 0.258             ;
-; rotary:comb_32|debounce:dut_two|counter[12]                    ; rotary:comb_32|debounce:dut_two|clean_out                ; 0.258             ;
-; rotary:comb_32|debounce:dut_two|counter[11]                    ; rotary:comb_32|debounce:dut_two|clean_out                ; 0.258             ;
-; rotary:comb_32|debounce:dut_two|synchroniser:dosync|sync       ; rotary:comb_32|debounce:dut_two|clean_out                ; 0.258             ;
-; rotary:comb_32|debounce:dut_two|prev_syncbouncy                ; rotary:comb_32|debounce:dut_two|clean_out                ; 0.258             ;
-; rotary:comb_32|debounce:dut_two|counter[10]                    ; rotary:comb_32|debounce:dut_two|clean_out                ; 0.258             ;
-; rotary:comb_31|debounce:dut_one|counter[6]                     ; rotary:comb_31|debounce:dut_one|clean_out                ; 0.254             ;
-; rotary:comb_31|debounce:dut_one|counter[5]                     ; rotary:comb_31|debounce:dut_one|clean_out                ; 0.254             ;
-; rotary:comb_31|debounce:dut_one|counter[2]                     ; rotary:comb_31|debounce:dut_one|clean_out                ; 0.254             ;
-; rotary:comb_31|debounce:dut_one|synchroniser:dosync|sync       ; rotary:comb_31|debounce:dut_one|clean_out                ; 0.254             ;
-; rotary:comb_31|debounce:dut_one|prev_syncbouncy                ; rotary:comb_31|debounce:dut_one|clean_out                ; 0.254             ;
-; rotary:comb_31|debounce:dut_one|counter[7]                     ; rotary:comb_31|debounce:dut_one|clean_out                ; 0.254             ;
-; shiftregctl:comb_4|clk                                         ; shiftregctl:comb_4|tmp[4]                                ; 0.251             ;
-; rotary:comb_32|debounce:dut_one|synchroniser:dosync|sync       ; rotary:comb_32|debounce:dut_one|clean_out                ; 0.248             ;
-; shiftregctl:comb_4|state[1]                                    ; shiftregctl:comb_4|state[3]                              ; 0.244             ;
-; rotary:comb_31|debounce:dut_two|counter[14]                    ; rotary:comb_31|debounce:dut_two|clean_out                ; 0.238             ;
-; rotary:comb_31|debounce:dut_two|counter[13]                    ; rotary:comb_31|debounce:dut_two|clean_out                ; 0.238             ;
-; rotary:comb_31|debounce:dut_two|counter[6]                     ; rotary:comb_31|debounce:dut_two|clean_out                ; 0.238             ;
-; rotary:comb_31|debounce:dut_two|prev_syncbouncy                ; rotary:comb_31|debounce:dut_two|clean_out                ; 0.238             ;
-; rotary:comb_31|debounce:dut_two|counter[12]                    ; rotary:comb_31|debounce:dut_two|clean_out                ; 0.238             ;
-; rotary:comb_31|debounce:dut_one|counter[13]                    ; rotary:comb_31|debounce:dut_one|clean_out                ; 0.238             ;
-; rotary:comb_32|debounce:dut_one|counter[14]                    ; rotary:comb_32|debounce:dut_one|clean_out                ; 0.232             ;
-; rotary:comb_32|debounce:dut_one|counter[13]                    ; rotary:comb_32|debounce:dut_one|clean_out                ; 0.232             ;
-; rotary:comb_32|debounce:dut_one|counter[12]                    ; rotary:comb_32|debounce:dut_one|clean_out                ; 0.232             ;
-; rotary:comb_32|debounce:dut_one|prev_syncbouncy                ; rotary:comb_32|debounce:dut_one|clean_out                ; 0.232             ;
-; rotary:comb_32|debounce:dut_one|counter[11]                    ; rotary:comb_32|debounce:dut_one|clean_out                ; 0.232             ;
-; rotary:comb_31|debounce:dut_one|counter[11]                    ; rotary:comb_31|debounce:dut_one|clean_out                ; 0.213             ;
-; rotary:comb_31|debounce:dut_one|counter[10]                    ; rotary:comb_31|debounce:dut_one|clean_out                ; 0.213             ;
-; rotary:comb_31|debounce:dut_one|counter[9]                     ; rotary:comb_31|debounce:dut_one|clean_out                ; 0.213             ;
-; rotary:comb_31|debounce:dut_one|counter[8]                     ; rotary:comb_31|debounce:dut_one|clean_out                ; 0.213             ;
-; rotary:comb_31|debounce:dut_one|counter[12]                    ; rotary:comb_31|debounce:dut_one|clean_out                ; 0.213             ;
-; shiftregctl:comb_4|state[2]                                    ; shiftregctl:comb_4|tmp[15]                               ; 0.211             ;
-; shiftregctl:comb_4|state[4]                                    ; shiftregctl:comb_4|tmp[15]                               ; 0.211             ;
-; SHIFT_OUT                                                      ; shiftregctl:comb_4|tmp[12]                               ; 0.145             ;
-; shiftregctl:comb_4|last_clk                                    ; shiftregctl:comb_4|tmp[12]                               ; 0.145             ;
-; shiftregctl:comb_4|tmp[6]                                      ; shiftregctl:comb_4|buttons[6]                            ; 0.144             ;
-; shiftregctl:comb_4|tmp[7]                                      ; shiftregctl:comb_4|buttons[7]                            ; 0.144             ;
-; rotary:comb_31|debounce:dut_two|synchroniser:dosync|metastable ; rotary:comb_31|debounce:dut_two|synchroniser:dosync|sync ; 0.132             ;
-; rotary:comb_32|debounce:dut_one|synchroniser:dosync|metastable ; rotary:comb_32|debounce:dut_one|synchroniser:dosync|sync ; 0.108             ;
-; rotary:comb_32|debounce:dut_two|synchroniser:dosync|metastable ; rotary:comb_32|debounce:dut_two|synchroniser:dosync|sync ; 0.105             ;
-; rotary:comb_31|debounce:dut_two|counter[5]                     ; rotary:comb_31|debounce:dut_two|clean_out                ; 0.038             ;
-; rotary:comb_32|debounce:dut_two|counter[4]                     ; rotary:comb_32|debounce:dut_two|clean_out                ; 0.031             ;
-; rotary:comb_31|last_pos[0]                                     ; rotary:comb_31|rotary_pos[7]                             ; 0.028             ;
-; rotary:comb_32|last_pos[0]                                     ; rotary:comb_32|rotary_pos[7]                             ; 0.028             ;
-; rotary:comb_31|debounce:dut_one|synchroniser:dosync|metastable ; rotary:comb_31|debounce:dut_one|synchroniser:dosync|sync ; 0.022             ;
-; rotary:comb_32|debounce:dut_one|counter[5]                     ; rotary:comb_32|debounce:dut_one|clean_out                ; 0.018             ;
-+----------------------------------------------------------------+----------------------------------------------------------+-------------------+
-Note: This table only shows the top 70 path(s) that have the largest delay added for hold.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                                                                                                                                                                                        ;
++----------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------------------+
+; Source Register                                                                                                                        ; Destination Register                                                                                                                    ; Delay Added in ns ;
++----------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------------------+
+; rotary_hex:u0|shiftregctl:shiftregctl_0|clk_div[0]                                                                                     ; rotary_hex:u0|shiftregctl:shiftregctl_0|clk_div[7]                                                                                      ; 0.416             ;
+; rotary_hex:u0|shiftregctl:shiftregctl_0|state[0]                                                                                       ; rotary_hex:u0|shiftregctl:shiftregctl_0|state[2]                                                                                        ; 0.325             ;
+; rotary_hex:u0|shiftregctl:shiftregctl_0|state[3]                                                                                       ; rotary_hex:u0|shiftregctl:shiftregctl_0|state[0]                                                                                        ; 0.321             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|counter[13]                                                                          ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|clean_out                                                                             ; 0.318             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|counter[12]                                                                          ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|clean_out                                                                             ; 0.318             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|counter[11]                                                                          ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|clean_out                                                                             ; 0.318             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|synchroniser:dosync|sync                                                             ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|clean_out                                                                             ; 0.318             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|prev_syncbouncy                                                                      ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|clean_out                                                                             ; 0.318             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|counter[10]                                                                          ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|clean_out                                                                             ; 0.318             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|counter[14]                                                                          ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|clean_out                                                                             ; 0.285             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|counter[3]                                                                           ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|clean_out                                                                             ; 0.285             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|counter[2]                                                                           ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|clean_out                                                                             ; 0.285             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|counter[1]                                                                           ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|clean_out                                                                             ; 0.285             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|counter[0]                                                                           ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|clean_out                                                                             ; 0.285             ;
+; rotary_hex:u0|shiftregctl:shiftregctl_0|state[1]                                                                                       ; rotary_hex:u0|shiftregctl:shiftregctl_0|tmp[13]                                                                                         ; 0.276             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|synchroniser:dosync|sync                                                             ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|clean_out                                                                             ; 0.267             ;
+; rotary_hex:u0|shiftregctl:shiftregctl_0|state[2]                                                                                       ; rotary_hex:u0|shiftregctl:shiftregctl_0|state[3]                                                                                        ; 0.262             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|synchroniser:dosync|sync                                                             ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|clean_out                                                                             ; 0.260             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|counter[14]                                                                          ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|clean_out                                                                             ; 0.254             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|counter[13]                                                                          ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|clean_out                                                                             ; 0.254             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|counter[12]                                                                          ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|clean_out                                                                             ; 0.254             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|prev_syncbouncy                                                                      ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|clean_out                                                                             ; 0.254             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|counter[11]                                                                          ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|clean_out                                                                             ; 0.254             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|counter[6]                                                                           ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|clean_out                                                                             ; 0.247             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|counter[5]                                                                           ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|clean_out                                                                             ; 0.247             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|counter[2]                                                                           ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|clean_out                                                                             ; 0.247             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|prev_syncbouncy                                                                      ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|clean_out                                                                             ; 0.247             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|counter[7]                                                                           ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|clean_out                                                                             ; 0.247             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|counter[14]                                                                          ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|clean_out                                                                             ; 0.247             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|counter[4]                                                                           ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|clean_out                                                                             ; 0.247             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|counter[3]                                                                           ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|clean_out                                                                             ; 0.247             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|counter[1]                                                                           ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|clean_out                                                                             ; 0.247             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|counter[0]                                                                           ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|clean_out                                                                             ; 0.247             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|counter[5]                                                                           ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|clean_out                                                                             ; 0.237             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|counter[14]                                                                          ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|clean_out                                                                             ; 0.191             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|counter[13]                                                                          ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|clean_out                                                                             ; 0.191             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|counter[6]                                                                           ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|clean_out                                                                             ; 0.191             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|synchroniser:dosync|sync                                                             ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|clean_out                                                                             ; 0.191             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|prev_syncbouncy                                                                      ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|clean_out                                                                             ; 0.191             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|counter[12]                                                                          ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|clean_out                                                                             ; 0.191             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|counter[10]                                                                          ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|clean_out                                                                             ; 0.190             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|counter[9]                                                                           ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|clean_out                                                                             ; 0.190             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|counter[8]                                                                           ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|clean_out                                                                             ; 0.190             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|counter[7]                                                                           ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|clean_out                                                                             ; 0.190             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|counter[6]                                                                           ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_one|clean_out                                                                             ; 0.190             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|counter[13]                                                                          ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|clean_out                                                                             ; 0.178             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|counter[4]                                                                           ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|clean_out                                                                             ; 0.175             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|counter[3]                                                                           ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|clean_out                                                                             ; 0.175             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|counter[2]                                                                           ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|clean_out                                                                             ; 0.175             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|counter[1]                                                                           ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|clean_out                                                                             ; 0.175             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|counter[0]                                                                           ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_two|clean_out                                                                             ; 0.175             ;
+; rotary_hex:u0|shiftregctl:shiftregctl_0|state[4]                                                                                       ; rotary_hex:u0|shiftregctl:shiftregctl_0|tmp[7]                                                                                          ; 0.161             ;
+; rotary_hex:u0|shiftregctl:shiftregctl_0|clk                                                                                            ; rotary_hex:u0|shiftregctl:shiftregctl_0|buttons[6]                                                                                      ; 0.155             ;
+; rotary_hex:u0|shiftregctl:shiftregctl_0|last_clk                                                                                       ; rotary_hex:u0|shiftregctl:shiftregctl_0|buttons[6]                                                                                      ; 0.151             ;
+; rotary_hex:u0|shiftregctl:shiftregctl_0|tmp[6]                                                                                         ; rotary_hex:u0|shiftregctl:shiftregctl_0|buttons[6]                                                                                      ; 0.149             ;
+; rotary_hex:u0|shiftregctl:shiftregctl_0|tmp[1]                                                                                         ; rotary_hex:u0|shiftregctl:shiftregctl_0|buttons[1]                                                                                      ; 0.149             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|counter[4]                                                                           ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|clean_out                                                                             ; 0.145             ;
+; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|synchroniser:dosync|metastable                                                       ; rotary_hex:u0|rotary:rotaryctl_0|debounce:dut_two|synchroniser:dosync|sync                                                              ; 0.144             ;
+; rotary_hex:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[1] ; rotary_hex:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[0]  ; 0.144             ;
+; rotary_hex:u0|shiftregctl:shiftregctl_0|tmp[15]                                                                                        ; rotary_hex:u0|shiftregctl:shiftregctl_0|buttons[15]                                                                                     ; 0.143             ;
+; rotary_hex:u0|shiftregctl:shiftregctl_0|tmp[2]                                                                                         ; rotary_hex:u0|shiftregctl:shiftregctl_0|buttons[2]                                                                                      ; 0.136             ;
+; rotary_hex:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[0] ; rotary_hex:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out ; 0.136             ;
+; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|synchroniser:dosync|metastable                                                       ; rotary_hex:u0|rotary:rotaryctl_1|debounce:dut_one|synchroniser:dosync|sync                                                              ; 0.131             ;
+; SHIFT_OUT                                                                                                                              ; rotary_hex:u0|shiftregctl:shiftregctl_0|tmp[5]                                                                                          ; 0.114             ;
+; rotary_hex:u0|rotary:rotaryctl_0|last_pos[0]                                                                                           ; rotary_hex:u0|rotary:rotaryctl_0|rotary_pos[7]                                                                                          ; 0.028             ;
+; rotary_hex:u0|rotary:rotaryctl_1|last_pos[0]                                                                                           ; rotary_hex:u0|rotary:rotaryctl_1|rotary_pos[7]                                                                                          ; 0.026             ;
++----------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------------------+
+Note: This table only shows the top 66 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2948,9 +2826,10 @@ Warning (292013): Feature LogicLock is only available with a valid subscription 
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Info (184020): Starting Fitter periphery placement operations
 Info (11191): Automatically promoted 1 clock (1 global)
-    Info (11162): CLOCK_50~inputCLKENA0 with 132 fanout uses global clock CLKCTRL_G6
+    Info (11162): CLOCK_50~inputCLKENA0 with 135 fanout uses global clock CLKCTRL_G6
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
+Info (332104): Reading SDC File: 'rotary_hex/synthesis/submodules/altera_reset_controller.sdc'
 Info (332104): Reading SDC File: 'toplevel.sdc'
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
@@ -2967,7 +2846,7 @@ Info (176235): Finished register packing
 Info (11798): Fitter preparation operations ending: elapsed time is 00:00:15
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:03
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:04
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
@@ -2978,88 +2857,88 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 1.01 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 1.14 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:07
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:08
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169064): Following 63 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
-    Info (169065): Pin ADC_CS_N has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 35
-    Info (169065): Pin AUD_ADCLRCK has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 42
-    Info (169065): Pin AUD_BCLK has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 43
-    Info (169065): Pin AUD_DACLRCK has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 45
-    Info (169065): Pin DRAM_DQ[0] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
-    Info (169065): Pin DRAM_DQ[1] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
-    Info (169065): Pin DRAM_DQ[2] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
-    Info (169065): Pin DRAM_DQ[3] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
-    Info (169065): Pin DRAM_DQ[4] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
-    Info (169065): Pin DRAM_DQ[5] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
-    Info (169065): Pin DRAM_DQ[6] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
-    Info (169065): Pin DRAM_DQ[7] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
-    Info (169065): Pin DRAM_DQ[8] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
-    Info (169065): Pin DRAM_DQ[9] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
-    Info (169065): Pin DRAM_DQ[10] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
-    Info (169065): Pin DRAM_DQ[11] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
-    Info (169065): Pin DRAM_DQ[12] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
-    Info (169065): Pin DRAM_DQ[13] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
-    Info (169065): Pin DRAM_DQ[14] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
-    Info (169065): Pin DRAM_DQ[15] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 61
-    Info (169065): Pin FPGA_I2C_SDAT has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 72
-    Info (169065): Pin GPIO_0[0] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[1] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[2] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[3] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[4] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[5] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[6] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[7] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[8] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[9] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[10] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[11] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[12] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[13] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[14] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[15] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[16] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[17] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[18] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[19] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[20] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[21] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[22] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[23] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[24] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[25] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[26] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[27] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[28] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[29] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[30] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[31] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[32] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[33] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[34] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin GPIO_0[35] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 75
-    Info (169065): Pin PS2_CLK has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 152
-    Info (169065): Pin PS2_CLK2 has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 153
-    Info (169065): Pin PS2_DAT has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 154
-    Info (169065): Pin PS2_DAT2 has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 155
-    Info (169065): Pin DISPLAY_SDA has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 208
-    Info (169065): Pin DISPLAY_SCL has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/toplevel.sv Line: 211
-Info (144001): Generated suppressed messages file /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/output_files/toplevel.fit.smsg
+    Info (169065): Pin ADC_CS_N has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 35
+    Info (169065): Pin AUD_ADCLRCK has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 42
+    Info (169065): Pin AUD_BCLK has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 43
+    Info (169065): Pin AUD_DACLRCK has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 45
+    Info (169065): Pin DRAM_DQ[0] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 61
+    Info (169065): Pin DRAM_DQ[1] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 61
+    Info (169065): Pin DRAM_DQ[2] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 61
+    Info (169065): Pin DRAM_DQ[3] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 61
+    Info (169065): Pin DRAM_DQ[4] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 61
+    Info (169065): Pin DRAM_DQ[5] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 61
+    Info (169065): Pin DRAM_DQ[6] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 61
+    Info (169065): Pin DRAM_DQ[7] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 61
+    Info (169065): Pin DRAM_DQ[8] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 61
+    Info (169065): Pin DRAM_DQ[9] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 61
+    Info (169065): Pin DRAM_DQ[10] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 61
+    Info (169065): Pin DRAM_DQ[11] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 61
+    Info (169065): Pin DRAM_DQ[12] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 61
+    Info (169065): Pin DRAM_DQ[13] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 61
+    Info (169065): Pin DRAM_DQ[14] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 61
+    Info (169065): Pin DRAM_DQ[15] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 61
+    Info (169065): Pin FPGA_I2C_SDAT has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 72
+    Info (169065): Pin GPIO_0[0] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[1] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[2] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[3] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[4] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[5] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[6] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[7] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[8] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[9] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[10] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[11] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[12] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[13] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[14] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[15] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[16] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[17] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[18] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[19] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[20] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[21] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[22] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[23] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[24] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[25] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[26] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[27] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[28] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[29] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[30] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[31] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[32] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[33] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[34] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin GPIO_0[35] has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 75
+    Info (169065): Pin PS2_CLK has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 152
+    Info (169065): Pin PS2_CLK2 has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 153
+    Info (169065): Pin PS2_DAT has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 154
+    Info (169065): Pin PS2_DAT2 has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 155
+    Info (169065): Pin DISPLAY_SDA has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 208
+    Info (169065): Pin DISPLAY_SCL has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 211
+Info (144001): Generated suppressed messages file /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/output_files/toplevel.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 2050 megabytes
-    Info: Processing ended: Tue Oct 31 15:18:22 2017
-    Info: Elapsed time: 00:01:04
-    Info: Total CPU time (on all processors): 00:01:03
+    Info: Peak virtual memory: 2052 megabytes
+    Info: Processing ended: Tue Oct 31 16:59:49 2017
+    Info: Elapsed time: 00:01:07
+    Info: Total CPU time (on all processors): 00:01:05
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_1/output_files/toplevel.fit.smsg.
+The suppressed messages can be found in /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/output_files/toplevel.fit.smsg.
 
 

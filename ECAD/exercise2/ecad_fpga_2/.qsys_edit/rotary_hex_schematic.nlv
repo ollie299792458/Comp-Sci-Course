@@ -1,0 +1,16 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst rotary_hex.EightBitsToSevenSeg_0 -pg 1 -lvl 2 -y 30
+preplace inst rotary_hex -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst rotary_hex.RotaryCtl_0 -pg 1 -lvl 2 -y 130
+preplace inst rotary_hex.clk_0 -pg 1 -lvl 1 -y 90
+preplace netloc EXPORT<net_container>rotary_hex</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)rotary_hex.reset) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>rotary_hex</net_container>(SLAVE)EightBitsToSevenSeg_0.data_in,(SLAVE)RotaryCtl_0.rotary_pos) 1 1 1 450
+preplace netloc EXPORT<net_container>rotary_hex</net_container>(SLAVE)EightBitsToSevenSeg_0.led_pins,(SLAVE)rotary_hex.eightbitstosevenseg_0_led_pins) 1 0 2 NJ 80 NJ
+preplace netloc EXPORT<net_container>rotary_hex</net_container>(SLAVE)clk_0.clk_in,(SLAVE)rotary_hex.clk) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>rotary_hex</net_container>(SLAVE)EightBitsToSevenSeg_0.clock,(SLAVE)RotaryCtl_0.clock,(MASTER)clk_0.clk) 1 1 1 410
+preplace netloc FAN_OUT<net_container>rotary_hex</net_container>(MASTER)clk_0.clk_reset,(SLAVE)EightBitsToSevenSeg_0.reset,(SLAVE)RotaryCtl_0.reset) 1 1 1 430
+preplace netloc EXPORT<net_container>rotary_hex</net_container>(SLAVE)rotary_hex.rotaryctl_0_rotary_in,(SLAVE)RotaryCtl_0.rotary_in) 1 0 2 NJ 200 NJ
+preplace netloc EXPORT<net_container>rotary_hex</net_container>(SLAVE)RotaryCtl_0.rotary_event,(SLAVE)rotary_hex.rotaryctl_0_rotary_event) 1 0 2 NJ 180 NJ
+levelinfo -pg 1 0 200 650
+levelinfo -hier rotary_hex 210 240 510 640
