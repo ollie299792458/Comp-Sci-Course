@@ -5,6 +5,7 @@ use std::cell::Cell;
 enum LogMessage {
     HelloWorld,
     AString(String),
+    ANewUser(String, u32),
 }
 
 //interface
@@ -19,6 +20,7 @@ struct LogPrinter {
     //Generic type - allow interior mutability, only the place that owns the
     //cell can free/destroy the cell
     message_id: Cell<u32>
+    last_user_id: Cell<u32>
 }
 
 //implementation
@@ -44,6 +46,10 @@ impl Logger for LogPrinter {
                 println!("{}: Hello World!", message_id),
             LogMessage::AString(string) =>
                 println!("{}: {}", message_id, string),
+            LogMessage::ANewUser(user_name, user_id) => {
+                println!("{}: {}", message_id, user_name);
+                self.user_id.set(user_id);
+            },
         }
         //return id to LogPrinter
         self.message_id.set(message_id + 1);
@@ -56,4 +62,5 @@ fn main() {
     logger.log(LogMessage::HelloWorld);
     //"Rust = C + ML" is a statically allocated immutable string
     logger.log(LogMessage::AString("Rust = C + ML".into()));
+    logger.log(LogMessage::ANewUser("Oliver".into(), ));
 }
