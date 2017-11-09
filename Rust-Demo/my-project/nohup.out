@@ -1,0 +1,20 @@
+[94m[INFO 13:32:27.665770][0m Application.vala:153: Scratch version: 2.4.1
+[94m[INFO 13:32:27.665798][0m Application.vala:155: Kernel version: 4.4.0-98-generic
+[92m[DEBUG 13:32:27.666663][0m Settings.vala:163: Loading settings from schema 'org.pantheon.scratch.saved-state'
+[92m[DEBUG 13:32:27.667143][0m Settings.vala:163: Loading settings from schema 'org.pantheon.scratch.settings'
+[92m[DEBUG 13:32:27.667827][0m Settings.vala:163: Loading settings from schema 'org.pantheon.scratch.services'
+[94m[INFO 13:33:53.951087][0m Application.vala:153: Scratch version: 2.4.1
+[94m[INFO 13:33:53.951135][0m Application.vala:155: Kernel version: 4.4.0-98-generic
+[92m[DEBUG 13:33:53.952429][0m Settings.vala:163: Loading settings from schema 'org.pantheon.scratch.saved-state'
+[92m[DEBUG 13:33:53.953118][0m Settings.vala:163: Loading settings from schema 'org.pantheon.scratch.settings'
+[92m[DEBUG 13:33:53.955258][0m Settings.vala:163: Loading settings from schema 'org.pantheon.scratch.services'
+[94m[INFO 13:34:20.414902][0m Application.vala:153: Scratch version: 2.4.1
+[94m[INFO 13:34:20.414927][0m Application.vala:155: Kernel version: 4.4.0-98-generic
+[92m[DEBUG 13:34:20.415828][0m Settings.vala:163: Loading settings from schema 'org.pantheon.scratch.saved-state'
+[92m[DEBUG 13:34:20.416265][0m Settings.vala:163: Loading settings from schema 'org.pantheon.scratch.settings'
+[92m[DEBUG 13:34:20.416984][0m Settings.vala:163: Loading settings from schema 'org.pantheon.scratch.services'
+[94m[INFO 13:37:43.124069][0m Application.vala:153: Scratch version: 2.4.1
+[94m[INFO 13:37:43.124094][0m Application.vala:155: Kernel version: 4.4.0-98-generic
+[92m[DEBUG 13:37:43.124947][0m Settings.vala:163: Loading settings from schema 'org.pantheon.scratch.saved-state'
+[92m[DEBUG 13:37:43.125365][0m Settings.vala:163: Loading settings from schema 'org.pantheon.scratch.settings'
+[92m[DEBUG 13:37:43.126027][0m Settings.vala:163: Loading settings from schema 'org.pantheon.scratch.services'

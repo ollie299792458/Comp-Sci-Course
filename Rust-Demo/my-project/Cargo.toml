@@ -1,0 +1,6 @@
+[package]
+name = "my-project"
+version = "0.1.0"
+authors = ["Oliver Black <olb22@cam.ac.uk>"]
+
+[dependencies]
