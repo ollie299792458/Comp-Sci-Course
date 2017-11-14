@@ -64,14 +64,14 @@ public class ClientHandler {
                     } catch (ClassNotFoundException e) {
                         //ignored message type
                     } catch (IOException e) {
-                        //can't handle disconnects
-                        System.err.println("Unknown error reading from port");
-                        e.printStackTrace();
+                        String statusText = nickname + " has disconnected.";
+                        multiQueue.deregister(clientMessages);
+                        multiQueue.put(new StatusMessage(statusText));
+                        return;
                     }
                 }
             }
         };
-        incoming.setDaemon(true);
 
         Thread outgoing = new Thread() {
             @Override
@@ -90,14 +90,12 @@ public class ClientHandler {
                     try {
                         oos.writeObject(message);
                     } catch (IOException e) {
-                        //can't handle disconnects
-                        System.err.println("Unknown error writing to port");
-                        e.printStackTrace();
+                        //disconnected, handled in other thread
+                        return;
                     }
                 }
             }
         };
-        outgoing.setDaemon(true);
 
 
         incoming.start();
