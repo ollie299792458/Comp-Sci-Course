@@ -35,8 +35,7 @@ public class VectorClock {
         }
         return vectorClock;
 	    //DONE: why is this required for thread safety?
-        //I'm not sure, something to do with making sure that the operation that has just happened happens before other
-        //objects try to use the vectorclock
+        //So the message can't change the internals of this vector clock (the return value is passed to the message in line
     }
 
     public synchronized int getClock(String uid) {
