@@ -1,0 +1,195 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise4/clarvi_displayemul
+vclarvi
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+DXx4 work 14 clarvi_sv_unit 0 22 fJbhS4=VAOcn`Wk;GHne42
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 ^SVzN<ciH]jTeIMm`@ZJh0
+IB]hfZ?;[3o1@Vk;^deW9z3
+!s105 clarvi_sv_unit
+S1
+R0
+Z3 w1511820736
+Z4 8clarvi.sv
+Z5 Fclarvi.sv
+Fclarvi_debug.sv
+L0 74
+Z6 OV;L;10.5b;63
+Z7 !s108 1511822504.000000
+Z8 !s107 clarvi_debug.sv|riscv.svh|clarvi.sv|
+Z9 !s90 -reportprogress|300|clarvi.sv|
+!i113 1
+Z10 tCvgOpt 0
+vclarvi_avalon
+R1
+Z11 !s110 1511822504
+!i10b 1
+!s100 ;8oT_9[:XmYOIAEY@m@]f0
+I];d25JN>9W]eZIiUaF2`I3
+R2
+!s105 clarvi_avalon_sv_unit
+S1
+R0
+R3
+8clarvi_avalon.sv
+Fclarvi_avalon.sv
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+!s107 clarvi_avalon.sv|
+!s90 -reportprogress|300|clarvi_avalon.sv|
+!i113 1
+R10
+vclarvi_avalon_external
+R1
+R11
+!i10b 1
+!s100 RA[Tc41;E`X[Q7D]OW1do3
+ILQai`3DAPIA@R:K@1_>iS1
+R2
+!s105 clarvi_avalon_external_sv_unit
+S1
+R0
+R3
+8clarvi_avalon_external.sv
+Fclarvi_avalon_external.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 clarvi_avalon_external.sv|
+!s90 -reportprogress|300|clarvi_avalon_external.sv|
+!i113 1
+R10
+vclarvi_sim
+R1
+R11
+!i10b 1
+!s100 SQ0Dj9n>84^7JP2AI]hdI3
+IHWVO5ViD2ha2ZMfZOA>JA3
+R2
+Z12 !s105 clarvi_sim_sv_unit
+S1
+R0
+R3
+Z13 8clarvi_sim.sv
+Z14 Fclarvi_sim.sv
+Z15 L0 29
+R6
+r1
+!s85 0
+31
+R7
+Z16 !s107 clarvi_sim.sv|
+Z17 !s90 -reportprogress|300|clarvi_sim.sv|
+!i113 1
+R10
+Xclarvi_sv_unit
+R1
+VfJbhS4=VAOcn`Wk;GHne42
+r1
+!s85 0
+31
+!i10b 1
+!s100 Zl2zJoKTWR<KbCmmSfKEc2
+IfJbhS4=VAOcn`Wk;GHne42
+!i103 1
+S1
+R0
+R3
+R4
+R5
+Friscv.svh
+L0 39
+R6
+R7
+R8
+R9
+!i113 1
+R10
+vdual_port_bram
+R1
+R11
+!i10b 1
+!s100 0T3jR@WEPBNe>`D8zGClI0
+IEl6E@PA0P3C>W]3A2H_9M3
+R2
+!s105 bram_sv_unit
+S1
+R0
+R3
+8bram.sv
+Fbram.sv
+R15
+R6
+r1
+!s85 0
+31
+R7
+!s107 bram.sv|
+!s90 -reportprogress|300|bram.sv|
+!i113 1
+R10
+vmock_interrupt
+R1
+R11
+!i10b 1
+!s100 B7BQl9g=Kd1fZY09;W^IB2
+Im7eb<Abf>IiFK748Ik7Bh3
+R2
+R12
+S1
+R0
+R3
+R13
+R14
+L0 162
+R6
+r1
+!s85 0
+31
+R7
+R16
+R17
+!i113 1
+R10
+vmock_waitrequest
+R1
+R11
+!i10b 1
+!s100 F=b[<C`lg`@:^8h[Qblo:1
+I<A`Al?YXOl76Nc;d1X>P[0
+R2
+R12
+S1
+R0
+R3
+R13
+R14
+L0 140
+R6
+r1
+!s85 0
+31
+R7
+R16
+R17
+!i113 1
+R10

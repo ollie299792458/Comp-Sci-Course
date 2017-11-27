@@ -1,0 +1,27 @@
+VERSION 10 1 1
+SYM_BEGIN 7
+5 23
+clarvi_avalon_write_mem
+3 25
+clarvi_avalon_external.sv
+0 22
+clarvi_avalon_read_mem
+6 4
+data
+4 19
+clarvi_avalon_setup
+2 7
+byteena
+1 7
+address
+SYM_END
+TYPEDEF_BEGIN 0
+TYPEDEF_END 
+TF_BEGIN 3
+0 166 
+0 -1 -1 4 2 1 0 0x0 1 0 12 0 -1 4 278571 32 0 31 31 0 32 0x1 0 1 0x0 1 0 12 0 -1 4 278571 32 0 31 31 0 32 0x1 1 0 2 0x0 1 0 12 0 -1 4 278571 8 0 7 7 0 8 0x1 1 1 3 17  
+4 33 
+4 -1 -1 4 0 1 0 0x0 0 0x1 1 3 16  
+5 182 
+5 -1 -1 4 3 1 0 0x0 0 0x1 0 1 0x0 1 0 12 0 -1 4 278571 32 0 31 31 0 32 0x1 1 0 6 0x0 1 0 12 0 -1 4 278571 32 0 31 31 0 32 0x1 1 0 2 0x0 1 0 12 0 -1 4 278571 8 0 7 7 0 8 0x1 1 1 3 18  
+TF_END 

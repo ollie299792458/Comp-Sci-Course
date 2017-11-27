@@ -11,6 +11,6 @@ void main(void)
 	    left = avalon_read(PIO_ROTARY_L);
 	    debug_print(left);
 	    
-	    vid_set_pixel(3, 3, PIXEL_BLUE);
+	    vid_set_pixel(3,3, PIXEL_BLUE);
 	}
 }

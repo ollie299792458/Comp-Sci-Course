@@ -1,0 +1,45 @@
+
+build/program.elf:     file format elf32-littleriscv
+
+Contents of section .text.init:
+ 0000 17010100 130101fe 97020000 93824201  ..............B.
+ 0010 73905230 ef00c002 73000000 6f000000  s.R0....s...o...
+Contents of section .text:
+ 0020 130101fe 23201100 370d0004 130d0d30  ....# ..7......0
+ 0030 03250d00 83200100 13010102 67800000  .%... ......g...
+ 0040 130101fe 23201100 eff09ffd 83200100  ....# ....... ..
+ 0050 13010102 67800000                    ....g...        
+
+Disassembly of section .text.init:
+
+00000000 <entry>:
+   0:	00010117          	auipc	sp,0x10
+   4:	fe010113          	addi	sp,sp,-32 # ffe0 <main+0xffa0>
+   8:	00000297          	auipc	t0,0x0
+   c:	01428293          	addi	t0,t0,20 # 1c <end>
+  10:	30529073          	csrw	mtvec,t0
+  14:	02c000ef          	jal	ra,40 <main>
+  18:	00000073          	ecall
+
+0000001c <end>:
+  1c:	0000006f          	j	1c <end>
+
+Disassembly of section .text:
+
+00000020 <myfunction>:
+  20:	fe010113          	addi	sp,sp,-32
+  24:	00112023          	sw	ra,0(sp)
+  28:	04000d37          	lui	s10,0x4000
+  2c:	300d0d13          	addi	s10,s10,768 # 4000300 <__sp+0x3ff0300>
+  30:	000d2503          	lw	a0,0(s10)
+  34:	00012083          	lw	ra,0(sp)
+  38:	02010113          	addi	sp,sp,32
+  3c:	00008067          	ret
+
+00000040 <main>:
+  40:	fe010113          	addi	sp,sp,-32
+  44:	00112023          	sw	ra,0(sp)
+  48:	fd9ff0ef          	jal	ra,20 <myfunction>
+  4c:	00012083          	lw	ra,0(sp)
+  50:	02010113          	addi	sp,sp,32
+  54:	00008067          	ret

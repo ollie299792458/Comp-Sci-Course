@@ -1,0 +1,93 @@
+
+build/program.elf:     file format elf32-littleriscv
+
+Contents of section .text.init:
+ 0000 17010100 130101fe 97020000 93824201  ..............B.
+ 0010 73905230 ef004003 73000000 6f000000  s.R0..@.s...o...
+Contents of section .text:
+ 0020 130101fe 232e8100 13040102 2326a4fe  ....#.......#&..
+ 0030 8327c4fe 7390277b 13000000 0324c101  .'..s.'{.....$..
+ 0040 13010102 67800000 130101fe 232e1100  ....g.......#...
+ 0050 232c8100 13040102 b7070004 13850710  #,..............
+ 0060 ef004001 2326a4fe 0325c4fe eff05ffb  ..@.#&...%...._.
+ 0070 6ff09ffe 130101fd 23268102 13040103  o.......#&......
+ 0080 232ea4fc 8327c4fd 2326f4fe 8327c4fe  #....'..#&...'..
+ 0090 83a70700 13850700 0324c102 13010103  .........$......
+ 00a0 67800000 130101fd 23268102 13040103  g.......#&......
+ 00b0 232ea4fc 232cb4fc 8327c4fd 2326f4fe  #...#,...'..#&..
+ 00c0 8327c4fe 032784fd 23a0e700 13000000  .'...'..#.......
+ 00d0 0324c102 13010103 67800000           .$......g...    
+Contents of section .comment:
+ 0000 4743433a 2028474e 55292037 2e312e30  GCC: (GNU) 7.1.0
+ 0010 00                                   .               
+
+Disassembly of section .text.init:
+
+00000000 <entry>:
+   0:	00010117          	auipc	sp,0x10
+   4:	fe010113          	addi	sp,sp,-32 # ffe0 <avalon_write+0xff3c>
+   8:	00000297          	auipc	t0,0x0
+   c:	01428293          	addi	t0,t0,20 # 1c <end>
+  10:	30529073          	csrw	mtvec,t0
+  14:	034000ef          	jal	ra,48 <main>
+  18:	00000073          	ecall
+
+0000001c <end>:
+  1c:	0000006f          	j	1c <end>
+
+Disassembly of section .text:
+
+00000020 <debug_print>:
+  20:	fe010113          	addi	sp,sp,-32
+  24:	00812e23          	sw	s0,28(sp)
+  28:	02010413          	addi	s0,sp,32
+  2c:	fea42623          	sw	a0,-20(s0)
+  30:	fec42783          	lw	a5,-20(s0)
+  34:	7b279073          	csrw	dscratch,a5
+  38:	00000013          	nop
+  3c:	01c12403          	lw	s0,28(sp)
+  40:	02010113          	addi	sp,sp,32
+  44:	00008067          	ret
+
+00000048 <main>:
+  48:	fe010113          	addi	sp,sp,-32
+  4c:	00112e23          	sw	ra,28(sp)
+  50:	00812c23          	sw	s0,24(sp)
+  54:	02010413          	addi	s0,sp,32
+  58:	040007b7          	lui	a5,0x4000
+  5c:	10078513          	addi	a0,a5,256 # 4000100 <__sp+0x3ff0100>
+  60:	014000ef          	jal	ra,74 <avalon_read>
+  64:	fea42623          	sw	a0,-20(s0)
+  68:	fec42503          	lw	a0,-20(s0)
+  6c:	fb5ff0ef          	jal	ra,20 <debug_print>
+  70:	fe9ff06f          	j	58 <main+0x10>
+
+00000074 <avalon_read>:
+  74:	fd010113          	addi	sp,sp,-48
+  78:	02812623          	sw	s0,44(sp)
+  7c:	03010413          	addi	s0,sp,48
+  80:	fca42e23          	sw	a0,-36(s0)
+  84:	fdc42783          	lw	a5,-36(s0)
+  88:	fef42623          	sw	a5,-20(s0)
+  8c:	fec42783          	lw	a5,-20(s0)
+  90:	0007a783          	lw	a5,0(a5)
+  94:	00078513          	mv	a0,a5
+  98:	02c12403          	lw	s0,44(sp)
+  9c:	03010113          	addi	sp,sp,48
+  a0:	00008067          	ret
+
+000000a4 <avalon_write>:
+  a4:	fd010113          	addi	sp,sp,-48
+  a8:	02812623          	sw	s0,44(sp)
+  ac:	03010413          	addi	s0,sp,48
+  b0:	fca42e23          	sw	a0,-36(s0)
+  b4:	fcb42c23          	sw	a1,-40(s0)
+  b8:	fdc42783          	lw	a5,-36(s0)
+  bc:	fef42623          	sw	a5,-20(s0)
+  c0:	fec42783          	lw	a5,-20(s0)
+  c4:	fd842703          	lw	a4,-40(s0)
+  c8:	00e7a023          	sw	a4,0(a5)
+  cc:	00000013          	nop
+  d0:	02c12403          	lw	s0,44(sp)
+  d4:	03010113          	addi	sp,sp,48
+  d8:	00008067          	ret
