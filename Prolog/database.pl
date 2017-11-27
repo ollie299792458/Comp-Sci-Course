@@ -33,4 +33,7 @@ qFullNameAndCollegeFullOuter(A,B) :- qFullNameAndCollegeCollegeOuter(A,B).
 qFullNameAndCollegeFullOuter(A,B) :- tCollege(ID,B), not(tName(ID,A)), A = ''.
 
 % 22S.5
-qLowestGrade(ID,A) :- tGrade(ID,_,A),tGrade(ID,_,B),A < B, !.
+qLowestGrade(ID,A) :- tGrade(ID,_,A), forall(tGrade(ID,_,B), B>=A),!.
+
+% 22S.6
+qNoOfFirstClass(A) :- 
