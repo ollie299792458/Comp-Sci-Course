@@ -1,5 +1,5 @@
 Fitter report for toplevel
-Tue Oct 31 16:59:48 2017
+Mon Nov 27 22:02:29 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -64,7 +64,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Tue Oct 31 16:59:48 2017       ;
+; Fitter Status                   ; Successful - Mon Nov 27 22:02:29 2017       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; toplevel                                    ;
 ; Top-level Entity Name           ; toplevel                                    ;
@@ -2857,12 +2857,12 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 1.14 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 1.10 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:08
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:07
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169064): Following 63 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
     Info (169065): Pin ADC_CS_N has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 35
@@ -2930,10 +2930,10 @@ Warning (169064): Following 63 pins have no output enable or a GND or VCC output
     Info (169065): Pin DISPLAY_SCL has a permanently disabled output enable File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/toplevel.sv Line: 211
 Info (144001): Generated suppressed messages file /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise2/ecad_fpga_2/output_files/toplevel.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 2052 megabytes
-    Info: Processing ended: Tue Oct 31 16:59:49 2017
-    Info: Elapsed time: 00:01:07
-    Info: Total CPU time (on all processors): 00:01:05
+    Info: Peak virtual memory: 2048 megabytes
+    Info: Processing ended: Mon Nov 27 22:02:30 2017
+    Info: Elapsed time: 00:01:05
+    Info: Total CPU time (on all processors): 00:01:02
 
 
 +----------------------------+
