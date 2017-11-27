@@ -1,0 +1,17 @@
+Questions
+1.
+They haven't declared the width of out_a and out_b, so they are single width, so are only 1 or 0.
+As count_a <= count_a - 1; is non blocking, and out_a_ = latch...; is blocking, at the moment of the clock it is impossible to know whether count_a will have the old or new value. They need to properly differentiate between the two types to avoid unexpected behaviour.
+When the latch is not high the two outputs swap, but when it is taken low again the outputs will jump by several values.
+They should probably make the always an always_ff or always_comb (which woud also solve the earlier problem), but that might break the initial block (it did on mine...)
+
+2.
+As the F_MAX reported by the timing analysis is around 290MHz, it wouldn't work with a 500MHz crystal, as it would ossilate too fast for the flip flops and combinatorial logic to update in time.
+
+3.
+8 before the loop (assuming a1 isn't 0, excluding stack allocation, from TRACE)
+Every loop iteration is 14 (from TRACE)
+Post loop is 2 (from TRACE)
+
+So the total is 8 + 2 + 14*nbits
+

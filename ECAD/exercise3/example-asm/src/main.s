@@ -74,23 +74,23 @@ main:
 
 	#test template
 	addi    a0, zero, 12    # a0 <- 12
-        addi    a1, zero, 4     # a1 <- 4
-        call    div
-        DEBUG_PRINT a0          # display the quotient
-        DEBUG_PRINT a1          # display the remainder
+    addi    a1, zero, 4     # a1 <- 4
+    call    div
+    DEBUG_PRINT a0          # display the quotient
+    DEBUG_PRINT a1          # display the remainder
 
-        addi    a0, zero, 93    # a0 <- 93
-        addi    a1, zero, 7     # a1 <- 7
-        call    div
-        DEBUG_PRINT a0          # display the quotient
-        DEBUG_PRINT a1          # display the remainder
+    addi    a0, zero, 93    # a0 <- 93
+    addi    a1, zero, 7     # a1 <- 7
+    call    div
+    DEBUG_PRINT a0          # display the quotient
+    DEBUG_PRINT a1          # display the remainder
 
-        lui     a0, (0x12345000>>12)
-        ori     a0, a0, 0x678   # a0 <- 0x12345678
-        addi    a1, zero, 255   # a1 <- 255
-        call    div
-        DEBUG_PRINT a0          # display the quotient
-        DEBUG_PRINT a1          # display the remainder
+    lui     a0, (0x12345000>>12)
+    ori     a0, a0, 0x678   # a0 <- 0x12345678
+    addi    a1, zero, 255   # a1 <- 255
+    call    div
+    DEBUG_PRINT a0          # display the quotient
+    DEBUG_PRINT a1          # display the remainder
 	#end of test template
 
 	lw ra, 0(sp)
