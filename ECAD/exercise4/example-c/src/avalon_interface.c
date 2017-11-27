@@ -1,3 +1,19 @@
+#include "avalon_interface.h"
+
+void vid_set_pixel(int x, int y, int colour)
+{
+	// derive a pointer to the framebuffer described as 16 bit integers
+	volatile short *framebuffer = (volatile short *) (FRAMEBUFFER_BASE);
+
+	// make sure we don't go past the edge of the screen
+	if ((x<0) || (x>DISPLAY_WIDTH-1))
+		return;
+	if ((y<0) || (y>DISPLAY_HEIGHT-1))
+		return;
+
+	framebuffer[x+y*DISPLAY_WIDTH] = colour;
+}
+
 int avalon_read(unsigned int address)
 {
 	volatile int *pointer = (volatile int *) address;
