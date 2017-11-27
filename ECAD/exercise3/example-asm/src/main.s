@@ -12,8 +12,8 @@ div:
 	# temp register list
 	# t0, quotient
 	# t1, remainder
-	# t2, 0 to 32 iterator
-	# t3, loop check for iterator (equal to 32)
+	# t2, 31 to 0 iterator
+	# t3, -1 for loop termination
 	# t4, ith bitmask
 	# t5, one
 	# t6, ith bit of numerator
@@ -23,39 +23,43 @@ div:
 	addi t0, zero, 0
 	addi t1, zero, 0	
 	addi t5, zero, 1
-	addi t3, zero, 32
+	addi t3, zero, -1
 
 	# deal with 0 denominator
-	bne t0, zero, divnotzero
+	bne a1, zero, divnotzero
 	# if zero
 	ecall
 	divnotzero:
 
 	# set up loop
-	addi t2, zero, 0
+	addi t2, zero, 31
 
 	# iterate
 	divloop:
 		# left shift R by one bit
 		slli t1, t1, 1
-		# get i bit mask
+		# get i bit mask t4(i) = 1
 		sll t4, t5, t2
-		# get bit i of the numerator
+		# get bit i of the numerator, t6(i) = N(i)
 		and t6, a0, t4
-		# set least significant bit of R to ith bit
+		# shift bit back down, t6(0) = N(i)
+		srl t6, t6, t2
+		# set least significant bit of R to ith bit of N
 		or t1, t1, t6
-		divloopif:
+		# skip if, so condition inverted compared to algorithm
+		blt t1, a1, enddivloopif
 			# subtract the denominator from R
 			sub t1, t1, a1
 			# set Q(i) to 1
 			or t0, t0, t4
-		# add 1 to loop, and if not 32, loop round to beginning
-		addi t2, t2, 1
+		enddivloopif:
+		# take 1 from iterator, if not -1, loop round to beginning
+		addi t2, t2, -1
 		bne t2, t3, divloop
 
 	#move result to correct registers
-	addi a0, t0, 0
-	addi a1, t1, 0
+	mv a0, t0
+	mv a1, t1
 
 	# load every register you stored above
 	lw ra, 0(sp)
