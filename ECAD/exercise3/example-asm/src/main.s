@@ -41,7 +41,7 @@ div:
 		# get i bit mask
 		sll t4, t5, t2
 		# get bit i of the numerator
-		andi t6, a0, t4
+		and t6, a0, t4
 		# set least significant bit of R to ith bit
 		or t1, t1, t6
 		divloopif:

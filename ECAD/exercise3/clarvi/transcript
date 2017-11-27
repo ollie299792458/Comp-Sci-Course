@@ -1,34 +1,35 @@
 do clarvi_test.do ../example-asm/build/mem.txt TRACE
+# ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:34:56 on Nov 27,2017
+# Start time: 16:51:50 on Nov 27,2017
 # vlog -reportprogress 300 clarvi.sv "+define+TRACE" 
 # -- Compiling package clarvi_sv_unit
 # -- Compiling module clarvi
 # 
 # Top level modules:
 # 	clarvi
-# End time: 14:34:57 on Nov 27,2017, Elapsed time: 0:00:01
+# End time: 16:51:50 on Nov 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:34:57 on Nov 27,2017
+# Start time: 16:51:50 on Nov 27,2017
 # vlog -reportprogress 300 clarvi_avalon.sv 
 # -- Compiling module clarvi_avalon
 # 
 # Top level modules:
 # 	clarvi_avalon
-# End time: 14:34:57 on Nov 27,2017, Elapsed time: 0:00:00
+# End time: 16:51:50 on Nov 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:34:57 on Nov 27,2017
+# Start time: 16:51:50 on Nov 27,2017
 # vlog -reportprogress 300 bram.sv 
 # -- Compiling module dual_port_bram
 # 
 # Top level modules:
 # 	dual_port_bram
-# End time: 14:34:57 on Nov 27,2017, Elapsed time: 0:00:00
+# End time: 16:51:50 on Nov 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:34:57 on Nov 27,2017
+# Start time: 16:51:50 on Nov 27,2017
 # vlog -reportprogress 300 clarvi_sim.sv 
 # -- Compiling module clarvi_sim
 # -- Compiling module memory_debug
@@ -39,10 +40,10 @@ do clarvi_test.do ../example-asm/build/mem.txt TRACE
 # 	clarvi_sim
 # 	mock_waitrequest
 # 	mock_interrupt
-# End time: 14:34:57 on Nov 27,2017, Elapsed time: 0:00:00
+# End time: 16:51:50 on Nov 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim work.clarvi_sim -t ns -voptargs="+acc=npr" -GINIT_FILE=../example-asm/build/mem.txt 
-# Start time: 14:34:57 on Nov 27,2017
+# Start time: 16:51:50 on Nov 27,2017
 # Loading sv_std.std
 # Loading work.clarvi_sim
 # Loading work.dual_port_bram
@@ -50,119 +51,120 @@ do clarvi_test.do ../example-asm/build/mem.txt TRACE
 # Loading work.clarvi_avalon
 # Loading work.clarvi_sv_unit
 # Loading work.clarvi
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: unknown  Hostname: ecad-VirtualBox  ProcessID: 2534
+#           Attempting to use alternate WLF file "./wlftIzCfXM".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftIzCfXM
 run
-# ** Warning: (vsim-7) Failed to open readmem file "../example-asm/build/mem.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : bram.sv(55)
-#    Time: 0 ns  Iteration: 0  Instance: /clarvi_sim/mem
 # 0xxxxxxxxx:   ---
 # 0xxxxxxxxx:   ---
 # 0xxxxxxxxx:   ---
 # 0xxxxxxxxx:   ---
 # 0xxxxxxxxx:   ---
-# 0x00000000:   ---
-# 0x00000000:   ---
-# 0x00000004:   ---
-# 0x00000004:   ---
-# 0x00000008:   ---
-# 0x00000008:   ---
-run
-# 0x0000000c:   ---
-# 0x0000000c:   ---
-# 0x00000010:   ---
-# 0x00000010:   ---
-# 0x00000014:   ---
-# 0x00000014:   ---
-# 0x00000018:   ---
+# 0x00000000:   AUIPC	sp, 0x00010000		sp := 0x00010000 
+# 0x00000004:   ADDI	sp, sp, -32		sp := 0x0000ffe0, sp = 0x00010000 
+# 0x00000008:   AUIPC	t0, 0x00000000		t0 := 0x00000008 
+# 0x0000000c:   ADDI	t0, t0, 20		t0 := 0x0000001c, t0 = 0x00000008 
+# 0x00000010:   CSRRW	zero, MTVEC, t0 
+# 0x00000014:   JAL	ra, 100		ra := 0x00000018, target = 0x00000078 
 # 0x00000018:   ---
 # 0x0000001c:   ---
-# 0x0000001c:   ---
 # 0x00000020:   ---
-# 0x00000020:   ---
-# 0x00000024:   ---
-# 0x00000024:   ---
-# 0x00000028:   ---
-# 0x00000028:   ---
-# 0x0000002c:   ---
-# 0x0000002c:   ---
-# 0x00000030:   ---
-# 0x00000030:   ---
-# 0x00000034:   ---
-# 0x00000034:   ---
-# 0x00000038:   ---
-# 0x00000038:   ---
-# 0x0000003c:   ---
-# 0x0000003c:   ---
-# 0x00000040:   ---
-# 0x00000040:   ---
-# 0x00000044:   ---
-# 0x00000044:   ---
-# 0x00000048:   ---
-# 0x00000048:   ---
-# 0x0000004c:   ---
-# 0x0000004c:   ---
-# 0x00000050:   ---
-# 0x00000050:   ---
-# 0x00000054:   ---
-# 0x00000054:   ---
-# 0x00000058:   ---
-# 0x00000058:   ---
-# 0x0000005c:   ---
-# 0x0000005c:   ---
-# 0x00000060:   ---
-# 0x00000060:   ---
-# 0x00000064:   ---
-# 0x00000064:   ---
-# 0x00000068:   ---
-# 0x00000068:   ---
-# 0x0000006c:   ---
-# 0x0000006c:   ---
-# 0x00000070:   ---
-# 0x00000070:   ---
-# 0x00000074:   ---
-# 0x00000074:   ---
-# 0x00000078:   ---
-# 0x00000078:   ---
-# 0x0000007c:   ---
-# 0x0000007c:   ---
-# 0x00000080:   ---
-# 0x00000080:   ---
-# 0x00000084:   ---
-# 0x00000084:   ---
-# 0x00000088:   ---
-# 0x00000088:   ---
-# 0x0000008c:   ---
+# 0x00000078:   ADDI	sp, sp, -32		sp := 0x0000ffc0, sp = 0x0000ffe0 
+# 0x0000007c:   SW	ra, 0(sp)		mem[0000ffc0] := 0x00000018, sp = 0x0000ffc0, ra = 0x00000018 
+# 0x00000080:   ADDI	a0, zero, 12		a0 := 0x0000000c,  
+# 0x00000084:   ADDI	a1, zero, 4		a1 := 0x00000004,  
+# 0x00000088:   JAL	ra, -104		ra := 0x0000008c, target = 0x00000020 
 # 0x0000008c:   ---
 # 0x00000090:   ---
-# 0x00000090:   ---
 # 0x00000094:   ---
-# 0x00000094:   ---
-# 0x00000098:   ---
-# 0x00000098:   ---
-# 0x0000009c:   ---
-# 0x0000009c:   ---
-# 0x000000a0:   ---
-# 0x000000a0:   ---
-# 0x000000a4:   ---
-# 0x000000a4:   ---
-# 0x000000a8:   ---
-# 0x000000a8:   ---
-# 0x000000ac:   ---
-# 0x000000ac:   ---
-# 0x000000b0:   ---
-# 0x000000b0:   ---
-# 0x000000b4:   ---
-# 0x000000b4:   ---
-# 0x000000b8:   ---
-# 0x000000b8:   ---
-# 0x000000bc:   ---
-# 0x000000bc:   ---
-# 0x000000c0:   ---
-# 0x000000c0:   ---
-# 0x000000c4:   ---
-# 0x000000c4:   ---
-# 0x000000c8:   ---
-# 0x000000c8:   ---
-# 0x000000cc:   ---
-# 0x000000cc:   ---
-# 0x000000d0:   ---
-# 0x000000d0:   ---
+# 0x00000020:   ADDI	sp, sp, -32		sp := 0x0000ffa0, sp = 0x0000ffc0 
+# 0x00000024:   SW	ra, 0(sp)		mem[0000ffa0] := 0x0000008c, sp = 0x0000ffa0, ra = 0x0000008c 
+# 0x00000028:   ADDI	t0, zero, 0		t0 := 0x00000000,  
+# 0x0000002c:   ADDI	t1, zero, 0		t1 := 0x00000000,  
+# 0x00000030:   ADDI	t5, zero, 1		t5 := 0x00000001,  
+# 0x00000034:   ADDI	t3, zero, 32		t3 := 0x00000020,  
+# 0x00000038:   BNE	t0, zero, 0x00000040	t0 = 0x00000000, branch not taken 
+# 0x0000003c:   ECALL 
+# time: 300, '{op:ECALL, rd:zero, rs1:zero, rs2:zero, rs1_used:0, rs2_used:0, immediate_used:0, immediate:x, funct12:F12_ECALL, memory_write:0, memory_read:0, memory_read_unsigned:0, memory_width:B, enable_wb:0, pc:60} instruction at 0000003c, stopping simulator
+# ** Note: $stop    : clarvi_debug.sv(44)
+#    Time: 300 ns  Iteration: 1  Instance: /clarvi_sim/clarvi/clarvi
+# Break in Module clarvi at clarvi_debug.sv line 44
+run -continue
+# 0x00000040:   ---
+# 0x00000044:   ---
+# 0x00000048:   ---
+# 0x0000001c:   JAL	zero, 0		, target = 0x0000001c 
+# 0x00000020:   ---
+# 0x00000024:   ---
+# 0x00000028:   ---
+# 0x0000001c:   JAL	zero, 0		, target = 0x0000001c 
+# 0x00000020:   ---
+# 0x00000024:   ---
+# 0x00000028:   ---
+# 0x0000001c:   JAL	zero, 0		, target = 0x0000001c 
+# 0x00000020:   ---
+# 0x00000024:   ---
+# 0x00000028:   ---
+# 0x0000001c:   JAL	zero, 0		, target = 0x0000001c 
+# 0x00000020:   ---
+# 0x00000024:   ---
+# 0x00000028:   ---
+# 0x0000001c:   JAL	zero, 0		, target = 0x0000001c 
+# 0x00000020:   ---
+# 0x00000024:   ---
+# 0x00000028:   ---
+# 0x0000001c:   JAL	zero, 0		, target = 0x0000001c 
+# 0x00000020:   ---
+# 0x00000024:   ---
+# 0x00000028:   ---
+# 0x0000001c:   JAL	zero, 0		, target = 0x0000001c 
+# 0x00000020:   ---
+# 0x00000024:   ---
+# 0x00000028:   ---
+# 0x0000001c:   JAL	zero, 0		, target = 0x0000001c 
+# 0x00000020:   ---
+# 0x00000024:   ---
+# 0x00000028:   ---
+# 0x0000001c:   JAL	zero, 0		, target = 0x0000001c 
+# 0x00000020:   ---
+# 0x00000024:   ---
+# 0x00000028:   ---
+# 0x0000001c:   JAL	zero, 0		, target = 0x0000001c 
+# 0x00000020:   ---
+# 0x00000024:   ---
+# 0x00000028:   ---
+# 0x0000001c:   JAL	zero, 0		, target = 0x0000001c 
+# 0x00000020:   ---
+# 0x00000024:   ---
+# 0x00000028:   ---
+# 0x0000001c:   JAL	zero, 0		, target = 0x0000001c 
+# 0x00000020:   ---
+# 0x00000024:   ---
+# 0x00000028:   ---
+# 0x0000001c:   JAL	zero, 0		, target = 0x0000001c 
+# 0x00000020:   ---
+# 0x00000024:   ---
+# 0x00000028:   ---
+# 0x0000001c:   JAL	zero, 0		, target = 0x0000001c 
+# 0x00000020:   ---
+# 0x00000024:   ---
+# 0x00000028:   ---
+# 0x0000001c:   JAL	zero, 0		, target = 0x0000001c 
+# 0x00000020:   ---
+# 0x00000024:   ---
+# 0x00000028:   ---
+# 0x0000001c:   JAL	zero, 0		, target = 0x0000001c 
+# 0x00000020:   ---
+# 0x00000024:   ---
+# 0x00000028:   ---
+# 0x0000001c:   JAL	zero, 0		, target = 0x0000001c 
+# 0x00000020:   ---
+# 0x00000024:   ---
+# 0x00000028:   ---
