@@ -72,3 +72,6 @@ run
 # ** Note: $stop    : clarvi_debug.sv(44)
 #    Time: 14250 ns  Iteration: 1  Instance: /clarvi_sim/clarvi/clarvi
 # Break in Module clarvi at clarvi_debug.sv line 44
+# FATAL ERROR: Unable to read lock file necessary for use of uncounted nodelocked license. Exiting.
+# End time: 17:36:02 on Nov 27,2017, Elapsed time: 0:05:00
+# Errors: 4, Warnings: 2

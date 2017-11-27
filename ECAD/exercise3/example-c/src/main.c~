@@ -31,7 +31,7 @@ int get_binary_coded_time() {
 
 int main(void)
 {
-	while (1) {
+	while (true) {
 	    int value = get_binary_coded_time();	
 	    hex_output(value);
 	}

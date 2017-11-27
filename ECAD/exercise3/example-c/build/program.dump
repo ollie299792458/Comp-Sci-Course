@@ -1,0 +1,184 @@
+
+build/program.elf:     file format elf32-littleriscv
+
+Contents of section .text.init:
+ 0000 17010100 130101fe 97020000 93824201  ..............B.
+ 0010 73905230 ef00001a 73000000 6f000000  s.R0....s...o...
+Contents of section .text:
+ 0020 130101fe 23201100 93020000 13030000  ....# ..........
+ 0030 130f1000 130ef0ff 63940500 73000000  ........c...s...
+ 0040 9303f001 13131300 b31e7f00 b37fd501  ................
+ 0050 b3df7f00 3363f301 6346b300 3303b340  ....3c..cF..3..@
+ 0060 b3e2d201 9383f3ff e39ec3fd 13850200  ................
+ 0070 93050300 83200100 13010102 67800000  ..... ......g...
+ 0080 e30000fa 13850500 67800000 732510c0  ........g...s%..
+ 0090 67800000 130101fd 23268102 13040103  g.......#&......
+ 00a0 232ea4fc b7070004 93870708 2326f4fe  #...........#&..
+ 00b0 8327c4fe 0327c4fd 23a0e700 13000000  .'...'..#.......
+ 00c0 0324c102 13010103 67800000 130101fe  .$......g.......
+ 00d0 232e8100 13040102 2326a4fe 8327c4fe  #.......#&...'..
+ 00e0 7390277b 13000000 0324c101 13010102  s.'{.....$......
+ 00f0 67800000 130101fe 232e1100 232c8100  g.......#...#,..
+ 0100 13040102 eff09ff8 2326a4fe 9305a000  ........#&......
+ 0110 0325c4fe eff0dff0 2326a4fe 93054006  .%......#&....@.
+ 0120 0325c4fe eff0dff5 2324a4fe 93054006  .%......#$....@.
+ 0130 0325c4fe eff0dfee 2326a4fe 9305c003  .%......#&......
+ 0140 0325c4fe eff0dff3 93070500 93978700  .%..............
+ 0150 032784fe b307f700 2324f4fe 9305c003  .'......#$......
+ 0160 0325c4fe eff0dfeb 2326a4fe 9305c003  .%......#&......
+ 0170 0325c4fe eff0dff0 93070500 93970701  .%..............
+ 0180 032784fe b307f700 2324f4fe 9305c003  .'......#$......
+ 0190 0325c4fe eff0dfe8 2326a4fe 832784fe  .%......#&...'..
+ 01a0 13850700 8320c101 03248101 13010102  ..... ...$......
+ 01b0 67800000 130101fe 232e1100 232c8100  g.......#...#,..
+ 01c0 13040102 eff01ff3 2326a4fe 0325c4fe  ........#&...%..
+ 01d0 eff05fec 6ff01fff                    .._.o...        
+Contents of section .comment:
+ 0000 4743433a 2028474e 55292037 2e312e30  GCC: (GNU) 7.1.0
+ 0010 00                                   .               
+
+Disassembly of section .text.init:
+
+00000000 <entry>:
+   0:	00010117          	auipc	sp,0x10
+   4:	fe010113          	addi	sp,sp,-32 # ffe0 <main+0xfe2c>
+   8:	00000297          	auipc	t0,0x0
+   c:	01428293          	addi	t0,t0,20 # 1c <end>
+  10:	30529073          	csrw	mtvec,t0
+  14:	1a0000ef          	jal	ra,1b4 <main>
+  18:	00000073          	ecall
+
+0000001c <end>:
+  1c:	0000006f          	j	1c <end>
+
+Disassembly of section .text:
+
+00000020 <div>:
+  20:	fe010113          	addi	sp,sp,-32
+  24:	00112023          	sw	ra,0(sp)
+  28:	00000293          	li	t0,0
+  2c:	00000313          	li	t1,0
+  30:	00100f13          	li	t5,1
+  34:	fff00e13          	li	t3,-1
+  38:	00059463          	bnez	a1,40 <divnotzero>
+  3c:	00000073          	ecall
+
+00000040 <divnotzero>:
+  40:	01f00393          	li	t2,31
+
+00000044 <divloop>:
+  44:	00131313          	slli	t1,t1,0x1
+  48:	007f1eb3          	sll	t4,t5,t2
+  4c:	01d57fb3          	and	t6,a0,t4
+  50:	007fdfb3          	srl	t6,t6,t2
+  54:	01f36333          	or	t1,t1,t6
+  58:	00b34663          	blt	t1,a1,64 <enddivloopif>
+  5c:	40b30333          	sub	t1,t1,a1
+  60:	01d2e2b3          	or	t0,t0,t4
+
+00000064 <enddivloopif>:
+  64:	fff38393          	addi	t2,t2,-1
+  68:	fdc39ee3          	bne	t2,t3,44 <divloop>
+  6c:	00028513          	mv	a0,t0
+  70:	00030593          	mv	a1,t1
+  74:	00012083          	lw	ra,0(sp)
+  78:	02010113          	addi	sp,sp,32
+  7c:	00008067          	ret
+
+00000080 <rem>:
+  80:	fa0000e3          	beqz	zero,20 <div>
+  84:	00058513          	mv	a0,a1
+  88:	00008067          	ret
+
+0000008c <get_time>:
+  8c:	c0102573          	rdtime	a0
+  90:	00008067          	ret
+
+00000094 <hex_output>:
+  94:	fd010113          	addi	sp,sp,-48
+  98:	02812623          	sw	s0,44(sp)
+  9c:	03010413          	addi	s0,sp,48
+  a0:	fca42e23          	sw	a0,-36(s0)
+  a4:	040007b7          	lui	a5,0x4000
+  a8:	08078793          	addi	a5,a5,128 # 4000080 <__sp+0x3ff0080>
+  ac:	fef42623          	sw	a5,-20(s0)
+  b0:	fec42783          	lw	a5,-20(s0)
+  b4:	fdc42703          	lw	a4,-36(s0)
+  b8:	00e7a023          	sw	a4,0(a5)
+  bc:	00000013          	nop
+  c0:	02c12403          	lw	s0,44(sp)
+  c4:	03010113          	addi	sp,sp,48
+  c8:	00008067          	ret
+
+000000cc <debug_print>:
+  cc:	fe010113          	addi	sp,sp,-32
+  d0:	00812e23          	sw	s0,28(sp)
+  d4:	02010413          	addi	s0,sp,32
+  d8:	fea42623          	sw	a0,-20(s0)
+  dc:	fec42783          	lw	a5,-20(s0)
+  e0:	7b279073          	csrw	dscratch,a5
+  e4:	00000013          	nop
+  e8:	01c12403          	lw	s0,28(sp)
+  ec:	02010113          	addi	sp,sp,32
+  f0:	00008067          	ret
+
+000000f4 <get_binary_coded_time>:
+  f4:	fe010113          	addi	sp,sp,-32
+  f8:	00112e23          	sw	ra,28(sp)
+  fc:	00812c23          	sw	s0,24(sp)
+ 100:	02010413          	addi	s0,sp,32
+ 104:	f89ff0ef          	jal	ra,8c <get_time>
+ 108:	fea42623          	sw	a0,-20(s0)
+ 10c:	00a00593          	li	a1,10
+ 110:	fec42503          	lw	a0,-20(s0)
+ 114:	f0dff0ef          	jal	ra,20 <div>
+ 118:	fea42623          	sw	a0,-20(s0)
+ 11c:	06400593          	li	a1,100
+ 120:	fec42503          	lw	a0,-20(s0)
+ 124:	f5dff0ef          	jal	ra,80 <rem>
+ 128:	fea42423          	sw	a0,-24(s0)
+ 12c:	06400593          	li	a1,100
+ 130:	fec42503          	lw	a0,-20(s0)
+ 134:	eedff0ef          	jal	ra,20 <div>
+ 138:	fea42623          	sw	a0,-20(s0)
+ 13c:	03c00593          	li	a1,60
+ 140:	fec42503          	lw	a0,-20(s0)
+ 144:	f3dff0ef          	jal	ra,80 <rem>
+ 148:	00050793          	mv	a5,a0
+ 14c:	00879793          	slli	a5,a5,0x8
+ 150:	fe842703          	lw	a4,-24(s0)
+ 154:	00f707b3          	add	a5,a4,a5
+ 158:	fef42423          	sw	a5,-24(s0)
+ 15c:	03c00593          	li	a1,60
+ 160:	fec42503          	lw	a0,-20(s0)
+ 164:	ebdff0ef          	jal	ra,20 <div>
+ 168:	fea42623          	sw	a0,-20(s0)
+ 16c:	03c00593          	li	a1,60
+ 170:	fec42503          	lw	a0,-20(s0)
+ 174:	f0dff0ef          	jal	ra,80 <rem>
+ 178:	00050793          	mv	a5,a0
+ 17c:	01079793          	slli	a5,a5,0x10
+ 180:	fe842703          	lw	a4,-24(s0)
+ 184:	00f707b3          	add	a5,a4,a5
+ 188:	fef42423          	sw	a5,-24(s0)
+ 18c:	03c00593          	li	a1,60
+ 190:	fec42503          	lw	a0,-20(s0)
+ 194:	e8dff0ef          	jal	ra,20 <div>
+ 198:	fea42623          	sw	a0,-20(s0)
+ 19c:	fe842783          	lw	a5,-24(s0)
+ 1a0:	00078513          	mv	a0,a5
+ 1a4:	01c12083          	lw	ra,28(sp)
+ 1a8:	01812403          	lw	s0,24(sp)
+ 1ac:	02010113          	addi	sp,sp,32
+ 1b0:	00008067          	ret
+
+000001b4 <main>:
+ 1b4:	fe010113          	addi	sp,sp,-32
+ 1b8:	00112e23          	sw	ra,28(sp)
+ 1bc:	00812c23          	sw	s0,24(sp)
+ 1c0:	02010413          	addi	s0,sp,32
+ 1c4:	f31ff0ef          	jal	ra,f4 <get_binary_coded_time>
+ 1c8:	fea42623          	sw	a0,-20(s0)
+ 1cc:	fec42503          	lw	a0,-20(s0)
+ 1d0:	ec5ff0ef          	jal	ra,94 <hex_output>
+ 1d4:	ff1ff06f          	j	1c4 <main+0x10>
