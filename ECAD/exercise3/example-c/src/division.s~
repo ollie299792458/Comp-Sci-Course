@@ -69,6 +69,6 @@ div:
 	
 .global rem
 rem:
-    beq zero,zero div
-    mv a0,a1
+    call div
+    mv a0, a1
     ret

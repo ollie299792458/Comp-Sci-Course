@@ -69,6 +69,12 @@ div:
 	
 .global rem
 rem:
-    beq zero, zero, div
+    addi sp,sp,-32	# Allocate stack space
+	# store any callee-saved register you might overwrite
+	sw ra, 0(sp)
+    call div
     mv a0, a1
-    ret
+    # load every register you stored above
+	lw ra, 0(sp)
+	addi sp,sp,32 	# Free up stack space
+	ret
