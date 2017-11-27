@@ -40,7 +40,7 @@ void main(void) {
 	    
 	    x += calculate_change(left, lastleft);
 	    y += calculate_change(right, lastright);
-	    
+	    x++;
 	    vid_set_pixel(x, y, PIXEL_WHITE);
 	    lastleft = left;
 	    lastright = right;
