@@ -1288,3 +1288,439 @@ VirtualBox VM 5.0.40_Ubuntu r115130 linux.amd64 (Apr 20 2017 06:58:05) release l
 00:00:12.600621 GUI: UIMachineViewNormal::adjustGuestScreenSize: Adjust guest-screen size if necessary.
 00:00:12.600632 GUI: UISession::sltAdditionsChange: GA state change event came, notifying listeners.
 00:00:12.600641 GUI: UIMachineLogicNormal::sltCheckForRequestedVisualStateType: Requested-state=0, Machine-state=5
+00:38:52.700373 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 1600x818
+00:38:52.700745 VMMDev: SetVideoModeHint: Got a video mode hint (1600x818x32)@(0x0),(1;0) at 0
+00:38:53.763172 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 640x480
+00:38:53.763321 VMMDev: SetVideoModeHint: Got a video mode hint (640x480x32)@(0x0),(1;0) at 0
+00:38:55.781426 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 0, flags 0x5
+00:38:55.781571 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=0 cbLine=0xC80 flags=0x5
+00:38:55.781691 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+00:38:55.781902 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+00:38:55.781978 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+00:38:55.782050 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Using fallback buffer since no source bitmap is provided
+00:38:55.782814 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+00:38:55.803913 VBVA: InfoScreen: [0] @0,0 640x480, line 0xa00, BPP 0, flags 0x5
+00:38:55.803986 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=640 h=480 bpp=0 cbLine=0xA00 flags=0x5
+00:38:55.807615 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=640x480, Sending to async-handler
+00:38:55.807706 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=640x480
+00:38:55.807738 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=640x480
+00:38:55.807756 GUI: UIFrameBufferPrivate::performResize: Size=640x480, Using fallback buffer since no source bitmap is provided
+00:38:55.808020 VBVA: InfoScreen: [0] @0,0 640x480, line 0xa00, BPP 32, flags 0x1
+00:38:55.808048 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=640 h=480 bpp=32 cbLine=0xA00 flags=0x1
+00:38:55.808153 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=640x480, Sending to async-handler
+00:38:55.808284 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 640x480
+00:38:55.829420 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 640x480
+00:38:55.829472 VMMDev: SetVideoModeHint: Got a video mode hint (640x480x32)@(0x0),(1;0) at 0
+00:38:55.829547 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=640x480
+00:38:55.829559 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=640x480
+00:38:55.829569 GUI: UIFrameBufferPrivate::performResize: Size=640x480, Directly using source bitmap content
+00:38:55.830970 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 640x480
+00:38:55.838758 GUI: UIMediumEnumerator: Machine (or snapshot) event received, ID = 7afb9663-15ad-4725-80b3-248a228cff45
+00:38:55.838809 GUI: UIMediumEnumerator:  Old usage: 871c41fa-371f-4aaf-ab94-fb2b40eb7457, f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5
+00:38:55.839866 GUI: UIMediumEnumerator:  New usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
+00:38:55.839900 GUI: UIMediumEnumerator:  Items currently in usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
+00:38:55.839986 GUI: UIMediumEnumerator: Machine (or snapshot) event processed, ID = 7afb9663-15ad-4725-80b3-248a228cff45
+00:38:55.856307 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:38:56.146310 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 800x818
+00:38:56.146499 VMMDev: SetVideoModeHint: Got a video mode hint (800x818x32)@(0x0),(1;0) at 0
+00:38:58.178267 VBVA: InfoScreen: [0] @0,0 640x480, line 0xc80, BPP 32, flags 0x1
+00:38:58.178362 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=640 h=480 bpp=32 cbLine=0xC80 flags=0x1
+00:38:58.178451 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=640x480, Sending to async-handler
+00:38:58.178617 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=640x480
+00:38:58.178661 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=640x480
+00:38:58.178695 GUI: UIFrameBufferPrivate::performResize: Size=640x480, Directly using source bitmap content
+00:38:58.178855 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 640x480
+00:38:58.213456 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 32, flags 0x1
+00:38:58.213509 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=32 cbLine=0xC80 flags=0x1
+00:38:58.213572 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+00:38:58.213670 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+00:38:58.213687 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+00:38:58.213701 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Directly using source bitmap content
+00:38:58.213888 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+00:38:58.237431 GUI: UIMediumEnumerator: Machine (or snapshot) event received, ID = 7afb9663-15ad-4725-80b3-248a228cff45
+00:38:58.237529 GUI: UIMediumEnumerator:  Old usage: 871c41fa-371f-4aaf-ab94-fb2b40eb7457, f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5
+00:38:58.239628 GUI: UIMediumEnumerator:  New usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
+00:38:58.239724 GUI: UIMediumEnumerator:  Items currently in usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
+00:38:58.240342 GUI: UIMediumEnumerator: Machine (or snapshot) event processed, ID = 7afb9663-15ad-4725-80b3-248a228cff45
+00:38:58.281646 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:38:58.569502 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 800x818
+00:38:58.569654 VMMDev: SetVideoModeHint: Got a video mode hint (800x818x32)@(0x0),(1;0) at 0
+00:54:53.009992 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 1600x818
+00:54:53.010115 VMMDev: SetVideoModeHint: Got a video mode hint (1600x818x32)@(0x0),(1;0) at 0
+00:54:55.041298 VBVA: InfoScreen: [0] @0,0 800x818, line 0x1900, BPP 32, flags 0x1
+00:54:55.041384 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=32 cbLine=0x1900 flags=0x1
+00:54:55.041472 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+00:54:55.041613 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+00:54:55.041668 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+00:54:55.041709 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Directly using source bitmap content
+00:54:55.041885 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+00:54:55.066820 VBVA: InfoScreen: [0] @0,0 1600x818, line 0x1900, BPP 32, flags 0x1
+00:54:55.066872 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=1600 h=818 bpp=32 cbLine=0x1900 flags=0x1
+00:54:55.069637 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=1600x818, Sending to async-handler
+00:54:55.071656 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=1600x818
+00:54:55.071694 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=1600x818
+00:54:55.071711 GUI: UIFrameBufferPrivate::performResize: Size=1600x818, Directly using source bitmap content
+00:54:55.071834 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 1600x818
+00:54:55.108332 GUI: UIMediumEnumerator: Machine (or snapshot) event received, ID = 7afb9663-15ad-4725-80b3-248a228cff45
+00:54:55.108384 GUI: UIMediumEnumerator:  Old usage: 871c41fa-371f-4aaf-ab94-fb2b40eb7457, f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5
+00:54:55.110979 GUI: UIMediumEnumerator:  New usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
+00:54:55.111021 GUI: UIMediumEnumerator:  Items currently in usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
+00:54:55.111107 GUI: UIMediumEnumerator: Machine (or snapshot) event processed, ID = 7afb9663-15ad-4725-80b3-248a228cff45
+00:54:55.133721 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:54:56.258781 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 640x480
+00:54:56.258929 VMMDev: SetVideoModeHint: Got a video mode hint (640x480x32)@(0x0),(1;0) at 0
+00:54:56.783763 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 800x818
+00:54:56.784000 VMMDev: SetVideoModeHint: Got a video mode hint (800x818x32)@(0x0),(1;0) at 0
+00:54:58.801607 VBVA: InfoScreen: [0] @0,0 1600x818, line 0x1900, BPP 0, flags 0x5
+00:54:58.801733 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=1600 h=818 bpp=0 cbLine=0x1900 flags=0x5
+00:54:58.801823 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=1600x818, Sending to async-handler
+00:54:58.801981 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=1600x818
+00:54:58.802077 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=1600x818
+00:54:58.802145 GUI: UIFrameBufferPrivate::performResize: Size=1600x818, Using fallback buffer since no source bitmap is provided
+00:54:58.803077 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 1600x818
+00:54:58.819224 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 0, flags 0x5
+00:54:58.819291 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=0 cbLine=0xC80 flags=0x5
+00:54:58.823359 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+00:54:58.823490 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+00:54:58.823513 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+00:54:58.823523 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Using fallback buffer since no source bitmap is provided
+00:54:58.823650 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 32, flags 0x1
+00:54:58.823748 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=32 cbLine=0xC80 flags=0x1
+00:54:58.823803 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+00:54:58.824159 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+00:54:58.839991 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+00:54:58.840033 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+00:54:58.840043 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Directly using source bitmap content
+00:54:58.840147 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+00:54:58.844877 GUI: UIMediumEnumerator: Machine (or snapshot) event received, ID = 7afb9663-15ad-4725-80b3-248a228cff45
+00:54:58.844928 GUI: UIMediumEnumerator:  Old usage: 871c41fa-371f-4aaf-ab94-fb2b40eb7457, f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5
+00:54:58.851675 GUI: UIMediumEnumerator:  New usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
+00:54:58.851797 GUI: UIMediumEnumerator:  Items currently in usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
+00:54:58.856832 GUI: UIMediumEnumerator: Machine (or snapshot) event processed, ID = 7afb9663-15ad-4725-80b3-248a228cff45
+00:54:58.898139 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:54:59.179345 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 800x818
+00:54:59.179521 VMMDev: SetVideoModeHint: Got a video mode hint (800x818x32)@(0x0),(1;0) at 0
+00:57:45.617089 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 1600x818
+00:57:45.617339 VMMDev: SetVideoModeHint: Got a video mode hint (1600x818x32)@(0x0),(1;0) at 0
+00:57:46.241328 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 640x480
+00:57:46.241525 VMMDev: SetVideoModeHint: Got a video mode hint (640x480x32)@(0x0),(1;0) at 0
+00:57:48.255163 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 0, flags 0x5
+00:57:48.255281 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=0 cbLine=0xC80 flags=0x5
+00:57:48.255368 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+00:57:48.255499 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+00:57:48.255573 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+00:57:48.255621 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Using fallback buffer since no source bitmap is provided
+00:57:48.256088 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+00:57:48.276586 VBVA: InfoScreen: [0] @0,0 640x480, line 0xa00, BPP 0, flags 0x5
+00:57:48.276703 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=640 h=480 bpp=0 cbLine=0xA00 flags=0x5
+00:57:48.279215 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=640x480, Sending to async-handler
+00:57:48.279516 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=640x480
+00:57:48.279576 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=640x480
+00:57:48.279613 GUI: UIFrameBufferPrivate::performResize: Size=640x480, Using fallback buffer since no source bitmap is provided
+00:57:48.279706 VBVA: InfoScreen: [0] @0,0 640x480, line 0xa00, BPP 32, flags 0x1
+00:57:48.279761 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=640 h=480 bpp=32 cbLine=0xA00 flags=0x1
+00:57:48.279885 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=640x480, Sending to async-handler
+00:57:48.280136 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 640x480
+00:57:48.314751 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=640x480
+00:57:48.316265 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=640x480
+00:57:48.316285 GUI: UIFrameBufferPrivate::performResize: Size=640x480, Directly using source bitmap content
+00:57:48.318641 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 640x480
+00:57:48.329738 GUI: UIMediumEnumerator: Machine (or snapshot) event received, ID = 7afb9663-15ad-4725-80b3-248a228cff45
+00:57:48.329780 GUI: UIMediumEnumerator:  Old usage: 871c41fa-371f-4aaf-ab94-fb2b40eb7457, f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5
+00:57:48.330704 GUI: UIMediumEnumerator:  New usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
+00:57:48.330726 GUI: UIMediumEnumerator:  Items currently in usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
+00:57:48.330811 GUI: UIMediumEnumerator: Machine (or snapshot) event processed, ID = 7afb9663-15ad-4725-80b3-248a228cff45
+00:57:48.352618 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:57:48.636353 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 640x513
+00:57:48.636565 VMMDev: SetVideoModeHint: Got a video mode hint (640x513x32)@(0x0),(1;0) at 0
+00:57:50.411973 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 800x818
+00:57:50.412210 VMMDev: SetVideoModeHint: Got a video mode hint (800x818x32)@(0x0),(1;0) at 0
+00:57:52.429426 VBVA: InfoScreen: [0] @0,0 640x480, line 0xc80, BPP 32, flags 0x1
+00:57:52.429504 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=640 h=480 bpp=32 cbLine=0xC80 flags=0x1
+00:57:52.429558 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=640x480, Sending to async-handler
+00:57:52.429666 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=640x480
+00:57:52.429699 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=640x480
+00:57:52.429729 GUI: UIFrameBufferPrivate::performResize: Size=640x480, Directly using source bitmap content
+00:57:52.429881 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 640x480
+00:57:52.461858 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 32, flags 0x1
+00:57:52.461924 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=32 cbLine=0xC80 flags=0x1
+00:57:52.462001 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+00:57:52.462089 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+00:57:52.462121 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+00:57:52.462159 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Directly using source bitmap content
+00:57:52.462561 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+00:57:52.495976 GUI: UIMediumEnumerator: Machine (or snapshot) event received, ID = 7afb9663-15ad-4725-80b3-248a228cff45
+00:57:52.496065 GUI: UIMediumEnumerator:  Old usage: 871c41fa-371f-4aaf-ab94-fb2b40eb7457, f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5
+00:57:52.506440 GUI: UIMediumEnumerator:  New usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
+00:57:52.506546 GUI: UIMediumEnumerator:  Items currently in usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
+00:57:52.506692 GUI: UIMediumEnumerator: Machine (or snapshot) event processed, ID = 7afb9663-15ad-4725-80b3-248a228cff45
+00:57:52.544468 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:57:52.828323 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 800x818
+00:57:52.828406 VMMDev: SetVideoModeHint: Got a video mode hint (800x818x32)@(0x0),(1;0) at 0
+01:31:00.306192 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 0, flags 0x5
+01:31:00.306234 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=0 cbLine=0xC80 flags=0x5
+01:31:00.306284 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+01:31:00.306337 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+01:31:00.306355 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+01:31:00.306370 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 0, flags 0x5
+01:31:00.306713 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=0 cbLine=0xC80 flags=0x5
+01:31:00.306729 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Using fallback buffer since no source bitmap is provided
+01:31:00.306749 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+01:31:00.306926 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+01:31:00.308800 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+01:31:00.308823 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+01:31:00.308832 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Using fallback buffer since no source bitmap is provided
+01:31:00.309002 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+01:34:11.119828 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 32, flags 0x1
+01:34:11.119922 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=32 cbLine=0xC80 flags=0x1
+01:34:11.120011 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+01:34:11.120153 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+01:34:11.120214 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+01:34:11.120249 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Directly using source bitmap content
+01:34:11.120504 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+01:41:48.051803 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 0, flags 0x5
+01:41:48.051954 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=0 cbLine=0xC80 flags=0x5
+01:41:48.052060 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+01:41:48.052251 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+01:41:48.052338 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+01:41:48.052403 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Using fallback buffer since no source bitmap is provided
+01:41:48.052700 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 0, flags 0x5
+01:41:48.052761 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=0 cbLine=0xC80 flags=0x5
+01:41:48.052841 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+01:41:48.053174 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+01:41:48.061582 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+01:41:48.061664 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+01:41:48.061698 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Using fallback buffer since no source bitmap is provided
+01:41:48.062223 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+01:46:48.052332 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 0, flags 0x5
+01:46:48.052532 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=0 cbLine=0xC80 flags=0x5
+01:46:48.052626 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+01:46:48.052785 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+01:46:48.052853 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+01:46:48.052897 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Using fallback buffer since no source bitmap is provided
+01:46:48.053399 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+01:59:51.680270 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 32, flags 0x1
+01:59:51.680309 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=32 cbLine=0xC80 flags=0x1
+01:59:51.680336 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+01:59:51.680401 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+01:59:51.680417 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+01:59:51.680426 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Directly using source bitmap content
+01:59:51.680527 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+02:04:51.845701 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 0, flags 0x5
+02:04:51.845812 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=0 cbLine=0xC80 flags=0x5
+02:04:51.845913 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+02:04:51.846072 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+02:04:51.846150 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+02:04:51.846203 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 0, flags 0x5
+02:04:51.846279 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=0 cbLine=0xC80 flags=0x5
+02:04:51.846357 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+02:04:51.848513 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Using fallback buffer since no source bitmap is provided
+02:04:51.849241 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+02:04:51.864916 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+02:04:51.865017 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+02:04:51.865058 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Using fallback buffer since no source bitmap is provided
+02:04:51.865665 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+02:06:45.989660 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 32, flags 0x1
+02:06:45.989735 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=32 cbLine=0xC80 flags=0x1
+02:06:45.989793 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+02:06:45.989866 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+02:06:45.989902 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+02:06:45.989928 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Directly using source bitmap content
+02:06:45.990077 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+02:12:39.826946 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 0, flags 0x5
+02:12:39.827078 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=0 cbLine=0xC80 flags=0x5
+02:12:39.827165 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+02:12:39.827362 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+02:12:39.827432 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+02:12:39.827492 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 0, flags 0x5
+02:12:39.827553 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=0 cbLine=0xC80 flags=0x5
+02:12:39.827606 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Using fallback buffer since no source bitmap is provided
+02:12:39.827727 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+02:12:39.828165 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+02:12:39.836374 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+02:12:39.836445 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+02:12:39.836501 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Using fallback buffer since no source bitmap is provided
+02:12:39.836959 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+02:15:29.501949 Pausing VM execution, reason 'host suspend'
+02:15:29.502007 Changing the VM state from 'RUNNING' to 'SUSPENDING'
+02:15:29.510503 AIOMgr: pdmacFileEpInitialize: RTFileOpen /home/oliver/Documents/Git Reps/Comp-Sci-Course/ECAD/ECAD-Labs.vmdk / 000c0781 failed with VERR_INVALID_PARAMETER
+02:15:29.510661 AIOMgr: Endpoint for file '/home/oliver/Documents/Git Reps/Comp-Sci-Course/ECAD/ECAD-Labs.vmdk' (flags 00000781) created successfully
+02:15:29.622634 PDMR3Suspend: 120 598 593 ns run time
+02:15:29.622665 Changing the VM state from 'SUSPENDING' to 'SUSPENDED'
+02:15:29.622679 Console: Machine state changed to 'Paused'
+02:15:39.725082 Resuming VM execution, reason 'host resume'
+02:15:39.725147 Changing the VM state from 'SUSPENDED' to 'RESUMING'
+02:15:39.725274 AIOMgr: pdmacFileEpInitialize: RTFileOpen /home/oliver/Documents/Git Reps/Comp-Sci-Course/ECAD/ECAD-Labs.vmdk / 000c0723 failed with VERR_INVALID_PARAMETER
+02:15:39.725348 AIOMgr: Endpoint for file '/home/oliver/Documents/Git Reps/Comp-Sci-Course/ECAD/ECAD-Labs.vmdk' (flags 00000723) created successfully
+02:15:39.730792 NAT: resolv.conf: nameserver 127.0.1.1
+02:15:39.730832 NAT: DNS#0: 127.0.1.1
+02:15:39.731084 Changing the VM state from 'RESUMING' to 'RUNNING'
+02:15:39.731112 Console: Machine state changed to 'Running'
+02:17:49.871358 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 0, flags 0x5
+02:17:49.871481 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=0 cbLine=0xC80 flags=0x5
+02:17:49.871583 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+02:17:49.871775 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+02:17:49.871851 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+02:17:49.871885 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Using fallback buffer since no source bitmap is provided
+02:17:49.872408 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+02:23:23.520219 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 32, flags 0x1
+02:23:23.520511 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=32 cbLine=0xC80 flags=0x1
+02:23:23.520832 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+02:23:23.524676 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+02:23:23.524769 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+02:23:23.524815 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Directly using source bitmap content
+02:23:23.525137 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+03:41:55.575328 Pausing VM execution, reason 'host suspend'
+03:41:55.576472 Changing the VM state from 'RUNNING' to 'SUSPENDING'
+03:41:55.602128 AIOMgr: pdmacFileEpInitialize: RTFileOpen /home/oliver/Documents/Git Reps/Comp-Sci-Course/ECAD/ECAD-Labs.vmdk / 000c0781 failed with VERR_INVALID_PARAMETER
+03:41:55.602574 AIOMgr: Endpoint for file '/home/oliver/Documents/Git Reps/Comp-Sci-Course/ECAD/ECAD-Labs.vmdk' (flags 00000781) created successfully
+03:41:55.614776 PDMR3Suspend: 38 300 610 ns run time
+03:41:55.614805 Changing the VM state from 'SUSPENDING' to 'SUSPENDED'
+03:41:55.614820 Console: Machine state changed to 'Paused'
+03:42:04.733027 Resuming VM execution, reason 'host resume'
+03:42:04.733081 Changing the VM state from 'SUSPENDED' to 'RESUMING'
+03:42:04.733715 AIOMgr: pdmacFileEpInitialize: RTFileOpen /home/oliver/Documents/Git Reps/Comp-Sci-Course/ECAD/ECAD-Labs.vmdk / 000c0723 failed with VERR_INVALID_PARAMETER
+03:42:04.733799 AIOMgr: Endpoint for file '/home/oliver/Documents/Git Reps/Comp-Sci-Course/ECAD/ECAD-Labs.vmdk' (flags 00000723) created successfully
+03:42:04.740885 NAT: resolv.conf: nameserver 127.0.1.1
+03:42:04.740920 NAT: DNS#0: 127.0.1.1
+03:42:04.741082 Changing the VM state from 'RESUMING' to 'RUNNING'
+03:42:04.741097 Console: Machine state changed to 'Running'
+03:46:49.411673 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 0, flags 0x5
+03:46:49.411808 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=0 cbLine=0xC80 flags=0x5
+03:46:49.411973 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+03:46:49.412185 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+03:46:49.412261 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+03:46:49.412314 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Using fallback buffer since no source bitmap is provided
+03:46:49.412374 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 0, flags 0x5
+03:46:49.412429 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=0 cbLine=0xC80 flags=0x5
+03:46:49.412555 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+03:46:49.412966 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+03:46:49.422707 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+03:46:49.422781 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+03:46:49.422812 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Using fallback buffer since no source bitmap is provided
+03:46:49.423268 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+03:51:49.410766 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 0, flags 0x5
+03:51:49.410946 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=0 cbLine=0xC80 flags=0x5
+03:51:49.411072 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+03:51:49.411315 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+03:51:49.411400 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+03:51:49.411440 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Using fallback buffer since no source bitmap is provided
+03:51:49.412113 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+03:54:37.617202 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 32, flags 0x1
+03:54:37.617368 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=32 cbLine=0xC80 flags=0x1
+03:54:37.617505 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+03:54:37.618240 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+03:54:37.618337 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+03:54:37.618391 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Directly using source bitmap content
+03:54:37.618690 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+04:28:17.780054 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 1600x818
+04:28:17.780183 VMMDev: SetVideoModeHint: Got a video mode hint (1600x818x32)@(0x0),(1;0) at 0
+04:28:18.497258 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 640x513
+04:28:18.497365 VMMDev: SetVideoModeHint: Got a video mode hint (640x513x32)@(0x0),(1;0) at 0
+04:28:20.510747 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 0, flags 0x5
+04:28:20.510873 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=0 cbLine=0xC80 flags=0x5
+04:28:20.510977 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+04:28:20.511173 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+04:28:20.511244 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+04:28:20.511297 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Using fallback buffer since no source bitmap is provided
+04:28:20.511850 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+04:28:20.528133 VBVA: InfoScreen: [0] @0,0 640x513, line 0xa00, BPP 0, flags 0x5
+04:28:20.528250 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=640 h=513 bpp=0 cbLine=0xA00 flags=0x5
+04:28:20.535866 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=640x513, Sending to async-handler
+04:28:20.536096 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 800x818
+04:28:20.536246 VMMDev: SetVideoModeHint: Got a video mode hint (800x818x0)@(0x0),(1;0) at 0
+04:28:20.536360 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=640x513
+04:28:20.536398 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=640x513
+04:28:20.536520 GUI: UIFrameBufferPrivate::performResize: Size=640x513, Using fallback buffer since no source bitmap is provided
+04:28:20.537030 VBVA: InfoScreen: [0] @0,0 640x513, line 0xa00, BPP 32, flags 0x1
+04:28:20.537123 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=640 h=513 bpp=32 cbLine=0xA00 flags=0x1
+04:28:20.537259 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=640x513, Sending to async-handler
+04:28:20.538047 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 640x513
+04:28:20.575534 VBVA: InfoScreen: [0] @0,0 640x513, line 0xc80, BPP 32, flags 0x1
+04:28:20.575585 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=640 h=513 bpp=32 cbLine=0xC80 flags=0x1
+04:28:20.575628 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=640x513, Sending to async-handler
+04:28:20.580252 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=640x513
+04:28:20.580295 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=640x513
+04:28:20.580307 GUI: UIFrameBufferPrivate::performResize: Size=640x513, Directly using source bitmap content
+04:28:20.580532 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 640x513
+04:28:20.584501 GUI: UIMediumEnumerator: Machine (or snapshot) event received, ID = 7afb9663-15ad-4725-80b3-248a228cff45
+04:28:20.584594 GUI: UIMediumEnumerator:  Old usage: 871c41fa-371f-4aaf-ab94-fb2b40eb7457, f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5
+04:28:20.585656 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 32, flags 0x1
+04:28:20.585819 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=32 cbLine=0xC80 flags=0x1
+04:28:20.585938 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+04:28:20.589424 GUI: UIMediumEnumerator:  New usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
+04:28:20.589464 GUI: UIMediumEnumerator:  Items currently in usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
+04:28:20.589664 GUI: UIMediumEnumerator: Machine (or snapshot) event processed, ID = 7afb9663-15ad-4725-80b3-248a228cff45
+04:28:20.589818 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=640x513
+04:28:20.589835 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=640x513
+04:28:20.589854 GUI: UIFrameBufferPrivate::performResize: Size=640x513, Directly using source bitmap content
+04:28:20.590179 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 640x513
+04:28:20.601234 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+04:28:20.601277 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+04:28:20.601369 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+04:28:20.621543 GUI: UIMediumEnumerator: Medium-enumeration finished!
+04:28:20.652504 GUI: UIMediumEnumerator: Machine (or snapshot) event received, ID = 7afb9663-15ad-4725-80b3-248a228cff45
+04:28:20.652553 GUI: UIMediumEnumerator:  Old usage: 871c41fa-371f-4aaf-ab94-fb2b40eb7457, f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5
+04:28:20.654454 GUI: UIMediumEnumerator:  New usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
+04:28:20.654486 GUI: UIMediumEnumerator:  Items currently in usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
+04:28:20.654564 GUI: UIMediumEnumerator: Machine (or snapshot) event processed, ID = 7afb9663-15ad-4725-80b3-248a228cff45
+04:28:20.666969 GUI: UIMediumEnumerator: Medium-enumeration finished!
+04:28:20.873420 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 800x818
+04:28:20.873712 VMMDev: SetVideoModeHint: Got a video mode hint (800x818x32)@(0x0),(1;0) at 0
+04:28:20.943531 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 800x818
+04:28:20.943766 VMMDev: SetVideoModeHint: Got a video mode hint (800x818x32)@(0x0),(1;0) at 0
+04:48:28.720597 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 1600x818
+04:48:28.721781 VMMDev: SetVideoModeHint: Got a video mode hint (1600x818x32)@(0x0),(1;0) at 0
+04:48:30.747987 VBVA: InfoScreen: [0] @0,0 800x818, line 0x1900, BPP 32, flags 0x1
+04:48:30.748102 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=32 cbLine=0x1900 flags=0x1
+04:48:30.748558 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+04:48:30.748749 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+04:48:30.748811 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+04:48:30.748857 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Directly using source bitmap content
+04:48:30.749090 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+04:48:30.767133 VBVA: InfoScreen: [0] @0,0 1600x818, line 0x1900, BPP 32, flags 0x1
+04:48:30.767198 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=1600 h=818 bpp=32 cbLine=0x1900 flags=0x1
+04:48:30.769359 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=1600x818, Sending to async-handler
+04:48:30.770015 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=1600x818
+04:48:30.770055 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=1600x818
+04:48:30.770084 GUI: UIFrameBufferPrivate::performResize: Size=1600x818, Directly using source bitmap content
+04:48:30.770304 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 1600x818
+04:48:30.808908 GUI: UIMediumEnumerator: Machine (or snapshot) event received, ID = 7afb9663-15ad-4725-80b3-248a228cff45
+04:48:30.808973 GUI: UIMediumEnumerator:  Old usage: 871c41fa-371f-4aaf-ab94-fb2b40eb7457, f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5
+04:48:30.809774 GUI: UIMediumEnumerator:  New usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
+04:48:30.809805 GUI: UIMediumEnumerator:  Items currently in usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
+04:48:30.809951 GUI: UIMediumEnumerator: Machine (or snapshot) event processed, ID = 7afb9663-15ad-4725-80b3-248a228cff45
+04:48:30.833458 GUI: UIMediumEnumerator: Medium-enumeration finished!
+04:49:52.126188 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 640x513
+04:49:52.126356 VMMDev: SetVideoModeHint: Got a video mode hint (640x513x32)@(0x0),(1;0) at 0
+04:49:52.536587 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 800x818
+04:49:52.536827 VMMDev: SetVideoModeHint: Got a video mode hint (800x818x32)@(0x0),(1;0) at 0
+04:49:53.966923 VBVA: InfoScreen: [0] @0,0 1600x818, line 0x1900, BPP 0, flags 0x5
+04:49:53.967037 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=1600 h=818 bpp=0 cbLine=0x1900 flags=0x5
+04:49:53.967124 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=1600x818, Sending to async-handler
+04:49:53.967275 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=1600x818
+04:49:53.967332 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=1600x818
+04:49:53.967384 GUI: UIFrameBufferPrivate::performResize: Size=1600x818, Using fallback buffer since no source bitmap is provided
+04:49:53.968291 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 1600x818
+04:49:53.987000 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 0, flags 0x5
+04:49:53.987062 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=0 cbLine=0xC80 flags=0x5
+04:49:53.991010 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+04:49:53.991136 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+04:49:53.991166 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+04:49:53.991181 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Using fallback buffer since no source bitmap is provided
+04:49:53.991495 VBVA: InfoScreen: [0] @0,0 800x818, line 0xc80, BPP 32, flags 0x1
+04:49:53.991519 Display::handleDisplayResize: uScreenId=0 pvVRAM=00007ff68ce00000 w=800 h=818 bpp=32 cbLine=0xC80 flags=0x1
+04:49:53.991566 GUI: UIFrameBufferPrivate::NotifyChange: Screen=0, Origin=0x0, Size=800x818, Sending to async-handler
+04:49:53.991949 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+04:49:54.016014 GUI: UIMachineView::sltHandleNotifyChange: Screen=0, Size=800x818
+04:49:54.016051 GUI: UIFrameBufferPrivate::handleNotifyChange: Size=800x818
+04:49:54.016064 GUI: UIFrameBufferPrivate::performResize: Size=800x818, Directly using source bitmap content
+04:49:54.018935 GUI: UIMachineView::storeGuestSizeHint: Storing guest-screen size-hint for screen 0 as 800x818
+04:49:54.023926 GUI: UIMediumEnumerator: Machine (or snapshot) event received, ID = 7afb9663-15ad-4725-80b3-248a228cff45
+04:49:54.023973 GUI: UIMediumEnumerator:  Old usage: 871c41fa-371f-4aaf-ab94-fb2b40eb7457, f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5
+04:49:54.024468 GUI: UIMediumEnumerator:  New usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
+04:49:54.024494 GUI: UIMediumEnumerator:  Items currently in usage: f1a4e7ac-a61a-4ff7-8db4-00bdce4972d5, 871c41fa-371f-4aaf-ab94-fb2b40eb7457
+04:49:54.024596 GUI: UIMediumEnumerator: Machine (or snapshot) event processed, ID = 7afb9663-15ad-4725-80b3-248a228cff45
+04:49:54.052772 GUI: UIMediumEnumerator: Medium-enumeration finished!
+04:49:54.342597 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 800x818
+04:49:54.342734 VMMDev: SetVideoModeHint: Got a video mode hint (800x818x32)@(0x0),(1;0) at 0
