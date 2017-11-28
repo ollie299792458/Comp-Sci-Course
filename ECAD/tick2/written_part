@@ -1,0 +1,8 @@
+Questions
+1.
+Using the same memory allows us to dynamically change the allocation between instructions and data at runtime.  However it is slower, as you need to wait for instruction reads to finish before you can write.
+
+2.
+You would struggle with memory access, both with regards to concurrency and the bottleneck, unless you added a much more complex memory heirerachy with some independant and some shared memory.
+
+Oliver Black olb22
