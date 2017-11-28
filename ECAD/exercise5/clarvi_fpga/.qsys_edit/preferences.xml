@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="159" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Project,Library/Processors and Peripherals/Peripherals,Library/Basic Functions,Library/Processors and Peripherals,Library" />
+ <window width="1602" height="799" x="-1" y="-1" />
+ <generation synthesis="VERILOG" />
+ <hdlexample language="VERILOG" />
+</preferences>

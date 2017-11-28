@@ -1,0 +1,182 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 656 496)
+	(text "clarvi_soc" (rect 299 -1 340 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 480 20 492)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 61 46 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 288 72)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "displaybuttons_pio_in_external_connection_export[15..0]" (rect 0 0 221 12)(font "Arial" (font_size 8)))
+		(text "displaybuttons_pio_in_external_connection_export[15..0]" (rect 4 101 334 112)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 288 112)(line_width 3))
+	)
+	(port
+		(pt 0 232)
+		(input)
+		(text "left_dial_pio_in_external_connection_export[7..0]" (rect 0 0 192 12)(font "Arial" (font_size 8)))
+		(text "left_dial_pio_in_external_connection_export[7..0]" (rect 4 221 298 232)(font "Arial" (font_size 8)))
+		(line (pt 0 232)(pt 288 232)(line_width 3))
+	)
+	(port
+		(pt 0 424)
+		(input)
+		(text "reset_reset_n" (rect 0 0 56 12)(font "Arial" (font_size 8)))
+		(text "reset_reset_n" (rect 4 413 82 424)(font "Arial" (font_size 8)))
+		(line (pt 0 424)(pt 288 424)(line_width 1))
+	)
+	(port
+		(pt 0 464)
+		(input)
+		(text "right_dial_pio_in_external_connection_export[7..0]" (rect 0 0 197 12)(font "Arial" (font_size 8)))
+		(text "right_dial_pio_in_external_connection_export[7..0]" (rect 4 453 304 464)(font "Arial" (font_size 8)))
+		(line (pt 0 464)(pt 288 464)(line_width 3))
+	)
+	(port
+		(pt 0 152)
+		(output)
+		(text "hex_digits_pio_out_external_connection_export[23..0]" (rect 0 0 212 12)(font "Arial" (font_size 8)))
+		(text "hex_digits_pio_out_external_connection_export[23..0]" (rect 4 141 316 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 288 152)(line_width 3))
+	)
+	(port
+		(pt 0 192)
+		(output)
+		(text "leds_pio_out_external_connection_export[9..0]" (rect 0 0 184 12)(font "Arial" (font_size 8)))
+		(text "leds_pio_out_external_connection_export[9..0]" (rect 4 181 274 192)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 288 192)(line_width 3))
+	)
+	(port
+		(pt 0 272)
+		(output)
+		(text "pixelstream_0_conduit_end_0_lcd_red[7..0]" (rect 0 0 174 12)(font "Arial" (font_size 8)))
+		(text "pixelstream_0_conduit_end_0_lcd_red[7..0]" (rect 4 261 250 272)(font "Arial" (font_size 8)))
+		(line (pt 0 272)(pt 288 272)(line_width 3))
+	)
+	(port
+		(pt 0 288)
+		(output)
+		(text "pixelstream_0_conduit_end_0_lcd_green[7..0]" (rect 0 0 184 12)(font "Arial" (font_size 8)))
+		(text "pixelstream_0_conduit_end_0_lcd_green[7..0]" (rect 4 277 262 288)(font "Arial" (font_size 8)))
+		(line (pt 0 288)(pt 288 288)(line_width 3))
+	)
+	(port
+		(pt 0 304)
+		(output)
+		(text "pixelstream_0_conduit_end_0_lcd_blue[7..0]" (rect 0 0 177 12)(font "Arial" (font_size 8)))
+		(text "pixelstream_0_conduit_end_0_lcd_blue[7..0]" (rect 4 293 256 304)(font "Arial" (font_size 8)))
+		(line (pt 0 304)(pt 288 304)(line_width 3))
+	)
+	(port
+		(pt 0 320)
+		(output)
+		(text "pixelstream_0_conduit_end_0_lcd_hsync" (rect 0 0 166 12)(font "Arial" (font_size 8)))
+		(text "pixelstream_0_conduit_end_0_lcd_hsync" (rect 4 309 226 320)(font "Arial" (font_size 8)))
+		(line (pt 0 320)(pt 288 320)(line_width 1))
+	)
+	(port
+		(pt 0 336)
+		(output)
+		(text "pixelstream_0_conduit_end_0_lcd_vsync" (rect 0 0 167 12)(font "Arial" (font_size 8)))
+		(text "pixelstream_0_conduit_end_0_lcd_vsync" (rect 4 325 226 336)(font "Arial" (font_size 8)))
+		(line (pt 0 336)(pt 288 336)(line_width 1))
+	)
+	(port
+		(pt 0 352)
+		(output)
+		(text "pixelstream_0_conduit_end_0_lcd_de" (rect 0 0 151 12)(font "Arial" (font_size 8)))
+		(text "pixelstream_0_conduit_end_0_lcd_de" (rect 4 341 208 352)(font "Arial" (font_size 8)))
+		(line (pt 0 352)(pt 288 352)(line_width 1))
+	)
+	(port
+		(pt 0 368)
+		(output)
+		(text "pixelstream_0_conduit_end_0_lcd_dclk" (rect 0 0 156 12)(font "Arial" (font_size 8)))
+		(text "pixelstream_0_conduit_end_0_lcd_dclk" (rect 4 357 220 368)(font "Arial" (font_size 8)))
+		(line (pt 0 368)(pt 288 368)(line_width 1))
+	)
+	(port
+		(pt 0 384)
+		(output)
+		(text "pixelstream_0_conduit_end_0_lcd_dclk_en" (rect 0 0 172 12)(font "Arial" (font_size 8)))
+		(text "pixelstream_0_conduit_end_0_lcd_dclk_en" (rect 4 373 238 384)(font "Arial" (font_size 8)))
+		(line (pt 0 384)(pt 288 384)(line_width 1))
+	)
+	(drawing
+		(text "clk" (rect 273 43 564 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 293 67 604 144)(font "Arial" (color 0 0 0)))
+		(text "displaybuttons_pio_in_external_connection" (rect 40 83 326 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 293 107 622 224)(font "Arial" (color 0 0 0)))
+		(text "hex_digits_pio_out_external_connection" (rect 56 123 340 259)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 293 147 622 304)(font "Arial" (color 0 0 0)))
+		(text "leds_pio_out_external_connection" (rect 91 163 374 339)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 293 187 622 384)(font "Arial" (color 0 0 0)))
+		(text "left_dial_pio_in_external_connection" (rect 76 203 368 419)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 293 227 622 464)(font "Arial" (color 0 0 0)))
+		(text "pixelstream_0_conduit_end_0" (rect 114 243 390 499)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "lcd_red" (rect 293 267 628 544)(font "Arial" (color 0 0 0)))
+		(text "lcd_green" (rect 293 283 640 576)(font "Arial" (color 0 0 0)))
+		(text "lcd_blue" (rect 293 299 634 608)(font "Arial" (color 0 0 0)))
+		(text "lcd_hsync" (rect 293 315 640 640)(font "Arial" (color 0 0 0)))
+		(text "lcd_vsync" (rect 293 331 640 672)(font "Arial" (color 0 0 0)))
+		(text "lcd_de" (rect 293 347 622 704)(font "Arial" (color 0 0 0)))
+		(text "lcd_dclk" (rect 293 363 634 736)(font "Arial" (color 0 0 0)))
+		(text "lcd_dclk_en" (rect 293 379 652 768)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 259 395 548 803)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 293 419 628 848)(font "Arial" (color 0 0 0)))
+		(text "right_dial_pio_in_external_connection" (rect 69 435 360 883)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 293 459 622 928)(font "Arial" (color 0 0 0)))
+		(text " clarvi_soc " (rect 608 480 1288 970)(font "Arial" ))
+		(line (pt 288 32)(pt 368 32)(line_width 1))
+		(line (pt 368 32)(pt 368 480)(line_width 1))
+		(line (pt 288 480)(pt 368 480)(line_width 1))
+		(line (pt 288 32)(pt 288 480)(line_width 1))
+		(line (pt 289 52)(pt 289 76)(line_width 1))
+		(line (pt 290 52)(pt 290 76)(line_width 1))
+		(line (pt 289 92)(pt 289 116)(line_width 1))
+		(line (pt 290 92)(pt 290 116)(line_width 1))
+		(line (pt 289 132)(pt 289 156)(line_width 1))
+		(line (pt 290 132)(pt 290 156)(line_width 1))
+		(line (pt 289 172)(pt 289 196)(line_width 1))
+		(line (pt 290 172)(pt 290 196)(line_width 1))
+		(line (pt 289 212)(pt 289 236)(line_width 1))
+		(line (pt 290 212)(pt 290 236)(line_width 1))
+		(line (pt 289 252)(pt 289 388)(line_width 1))
+		(line (pt 290 252)(pt 290 388)(line_width 1))
+		(line (pt 289 404)(pt 289 428)(line_width 1))
+		(line (pt 290 404)(pt 290 428)(line_width 1))
+		(line (pt 289 444)(pt 289 468)(line_width 1))
+		(line (pt 290 444)(pt 290 468)(line_width 1))
+		(line (pt 0 0)(pt 656 0)(line_width 1))
+		(line (pt 656 0)(pt 656 496)(line_width 1))
+		(line (pt 0 496)(pt 656 496)(line_width 1))
+		(line (pt 0 0)(pt 0 496)(line_width 1))
+	)
+)

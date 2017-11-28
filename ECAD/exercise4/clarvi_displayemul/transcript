@@ -38831,3 +38831,5 @@ run
 # Display emulator write avalon[0x80396cc] byteenable 3 <- 0
 # Display emulator write avalon[0x8039a8c] byteenable 3 <- 0
 # Display emulator write avalon[0x8039e4c] byteenable 3 <- 0
+# End time: 00:12:47 on Nov 28,2017, Elapsed time: 0:05:53
+# Errors: 0, Warnings: 0
