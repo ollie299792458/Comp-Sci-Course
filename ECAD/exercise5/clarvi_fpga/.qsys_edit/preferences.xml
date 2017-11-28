@@ -3,12 +3,11 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="159" />
+   <connections preferredWidth="223" />
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Project,Library/Processors and Peripherals/Peripherals,Library/Basic Functions,Library/Processors and Peripherals,Library" />
+ <library expandedCategories="Project,Library" />
  <window width="1602" height="799" x="-1" y="-1" />
  <generation synthesis="VERILOG" />
  <hdlexample language="VERILOG" />

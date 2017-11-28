@@ -216,16 +216,18 @@ module clarvi_fpga(
 		LCD_BACKLIGHT = 1'b1;
 		LCD_ON = 1'b1;
 	end
-
-   clarvi_soc qsys0 (
-        .clk_clk                                   (CLOCK_50),
-        .reset_reset_n                             (KEY[0]),
-        .pio_led_export                            (LEDR),
-        .buttonsctl_0_shiftreg_in_shiftreg_in     (SHIFT_OUT),
-        .buttonsctl_0_shiftreg_out_shiftreg_loadn (SHIFT_LOAD),
-        .buttonsctl_0_shiftreg_out_shiftreg_clk   (SHIFT_CLKIN),
-        .rotaryctl_left_rotary_in_rotary_in       (DIALL),
-        .rotaryctl_right_rotary_in_rotary_in      (DIALR),
+ 
+	 clarvi_soc u0 (
+        .clk_clk                                          (CLOCK_50),                                          //                                       clk.clk
+        .displaybuttons_pio_in_external_connection_export (SHIFT_OUT), // displaybuttons_pio_in_external_connection.export
+        .eightbitstosevenseg_0_led_pins_led0              (HEX0),              //            eightbitstosevenseg_0_led_pins.led0
+        .eightbitstosevenseg_0_led_pins_led1              (HEX1),              //                                          .led1
+        .eightbitstosevenseg_1_led_pins_led0              (HEX2),              //            eightbitstosevenseg_1_led_pins.led0
+        .eightbitstosevenseg_1_led_pins_led1              (HEX3),              //                                          .led1
+        .eightbitstosevenseg_2_led_pins_led0              (HEX4),              //            eightbitstosevenseg_2_led_pins.led0
+        .eightbitstosevenseg_2_led_pins_led1              (HEX5),              //                                          .led1
+        .leds_pio_out_external_connection_export          (LEDR),          //          leds_pio_out_external_connection.export
+        .left_dial_pio_in_external_connection_export      (DIALL),      //      left_dial_pio_in_external_connection.export
         .pixelstream_0_conduit_end_0_lcd_red   (LCD_R),   // pixelstream_0_conduit_end_0.lcd_red
         .pixelstream_0_conduit_end_0_lcd_green (LCD_G), //                            .lcd_green
         .pixelstream_0_conduit_end_0_lcd_blue  (LCD_B),  //                            .lcd_blue
@@ -233,10 +235,10 @@ module clarvi_fpga(
         .pixelstream_0_conduit_end_0_lcd_vsync (LCD_VSYNC), //                            .lcd_vsync
         .pixelstream_0_conduit_end_0_lcd_de    (LCD_DEN),    //                            .lcd_de
         .pixelstream_0_conduit_end_0_lcd_dclk    (LCD_DCLK),    //                            .lcd_dclk
-//        .pixelstream_0_conduit_end_0_lcd_dclk_en (<connected-to-pixelstream_0_conduit_end_0_lcd_dclk_en>), //                            .lcd_dclk_en
+        //.pixelstream_0_conduit_end_0_lcd_dclk_en          (<connected-to-pixelstream_0_conduit_end_0_lcd_dclk_en>),          //                                          .lcd_dclk_en
+        .reset_reset_n                                    (KEY[0]),                                    //                                     reset.reset_n
+        .right_dial_pio_in_external_connection_export     (DIALR)      //     right_dial_pio_in_external_connection.export
     );
-
-
 
 endmodule
 

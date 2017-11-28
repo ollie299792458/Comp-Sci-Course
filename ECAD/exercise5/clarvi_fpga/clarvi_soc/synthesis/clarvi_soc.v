@@ -6,7 +6,12 @@
 module clarvi_soc (
 		input  wire        clk_clk,                                          //                                       clk.clk
 		input  wire [15:0] displaybuttons_pio_in_external_connection_export, // displaybuttons_pio_in_external_connection.export
-		output wire [23:0] hex_digits_pio_out_external_connection_export,    //    hex_digits_pio_out_external_connection.export
+		output wire [6:0]  eightbitstosevenseg_0_led_pins_led0,              //            eightbitstosevenseg_0_led_pins.led0
+		output wire [6:0]  eightbitstosevenseg_0_led_pins_led1,              //                                          .led1
+		output wire [6:0]  eightbitstosevenseg_1_led_pins_led0,              //            eightbitstosevenseg_1_led_pins.led0
+		output wire [6:0]  eightbitstosevenseg_1_led_pins_led1,              //                                          .led1
+		output wire [6:0]  eightbitstosevenseg_2_led_pins_led0,              //            eightbitstosevenseg_2_led_pins.led0
+		output wire [6:0]  eightbitstosevenseg_2_led_pins_led1,              //                                          .led1
 		output wire [9:0]  leds_pio_out_external_connection_export,          //          leds_pio_out_external_connection.export
 		input  wire [7:0]  left_dial_pio_in_external_connection_export,      //      left_dial_pio_in_external_connection.export
 		output wire [7:0]  pixelstream_0_conduit_end_0_lcd_red,              //               pixelstream_0_conduit_end_0.lcd_red
@@ -21,8 +26,12 @@ module clarvi_soc (
 		input  wire [7:0]  right_dial_pio_in_external_connection_export      //     right_dial_pio_in_external_connection.export
 	);
 
-	wire         pll_outclk0_clk;                                              // pll:outclk_0 -> [PixelStream_0:csi_clockreset_clk, clarvi_0:clock, displaybuttons_pio_in:clk, hex_digits_pio_out:clk, leds_pio_out:clk, left_dial_pio_in:clk, mm_interconnect_0:pll_outclk0_clk, mm_interconnect_1:pll_outclk0_clk, onchip_memory2_0:clk, onchip_memory2_0:clk2, right_dial_pio_in:clk, rst_controller:clk, video_memory:clk]
+	wire         pll_outclk0_clk;                                              // pll:outclk_0 -> [EightBitsToSevenSeg_0:clock, EightBitsToSevenSeg_1:clock, EightBitsToSevenSeg_2:clock, PixelStream_0:csi_clockreset_clk, clarvi_0:clock, displaybuttons_pio_in:clk, hex_digits_pio_out:clk, leds_pio_out:clk, left_dial_pio_in:clk, mm_interconnect_0:pll_outclk0_clk, mm_interconnect_1:pll_outclk0_clk, onchip_memory2_0:clk, onchip_memory2_0:clk2, right_dial_pio_in:clk, rst_controller:clk, video_memory:clk]
 	wire         pll_outclk1_clk;                                              // pll:outclk_1 -> PixelStream_0:csi_video_clk
+	wire   [7:0] twentyfourtothreeeightbits_0_bits_out_one_export;             // TwentyFourToThreeEightBits_0:eightBitsOne -> EightBitsToSevenSeg_0:hexval
+	wire   [7:0] twentyfourtothreeeightbits_0_bits_out_three_export;           // TwentyFourToThreeEightBits_0:eightBitsThree -> EightBitsToSevenSeg_2:hexval
+	wire   [7:0] twentyfourtothreeeightbits_0_bits_out_two_export;             // TwentyFourToThreeEightBits_0:eightBitsTwo -> EightBitsToSevenSeg_1:hexval
+	wire  [23:0] hex_digits_pio_out_external_connection_export;                // hex_digits_pio_out:out_port -> TwentyFourToThreeEightBits_0:twentyFourBits
 	wire  [31:0] clarvi_0_instr_readdata;                                      // mm_interconnect_0:clarvi_0_instr_readdata -> clarvi_0:avm_instr_readdata
 	wire         clarvi_0_instr_waitrequest;                                   // mm_interconnect_0:clarvi_0_instr_waitrequest -> clarvi_0:avm_instr_waitrequest
 	wire  [13:0] clarvi_0_instr_address;                                       // clarvi_0:avm_instr_address -> mm_interconnect_0:clarvi_0_instr_address
@@ -87,8 +96,32 @@ module clarvi_soc (
 	wire         mm_interconnect_1_pixelstream_0_slave_parameters_write;       // mm_interconnect_1:PixelStream_0_slave_parameters_write -> PixelStream_0:avs_s0_write
 	wire  [31:0] mm_interconnect_1_pixelstream_0_slave_parameters_writedata;   // mm_interconnect_1:PixelStream_0_slave_parameters_writedata -> PixelStream_0:avs_s0_writedata
 	wire         clarvi_0_interrupt_receiver_0_irq;                            // irq_mapper:sender_irq -> clarvi_0:inr_irq
-	wire         rst_controller_reset_out_reset;                               // rst_controller:reset_out -> [PixelStream_0:csi_clockreset_reset_n, clarvi_0:reset, displaybuttons_pio_in:reset_n, hex_digits_pio_out:reset_n, leds_pio_out:reset_n, left_dial_pio_in:reset_n, mm_interconnect_0:clarvi_0_reset_reset_bridge_in_reset_reset, mm_interconnect_1:clarvi_0_reset_reset_bridge_in_reset_reset, onchip_memory2_0:reset, onchip_memory2_0:reset2, right_dial_pio_in:reset_n, rst_translator:in_reset, video_memory:reset]
+	wire         rst_controller_reset_out_reset;                               // rst_controller:reset_out -> [EightBitsToSevenSeg_0:reset, EightBitsToSevenSeg_1:reset, EightBitsToSevenSeg_2:reset, PixelStream_0:csi_clockreset_reset_n, clarvi_0:reset, displaybuttons_pio_in:reset_n, hex_digits_pio_out:reset_n, leds_pio_out:reset_n, left_dial_pio_in:reset_n, mm_interconnect_0:clarvi_0_reset_reset_bridge_in_reset_reset, mm_interconnect_1:clarvi_0_reset_reset_bridge_in_reset_reset, onchip_memory2_0:reset, onchip_memory2_0:reset2, right_dial_pio_in:reset_n, rst_translator:in_reset, video_memory:reset]
 	wire         rst_controller_reset_out_reset_req;                           // rst_controller:reset_req -> [onchip_memory2_0:reset_req, onchip_memory2_0:reset_req2, rst_translator:reset_req_in, video_memory:reset_req]
+
+	EightBitsToSevenSeg eightbitstosevenseg_0 (
+		.hexval (twentyfourtothreeeightbits_0_bits_out_one_export), //  data_in.export
+		.digit0 (eightbitstosevenseg_0_led_pins_led0),              // led_pins.led0
+		.digit1 (eightbitstosevenseg_0_led_pins_led1),              //         .led1
+		.reset  (rst_controller_reset_out_reset),                   //    reset.reset
+		.clock  (pll_outclk0_clk)                                   //    clock.clk
+	);
+
+	EightBitsToSevenSeg eightbitstosevenseg_1 (
+		.hexval (twentyfourtothreeeightbits_0_bits_out_two_export), //  data_in.export
+		.digit0 (eightbitstosevenseg_1_led_pins_led0),              // led_pins.led0
+		.digit1 (eightbitstosevenseg_1_led_pins_led1),              //         .led1
+		.reset  (rst_controller_reset_out_reset),                   //    reset.reset
+		.clock  (pll_outclk0_clk)                                   //    clock.clk
+	);
+
+	EightBitsToSevenSeg eightbitstosevenseg_2 (
+		.hexval (twentyfourtothreeeightbits_0_bits_out_three_export), //  data_in.export
+		.digit0 (eightbitstosevenseg_2_led_pins_led0),                // led_pins.led0
+		.digit1 (eightbitstosevenseg_2_led_pins_led1),                //         .led1
+		.reset  (rst_controller_reset_out_reset),                     //    reset.reset
+		.clock  (pll_outclk0_clk)                                     //    clock.clk
+	);
 
 	mkPixelStream pixelstream_0 (
 		.csi_clockreset_clk               (pll_outclk0_clk),                                              //        clockreset.clk
@@ -115,6 +148,13 @@ module clarvi_soc (
 		.coe_hdmi_de                      (pixelstream_0_conduit_end_0_lcd_de),                           //                  .lcd_de
 		.csi_clockreset_clk_coe_hdmi_dclk (pixelstream_0_conduit_end_0_lcd_dclk),                         //                  .lcd_dclk
 		.CLK_GATE_coe_hdmi_dclk           (pixelstream_0_conduit_end_0_lcd_dclk_en)                       //                  .lcd_dclk_en
+	);
+
+	TwentyFourBitsToThreeEightBits twentyfourtothreeeightbits_0 (
+		.twentyFourBits (hex_digits_pio_out_external_connection_export),      //        bits_in.export
+		.eightBitsOne   (twentyfourtothreeeightbits_0_bits_out_one_export),   //   bits_out_one.export
+		.eightBitsTwo   (twentyfourtothreeeightbits_0_bits_out_two_export),   //   bits_out_two.export
+		.eightBitsThree (twentyfourtothreeeightbits_0_bits_out_three_export)  // bits_out_three.export
 	);
 
 	clarvi_avalon #(

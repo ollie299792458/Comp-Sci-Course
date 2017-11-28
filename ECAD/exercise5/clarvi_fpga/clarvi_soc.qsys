@@ -9,11 +9,43 @@
    categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
+   element EightBitsToSevenSeg_0
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element EightBitsToSevenSeg_1
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
+      }
+   }
+   element EightBitsToSevenSeg_2
+   {
+      datum _sortIndex
+      {
+         value = "13";
+         type = "int";
+      }
+   }
    element PixelStream_0
    {
       datum _sortIndex
       {
          value = "3";
+         type = "int";
+      }
+   }
+   element TwentyFourToThreeEightBits_0
+   {
+      datum _sortIndex
+      {
+         value = "14";
          type = "int";
       }
    }
@@ -23,6 +55,14 @@
       {
          value = "4";
          type = "int";
+      }
+   }
+   element clarvi_soc
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
       }
    }
    element clk_50
@@ -133,8 +173,18 @@
    type="conduit"
    dir="end" />
  <interface
-   name="hex_digits_pio_out_external_connection"
-   internal="hex_digits_pio_out.external_connection"
+   name="eightbitstosevenseg_0_led_pins"
+   internal="EightBitsToSevenSeg_0.led_pins"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="eightbitstosevenseg_1_led_pins"
+   internal="EightBitsToSevenSeg_1.led_pins"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="eightbitstosevenseg_2_led_pins"
+   internal="EightBitsToSevenSeg_2.led_pins"
    type="conduit"
    dir="end" />
  <interface
@@ -158,7 +208,27 @@
    internal="right_dial_pio_in.external_connection"
    type="conduit"
    dir="end" />
+ <module
+   name="EightBitsToSevenSeg_0"
+   kind="EightBitsToSevenSeg"
+   version="1.0"
+   enabled="1" />
+ <module
+   name="EightBitsToSevenSeg_1"
+   kind="EightBitsToSevenSeg"
+   version="1.0"
+   enabled="1" />
+ <module
+   name="EightBitsToSevenSeg_2"
+   kind="EightBitsToSevenSeg"
+   version="1.0"
+   enabled="1" />
  <module name="PixelStream_0" kind="PixelStream" version="1.0" enabled="1" />
+ <module
+   name="TwentyFourToThreeEightBits_0"
+   kind="TwentyFourToThreeEightBits"
+   version="1.0"
+   enabled="1" />
  <module name="clarvi_0" kind="clarvi" version="1.0" enabled="1">
   <parameter name="AUTO_INTERRUPT_RECEIVER_0_INTERRUPTS_USED" value="0" />
   <parameter name="DATA_ADDR_WIDTH" value="29" />
@@ -665,12 +735,71 @@
    kind="clock"
    version="16.1"
    start="pll.outclk0"
+   end="EightBitsToSevenSeg_2.clock" />
+ <connection
+   kind="clock"
+   version="16.1"
+   start="pll.outclk0"
+   end="EightBitsToSevenSeg_1.clock" />
+ <connection
+   kind="clock"
+   version="16.1"
+   start="pll.outclk0"
+   end="EightBitsToSevenSeg_0.clock" />
+ <connection
+   kind="clock"
+   version="16.1"
+   start="pll.outclk0"
    end="PixelStream_0.clockreset" />
  <connection
    kind="clock"
    version="16.1"
    start="pll.outclk1"
    end="PixelStream_0.video" />
+ <connection
+   kind="conduit"
+   version="16.1"
+   start="TwentyFourToThreeEightBits_0.bits_out_one"
+   end="EightBitsToSevenSeg_0.data_in">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="16.1"
+   start="TwentyFourToThreeEightBits_0.bits_out_three"
+   end="EightBitsToSevenSeg_2.data_in">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="16.1"
+   start="TwentyFourToThreeEightBits_0.bits_out_two"
+   end="EightBitsToSevenSeg_1.data_in">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="16.1"
+   start="hex_digits_pio_out.external_connection"
+   end="TwentyFourToThreeEightBits_0.bits_in">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
  <connection
    kind="reset"
    version="16.1"
@@ -707,6 +836,21 @@
    version="16.1"
    start="clk_50.clk_reset"
    end="leds_pio_out.reset" />
+ <connection
+   kind="reset"
+   version="16.1"
+   start="clk_50.clk_reset"
+   end="EightBitsToSevenSeg_1.reset" />
+ <connection
+   kind="reset"
+   version="16.1"
+   start="clk_50.clk_reset"
+   end="EightBitsToSevenSeg_2.reset" />
+ <connection
+   kind="reset"
+   version="16.1"
+   start="clk_50.clk_reset"
+   end="EightBitsToSevenSeg_0.reset" />
  <connection
    kind="reset"
    version="16.1"

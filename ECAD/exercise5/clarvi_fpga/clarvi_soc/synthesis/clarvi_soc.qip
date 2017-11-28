@@ -2,7 +2,7 @@ set_global_assignment -entity "clarvi_soc" -library "clarvi_soc" -name IP_TOOL_N
 set_global_assignment -entity "clarvi_soc" -library "clarvi_soc" -name IP_TOOL_VERSION "16.1"
 set_global_assignment -entity "clarvi_soc" -library "clarvi_soc" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "clarvi_soc" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../clarvi_soc.sopcinfo"]
-set_global_assignment -entity "clarvi_soc" -library "clarvi_soc" -name SLD_INFO "QSYS_NAME clarvi_soc HAS_SOPCINFO 1 GENERATION_ID 1511829756"
+set_global_assignment -entity "clarvi_soc" -library "clarvi_soc" -name SLD_INFO "QSYS_NAME clarvi_soc HAS_SOPCINFO 1 GENERATION_ID 1511833502"
 set_global_assignment -library "clarvi_soc" -name MISC_FILE [file join $::quartus(qip_path) "../clarvi_soc.cmp"]
 set_global_assignment -library "clarvi_soc" -name SLD_FILE [file join $::quartus(qip_path) "clarvi_soc.regmap"]
 set_global_assignment -library "clarvi_soc" -name SLD_FILE [file join $::quartus(qip_path) "clarvi_soc.debuginfo"]
@@ -16,7 +16,7 @@ set_global_assignment -entity "clarvi_soc" -library "clarvi_soc" -name IP_COMPON
 set_global_assignment -entity "clarvi_soc" -library "clarvi_soc" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "clarvi_soc" -library "clarvi_soc" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "clarvi_soc" -library "clarvi_soc" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "clarvi_soc" -library "clarvi_soc" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTUxMTgyOTc1Ng==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "clarvi_soc" -library "clarvi_soc" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTUxMTgzMzUwMg==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "clarvi_soc" -library "clarvi_soc" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "clarvi_soc" -library "clarvi_soc" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTRU1BNUYzMUM2::QXV0byBERVZJQ0U="
 set_global_assignment -entity "clarvi_soc" -library "clarvi_soc" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -1117,6 +1117,11 @@ set_global_assignment -entity "clarvi_avalon" -library "clarvi_soc" -name IP_COM
 set_global_assignment -entity "clarvi_avalon" -library "clarvi_soc" -name IP_COMPONENT_PARAMETER "SU5JVElBTF9QQw==::MA==::SU5JVElBTF9QQw=="
 set_global_assignment -entity "clarvi_avalon" -library "clarvi_soc" -name IP_COMPONENT_PARAMETER "REVGQVVMVF9UUkFQX1ZFQ1RPUg==::MA==::REVGQVVMVF9UUkFQX1ZFQ1RPUg=="
 set_global_assignment -entity "clarvi_avalon" -library "clarvi_soc" -name IP_COMPONENT_PARAMETER "QVVUT19JTlRFUlJVUFRfUkVDRUlWRVJfMF9JTlRFUlJVUFRTX1VTRUQ=::MA==::QXV0byBJTlRFUlJVUFRTX1VTRUQ="
+set_global_assignment -entity "TwentyFourBitsToThreeEightBits" -library "clarvi_soc" -name IP_COMPONENT_NAME "VHdlbnR5Rm91ckJpdHNUb1RocmVlRWlnaHRCaXRz"
+set_global_assignment -entity "TwentyFourBitsToThreeEightBits" -library "clarvi_soc" -name IP_COMPONENT_DISPLAY_NAME "VHdlbnR5Rm91clRvVGhyZWVFaWdodEJpdHM="
+set_global_assignment -entity "TwentyFourBitsToThreeEightBits" -library "clarvi_soc" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "TwentyFourBitsToThreeEightBits" -library "clarvi_soc" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "TwentyFourBitsToThreeEightBits" -library "clarvi_soc" -name IP_COMPONENT_VERSION "MS4w"
 set_global_assignment -entity "mkPixelStream" -library "clarvi_soc" -name IP_COMPONENT_NAME "bWtQaXhlbFN0cmVhbQ=="
 set_global_assignment -entity "mkPixelStream" -library "clarvi_soc" -name IP_COMPONENT_DISPLAY_NAME "UGl4ZWwgU3RyZWFt"
 set_global_assignment -entity "mkPixelStream" -library "clarvi_soc" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
@@ -1124,6 +1129,11 @@ set_global_assignment -entity "mkPixelStream" -library "clarvi_soc" -name IP_COM
 set_global_assignment -entity "mkPixelStream" -library "clarvi_soc" -name IP_COMPONENT_AUTHOR "U2ltb24gTW9vcmU="
 set_global_assignment -entity "mkPixelStream" -library "clarvi_soc" -name IP_COMPONENT_VERSION "MS4w"
 set_global_assignment -entity "mkPixelStream" -library "clarvi_soc" -name IP_COMPONENT_DESCRIPTION "U3RyZWFtIHBpeGVscyBmcm9tIG1lbW9yeSB0byBMQ0Qgb3V0cHV0"
+set_global_assignment -entity "EightBitsToSevenSeg" -library "clarvi_soc" -name IP_COMPONENT_NAME "RWlnaHRCaXRzVG9TZXZlblNlZw=="
+set_global_assignment -entity "EightBitsToSevenSeg" -library "clarvi_soc" -name IP_COMPONENT_DISPLAY_NAME "RWlnaHRCaXRzVG9TZXZlblNlZw=="
+set_global_assignment -entity "EightBitsToSevenSeg" -library "clarvi_soc" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "EightBitsToSevenSeg" -library "clarvi_soc" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "EightBitsToSevenSeg" -library "clarvi_soc" -name IP_COMPONENT_VERSION "MS4w"
 
 set_global_assignment -library "clarvi_soc" -name VERILOG_FILE [file join $::quartus(qip_path) "clarvi_soc.v"]
 set_global_assignment -library "clarvi_soc" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.v"]
@@ -1166,6 +1176,7 @@ set_global_assignment -library "clarvi_soc" -name VERILOG_FILE [file join $::qua
 set_global_assignment -library "clarvi_soc" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/clarvi_avalon.sv"]
 set_global_assignment -library "clarvi_soc" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/clarvi.sv"]
 set_global_assignment -library "clarvi_soc" -name MISC_FILE [file join $::quartus(qip_path) "submodules/riscv.svh"]
+set_global_assignment -library "clarvi_soc" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/TwentyFourBitsToThreeEightBits.sv"]
 set_global_assignment -library "clarvi_soc" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/mkPixelStream.v"]
 set_global_assignment -library "clarvi_soc" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/mkBurstRead.v"]
 set_global_assignment -library "clarvi_soc" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/SizedFIFO.v"]
@@ -1174,6 +1185,7 @@ set_global_assignment -library "clarvi_soc" -name VERILOG_FILE [file join $::qua
 set_global_assignment -library "clarvi_soc" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/SyncRegister.v"]
 set_global_assignment -library "clarvi_soc" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/SyncResetA.v"]
 set_global_assignment -library "clarvi_soc" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/SyncHandshake.v"]
+set_global_assignment -library "clarvi_soc" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/EightBitsToSevenSeg.sv"]
 
 set_global_assignment -entity "altera_reset_controller" -library "clarvi_soc" -name IP_TOOL_NAME "altera_reset_controller"
 set_global_assignment -entity "altera_reset_controller" -library "clarvi_soc" -name IP_TOOL_VERSION "16.1"
