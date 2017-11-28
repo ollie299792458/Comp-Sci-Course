@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="5d8ca0ecd83b1ec82d3c"/>
+  </project>
+  <file_info>
+    <file device="5CSEMA5F31C6" path="clarvi_fpga.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="clarvi_soc:u0" name="u0">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME clarvi_soc HAS_SOPCINFO 1 GENERATION_ID 1511833502"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>
