@@ -219,15 +219,17 @@ module clarvi_fpga(
  
 	 clarvi_soc u0 (
         .clk_clk                                          (CLOCK_50),                                          //                                       clk.clk
-        .displaybuttons_pio_in_external_connection_export (SHIFT_OUT), // displaybuttons_pio_in_external_connection.export
-        .eightbitstosevenseg_0_led_pins_led0              (HEX0),              //            eightbitstosevenseg_0_led_pins.led0
-        .eightbitstosevenseg_0_led_pins_led1              (HEX1),              //                                          .led1
-        .eightbitstosevenseg_1_led_pins_led0              (HEX2),              //            eightbitstosevenseg_1_led_pins.led0
-        .eightbitstosevenseg_1_led_pins_led1              (HEX3),              //                                          .led1
-        .eightbitstosevenseg_2_led_pins_led0              (HEX4),              //            eightbitstosevenseg_2_led_pins.led0
-        .eightbitstosevenseg_2_led_pins_led1              (HEX5),              //                                          .led1
-        .leds_pio_out_external_connection_export          (LEDR),          //          leds_pio_out_external_connection.export
-        .left_dial_pio_in_external_connection_export      (DIALL),      //      left_dial_pio_in_external_connection.export
+        //.hex_digits_pio_out_external_connection_export (<connected-to-hex_digits_pio_out_external_connection_export>), // hex_digits_pio_out_external_connection.export
+        //.rotaryctl_0_rotary_event_rotary_cw            (<connected-to-rotaryctl_0_rotary_event_rotary_cw>),            //               rotaryctl_0_rotary_event.rotary_cw
+        //.rotaryctl_0_rotary_event_rotary_ccw           (<connected-to-rotaryctl_0_rotary_event_rotary_ccw>),           //                                       .rotary_ccw
+        //.rotaryctl_1_rotary_event_rotary_cw            (<connected-to-rotaryctl_1_rotary_event_rotary_cw>),            //               rotaryctl_1_rotary_event.rotary_cw
+        //.rotaryctl_1_rotary_event_rotary_ccw           (<connected-to-rotaryctl_1_rotary_event_rotary_ccw>),           //                                       .rotary_ccw
+        .shiftregctl_0_shiftreg_ext_shiftreg_clk       (SHIFT_CLKIN),       //             shiftregctl_0_shiftreg_ext.shiftreg_clk
+        .shiftregctl_0_shiftreg_ext_shiftreg_loadn     (SHIFT_LOAD),     //                                       .shiftreg_loadn
+        .shiftregctl_0_shiftreg_ext_shiftreg_out       (SHIFT_OUT),       //                                       .shiftreg_out
+        .rotaryctl_right_rotary_in_export              (DIALR),              //              rotaryctl_right_rotary_in.export
+        .rotaryctl_left_rotary_in_export               (DIALL) ,               //               rotaryctl_left_rotary_in.export
+		  .leds_pio_out_external_connection_export          (LEDR),          //          leds_pio_out_external_connection.export
         .pixelstream_0_conduit_end_0_lcd_red   (LCD_R),   // pixelstream_0_conduit_end_0.lcd_red
         .pixelstream_0_conduit_end_0_lcd_green (LCD_G), //                            .lcd_green
         .pixelstream_0_conduit_end_0_lcd_blue  (LCD_B),  //                            .lcd_blue
@@ -237,7 +239,6 @@ module clarvi_fpga(
         .pixelstream_0_conduit_end_0_lcd_dclk    (LCD_DCLK),    //                            .lcd_dclk
         //.pixelstream_0_conduit_end_0_lcd_dclk_en          (<connected-to-pixelstream_0_conduit_end_0_lcd_dclk_en>),          //                                          .lcd_dclk_en
         .reset_reset_n                                    (KEY[0]),                                    //                                     reset.reset_n
-        .right_dial_pio_in_external_connection_export     (DIALR)      //     right_dial_pio_in_external_connection.export
     );
 
 endmodule

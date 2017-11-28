@@ -3,11 +3,12 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="223" />
+   <connections preferredWidth="207" />
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
- <library expandedCategories="Project,Library" />
+ <library
+   expandedCategories="Library/Basic Functions/On Chip Memory,Library,Library/Memory Interfaces and Controllers,Project,Library/Basic Functions" />
  <window width="1602" height="799" x="-1" y="-1" />
  <generation synthesis="VERILOG" />
  <hdlexample language="VERILOG" />

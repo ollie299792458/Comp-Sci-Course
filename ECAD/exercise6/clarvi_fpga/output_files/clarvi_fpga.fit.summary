@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Nov 28 13:37:48 2017
+Fitter Status : Successful - Tue Nov 28 15:12:17 2017
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : clarvi_fpga
 Top-level Entity Name : clarvi_fpga
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 2,736 / 32,070 ( 9 % )
-Total registers : 3370
+Logic utilization (in ALMs) : 2,769 / 32,070 ( 9 % )
+Total registers : 3595
 Total pins : 246 / 457 ( 54 % )
 Total virtual pins : 0
 Total block memory bits : 2,621,814 / 4,065,280 ( 64 % )

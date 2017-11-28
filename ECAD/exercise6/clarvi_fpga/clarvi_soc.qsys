@@ -9,30 +9,6 @@
    categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
-   element EightBitsToSevenSeg_0
-   {
-      datum _sortIndex
-      {
-         value = "11";
-         type = "int";
-      }
-   }
-   element EightBitsToSevenSeg_1
-   {
-      datum _sortIndex
-      {
-         value = "12";
-         type = "int";
-      }
-   }
-   element EightBitsToSevenSeg_2
-   {
-      datum _sortIndex
-      {
-         value = "13";
-         type = "int";
-      }
-   }
    element PixelStream_0
    {
       datum _sortIndex
@@ -41,11 +17,27 @@
          type = "int";
       }
    }
-   element TwentyFourToThreeEightBits_0
+   element RotaryCtl_Left
    {
       datum _sortIndex
       {
-         value = "14";
+         value = "12";
+         type = "int";
+      }
+   }
+   element RotaryCtl_Right
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element ShiftRegCtl_0
+   {
+      datum _sortIndex
+      {
+         value = "10";
          type = "int";
       }
    }
@@ -77,7 +69,7 @@
    {
       datum _sortIndex
       {
-         value = "10";
+         value = "9";
          type = "int";
       }
    }
@@ -85,7 +77,7 @@
    {
       datum _sortIndex
       {
-         value = "7";
+         value = "6";
          type = "int";
       }
    }
@@ -93,7 +85,7 @@
    {
       datum _sortIndex
       {
-         value = "6";
+         value = "5";
          type = "int";
       }
    }
@@ -101,7 +93,7 @@
    {
       datum _sortIndex
       {
-         value = "8";
+         value = "7";
          type = "int";
       }
    }
@@ -109,7 +101,7 @@
    {
       datum _sortIndex
       {
-         value = "5";
+         value = "13";
          type = "int";
       }
    }
@@ -125,7 +117,7 @@
    {
       datum _sortIndex
       {
-         value = "9";
+         value = "8";
          type = "int";
       }
    }
@@ -168,33 +160,13 @@
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_50.clk_in" type="clock" dir="end" />
  <interface
-   name="displaybuttons_pio_in_external_connection"
-   internal="displaybuttons_pio_in.external_connection"
-   type="conduit"
-   dir="end" />
- <interface
-   name="eightbitstosevenseg_0_led_pins"
-   internal="EightBitsToSevenSeg_0.led_pins"
-   type="conduit"
-   dir="end" />
- <interface
-   name="eightbitstosevenseg_1_led_pins"
-   internal="EightBitsToSevenSeg_1.led_pins"
-   type="conduit"
-   dir="end" />
- <interface
-   name="eightbitstosevenseg_2_led_pins"
-   internal="EightBitsToSevenSeg_2.led_pins"
+   name="hex_digits_pio_out_external_connection"
+   internal="hex_digits_pio_out.external_connection"
    type="conduit"
    dir="end" />
  <interface
    name="leds_pio_out_external_connection"
    internal="leds_pio_out.external_connection"
-   type="conduit"
-   dir="end" />
- <interface
-   name="left_dial_pio_in_external_connection"
-   internal="left_dial_pio_in.external_connection"
    type="conduit"
    dir="end" />
  <interface
@@ -204,31 +176,34 @@
    dir="end" />
  <interface name="reset" internal="clk_50.clk_in_reset" type="reset" dir="end" />
  <interface
-   name="right_dial_pio_in_external_connection"
-   internal="right_dial_pio_in.external_connection"
+   name="rotaryctl_0_rotary_event"
+   internal="RotaryCtl_Right.rotary_event"
    type="conduit"
    dir="end" />
- <module
-   name="EightBitsToSevenSeg_0"
-   kind="EightBitsToSevenSeg"
-   version="1.0"
-   enabled="1" />
- <module
-   name="EightBitsToSevenSeg_1"
-   kind="EightBitsToSevenSeg"
-   version="1.0"
-   enabled="1" />
- <module
-   name="EightBitsToSevenSeg_2"
-   kind="EightBitsToSevenSeg"
-   version="1.0"
-   enabled="1" />
+ <interface
+   name="rotaryctl_1_rotary_event"
+   internal="RotaryCtl_Left.rotary_event"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="rotaryctl_left_rotary_in"
+   internal="RotaryCtl_Left.rotary_in"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="rotaryctl_right_rotary_in"
+   internal="RotaryCtl_Right.rotary_in"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="shiftregctl_0_shiftreg_ext"
+   internal="ShiftRegCtl_0.shiftreg_ext"
+   type="conduit"
+   dir="end" />
  <module name="PixelStream_0" kind="PixelStream" version="1.0" enabled="1" />
- <module
-   name="TwentyFourToThreeEightBits_0"
-   kind="TwentyFourToThreeEightBits"
-   version="1.0"
-   enabled="1" />
+ <module name="RotaryCtl_Left" kind="RotaryCtl" version="1.0.1" enabled="1" />
+ <module name="RotaryCtl_Right" kind="RotaryCtl" version="1.0.1" enabled="1" />
+ <module name="ShiftRegCtl_0" kind="ShiftRegCtl" version="1.0" enabled="1" />
  <module name="clarvi_0" kind="clarvi" version="1.0" enabled="1">
   <parameter name="AUTO_INTERRUPT_RECEIVER_0_INTERRUPTS_USED" value="0" />
   <parameter name="DATA_ADDR_WIDTH" value="29" />
@@ -320,7 +295,7 @@
    version="16.1"
    enabled="1">
   <parameter name="allowInSystemMemoryContentEditor" value="false" />
-  <parameter name="autoInitializationFileName">$${FILENAME}_onchip_memory2_0</parameter>
+  <parameter name="autoInitializationFileName">clarvi_soc_onchip_memory2_0</parameter>
   <parameter name="blockType" value="AUTO" />
   <parameter name="copyInitFile" value="false" />
   <parameter name="dataWidth" value="32" />
@@ -573,7 +548,7 @@
    version="16.1"
    enabled="1">
   <parameter name="allowInSystemMemoryContentEditor" value="false" />
-  <parameter name="autoInitializationFileName">$${FILENAME}_video_memory</parameter>
+  <parameter name="autoInitializationFileName">clarvi_soc_video_memory</parameter>
   <parameter name="blockType" value="AUTO" />
   <parameter name="copyInitFile" value="false" />
   <parameter name="dataWidth" value="32" />
@@ -604,15 +579,6 @@
    version="16.1"
    start="clarvi_0.instr"
    end="onchip_memory2_0.s2">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="16.1"
-   start="clarvi_0.main"
-   end="onchip_memory2_0.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
@@ -669,6 +635,15 @@
    end="leds_pio_out.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x04000000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.1"
+   start="clarvi_0.main"
+   end="onchip_memory2_0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -735,17 +710,17 @@
    kind="clock"
    version="16.1"
    start="pll.outclk0"
-   end="EightBitsToSevenSeg_2.clock" />
+   end="RotaryCtl_Right.clock" />
  <connection
    kind="clock"
    version="16.1"
    start="pll.outclk0"
-   end="EightBitsToSevenSeg_1.clock" />
+   end="RotaryCtl_Left.clock" />
  <connection
    kind="clock"
    version="16.1"
    start="pll.outclk0"
-   end="EightBitsToSevenSeg_0.clock" />
+   end="ShiftRegCtl_0.clock_sink" />
  <connection
    kind="clock"
    version="16.1"
@@ -759,8 +734,8 @@
  <connection
    kind="conduit"
    version="16.1"
-   start="TwentyFourToThreeEightBits_0.bits_out_one"
-   end="EightBitsToSevenSeg_0.data_in">
+   start="ShiftRegCtl_0.buttons"
+   end="displaybuttons_pio_in.external_connection">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -770,8 +745,8 @@
  <connection
    kind="conduit"
    version="16.1"
-   start="TwentyFourToThreeEightBits_0.bits_out_three"
-   end="EightBitsToSevenSeg_2.data_in">
+   start="RotaryCtl_Left.rotary_pos"
+   end="left_dial_pio_in.external_connection">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -781,19 +756,8 @@
  <connection
    kind="conduit"
    version="16.1"
-   start="TwentyFourToThreeEightBits_0.bits_out_two"
-   end="EightBitsToSevenSeg_1.data_in">
-  <parameter name="endPort" value="" />
-  <parameter name="endPortLSB" value="0" />
-  <parameter name="startPort" value="" />
-  <parameter name="startPortLSB" value="0" />
-  <parameter name="width" value="0" />
- </connection>
- <connection
-   kind="conduit"
-   version="16.1"
-   start="hex_digits_pio_out.external_connection"
-   end="TwentyFourToThreeEightBits_0.bits_in">
+   start="RotaryCtl_Right.rotary_pos"
+   end="right_dial_pio_in.external_connection">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -840,17 +804,17 @@
    kind="reset"
    version="16.1"
    start="clk_50.clk_reset"
-   end="EightBitsToSevenSeg_1.reset" />
+   end="RotaryCtl_Right.reset" />
  <connection
    kind="reset"
    version="16.1"
    start="clk_50.clk_reset"
-   end="EightBitsToSevenSeg_2.reset" />
+   end="ShiftRegCtl_0.reset" />
  <connection
    kind="reset"
    version="16.1"
    start="clk_50.clk_reset"
-   end="EightBitsToSevenSeg_0.reset" />
+   end="RotaryCtl_Left.reset" />
  <connection
    kind="reset"
    version="16.1"

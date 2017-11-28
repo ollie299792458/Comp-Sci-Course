@@ -185,11 +185,7 @@ module clarvi_soc_mm_interconnect_1_router_003
 
 
         if (destid == 1 ) begin
-            src_channel = 8'b01;
-        end
-
-        if (destid == 0 ) begin
-            src_channel = 8'b10;
+            src_channel = 8'b1;
         end
 
 

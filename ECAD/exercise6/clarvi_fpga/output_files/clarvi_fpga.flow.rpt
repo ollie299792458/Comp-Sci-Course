@@ -1,5 +1,5 @@
 Flow report for clarvi_fpga
-Tue Nov 28 13:43:25 2017
+Tue Nov 28 15:17:53 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Nov 28 13:40:06 2017       ;
+; Flow Status                     ; Successful - Tue Nov 28 15:14:39 2017       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; clarvi_fpga                                 ;
 ; Top-level Entity Name           ; clarvi_fpga                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 2,736 / 32,070 ( 9 % )                      ;
-; Total registers                 ; 3370                                        ;
+; Logic utilization (in ALMs)     ; 2,769 / 32,070 ( 9 % )                      ;
+; Total registers                 ; 3595                                        ;
 ; Total pins                      ; 246 / 457 ( 54 % )                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 2,621,814 / 4,065,280 ( 64 % )              ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/28/2017 13:29:57 ;
+; Start date & time ; 11/28/2017 15:03:00 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; clarvi_fpga         ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+--------------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                        ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+--------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 8796747652916.151187579626243                                ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 8796747652916.151188138029950                                ; --            ; --          ; --         ;
 ; ENABLE_SIGNALTAP                    ; On                                                           ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                           ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                            ; --            ; --          ; --         ;
@@ -94,7 +94,7 @@ agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                 ; --            ; --          ; --         ;
 ; SLD_FILE                            ; clarvi_soc/synthesis/clarvi_soc.regmap                       ; --            ; --          ; --         ;
 ; SLD_FILE                            ; clarvi_soc/synthesis/clarvi_soc.debuginfo                    ; --            ; --          ; --         ;
-; SLD_INFO                            ; QSYS_NAME clarvi_soc HAS_SOPCINFO 1 GENERATION_ID 1511833502 ; --            ; clarvi_soc  ; --         ;
+; SLD_INFO                            ; QSYS_NAME clarvi_soc HAS_SOPCINFO 1 GENERATION_ID 1511878358 ; --            ; clarvi_soc  ; --         ;
 ; SOPCINFO_FILE                       ; clarvi_soc/synthesis/../../clarvi_soc.sopcinfo               ; --            ; --          ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                           ; --            ; --          ; --         ;
 ; USE_SIGNALTAP_FILE                  ; stp1.stp                                                     ; --            ; --          ; --         ;
@@ -108,11 +108,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:02:00     ; 1.0                     ; 1118 MB             ; 00:00:38                           ;
-; Fitter                    ; 00:06:23     ; 1.0                     ; 2235 MB             ; 00:04:37                           ;
-; Assembler                 ; 00:02:14     ; 1.0                     ; 1067 MB             ; 00:00:14                           ;
-; TimeQuest Timing Analyzer ; 00:02:10     ; 1.0                     ; 1333 MB             ; 00:00:48                           ;
-; Total                     ; 00:12:47     ; --                      ; --                  ; 00:06:17                           ;
+; Analysis & Synthesis      ; 00:01:59     ; 1.0                     ; 1106 MB             ; 00:00:38                           ;
+; Fitter                    ; 00:07:24     ; 1.0                     ; 2233 MB             ; 00:05:02                           ;
+; MIF/HEX Update            ; 00:00:19     ; 1.0                     ; 1382 MB             ; 00:00:10                           ;
+; Assembler                 ; 00:02:18     ; 1.0                     ; 1068 MB             ; 00:00:12                           ;
+; TimeQuest Timing Analyzer ; 00:02:08     ; 1.0                     ; 1337 MB             ; 00:00:46                           ;
+; Total                     ; 00:14:08     ; --                      ; --                  ; 00:06:48                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -123,6 +124,7 @@ agreement for further details.
 +---------------------------+------------------+----------------+------------+----------------+
 ; Analysis & Synthesis      ; ecad-VirtualBox  ; Ubuntu 16.04.3 ; 16         ; x86_64         ;
 ; Fitter                    ; ecad-VirtualBox  ; Ubuntu 16.04.3 ; 16         ; x86_64         ;
+; MIF/HEX Update            ; ecad-VirtualBox  ; Ubuntu 16.04.3 ; 16         ; x86_64         ;
 ; Assembler                 ; ecad-VirtualBox  ; Ubuntu 16.04.3 ; 16         ; x86_64         ;
 ; TimeQuest Timing Analyzer ; ecad-VirtualBox  ; Ubuntu 16.04.3 ; 16         ; x86_64         ;
 +---------------------------+------------------+----------------+------------+----------------+
@@ -133,6 +135,7 @@ agreement for further details.
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off clarvi_fpga -c clarvi_fpga
 quartus_fit --read_settings_files=off --write_settings_files=off clarvi_fpga -c clarvi_fpga
+quartus_cdb clarvi_fpga -c clarvi_fpga --update_mif
 quartus_asm --read_settings_files=off --write_settings_files=off clarvi_fpga -c clarvi_fpga
 quartus_sta clarvi_fpga -c clarvi_fpga
 

@@ -4,8 +4,8 @@ PROJECT = program
 BUILD = build
 
 # name of the Quartus program
-FPGA_PROJECT_PATH = ../quartus
-FPGA_PROJECT = clarvi
+FPGA_PROJECT_PATH = ../
+FPGA_PROJECT = clarvi_fpga
 
 # source files
 C_FILES := $(wildcard src/*.c)
