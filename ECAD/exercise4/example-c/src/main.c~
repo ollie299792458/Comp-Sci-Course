@@ -19,11 +19,27 @@ int calculate_change(int new, int old) {
     if (old == 0 && new == 8) {
         return -1;
     }
-    return new-old;
+    if (new-old > 0) {
+        return 1;
+    }
+    if (new-old < 0) {
+        return -1
+    }
+    return 0;
+}
+
+int wrap_around(int value, int max) {
+    if (value < 0) {
+        return max;
+    }
+    if (value > max) {
+        return 0;
+    }
+    return value;
 }
 
 void main(void) {
-    int x = 0, y = 0;
+    int x = DISPLAY_WIDTH/2, y = DISPLAY_HEIGHT/2;
     int lastleft = 0, lastright = 0;
     while (1) {
         int clicked = 0;
@@ -40,7 +56,10 @@ void main(void) {
 	    
 	    x += calculate_change(left, lastleft);
 	    y += calculate_change(right, lastright);
-	    x++;
+	 
+	    x = wrap_around(x, DISPLAY_WIDTH);
+	    y = wrap_around(y, DISPLAY_HEIGHT);   
+	    
 	    vid_set_pixel(x, y, PIXEL_WHITE);
 	    lastleft = left;
 	    lastright = right;
