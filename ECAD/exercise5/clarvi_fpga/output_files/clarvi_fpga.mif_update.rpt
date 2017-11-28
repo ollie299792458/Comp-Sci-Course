@@ -1,0 +1,74 @@
+MIF/HEX Update report for clarvi_fpga
+Tue Nov 28 13:10:30 2017
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. MIF/HEX Update Summary
+  3. MIF/HEX Update Processed Files
+  4. MIF/HEX Update Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; MIF/HEX Update Summary                                        ;
++-----------------------+---------------------------------------+
+; MIF/HEX Update Status ; Successful - Tue Nov 28 13:10:30 2017 ;
+; Revision Name         ; clarvi_fpga                           ;
+; Top-level Entity Name ; clarvi_fpga                           ;
+; Family                ; Cyclone V                             ;
+; Device                ; 5CSEMA5F31C6                          ;
++-----------------------+---------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; MIF/HEX Update Processed Files                                                   ;
++----------------------------------------------------------------------------------+
+; File Name                                                                        ;
++----------------------------------------------------------------------------------+
+; /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise5/clarvi_fpga/mem.hex ;
++----------------------------------------------------------------------------------+
+
+
++-------------------------+
+; MIF/HEX Update Messages ;
++-------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime MIF/HEX Update
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Tue Nov 28 13:09:09 2017
+Info: Command: quartus_cdb clarvi_fpga -c clarvi_fpga --update_mif
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Critical Warning (127005): Memory depth (16384) in the design file differs from memory depth (171) in the Memory Initialization File "/home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise5/clarvi_fpga/mem.hex" -- setting initial value for remaining addresses to 0
+Info (39024): Processed the following Memory Initialization File(s)
+    Info (39025): Processed Memory Initialization File /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise5/clarvi_fpga/mem.hex File: /home/ecad/Documents/Git_Reps/Comp-Sci-Course/ECAD/exercise5/clarvi_fpga/mem.hex Line: 0
+Info: Quartus Prime MIF/HEX Update was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 1386 megabytes
+    Info: Processing ended: Tue Nov 28 13:10:30 2017
+    Info: Elapsed time: 00:01:21
+    Info: Total CPU time (on all processors): 00:00:10
+
+

@@ -1,6 +1,6 @@
 #include "division.h"
 #include "cycles.h"
-#define TICKS_PER_CENTI_SECOND 10
+#define TICKS_PER_CENTI_SECOND 1000
 
 void hex_output(int value)
 {
