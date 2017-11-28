@@ -1,0 +1,4320 @@
+ls
+# clarvi_displayemul
+# clarvi_displayemul.zip
+# example-asm
+# example-c
+# software.zip
+# transcript
+cd ..
+# reading modelsim.ini
+cd exercise3
+# reading /opt/altera_lite/16.1/modelsim_ase/linuxaloem/../modelsim.ini
+ls
+# clarvi
+# clarvi.zip
+# example-asm
+# example-c
+# software.zip
+cd clarvi
+ls
+# bram.sv
+# clarvi_avalon.sv
+# clarvi_debug.sv
+# clarvi_hw.tcl
+# clarvi_sim.sv
+# clarvi.sv
+# clarvi_test.do
+# README.md
+# riscv.svh
+# transcript
+# vsim.wlf
+# wlft4zE91z
+# wlft7gEI21
+# wlft7oTlj6
+# wlft8RaHLA
+# wlft9nHyNa
+# wlftAFHb2A
+# wlftANyfHK
+# wlftAWsnzp
+# wlftBZKOqs
+# wlftcGgq6A
+# wlftD6LN5o
+# wlftdcfCU4
+# wlftDufrOf
+# wlftdYr5Vi
+# wlftgqAxiS
+# wlfti3GBT6
+# wlftIzCfXM
+# wlftmdEW27
+# wlftNX50Bz
+# wlftoW9PXL
+# wlftPdyNuL
+# wlftpw22LZ
+# wlftqp7hRb
+# wlftRk3och
+# wlftSFbWQ2
+# wlftubZKzQ
+# wlftuJfH6H
+# wlftwCjcpT
+# wlftYOIJTf
+# wlftZ8oWJn
+# work
+cd ..
+cd clarvi
+do clarvi_test.do ../example-asm/build/mem.txt
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:28:55 on Nov 28,2017
+# vlog -reportprogress 300 clarvi.sv 
+# ** Warning: riscv.svh(39): (vlog-13233) Design unit "clarvi_sv_unit" already exists and will be overwritten. Design unit compiled with different set of options.
+# -- Compiling package clarvi_sv_unit
+# -- Compiling module clarvi
+# 
+# Top level modules:
+# 	clarvi
+# End time: 15:28:55 on Nov 28,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:28:55 on Nov 28,2017
+# vlog -reportprogress 300 clarvi_avalon.sv 
+# -- Compiling module clarvi_avalon
+# 
+# Top level modules:
+# 	clarvi_avalon
+# End time: 15:28:55 on Nov 28,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:28:55 on Nov 28,2017
+# vlog -reportprogress 300 bram.sv 
+# -- Compiling module dual_port_bram
+# 
+# Top level modules:
+# 	dual_port_bram
+# End time: 15:28:55 on Nov 28,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:28:55 on Nov 28,2017
+# vlog -reportprogress 300 clarvi_sim.sv 
+# -- Compiling module clarvi_sim
+# -- Compiling module memory_debug
+# -- Compiling module mock_waitrequest
+# -- Compiling module mock_interrupt
+# 
+# Top level modules:
+# 	clarvi_sim
+# 	mock_waitrequest
+# 	mock_interrupt
+# End time: 15:28:56 on Nov 28,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim work.clarvi_sim -t ns -voptargs="+acc=npr" -GINIT_FILE=../example-asm/build/mem.txt 
+# Start time: 15:28:56 on Nov 28,2017
+# Loading sv_std.std
+# Loading work.clarvi_sim
+# Loading work.dual_port_bram
+# Loading work.memory_debug
+# Loading work.clarvi_avalon
+# Loading work.clarvi_sv_unit
+# Loading work.clarvi
+run
+# Debug output: a0 = 0x00000003
+# Debug output: a1 = 0x00000000
+# Debug output: a0 = 0x0000000d
+# Debug output: a1 = 0x00000002
+# Debug output: a0 = 0x0012469d
+# Debug output: a1 = 0x00000015
+# time: 14250, '{op:ECALL, rd:zero, rs1:zero, rs2:zero, rs1_used:0, rs2_used:0, immediate_used:0, immediate:x, funct12:F12_ECALL, memory_write:0, memory_read:0, memory_read_unsigned:0, memory_width:B, enable_wb:0, pc:24} instruction at 00000018, stopping simulator
+# ** Note: $stop    : clarvi_debug.sv(44)
+#    Time: 14250 ns  Iteration: 1  Instance: /clarvi_sim/clarvi/clarvi
+# Break in Module clarvi at clarvi_debug.sv line 44
+do clarvi_test.do ../example-c/build/mem.txt
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:35:48 on Nov 28,2017
+# vlog -reportprogress 300 clarvi.sv 
+# -- Compiling package clarvi_sv_unit
+# -- Compiling module clarvi
+# 
+# Top level modules:
+# 	clarvi
+# End time: 15:35:48 on Nov 28,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:35:48 on Nov 28,2017
+# vlog -reportprogress 300 clarvi_avalon.sv 
+# -- Compiling module clarvi_avalon
+# 
+# Top level modules:
+# 	clarvi_avalon
+# End time: 15:35:48 on Nov 28,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:35:48 on Nov 28,2017
+# vlog -reportprogress 300 bram.sv 
+# -- Compiling module dual_port_bram
+# 
+# Top level modules:
+# 	dual_port_bram
+# End time: 15:35:48 on Nov 28,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:35:48 on Nov 28,2017
+# vlog -reportprogress 300 clarvi_sim.sv 
+# -- Compiling module clarvi_sim
+# -- Compiling module memory_debug
+# -- Compiling module mock_waitrequest
+# -- Compiling module mock_interrupt
+# 
+# Top level modules:
+# 	clarvi_sim
+# 	mock_waitrequest
+# 	mock_interrupt
+# End time: 15:35:48 on Nov 28,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:35:49 on Nov 28,2017, Elapsed time: 0:06:53
+# Errors: 0, Warnings: 0
+# vsim work.clarvi_sim -t ns -voptargs="+acc=npr" -GINIT_FILE=../example-c/build/mem.txt 
+# Start time: 15:35:49 on Nov 28,2017
+# Loading sv_std.std
+# Loading work.clarvi_sim
+# Loading work.dual_port_bram
+# Loading work.memory_debug
+# Loading work.clarvi_avalon
+# Loading work.clarvi_sv_unit
+# Loading work.clarvi
+run
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000000
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000007
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000014
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000021
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000029
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000036
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000043
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000050
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000058
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000065
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000072
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000079
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000087
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000094
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000101
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000109
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000116
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000123
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000130
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000138
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000145
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000152
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000159
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000167
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000174
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000181
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000188
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000196
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000203
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000210
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000218
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000225
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000232
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000239
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000247
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000254
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000261
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000268
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000276
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000283
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000290
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000297
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000305
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000312
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000319
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000327
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000334
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000341
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000348
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000356
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000363
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000370
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000377
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000385
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000392
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000399
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000406
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000414
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000421
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000428
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000435
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000443
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000450
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000457
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000465
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000472
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000479
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000486
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000494
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000501
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000508
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000515
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000523
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000530
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000537
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000544
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000552
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000559
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000566
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000573
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000581
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000588
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000595
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000603
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000610
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000617
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000624
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000632
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000639
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000646
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000653
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000661
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000668
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000675
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000682
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000690
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000697
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000704
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000711
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000719
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000726
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000733
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000741
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000748
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000755
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000762
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000770
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000777
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000784
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000791
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000799
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000806
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000813
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000820
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000828
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000835
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000842
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000849
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000857
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000864
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000871
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000879
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000886
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000893
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000900
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000908
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000915
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000922
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000929
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000937
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000944
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000951
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000958
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000966
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000973
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000980
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000987
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00000995
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001002
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001009
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001016
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001024
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001031
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001038
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001046
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001053
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001060
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001067
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001075
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001082
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001089
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001096
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001104
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001111
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001118
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001125
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001133
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001140
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001147
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001154
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001162
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001169
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001176
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001183
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001191
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001198
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001205
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001212
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001220
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001227
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001234
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001241
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001249
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001256
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001263
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001271
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001278
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001285
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001292
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001300
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001307
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001314
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001321
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001329
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001336
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001343
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001350
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001358
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001365
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001372
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001379
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001387
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001394
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001401
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001408
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001416
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001423
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001430
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001437
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001445
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001452
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001459
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001466
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001474
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001481
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001488
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001495
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001503
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001510
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001517
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001524
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001532
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001539
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001546
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001553
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001561
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001568
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001575
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001583
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001590
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001597
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001604
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001612
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001619
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001626
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001633
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001641
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001648
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001655
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001662
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001670
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001677
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001684
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001691
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001699
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001706
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001713
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001720
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001728
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001735
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001742
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001749
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001757
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001764
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001771
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001778
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001786
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001793
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001800
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001808
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001815
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001822
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001829
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001837
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001844
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001851
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001858
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001866
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001873
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001880
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001887
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001895
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001902
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001909
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001916
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001924
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001931
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001938
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001945
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001953
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001960
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001967
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001974
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001982
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001989
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00001996
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002003
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002011
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002018
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002025
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002032
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002040
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002047
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002054
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002061
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002069
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002076
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002083
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002091
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002098
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002105
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002112
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002120
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002127
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002134
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002141
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002149
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002156
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002163
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002170
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002178
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002185
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002192
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002199
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002207
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002214
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002221
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002228
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002236
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002243
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002250
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002257
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002265
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002272
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002279
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002286
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002294
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002301
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002308
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002315
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002323
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002330
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002337
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002345
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002352
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002359
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002366
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002374
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002381
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002388
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002395
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002403
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002410
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002417
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002424
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002432
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002439
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002446
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002453
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002461
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002468
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002475
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002482
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002490
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002497
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002504
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002511
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002519
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002526
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002533
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002540
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002548
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002555
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002562
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002569
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002577
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002584
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002591
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002598
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002606
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002613
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002620
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002628
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002635
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002642
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002649
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002657
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002664
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002671
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002678
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002686
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002693
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002700
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002707
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002715
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002722
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002729
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002736
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002744
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002751
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002758
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002765
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002773
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002780
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002787
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002794
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002802
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002809
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002816
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002823
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002831
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002838
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002845
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002852
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002860
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002867
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002874
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002881
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002889
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002896
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002903
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002910
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002918
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002925
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002932
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002939
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002947
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002954
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002961
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002968
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002976
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002983
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002990
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00002997
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003005
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003012
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003019
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003026
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003034
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003041
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003048
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003055
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003063
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003070
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003077
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003084
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003092
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003099
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003106
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003113
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003121
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003128
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003135
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003142
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003150
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003157
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003164
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003171
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003179
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003186
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003193
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003200
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003208
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003215
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003222
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003229
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003237
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003244
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003251
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003259
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003266
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003273
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003280
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003288
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003295
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003302
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003309
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003317
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003324
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003331
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003338
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003346
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003353
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003360
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003367
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003375
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003382
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003389
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003396
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003404
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003411
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003418
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003425
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003433
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003440
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003447
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003454
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003462
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003469
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003476
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003483
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003491
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003498
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003505
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003512
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003520
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003527
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003534
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003541
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003549
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003556
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003563
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003570
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003578
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003585
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003592
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003599
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003607
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003614
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003621
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003628
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003636
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003643
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003650
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003657
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003665
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003672
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003679
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003686
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003694
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003701
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003708
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003715
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003723
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003730
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003737
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003744
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003752
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003759
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003766
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003773
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003781
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003788
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003795
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003802
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003810
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003817
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003824
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003831
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003839
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003846
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003853
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003860
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003868
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003875
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003882
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003889
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003897
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003904
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003911
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003918
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003926
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003933
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003940
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003947
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003955
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003962
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003969
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003976
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003984
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003991
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00003998
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004005
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004013
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004020
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004027
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004034
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004042
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004049
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004056
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004063
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004071
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004078
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004085
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004092
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004100
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004107
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004114
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004122
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004129
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004136
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004143
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004151
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004158
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004165
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004172
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004180
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004187
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004194
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004201
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004209
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004216
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004223
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004230
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004238
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004245
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004252
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004259
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004267
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004274
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004281
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004288
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004296
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004303
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004310
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004317
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004325
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004332
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004339
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004346
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004354
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004361
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004368
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004375
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004383
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004390
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004397
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004405
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004412
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004419
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004426
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004434
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004441
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004448
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004455
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004463
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004470
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004477
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004484
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004492
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004499
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004506
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004513
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004521
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004528
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004535
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004542
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004550
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004557
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004564
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004571
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004579
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004586
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004593
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004600
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004608
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004615
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004622
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004629
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004637
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004644
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004651
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004658
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004666
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004673
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004680
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004687
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004695
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004702
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004709
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004716
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004724
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004731
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004738
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004745
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004753
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004760
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004767
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004774
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004782
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004789
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004796
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004803
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004811
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004818
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004825
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004833
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004840
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004847
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004854
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004862
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004869
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004876
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004883
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004891
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004898
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004905
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004912
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004920
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004927
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004934
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004941
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004949
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004956
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004963
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004970
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004978
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004985
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004992
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000004
+# HEX write, address 04000080, data 00004999
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005007
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005014
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005021
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005028
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005036
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005043
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005050
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005057
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005065
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005072
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005079
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005086
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005094
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005101
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005108
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005115
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005123
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005130
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005137
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005144
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005152
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005159
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005166
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005173
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005181
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005188
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005195
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005202
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005210
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005217
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005224
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005231
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005239
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005246
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005253
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005260
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005268
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005275
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005282
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005289
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005297
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005304
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005311
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005318
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005326
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005333
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005340
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005347
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005355
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005362
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005369
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005376
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005384
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005391
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005398
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005405
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005413
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005420
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005427
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005434
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005442
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005449
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005456
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005463
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005471
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005478
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005485
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005492
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005500
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005507
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005514
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005521
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005529
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005536
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005543
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005550
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005558
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005565
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005572
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005579
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005587
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005594
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005601
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005608
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005616
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005623
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005630
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005637
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005645
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005652
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005659
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005666
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005674
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005681
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005688
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005695
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005703
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005710
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005717
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005724
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005732
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005739
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005746
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005753
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005761
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005768
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005775
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005782
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005790
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005797
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005804
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005811
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005819
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005826
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005833
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005840
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005848
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005855
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005862
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005869
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005877
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005884
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005891
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005898
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005906
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005913
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005920
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005927
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005935
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005942
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005949
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005956
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005964
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005971
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005978
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005985
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000005
+# HEX write, address 04000080, data 00005993
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010000
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010007
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010014
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010022
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010029
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010036
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010043
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010051
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010058
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010065
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010072
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010080
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010087
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010094
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010101
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010109
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010116
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010123
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010130
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010138
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010145
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010152
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010159
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010167
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010174
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010181
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010188
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010196
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010203
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010210
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010217
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010225
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010232
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010239
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010246
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010254
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010261
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010268
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010275
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010283
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010290
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010297
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010304
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010312
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010319
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010326
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010333
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010341
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010348
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010355
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010362
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010370
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010377
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010384
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010391
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010399
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010406
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010413
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010421
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010428
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010435
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010442
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010450
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010457
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010464
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010471
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010479
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010486
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010493
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010500
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010508
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010515
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010522
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010529
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010537
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010544
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010551
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010558
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010566
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010573
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010580
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010588
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010595
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010602
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010609
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010617
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010624
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010631
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010638
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010646
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010653
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010660
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010667
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010675
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010682
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010689
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010696
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010704
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010711
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010718
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010725
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010733
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010740
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010747
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010754
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010762
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010769
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010776
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010783
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010791
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010798
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010805
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010813
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010820
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010827
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010834
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010842
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010849
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010856
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010863
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010871
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010878
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010885
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010892
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010900
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010907
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010914
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010921
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010929
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010936
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010943
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010950
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010958
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010965
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010972
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010979
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010987
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000000
+# HEX write, address 04000080, data 00010994
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011001
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011008
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011016
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011023
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011030
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011037
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011045
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011052
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011059
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011066
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011074
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011081
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011088
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011095
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011103
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011110
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011117
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011124
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011132
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011139
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011146
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011153
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011161
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011168
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011175
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011182
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011190
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011197
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011204
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011211
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011219
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011226
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011233
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011241
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011248
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011255
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011262
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011270
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011277
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011284
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011291
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011299
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011306
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011313
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011320
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011328
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011335
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011342
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011349
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011357
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011364
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011371
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011378
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011386
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011393
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011400
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011407
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011415
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011422
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011429
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011436
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011444
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011451
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011458
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011465
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011473
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011480
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011487
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011494
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011502
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011509
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011516
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011523
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011531
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011538
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011545
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011552
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011560
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011567
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011574
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011581
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011589
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011596
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011603
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011610
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011618
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011625
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011632
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011639
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011647
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011654
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011661
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011668
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011676
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011683
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011690
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011697
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011705
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011712
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011719
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011726
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011734
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011741
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011748
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011755
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011763
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011770
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011777
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011784
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011792
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011799
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011806
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011813
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011821
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011828
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011835
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011842
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011850
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011857
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011864
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011871
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011879
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011886
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011893
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011900
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011908
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011915
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011922
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011929
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011937
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011944
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011951
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011958
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011966
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011973
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011980
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011987
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000001
+# HEX write, address 04000080, data 00011995
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012002
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012009
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012016
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012024
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012031
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012038
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012045
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012053
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012060
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012067
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012074
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012082
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012089
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012096
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012103
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012111
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012118
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012125
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012132
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012140
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012147
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012154
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012161
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012169
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012176
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012183
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012190
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012198
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012205
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012212
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012219
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012227
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012234
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012241
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012248
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012256
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012263
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012270
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012277
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012285
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012292
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012299
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012306
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012314
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012321
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012328
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012336
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012343
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012350
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012357
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012365
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012372
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012379
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012386
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012394
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012401
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012408
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012415
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012423
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012430
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012437
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012444
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012452
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012459
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012466
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012473
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012481
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012488
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012495
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012502
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012510
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012517
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012524
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012531
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012539
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012546
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012553
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012560
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012568
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012575
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012582
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012589
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012597
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012604
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012611
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012618
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012626
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012633
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012640
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012647
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012655
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012662
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012669
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012676
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012684
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012691
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012698
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012705
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012713
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012720
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012727
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012734
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012742
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012749
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012756
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012763
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012771
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012778
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012785
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012792
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012800
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012807
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012814
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012821
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012829
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012836
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012843
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012850
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012858
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012865
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012872
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012879
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012887
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012894
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012901
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012908
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012916
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012923
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012930
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012937
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012945
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012952
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012959
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012966
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012974
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012981
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012988
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000002
+# HEX write, address 04000080, data 00012995
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013003
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013010
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013017
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013024
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013032
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013039
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013046
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013053
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013061
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013068
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013075
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013082
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013090
+# Debug output: a5 = 0x00000000
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013097
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013104
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013111
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013119
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013126
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013133
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013140
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013148
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013155
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013162
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013169
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013177
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013184
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013191
+# Debug output: a5 = 0x00000001
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013198
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013206
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013213
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013220
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013227
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013235
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013242
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013249
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013256
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013264
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013271
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013278
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013285
+# Debug output: a5 = 0x00000002
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013293
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013300
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013307
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013314
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013322
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013329
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013336
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013343
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013351
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013358
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013365
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013372
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013380
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013387
+# Debug output: a5 = 0x00000003
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013394
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013401
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013409
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013416
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013423
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013430
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013438
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013445
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013452
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013459
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013466
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013474
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013481
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013488
+# Debug output: a5 = 0x00000004
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013495
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013503
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013510
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013517
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013524
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013532
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013539
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013546
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013553
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013561
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013568
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013575
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013582
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013590
+# Debug output: a5 = 0x00000005
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013597
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013604
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013611
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013619
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013626
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013633
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013640
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013648
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013655
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013662
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013669
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013677
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013684
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013691
+# Debug output: a5 = 0x00000006
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013698
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013706
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013713
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013720
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013727
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013735
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013742
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013749
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013756
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013764
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013771
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013778
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013785
+# Debug output: a5 = 0x00000007
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013793
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013800
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013807
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013814
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013822
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013829
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013836
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013843
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013851
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013858
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013865
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013872
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013880
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013887
+# Debug output: a5 = 0x00000008
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013894
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013901
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013909
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013916
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013923
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013930
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013938
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013945
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013952
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013959
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013967
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013974
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013981
+# Debug output: a5 = 0x00000009
+# Debug output: a5 = 0x00000003
+# HEX write, address 04000080, data 00013988
+# End time: 16:00:02 on Nov 28,2017, Elapsed time: 0:24:13
+# Errors: 0, Warnings: 0

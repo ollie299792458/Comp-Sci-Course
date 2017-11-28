@@ -6,7 +6,7 @@ When the latch is not high the two outputs swap, but when it is taken low again 
 They should probably make the always an always_ff or always_comb (which woud also solve the earlier problem), but that might break the initial block (it did on mine...)
 
 2.
-As the F_MAX is around 290MHz, it wouldn't wo
+As the F_MAX reported by the timing analysis is around 290MHz, it wouldn't work with a 500MHz crystal, as it would ossilate too fast for the flip flops and combinatorial logic to update in time.
 
 3.
 8 before the loop (assuming a1 isn't 0, excluding stack allocation, from TRACE)
