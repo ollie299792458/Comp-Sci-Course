@@ -9,4 +9,8 @@ client.c
 The client code connects to the server on the port and IP address specified, then writes all the data received to stout (by default the terminal).
 
 -Question 2
+server.c
+Missing a "}" at the end, and the one just before it needs to be moved so it closes the for loop (else the server terminates after only 1 connection has been serviced).
+""if (argc != 2)"" should be 3, as the first argument is the name of the program (i.e. server1), so with a file and a port argument the total number of arguments is 3.
+The integer w is not reset to 0, so come the second connection it things the whole files has already been written, so doesn't write anything to the client
 

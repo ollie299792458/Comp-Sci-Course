@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
   FILE *fp;
   struct sockaddr_in server;
 
-  if (argc != 2) {
+  if (argc != 3) {
     puts("Usage: server <port> <file>");
     return 1;
   }
@@ -57,6 +57,7 @@ int main(int argc, char *argv[]) {
       char bytes[BUFSIZE];
       int r,w;
 
+      w = 0;
       r = fread(bytes,sizeof(char),BUFSIZE,fp);
 
       while(w<r) {
@@ -71,7 +72,9 @@ int main(int argc, char *argv[]) {
     fseek(fp,0,SEEK_SET);
 
     close(connfd);
-
-    return 0;
   }
 
+  
+
+  return 0;
+}
