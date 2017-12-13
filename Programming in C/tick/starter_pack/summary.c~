@@ -1,0 +1,43 @@
+/* client.c */
+#include <stdio.h>
+#include <arpa/inet.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <netinet/in.h>
+
+
+int main(int argc, char *argv[]) {
+
+  FILE *fp
+  
+  if (argc != 2) {
+    perror("Usage: summary <file>");
+    return 1;
+  }
+
+  if ((fp=fopen(argv[1],"rb")) == 0) {
+    perror("Cannot find file to summarise");
+    return 2;
+  }
+
+  memset(&servaddr,0,sizeof(servaddr));
+  servaddr.sin_family = AF_INET;
+  servaddr.sin_addr.s_addr = inet_addr(argv[1]);
+  servaddr.sin_port = htons(atoi(argv[2]));
+
+  if (connect(sockfd,(struct sockaddr *) &servaddr,sizeof(servaddr)) < 0) {
+    perror("Cannot connect to server");
+    return 3;
+  }
+
+  {
+    int n;
+    char bytes[BUFSIZE-1];
+    while((n = read(sockfd,bytes,BUFSIZE)) > 0) {
+      fwrite(bytes,n,sizeof(char),stdout);
+    }
+  }
+
+  return 1;
+}
