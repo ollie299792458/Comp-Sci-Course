@@ -3,7 +3,10 @@ Oliver Black, Selwyn, olb22
 
 -Question 1
 server.c
-
+The server code sets up a socket on a port, and opens a local file, then blocks waiting for incoming connections, when a connection becomes available it writes everything in the local file to the client, and then goes back to waiting for connections.
 
 client.c
+The client code connects to the server on the port and IP address specified, then writes all the data received to stout (by default the terminal).
+
+-Question 2
 
