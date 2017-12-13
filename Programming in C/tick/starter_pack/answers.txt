@@ -1,0 +1,9 @@
+Programming in C practical exercise
+Oliver Black, Selwyn, olb22
+
+-Question 1
+server.c
+
+
+client.c
+
