@@ -1,7 +1,8 @@
 /* summary.c */
 #include <stdio.h>
 
-#define BUFSIZE 1024
+#define BUFSIZE 1048576
+#define BUFSIZESTRING "BUFSIZE"
 #define IP_HEADER_MIN_SIZE_BYTES 20
 #define TCP_HEADER_MIN_SIZE_BYTES 20
 
@@ -11,13 +12,13 @@ void ip_string(int ip, char* output) {
   bytes[1] = (ip >> 8) & 0xFF;
   bytes[2] = (ip >> 16) & 0xFF;
   bytes[3] = (ip >> 24) & 0xFF;
-  sprintf(output,"%d.%d.%d.%d\n", bytes[3], bytes[2], bytes[1], bytes[0]);
+  sprintf(output,"%d.%d.%d.%d", bytes[3], bytes[2], bytes[1], bytes[0]);
 }
 
 int main(int argc, char *argv[]) {
 
   FILE *fp;
-  char bytes[BUFSIZE];
+  unsigned char bytes[BUFSIZE];
 
   if (argc != 2) {
     perror("Usage: summary <file>");
@@ -32,12 +33,15 @@ int main(int argc, char *argv[]) {
   //read start into buffer
   int r = fread(bytes,1,BUFSIZE,fp);
   int loc = 0;
-  
-  printf("Read %d bytes\n",r);
 
   if (r < IP_HEADER_MIN_SIZE_BYTES + TCP_HEADER_MIN_SIZE_BYTES) {
     perror("File doesn't contain at least one IP and TCP packet");
     return 3;
+  }
+
+  if (r >= BUFSIZE) {
+    perror("File longer than "BUFSIZESTRING" bytes");
+    return 4;
   }
 
   //get the IHL, second 4 bits of first byte
@@ -74,22 +78,27 @@ int main(int argc, char *argv[]) {
   //skip first 12 tcp bytes
   loc += 12;
 
-  //get the TCP packet's header size
-  int header_size = bytes[loc] >> 4;
-  printf("\n%d\n", header_size);
+  //get the TCP packet's header size, cast to make the shift a logical one, padding with 0's
+  int data_offset = bytes[loc] >> 4;
 
   loc = total_length;
   int n_ip = 1;
 
-  while (loc < r) {
+  while (loc <= r) {
     //skip the first two bytes
     loc += 2;
 
     //get length and skip to end of packet
     int length = (bytes[loc]<<8) + bytes[loc+1];
+    if (length == 0) {
+      break;
+    }
     n_ip++;
     loc += length - 2;
   }
+
+  //print out result
+  printf("%s %s %d %d %d %d\n", source, dest, ihl, total_length, data_offset, n_ip);
 
   return 0;
 }
