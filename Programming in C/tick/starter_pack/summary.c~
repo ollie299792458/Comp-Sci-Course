@@ -1,16 +1,25 @@
-/* client.c */
+/* summary.c */
 #include <stdio.h>
-#include <arpa/inet.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <netinet/in.h>
 
+#define BUFSIZE 1048576
+#define BUFSIZESTRING "BUFSIZE"
+#define IP_HEADER_MIN_SIZE_BYTES 20
+#define TCP_HEADER_MIN_SIZE_BYTES 20
+
+void ip_string(int ip, char* output) {
+  unsigned char bytes[4];
+  bytes[0] = ip & 0xFF;
+  bytes[1] = (ip >> 8) & 0xFF;
+  bytes[2] = (ip >> 16) & 0xFF;
+  bytes[3] = (ip >> 24) & 0xFF;
+  sprintf(output,"%d.%d.%d.%d", bytes[3], bytes[2], bytes[1], bytes[0]);
+}
 
 int main(int argc, char *argv[]) {
 
-  FILE *fp
-  
+  FILE *fp;
+  unsigned char bytes[BUFSIZE];
+
   if (argc != 2) {
     perror("Usage: summary <file>");
     return 1;
@@ -21,23 +30,75 @@ int main(int argc, char *argv[]) {
     return 2;
   }
 
-  memset(&servaddr,0,sizeof(servaddr));
-  servaddr.sin_family = AF_INET;
-  servaddr.sin_addr.s_addr = inet_addr(argv[1]);
-  servaddr.sin_port = htons(atoi(argv[2]));
+  //read start into buffer
+  int r = fread(bytes,1,BUFSIZE,fp);
+  int loc = 0;
 
-  if (connect(sockfd,(struct sockaddr *) &servaddr,sizeof(servaddr)) < 0) {
-    perror("Cannot connect to server");
+  if (r < IP_HEADER_MIN_SIZE_BYTES + TCP_HEADER_MIN_SIZE_BYTES) {
+    perror("File doesn't contain at least one IP and TCP packet");
     return 3;
   }
 
-  {
-    int n;
-    char bytes[BUFSIZE-1];
-    while((n = read(sockfd,bytes,BUFSIZE)) > 0) {
-      fwrite(bytes,n,sizeof(char),stdout);
-    }
+  if (r >= BUFSIZE) {
+    perror("File longer than "BUFSIZESTRING" bytes");
+    return 4;
   }
 
-  return 1;
+  //get the IHL, second 4 bits of first byte
+  int ihl = bytes[loc] & 0x0F;
+  loc += 1;
+
+  //ignore the second byte
+  loc += 1;
+
+  //get the total length
+  int total_length = (bytes[loc]<<8) + bytes[loc+1];
+  loc += 2;
+
+  //ignore next 8 bytes
+  loc += 8;
+
+  //get the source address
+  int source_int = (bytes[loc] << 24) + (bytes[loc+1] << 16) + (bytes[loc+2] << 8) + bytes[loc+3];
+  char source[15];
+  ip_string(source_int, source);
+  loc += 4;
+
+  //get the destination address
+  int dest_int = (bytes[loc] << 24) + (bytes[loc+1] << 16) + (bytes[loc+2] << 8) + bytes[loc+3];
+  char dest[15];
+  ip_string(dest_int, dest);
+  loc += 4;
+
+  //if the IP header contains options
+  if (ihl > 5) {
+    loc += 4*(ihl-5);
+  }
+
+  //skip first 12 tcp bytes
+  loc += 12;
+
+  //get the TCP packet's header size, cast to make the shift a logical one, padding with 0's
+  int data_offset = bytes[loc] >> 4;
+
+  loc = total_length;
+  int n_ip = 1;
+
+  while (loc <= r) {
+    //skip the first two bytes
+    loc += 2;
+
+    //get length and skip to end of packet
+    int length = (bytes[loc]<<8) + bytes[loc+1];
+    if (length == 0) {
+      break;
+    }
+    n_ip++;
+    loc += length - 2;
+  }
+
+  //print out result
+  printf("%s %s %d %d %d %d\n", source, dest, ihl, total_length, data_offset, n_ip);
+
+  return 0;
 }

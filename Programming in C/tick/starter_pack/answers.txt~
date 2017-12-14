@@ -9,4 +9,11 @@ client.c
 The client code connects to the server on the port and IP address specified, then writes all the data received to stout (by default the terminal).
 
 -Question 2
+server.c
+Missing a "}" at the end, and the one just before it needs to be moved so it closes the for loop (else the server terminates after only 1 connection has been serviced).
+""if (argc != 2)"" should be 3, as the first argument is the name of the program (i.e. server1), so with a file and a port argument the total number of arguments is 3.
+The integer w is not reset to 0, so come the second connection it things the whole files has already been written, so doesn't write anything to the client
+
+-Task 2 note
+It was impossible to properly test, as no expected output for message1-4 was given, my implementation produces some numbers, which I believe are the correct ones, however I cannot be sure, in future some example test data, or a link to a tool that can accurately deconstruct binary files into IP and TCP headers and data would be useful.  Due to not being able to test it properly, I didn't bother with a proper buffer implementation (but one can be seen in task 3).
 

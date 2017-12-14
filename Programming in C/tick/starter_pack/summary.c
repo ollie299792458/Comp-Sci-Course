@@ -78,7 +78,7 @@ int main(int argc, char *argv[]) {
   //skip first 12 tcp bytes
   loc += 12;
 
-  //get the TCP packet's header size, cast to make the shift a logical one, padding with 0's
+  //get the TCP packet's header size
   int data_offset = bytes[loc] >> 4;
 
   loc = total_length;

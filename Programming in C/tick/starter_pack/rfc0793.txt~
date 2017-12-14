@@ -1145,7 +1145,7 @@ Functional Specification
     Reserved for future use.  Must be zero.
 
   Control Bits:  6 bits (from left to right):
-can a tcp packet be split up by ip
+
     URG:  Urgent Pointer field significant
     ACK:  Acknowledgment field significant
     PSH:  Push Function
