@@ -60,7 +60,6 @@ int main(int argc, char *argv[]) {
         fwrite(dbuf, 1, dl, fo);
     }
     
-    
     //close files
     fclose(fm);
     fclose(fo);
