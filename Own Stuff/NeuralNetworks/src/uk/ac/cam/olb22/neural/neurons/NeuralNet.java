@@ -16,15 +16,13 @@ public class NeuralNet {
     }
 
 
-    private double[] calculateOutput() {
-        return outputLayer.calculateOutput();
-    }
-
-    private void reset() {
-        outputLayer.reset();
-        inputLayer.reset();
-        for (NeuronLayer layer:hiddenLayers) {
-            layer.reset();
+    private double[] calculateOutput(double[] inputs) {
+        double[] outputs = inputLayer.calculateOutput(inputs);
+        inputs = outputs;
+        for (int i = 0; i < hiddenLayers.length; i++) {
+            outputs = hiddenLayers[i].calculateOutput(inputs);
+            inputs = outputs;
         }
+        return outputLayer.calculateOutput(inputs);
     }
 }

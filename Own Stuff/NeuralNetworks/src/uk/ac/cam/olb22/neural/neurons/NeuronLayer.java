@@ -22,14 +22,11 @@ public class NeuronLayer {
         return neurons.length;
     }
 
-    public void reset() {
-        for (Neuron neuron: neurons) {
-            neuron.reset();
+    public double[] calculateOutput(double[] inputActivations) {
+        double[] outputs = new double[size()];
+        for (int i = 0; i < size(); i++) {
+            outputs[i] = neurons[i].calculateOutput(inputActivations);
         }
-    }
-
-    public double[] calculateOutput() {
-        //for ()
-        return null;
+        return outputs;
     }
 }

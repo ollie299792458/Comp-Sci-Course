@@ -13,35 +13,27 @@ public class Neuron {
 
     private double[] weights;
 
-    private final Neuron[] incomingNeurons;
+    private final int inputs;
 
     private final Function<Double, Double> activationFunction;
 
-    private boolean outputFresh = false;
-
-    private double output;
-
-    public Neuron(int id, Neuron[] incomingNeurons, Function<Double, Double> activationFunction) {
-        this.incomingNeurons = incomingNeurons;
-        this.weights = new double[incomingNeurons.length];
+    public Neuron(int id, int inputs, Function<Double, Double> activationFunction) {
+        this.inputs = inputs;
+        this.weights = new double[inputs];
         this.activationFunction = activationFunction;
         this.id = id;
     }
 
-    public double calculateOutput() {
-        if (!outputFresh) {
-            double sum = 0;
-            for (int i = 0; i < weights.length; i++) {
-                sum += weights[i] * (incomingNeurons[i].calculateOutput());
-            }
-            output = activationFunction.apply(sum);
-            outputFresh = true;
+    public double calculateOutput(double[] inputActivations) {
+        if(inputActivations.length != inputs) {
+            throw new NeuralNetException("Incorrect number of input neurons");
         }
-        return output;
-    }
 
-    public void reset() {
-        outputFresh = false;
+        double sum = 0;
+        for (int i = 0; i < weights.length; i++) {
+            sum += weights[i] * inputActivations[i];
+        }
+        return activationFunction.apply(sum);
     }
 
     public void setBias(double bias) {
