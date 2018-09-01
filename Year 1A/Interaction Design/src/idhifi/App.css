@@ -1,0 +1,71 @@
+.autofill-text {
+    -fx-skin: "np.com.ngopal.control.AutoFillTextBoxSkin";
+}
+
+.jfx-text-field {
+    -jfx-focus-color: white;
+    -fx-color: white;
+}
+
+
+/** CSS **/
+.scrollview{
+    -fx-border-color:derive(#121f2d,100%) !important;
+}
+
+/* The main scrollbar CSS class of ListView */
+.scrollview .scroll-bar:horizontal ,
+.scrollview  .scroll-bar:vertical{
+    -fx-background-color:#121f2d;
+    -fx-border-color:#121f2d;
+}
+
+/* The increment and decrement button CSS class of scrollbar */
+.scrollview .increment-button ,.scrollview .decrement-button {
+    -fx-background-color:transparent;
+    -fx-border-color:#121f2d;
+    -fx-arrows-visible: false;
+}
+
+/* The main scrollbar **track** CSS class  */
+.scrollview .scroll-bar:horizontal .track ,
+.scrollview .scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color:#121f2d;
+    -fx-background-radius: 0em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.scrollview .scroll-bar:horizontal .thumb,
+.scrollview .scroll-bar:vertical .thumb {
+    -fx-background-color:derive(#121f2d,100%);
+    -fx-background-insets: 0, 0, 0;
+    -fx-background-radius: 0em;
+}
+
+/* ------------------------------------------------------------------------------------- */
+/** EVENT CSS **/
+/* ------------------------------------------------------------------------------------- */
+
+/* The main scrollbar **track** CSS class on event of "hover" and "pressed" */
+
+.scrollview .scroll-bar:horizontal:hover .track ,
+.scrollview .scroll-bar:horizontal:pressed .track ,
+.scrollview .scroll-bar:vertical:hover .track,
+.scrollview .scroll-bar:vertical:pressed .track{
+    -fx-background-color: derive(#121f2d,20%);
+    -fx-opacity: 1;
+    -fx-background-radius: 0em;
+}
+
+/* The main scrollbar **thumb** CSS class on event of "hover" and "pressed" */
+.scrollview .scroll-bar .thumb:hover,
+.scrollview .scroll-bar .thumb:pressed{
+    -fx-background-color: derive(#121f2d,100%);
+}
+
+.scrollview .increment-button:hover ,.scrollview .decrement-button:hover {
+    -fx-background-color:derive(#121f2d,100%);
+    -fx-border-color:#121f2d;
+
+}
