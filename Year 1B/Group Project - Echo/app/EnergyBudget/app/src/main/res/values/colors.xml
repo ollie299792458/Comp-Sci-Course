@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--app color scheme-->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--Landscape colours-->
+    <color name="grass_green">#7cfc00</color>
+    <!--sky colours-->
+    <color name="daylight">#b0dae8</color>
+    <color name="civil_twilight">#96bbc9</color>
+    <color name="nautical_twilight">#6f8f9a</color>
+    <color name="astronomical_twilight">#586a70</color>
+    <color name="night">#2f454d</color>
+    <!--cloud colours-->
+    <color name="happyCloud">#FCFCFC</color>
+    <color name="okCloud">#E6E6E6</color>
+    <color name="sadCloud">#8A8A8A</color>
+
+    <!--Radio Buttons-->
+    <color name="time_outline">#99c2ff</color>
+    <color name="time_background">#ccffffff</color>
+    <color name="time_text">#99c2ff</color>
+    <color name="time_selected_background">#cc99c2ff</color>
+    <color name="time_selected_text">#ffffff</color>
+
+    <!--Progress Bar-->
+    <color name="progress_background">#dddddd</color>
+    <color name="progress_green">#66cc99</color>
+    <color name="progress_red">#ff6666</color>
+
+    <color name="tipOfTheDay">#FFFFA5</color>
+
+    <!--Appliance types-->
+    <color name="kitchen_icon">#66cc99</color>
+    <color name="bathroom_icon">#4d94ff</color>
+    <color name="entertainment_icon">#cc66cc</color>
+    <color name="housekeeping_icon">#ff3385</color>
+    <color name="heating_icon">#ff8533</color>
+    <color name="light_icon">#ffdb4d</color>
+
+    <!--Badges-->
+    <color name = "tree_badge">#66cc99</color>
+    <color name = "flower_badge">#ff6666</color>
+    <color name = "animal_badge">#ffe680</color>
+    <color name = "mountain_badge">#b0dae8</color>
+    <color name = "kitchen_badge">#9fdfbf</color>
+    <color name = "bathroom_badge">#99c2ff</color>
+    <color name = "entertainment_badge">#df9fdf</color>
+    <color name = "housekeeping_badge">#ff80b3</color>
+    <color name = "heating_badge">#ffb380</color>
+    <color name = "light_badge">#ffe680</color>
+
+    <color name="white">#ffffff</color>
+
+    <color name="greyed_out">#cccccc</color>
+
+    <color name="transparent">#00000000</color>
+</resources>

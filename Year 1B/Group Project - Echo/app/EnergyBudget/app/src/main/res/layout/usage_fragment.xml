@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RadioGroup
+        android:id="@+id/timeRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:checkedButton="@+id/dayRadioButton"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <uk.ac.cam.cl.part1b.groupproject.echo.energybudget.TimeSelectRadioButton
+            android:id="@+id/dayRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_weight="0.25"
+            android:text="Day" />
+
+        <uk.ac.cam.cl.part1b.groupproject.echo.energybudget.TimeSelectRadioButton
+            android:id="@+id/weekRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="Week" />
+
+        <uk.ac.cam.cl.part1b.groupproject.echo.energybudget.TimeSelectRadioButton
+            android:id="@+id/monthRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="Month" />
+
+        <uk.ac.cam.cl.part1b.groupproject.echo.energybudget.TimeSelectRadioButton
+            android:id="@+id/yearRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="Year" />
+
+    </RadioGroup>
+
+
+    <RelativeLayout
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="0.5">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/changeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="No change"
+            android:textSize="20sp"
+            android:textColor="@color/greyed_out"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/changeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20%"
+                android:textSize="40sp"
+                android:textColor="@color/greyed_out"/>
+
+            <ImageView
+                android:id="@+id/changeArrow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:tint="@color/flower_badge"
+                android:adjustViewBounds="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/arrow_up" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/usageList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.35"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"/>
+
+</LinearLayout>

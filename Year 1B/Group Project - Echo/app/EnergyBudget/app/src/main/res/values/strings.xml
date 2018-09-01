@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Energy Budget</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_usage">Usage</string>
+    <string name="title_devices">Appliances</string>
+    <string name="title_tips">Tips</string>
+    <string name="title_badges">Badges</string>
+    <string name="general_badges">General Badges</string>
+    <string name="specific_badges">Specific Badges</string>
+    <string name="done">Done</string>
+    <string name="ignore">Ignore</string>
+    <string name="not_done">Undo</string>
+    <string name="not_ignored">Restore</string>
+    <string name="upgrades">Upgrades</string>
+    <string name="advice">Advice</string>
+
+</resources>

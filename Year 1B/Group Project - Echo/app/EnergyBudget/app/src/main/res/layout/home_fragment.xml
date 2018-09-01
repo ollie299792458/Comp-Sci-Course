@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--House Landscape-->
+    <!--Components laid out background to foreground-->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/house_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:background="@color/daylight">
+
+        <ImageView
+            android:id="@+id/BigDipper"
+            android:layout_width="98dp"
+            android:layout_height="71dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bigdipper" />
+
+        <ImageView
+            android:id="@+id/SunView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/grass"
+            app:srcCompat="@drawable/sun" />
+
+        <ImageView
+            android:id="@+id/Moon"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/grass"
+            app:layout_constraintVertical_bias="0.648"
+            app:srcCompat="@drawable/moon" />
+
+        <ImageView
+            android:id="@+id/Mountain"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/goal"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/Cloud"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cloud" />
+
+        <ImageView
+            android:id="@+id/HouseView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4"
+            app:srcCompat="@drawable/cabin" />
+
+        <ImageView
+            android:id="@+id/Plant1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.57"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/plant"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/FlowerPot"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.43"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/flower"
+            android:visibility="gone"/>
+
+        <View
+            android:id="@+id/grass"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+            android:background="@color/grass_green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/HouseView" />
+
+        <ImageView
+            android:id="@+id/Pines"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.64"
+            app:srcCompat="@drawable/pine" />
+
+        <ImageView
+            android:id="@+id/Tulip2"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="@+id/grass"
+            app:layout_constraintHorizontal_bias="0.57"
+            app:layout_constraintStart_toStartOf="@+id/grass"
+            app:layout_constraintTop_toTopOf="@+id/grass"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/tulip1" />
+
+        <ImageView
+            android:id="@+id/Poppy2"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="@+id/grass"
+            app:layout_constraintHorizontal_bias="0.43"
+            app:layout_constraintStart_toStartOf="@+id/grass"
+            app:layout_constraintTop_toTopOf="@+id/grass"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/poppy" />
+
+
+        <ImageView
+            android:id="@+id/Poppy"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="@+id/grass"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="@+id/grass"
+            app:layout_constraintTop_toTopOf="@+id/grass"
+            app:layout_constraintVertical_bias="0.440"
+            app:srcCompat="@drawable/poppy" />
+
+
+        <ImageView
+            android:id="@+id/Tulip"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="@+id/grass"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="@+id/grass"
+            app:layout_constraintTop_toTopOf="@+id/grass"
+            app:layout_constraintVertical_bias="0.440"
+            app:srcCompat="@drawable/tulip1" />
+
+        <ImageView
+            android:id="@+id/Tree1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/Poppy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.96"
+            app:layout_constraintStart_toStartOf="@+id/grass"
+            app:srcCompat="@drawable/tree"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/Tree2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.69"
+            app:srcCompat="@drawable/tree" />
+
+        <ImageView
+            android:id="@+id/Sheep"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="@+id/grass"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="@+id/grass"
+            app:layout_constraintTop_toTopOf="@+id/grass"
+            app:layout_constraintVertical_bias="0.86"
+            app:srcCompat="@drawable/sheep"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/Fox"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="@+id/grass"
+            app:layout_constraintHorizontal_bias="0.29"
+            app:layout_constraintStart_toStartOf="@+id/grass"
+            app:layout_constraintTop_toTopOf="@+id/grass"
+            app:layout_constraintVertical_bias="0.87"
+            app:srcCompat="@drawable/fox"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/Rabbit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.17"
+            app:layout_constraintStart_toStartOf="@+id/grass"
+            app:layout_constraintTop_toTopOf="@+id/grass"
+            app:layout_constraintVertical_bias="0.37"
+            app:srcCompat="@drawable/rabbit"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/FruitTree"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.29"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.68"
+            app:srcCompat="@drawable/fruittree"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/Grass1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="@+id/grass"
+            app:layout_constraintHorizontal_bias="0.75"
+            app:layout_constraintStart_toStartOf="@+id/grass"
+            app:layout_constraintTop_toTopOf="@+id/grass"
+            app:layout_constraintVertical_bias="0.88"
+            app:srcCompat="@drawable/grass" />
+
+        <ImageView
+            android:id="@+id/Grass2"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="@+id/grass"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@+id/grass"
+            app:layout_constraintTop_toTopOf="@+id/grass"
+            app:layout_constraintVertical_bias="0.36"
+            app:srcCompat="@drawable/grass" />
+
+        <ImageView
+            android:id="@+id/Grass3"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="@+id/grass"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="@+id/grass"
+            app:layout_constraintTop_toTopOf="@+id/grass"
+            app:layout_constraintVertical_bias="0.52"
+            app:srcCompat="@drawable/grass" />
+
+        <ImageView
+            android:id="@+id/PalmTree"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.74"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.62"
+            app:srcCompat="@drawable/palmtree"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/RedFlower1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/grass"
+            app:layout_constraintVertical_bias="0.88"
+            app:srcCompat="@drawable/redflower"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/RedFlower2"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.98"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/grass"
+            app:layout_constraintVertical_bias="0.089999974"
+            app:srcCompat="@drawable/redflower"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/YellowFlower1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.67"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/grass"
+            app:layout_constraintVertical_bias="0.98"
+            app:srcCompat="@drawable/yellowflower"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/YellowFlower2"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/grass"
+            app:layout_constraintVertical_bias="0.01999998"
+            app:srcCompat="@drawable/yellowflower"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/PinkFlower1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.96"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/grass"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/pinkflower"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/PinkFlower2"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/grass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.72"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/grass"
+            app:layout_constraintVertical_bias="0.31"
+            app:srcCompat="@drawable/pinkflower"
+            android:visibility="gone"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/homeTimeRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:checkedButton="@+id/dayRadioButton"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <uk.ac.cam.cl.part1b.groupproject.echo.energybudget.TimeSelectRadioButton
+                    android:id="@+id/dayRadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_weight="0.25"
+                    android:text="Day" />
+
+                <uk.ac.cam.cl.part1b.groupproject.echo.energybudget.TimeSelectRadioButton
+                    android:id="@+id/weekRadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:text="Week" />
+
+                <uk.ac.cam.cl.part1b.groupproject.echo.energybudget.TimeSelectRadioButton
+                    android:id="@+id/monthRadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:text="Month" />
+
+                <uk.ac.cam.cl.part1b.groupproject.echo.energybudget.TimeSelectRadioButton
+                    android:id="@+id/yearRadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:text="Year" />
+
+            </RadioGroup>
+
+            <!--Usage Progress Bar-->
+            <LinearLayout
+                android:id="@+id/budgetSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/progressText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Budget:" />
+
+                <LinearLayout
+                    android:id="@+id/progressSummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="0.2"
+                        android:max="100"
+                        android:progress="45"
+                        android:progressDrawable="@drawable/energy_progress_green" />
+
+
+
+                    <TextView
+                        android:id="@+id/progressPercentage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center"
+                        android:text="56%"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Consumption stats -->
+            <!--Energy-->
+            <LinearLayout
+                android:id="@+id/UsageSummary2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.9"
+                    android:gravity="center_vertical"
+                    app:srcCompat="@drawable/bolt" />
+
+                <TextView
+                    android:id="@+id/EnergyAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.1"
+                    android:text="Energy:  10.8 kWh"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <!--Cost-->
+            <LinearLayout
+                android:id="@+id/UsageSummary3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.9"
+                    android:gravity="center_vertical"
+                    app:srcCompat="@drawable/dollar" />
+
+                <TextView
+                    android:id="@+id/CostAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.1"
+                    android:text="Cost:      £4.16"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <!--Coal-->
+            <LinearLayout
+                android:id="@+id/UsageSummary4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.9"
+                    android:gravity="center_vertical"
+                    app:srcCompat="@drawable/coal" />
+
+                <TextView
+                    android:id="@+id/CoalAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.1"
+                    android:text="Coal:      2.01 KG"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <!-- Tip of the day -->
+            <LinearLayout
+                android:id="@+id/TipOfTheDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/shape"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/TipOfTheDayTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Tip Of The Day"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/TipOfTheDayBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="You currently use 3.4 times as much energy powering your fridge compared to the recommended amount, have you considered buying a more energy efficient one?"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+         </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
