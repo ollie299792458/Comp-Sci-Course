@@ -71,7 +71,7 @@ public class Main {
         System.out.println("Round up (p):"+totalRoundupPennies);
 
         //Create (Put) savings goal
-        //fails due to insufficient scope, from equivalent curl:
+        //fails due to insufficient scope, from equivalent curl (see error.txt):
         /*
             {"error":"insufficient_scope","error_description":"Insufficient scope.
             Required: [savings-goal:create].
