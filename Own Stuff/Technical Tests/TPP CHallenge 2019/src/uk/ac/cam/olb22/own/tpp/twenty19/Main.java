@@ -3,9 +3,14 @@ package uk.ac.cam.olb22.own.tpp.twenty19;
 public class Main {
 
     public static void main(String[] args) {
-        Primes test = new Primes(100);
-        System.out.println(test.isPrime(1));
-        System.out.println(test.isPrime(5));
-        System.out.println(test.isPrime(97));
+        //new Question1();
+        //new Question2();
+        //new Question4();
+        //TODO new Question5();
+        //TODO new Question6();
+        //new Question7();
+        //TODO new Question8();
+        //TODO new Question9();
+        new QuestionA();
     }
 }
