@@ -6,7 +6,7 @@ public class Question9 {
         int MAX = 5000;
         for (int i = 0; i < MAX; i++) {
             int totalarea = i;
-            double area = 0;
+            double area = 0;//todo
             double p = area / (double) totalarea;
             if (p < 0.001) {
                 System.out.println(i);

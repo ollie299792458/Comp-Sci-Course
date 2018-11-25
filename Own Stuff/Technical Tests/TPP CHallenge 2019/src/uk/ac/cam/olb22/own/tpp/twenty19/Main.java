@@ -8,9 +8,9 @@ public class Main {
         //new Question4();
         //TODO new Question5();
         //TODO new Question6();
-        //new Question7();
+        //TODO new Question7();
         //TODO new Question8();
         //TODO new Question9();
-        new QuestionA();
+        //new QuestionA();
     }
 }
