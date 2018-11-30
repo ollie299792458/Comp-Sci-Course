@@ -21,7 +21,7 @@ public class Tester {
         for (int i = 1; i <= threads; i++) {
             for (int x = 5; x <=5000; x *=10) {
                 for (int j = 0; j < iterations; j++) {
-                    System.out.println("threads:" + i + ", x:"+x+", it:" + j + ", result:" + TTSMutex.test(i,x,(200)));
+                    System.out.println("threads:" + i + ", x:"+x+", it:" + j + ", result:" + TTSMutex.test(i,x,(100)));
                 }
             }
         }

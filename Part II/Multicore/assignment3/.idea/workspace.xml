@@ -14,8 +14,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/partII/multicore/assignment3/Tester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+            <state relative-caret-position="114">
+              <caret line="23" column="115" lean-forward="true" selection-start-line="23" selection-start-column="115" selection-end-line="23" selection-end-column="115" />
             </state>
           </provider>
         </entry>
@@ -49,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/partII/multicore/assignment3/TTSMutex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+            <state relative-caret-position="255">
+              <caret line="95" column="38" selection-start-line="95" selection-start-column="38" selection-end-line="95" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -58,8 +58,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/partII/multicore/assignment3/locks/TestAndTestAndSetLock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+            <state relative-caret-position="136">
+              <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,9 +86,9 @@
         <option value="$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/partII/multicore/assignment3/Main.java" />
         <option value="$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/partII/multicore/assignment3/threads/ReadOnly.java" />
         <option value="$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/partII/multicore/assignment3/Example.java" />
+        <option value="$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/partII/multicore/assignment3/ReadOnly.java" />
         <option value="$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/partII/multicore/assignment3/locks/TestAndTestAndSetLock.java" />
         <option value="$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/partII/multicore/assignment3/TTSMutex.java" />
-        <option value="$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/partII/multicore/assignment3/ReadOnly.java" />
         <option value="$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/partII/multicore/assignment3/Tester.java" />
       </list>
     </option>
@@ -128,7 +131,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543545346182" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543546359331" />
     <property name="last_opened_file_path" value="C:/Program Files (x86)/Git/bin/git.exe" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
@@ -197,6 +200,7 @@
     <configuration name="TTSMutex" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="uk.ac.cam.cl.olb22.partII.multicore.assignment3.TTSMutex" />
       <module name="assignment3" />
+      <option name="PROGRAM_PARAMETERS" value="-Djava.compiler=NONE" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="uk.ac.cam.cl.olb22.partII.multicore.assignment3.*" />
@@ -210,6 +214,7 @@
     <configuration name="Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="uk.ac.cam.cl.olb22.partII.multicore.assignment3.Tester" />
       <module name="assignment3" />
+      <option name="PROGRAM_PARAMETERS" value="-Djava.compiler=NONE" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="uk.ac.cam.cl.olb22.partII.multicore.assignment3.*" />
@@ -318,10 +323,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/partII/multicore/assignment3/locks/TestAndTestAndSetLock.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        <state relative-caret-position="453">
+          <caret line="834" column="22" selection-start-line="834" selection-start-column="22" selection-end-line="834" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -332,13 +337,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="834" column="22" selection-start-line="834" selection-start-column="22" selection-end-line="834" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -354,17 +352,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/partII/multicore/assignment3/locks/TestAndTestAndSetLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/partII/multicore/assignment3/TTSMutex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+        <state relative-caret-position="255">
+          <caret line="95" column="38" selection-start-line="95" selection-start-column="38" selection-end-line="95" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/uk/ac/cam/cl/olb22/partII/multicore/assignment3/Tester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+        <state relative-caret-position="114">
+          <caret line="23" column="115" lean-forward="true" selection-start-line="23" selection-start-column="115" selection-end-line="23" selection-end-column="115" />
         </state>
       </provider>
     </entry>

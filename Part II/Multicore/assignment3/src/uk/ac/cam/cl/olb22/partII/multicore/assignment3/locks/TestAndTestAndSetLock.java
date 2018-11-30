@@ -1,7 +1,12 @@
 package uk.ac.cam.cl.olb22.partII.multicore.assignment3.locks;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 public class TestAndTestAndSetLock {
     private volatile static boolean lock = false;
+
+    private volatile static int temp;
 
     public static void acquireLock() {
         do {
@@ -9,12 +14,12 @@ public class TestAndTestAndSetLock {
             while(lock);
             //System.out.println("trying test");
         } while (testAndSet());
-        System.out.print("a");
+        temp += LocalDate.now().hashCode();
     }
 
     public static void releaseLock() {
         lock = false;
-        System.out.print("r");
+        temp += LocalDate.now().hashCode();
     }
 
     private static boolean testAndSet() {

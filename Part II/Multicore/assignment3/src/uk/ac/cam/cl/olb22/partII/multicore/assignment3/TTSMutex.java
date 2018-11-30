@@ -93,7 +93,7 @@ public class TTSMutex implements Runnable {
             List<Thread> threads = new LinkedList<>();
             for (int i = 0; i < n; i++) {
                 Runnable r;
-                r = new TTSMutex(5, 200);
+                r = new TTSMutex(5, 100);
                 Thread t = new Thread(r);
                 threads.add(t);
             }
