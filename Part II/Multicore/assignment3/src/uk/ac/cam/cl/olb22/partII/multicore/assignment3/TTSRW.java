@@ -1,6 +1,7 @@
 package uk.ac.cam.cl.olb22.partII.multicore.assignment3;
 
 import uk.ac.cam.cl.olb22.partII.multicore.assignment3.locks.TestAndTestAndSetLock;
+import uk.ac.cam.cl.olb22.partII.multicore.assignment3.locks.TestAndTestAndSetLockReaderWriter;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -8,12 +9,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-public class TTSMutex implements Runnable {
+public class TTSRW implements Runnable {
 
     private static int[] ints;
     private int arg = 0;
 
-    public TTSMutex(int x, int loops) {
+    public TTSRW(int x, int loops) {
         this.arg = loops;
         if (ints == null) {
             ints = new int[x];
@@ -31,7 +32,7 @@ public class TTSMutex implements Runnable {
             List<Thread> threads = new LinkedList<>();
             for (int i = 0; i < n; i++) {
                 Runnable r;
-                r = new TTSMutex(x, loops);
+                r = new TTSRW(x, loops);
                 Thread t = new Thread(r);
                 threads.add(t);
             }
@@ -64,13 +65,13 @@ public class TTSMutex implements Runnable {
         int oldsum = sum;
         for (int i = 0; i < arg; i++) {
             oldsum = sum;
-            TestAndTestAndSetLock.acquireLock();
+            TestAndTestAndSetLockReaderWriter.acquireRead();
                 sum = 0;
                 for (int j = 0; j < ints.length; j++) {
                     sum += ints[j];
                     temp += i + j;
                 }
-            TestAndTestAndSetLock.releaseLock();
+            TestAndTestAndSetLockReaderWriter.acquireRead();
             if (first) {
                 oldsum = sum;
                 first = false;
@@ -93,7 +94,7 @@ public class TTSMutex implements Runnable {
             List<Thread> threads = new LinkedList<>();
             for (int i = 0; i < n; i++) {
                 Runnable r;
-                r = new TTSMutex(5, 10000000);
+                r = new TTSRW(5, 10000000);
                 Thread t = new Thread(r);
                 threads.add(t);
             }
