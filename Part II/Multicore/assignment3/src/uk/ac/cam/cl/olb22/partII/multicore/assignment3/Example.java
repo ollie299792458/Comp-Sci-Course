@@ -3,6 +3,13 @@ package uk.ac.cam.cl.olb22.partII.multicore.assignment3;
 //
 // javac Example.java
 
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
 import java.util.concurrent.atomic.*;
 
 class Example implements Runnable {
@@ -52,17 +59,34 @@ class Example implements Runnable {
  
     // Start a new thread, and then wait for it to complete:
 
-    System.out.println("Start");
+    System.out.println("How many threads:");
+    Scanner scanner = new Scanner(System.in);
+    int n = scanner.nextInt();
+    LocalDateTime start, end;
+    Duration duration;
     try {
-      Example e1 = new Example(1000);
-      Thread t1 = new Thread(e1);
-      t1.start();
-      t1.join();
-      System.out.println("Joined with thread, ret=" + e1.result);
+      List<Thread> threads = new LinkedList<>();
+      for (int i = 0; i < n; i++) {
+        Example e1 = new Example(100);
+        Thread t = new Thread(e1);
+        threads.add(t);
+      }
+      System.out.println("Starting "+n+" threads");
+      start = LocalDateTime.now();
+      for (Thread t : threads) {
+        t.start();
+      }
+      for (Thread t : threads) {
+        t.join();
+      }
+      end = LocalDateTime.now();
+      duration = Duration.between(start,end);
+      System.out.println("Joined "+n+" threads");
     } catch (InterruptedException ie) {
       System.out.println("Caught " + ie);
+      duration = Duration.ZERO;
     }
-    System.out.println("End");
+    System.out.println("Total time: "+duration.toString());
 
     // Example compare and swap operations
 
