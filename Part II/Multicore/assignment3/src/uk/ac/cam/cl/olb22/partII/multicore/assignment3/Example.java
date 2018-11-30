@@ -4,15 +4,13 @@ package uk.ac.cam.cl.olb22.partII.multicore.assignment3;
 // javac Example.java
 
 import java.time.Duration;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.atomic.*;
 
-class Example implements Runnable {
+public class Example implements Runnable {
 
   // Delay function waits a variable time controlled by "d".  The function
   // writes to a per-object volatile field -- this aims to prevent the compiler
@@ -34,7 +32,7 @@ class Example implements Runnable {
   int arg;
   int result;
 
-  Example(int arg) {
+  private Example(int arg) {
     this.arg = arg;
   }
 
@@ -42,16 +40,43 @@ class Example implements Runnable {
   // controlled by the parameter passed when the thread is started.
 
   public void run() {
-    System.out.println("Thread started arg=" + arg);
+    //System.out.println("Thread started arg=" + arg);
     delay(arg);
     result = 42;
-    System.out.println("Thread done result=" + result);
+    //System.out.println("Thread done result=" + result);
   }
 
   // Shared variable for use with example atomic compare and swap
   // operations (ai.compareAndSet in this example).
 
   static AtomicInteger ai = new AtomicInteger(0);
+
+  public static String test(int threadCount) {
+    int n = threadCount;
+    LocalDateTime start, end;
+    Duration duration;
+    try {
+      List<Thread> threads = new LinkedList<>();
+      for (int i = 0; i < n; i++) {
+        Runnable r;
+        r = new Example(100);
+        Thread t = new Thread(r);
+        threads.add(t);
+      }
+      start = LocalDateTime.now();
+      for (Thread t : threads) {
+        t.start();
+      }
+      for (Thread t : threads) {
+        t.join();
+      }
+      end = LocalDateTime.now();
+      duration = Duration.between(start,end);
+    } catch (InterruptedException ie) {
+      duration = Duration.ZERO;
+    }
+    return duration.toString();
+  }
 
   // Main function
 
@@ -67,8 +92,9 @@ class Example implements Runnable {
     try {
       List<Thread> threads = new LinkedList<>();
       for (int i = 0; i < n; i++) {
-        Example e1 = new Example(100);
-        Thread t = new Thread(e1);
+        Runnable r;
+        r = new Example(1000000);
+        Thread t = new Thread(r);
         threads.add(t);
       }
       System.out.println("Starting "+n+" threads");
@@ -90,6 +116,7 @@ class Example implements Runnable {
 
     // Example compare and swap operations
 
+    /*
     boolean s;
     System.out.println("ai=" + ai);
     s = ai.compareAndSet(0, 1);
@@ -98,5 +125,6 @@ class Example implements Runnable {
     System.out.println("ai=" + ai + " s=" + s);
     s = ai.compareAndSet(1, 2);
     System.out.println("ai=" + ai + " s=" + s);
+    */
   }
 }
