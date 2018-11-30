@@ -1,17 +1,19 @@
 package uk.ac.cam.cl.olb22.partII.multicore.assignment3;
 
+import uk.ac.cam.cl.olb22.partII.multicore.assignment3.locks.TestAndTestAndSetLock;
+
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ReadOnly implements Runnable {
+public class TTSMutex implements Runnable {
 
     private static int[] ints;
     private int arg = 0;
 
-    public ReadOnly(int x, int loops) {
+    public TTSMutex(int x, int loops) {
         this.arg = loops;
         if (ints == null) {
             ints = new int[x];
@@ -21,7 +23,7 @@ public class ReadOnly implements Runnable {
         }
     }
 
-    public static String test(int threadCount) {
+    public static String test(int threadCount, int x, int loops) {
         int n = threadCount;
         LocalDateTime start, end;
         Duration duration;
@@ -29,7 +31,7 @@ public class ReadOnly implements Runnable {
             List<Thread> threads = new LinkedList<>();
             for (int i = 0; i < n; i++) {
                 Runnable r;
-                r = new ReadOnly(5000, 20000);
+                r = new TTSMutex(x, loops);
                 Thread t = new Thread(r);
                 threads.add(t);
             }
@@ -62,13 +64,13 @@ public class ReadOnly implements Runnable {
         int oldsum = sum;
         for (int i = 0; i < arg; i++) {
             oldsum = sum;
-            synchronized (this) {
+            TestAndTestAndSetLock.acquireLock();
                 sum = 0;
                 for (int j = 0; j < ints.length; j++) {
                     sum += ints[j];
                     temp += i + j;
                 }
-            }
+            TestAndTestAndSetLock.releaseLock();
             if (first) {
                 oldsum = sum;
                 first = false;
@@ -91,7 +93,7 @@ public class ReadOnly implements Runnable {
             List<Thread> threads = new LinkedList<>();
             for (int i = 0; i < n; i++) {
                 Runnable r;
-                r = new ReadOnly(5000, 20000);
+                r = new TTSMutex(5, 200);
                 Thread t = new Thread(r);
                 threads.add(t);
             }
