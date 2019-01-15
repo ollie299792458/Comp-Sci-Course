@@ -1,0 +1,9 @@
+X86 PartF
+“Fre PodWR Fre PodWR Fre PodWR"
+{ x=0; y=0; }
+ P0			| P1			| P2			;
+ mov [x],$1	| mov EBX,[x]  	| mov [y],$1	;
+ 	        | mov ECX,[y]	| mov EAX,[x]	;
+locations [x;y;]
+exists (1:EBX=1 /\ 1:ECX=0 /\ 2:EAX=0)
+
