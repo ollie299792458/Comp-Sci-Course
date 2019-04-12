@@ -1,0 +1,14 @@
+import time
+
+str = '';
+iterTo = 47;
+
+while True:
+	for i in range(1, iterTo):
+		str = '';
+		for j in range(0, i):
+			str += '1';
+		print(str);
+
+	for i in range(1, iterTo):
+		
