@@ -1,0 +1,9 @@
+[package]
+name = "luxingfu"
+version = "0.1.0"
+authors = ["Oliver Black <oliver.black.uk@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+[dependencies.pnet]
+version = "0.22.0"
