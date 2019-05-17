@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Receipt Muncher!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+
+<section class="hero is-dark">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                Receipt Muncher
+            </h1>
+            <h2 class="subtitle">
+                We munch online receipts to monzo transactions! Just give us access to your Gmail and Monzo, we promise nothing bad is likely to happen!
+            </h2>
+        </div>
+    </div>
+</section>
+<section class='section'>
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <a class="button is-large is-info" {% if session['credentials'] %}disabled{% endif %} href="/authorize">
+                <span class="icon is-medium">
+                         <i class="fab fa-google"></i>
+                    </span>
+                <span>Log in with Google</span>
+                </a>
+
+                <a class="button is-large is-danger" {% if session['credentialsmonzo'] %}disabled{% endif %}
+                href="/authorize_monzo">
+                <span class="icon is-medium">
+                        <i class="fab fa-monero"></i>
+                    </span>
+                <span>Log in with Monzo</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="main">
+ <div class="columns">
+            <div class="column">
+        <a id="muncher" class="button is-large is-success is-fullwidth" {% if not (session['credentials'] and
+        session['credentialsmonzo'])%}disabled{% endif %}>
+        <span>Munch my Receipts</span>
+        </a>
+            </div>
+ </div>
+    </div>
+
+    <div class="container">
+ <div class="columns">
+            <div class="column">
+        <a href="/clear" class="button is-large is-danger is-fullwidth" {% if not (session['credentials'] or session['credentialsmonzo'])%}disabled{% endif %}>
+        <span>Revoke our access to your personal details</span>
+        </a>
+    </div>
+ </div>
+    </div>
+</section>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script>
+    $("#muncher").click(function (e) {
+        $("#muncher").addClass("is-loading");
+        setTimeout(function() {
+            $('#muncher').removeClass("is-loading")
+        }, 10000)
+        e.preventDefault();
+        $.get("/doeverything");
+    });
+</script>
+</html>
